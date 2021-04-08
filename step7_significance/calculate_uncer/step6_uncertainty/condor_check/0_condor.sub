@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = 0_condor.sh
+arguments    =
+output       = outputfile_0
+error        = errorfile_0
+log          = myexe_0.log
+request_cpus   = 1
+request_memory = 2024
+request_disk   = 20240
+should_transfer_files = yes
+queue

@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = unfold_32_condor.sh
+arguments    = unfold_out2
+output       = unfold_outputfile32
+error        = unfold_errorfile32
+log          = unfold_myexe32.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 10240
+should_transfer_files = yes
+queue

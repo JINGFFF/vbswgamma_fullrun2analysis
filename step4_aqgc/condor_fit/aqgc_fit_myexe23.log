@@ -1,0 +1,23 @@
+000 (976615.000.000) 01/19 14:05:03 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=4412_1e41>
+...
+001 (976615.000.000) 01/19 14:05:26 Job executing on host: <192.168.1.10:9618?addrs=192.168.1.10-9618&alias=cmsdas.phy.pku.edu.cn&noUDP&sock=startd_2159_790f>
+...
+006 (976615.000.000) 01/19 14:05:35 Image size of job updated: 124640
+	122  -  MemoryUsage of job (MB)
+	124640  -  ResidentSetSize of job (KB)
+...
+005 (976615.000.000) 01/19 14:06:16 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:40, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:40, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	302610  -  Run Bytes Sent By Job
+	487  -  Run Bytes Received By Job
+	302610  -  Total Bytes Sent By Job
+	487  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :     1395    10240     42515 
+	   Memory (MB)          :      122     1024      1024 
+...

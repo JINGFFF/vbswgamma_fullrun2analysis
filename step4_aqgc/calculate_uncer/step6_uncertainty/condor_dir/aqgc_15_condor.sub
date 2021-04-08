@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = aqgc_15_condor.sh
+arguments    = aqgc_out3
+output       = aqgc_outputfile15
+error        = aqgc_errorfile15
+log          = aqgc_myexe15.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 10240
+should_transfer_files = yes
+queue

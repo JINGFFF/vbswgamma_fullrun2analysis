@@ -1,0 +1,19 @@
+WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
+         Developer's area is created for available architecture slc6_amd64_gcc630.
+[34myear             : 2018[0m
+[34mregion           : control region[0m
+[34mchannel          : electron channel[0m
+[34mbarrel_or_endcap : endcap[0m
+[34mtype             : mc[0m
+[34msample           : WGJJ[0m
+[34mbtag workpoint   : medium[0m
+[34minput file list  : filelist_dir2/tight_for_analysis_WGJJ_new.txt[0m
+[34moutput file      : fidu_out6/2018_electron_mc_control_endcap_medium_btag_WGJJ_uncertainty.root[0m
+
+start load Btag info!
+Btag info has been loaded!
+file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/fiducial/2018_wgjj_fiducial2.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 678552
+processing : [[32m[0m--------------------------------------------------]  [33m0%  0 p_event: 677570 n_event: 982[0m

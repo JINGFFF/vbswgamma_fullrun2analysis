@@ -1,0 +1,7 @@
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_B.root
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_C.root
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_D.root
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_E.root
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_F.root
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_G.root
+/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_electron_H.root

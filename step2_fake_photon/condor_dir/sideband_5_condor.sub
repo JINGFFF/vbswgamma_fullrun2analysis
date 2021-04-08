@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = sideband_5_condor.sh
+arguments    = out_sideband
+output       = sideband_outputfile5
+error        = sideband_errorfile5
+log          = sideband_myexe5.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = fid_55_condor.sh
+arguments    = fidu_out6
+output       = fid_outputfile55
+error        = fid_errorfile55
+log          = fid_myexe55.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 10240
+should_transfer_files = yes
+queue
