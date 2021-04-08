@@ -1,0 +1,2 @@
+/data/pku/home/pengj/testvbs/data/for_analysis/fiducial/2018_wgjj_fiducial2.root
+#/data/pku/home/pengj/testvbs/data/for_analysis/new_signal/2018_WGJJ_new.root

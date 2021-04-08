@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = sig_126_condor.sh
+arguments    = sig_rebin4
+output       = sig_outputfile126
+error        = sig_errorfile126
+log          = sig_myexe126.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 10240
+should_transfer_files = yes
+queue

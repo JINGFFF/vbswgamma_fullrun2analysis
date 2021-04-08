@@ -1,0 +1,39 @@
+imax 1   number of channels
+jmax 18   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 887.29
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	genbin1	genbin2	genbin3	genbin4	VBS_out	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	-4	-3	-2	-1	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+rate	0.926802101825	15.7747785371	0	0	3.47	464.26	0.32	0.00	2.06	2.83	1.42	29.22	7.27	1.87	0.35	57.79	133.18	143.81	22.73
+------------
+lumi	lnN	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	-	-	-	#lumi
+WGJJ_out_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	1.0	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	1.04922739091	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	1.33040784932	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	1.17515321799	-	-	-	-	-	-	-	-	-	-
+ST_tW_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	1.27867984389	-	-	-	-	-	-	-	-	-
+ST_tbarW_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	-	1.4482229968	-	-	-	-	-	-	-	-
+TTG_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	1.11523315361	-	-	-	-	-	-	-
+WW_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	1.29078010715	-	-	-	-	-	-
+WZ_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	1.50023009968	-	-	-	-	-
+ZZ_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	2	-	-	-	-
+ZG_muon_endcap_stat_bin_2_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1.09528185732	-	-	-
+photon_ID_2018	lnN	-	-	-	-	1.02	1.02	1.02	1.02	1.02	1.01	1.01	1.02	1.01	1.02	1.01	1.02	-	-	-
+electron_ID_2018	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_Reco_2018	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_HLT_2018	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_ID_2018	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso_2018	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT_2018	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+JEC_2018	lnN	-	-	-	-	1.03	1.07	1.00	1.05	1.08	1.05	1.18	1.00	1.06	1.00	1.00	1.05	-	-	-
+JER_2018	lnN	-	-	-	-	1.06	1.04	4.54	1.05	1.18	1.10	1.37	1.03	1.10	1.00	1.00	1.13	-	-	-

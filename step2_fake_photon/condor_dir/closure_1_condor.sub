@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = closure_1_condor.sh
+arguments    = out_closure
+output       = closure_outputfile1
+error        = closure_errorfile1
+log          = closure_myexe1.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

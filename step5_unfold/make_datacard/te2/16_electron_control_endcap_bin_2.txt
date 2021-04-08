@@ -1,0 +1,39 @@
+imax 1   number of channels
+jmax 18   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 220.73
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	genbin1	genbin2	genbin3	genbin4	VBS_out	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	-4	-3	-2	-1	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+rate	0	0.0380052501689	2.24394026481	0.0289231610215	1.18	116.28	0.00	0.48	0.42	1.55	0.53	7.81	1.94	0.00	0.21	15.66	22.12	39.77	10.49
+------------
+lumi	lnN	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	-	-	-	#lumi
+WGJJ_out_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	1.0	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	1.04434623588	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	1.35070393985	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	1.3801693187	-	-	-	-	-	-	-	-	-	-
+ST_tW_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	1.33483048217	-	-	-	-	-	-	-	-	-
+ST_tbarW_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	-	1.70713345514	-	-	-	-	-	-	-	-
+TTG_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	1.13273055171	-	-	-	-	-	-	-
+WW_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	1.40875592393	-	-	-	-	-	-
+WZ_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-
+ZZ_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	2	-	-	-	-
+ZG_electron_endcap_stat_bin_3_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1.10333686184	-	-	-
+photon_ID_2016	lnN	-	-	-	-	1.02	1.02	1.00	1.02	1.01	1.01	1.03	1.01	1.01	1.00	1.03	1.01	-	-	-
+electron_ID_2016	lnN	-	-	-	-	1.03	1.03	1.00	1.01	1.01	1.01	1.01	1.05	1.01	1.00	1.00	1.04	-	-	-
+electron_Reco_2016	lnN	-	-	-	-	1.01	1.01	1.00	1.01	1.01	1.01	1.01	1.01	1.01	1.00	1.01	1.01	-	-	-
+electron_HLT_2016	lnN	-	-	-	-	1.00	1.01	1.00	1.01	1.00	1.00	1.01	1.00	1.00	1.00	1.01	1.01	-	-	-
+muon_ID_2016	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso_2016	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT_2016	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+JEC_2016	lnN	-	-	-	-	1.04	1.07	1.00	1.13	1.14	1.00	1.00	1.04	1.00	1.00	1.00	1.10	-	-	-
+JER_2016	lnN	-	-	-	-	1.04	1.07	1.00	1.26	1.15	1.11	1.42	1.01	1.32	1.00	1.89	1.15	-	-	-

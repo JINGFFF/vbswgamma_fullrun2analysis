@@ -1,0 +1,4 @@
+/home/pku/pengj/testvbs/data/for_analysis/2018_tight_for_analysis_single_electron_A.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_tight_for_analysis_single_electron_B.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_tight_for_analysis_single_electron_C.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_tight_for_analysis_single_electron_D.root

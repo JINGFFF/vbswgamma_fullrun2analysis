@@ -1,0 +1,1464 @@
+WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
+         Developer's area is created for available architecture slc6_amd64_gcc630.
+[34myear             : 2018[0m
+[34mregion           : control region[0m
+[34mchannel          : muon channel[0m
+[34mbarrel_or_endcap : endcap[0m
+[34mtype             : mc[0m
+[34msample           : WGJets[0m
+[34mbtag workpoint   : medium[0m
+[34minput file list  : filelist_dir2/tight_for_analysis_WGJets.txt[0m
+[34moutput file      : fidu_out6/2018_muon_mc_control_endcap_medium_btag_WGJets_uncertainty.root[0m
+
+start load Btag info!
+Btag info has been loaded!
+file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_1.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1177
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 41670 n_event: 10040[0m
+file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_10.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2386
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 125344 n_event: 30164[0m
+file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_100.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1317
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 173957 n_event: 41893[0m
+file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_101.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3991
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 313036 n_event: 75598[0m
+file 5 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_102.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3307
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 430684 n_event: 104399[0m
+file 6 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_103.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2184
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 506989 n_event: 122945[0m
+file 7 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_104.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2758
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 603786 n_event: 146250[0m
+file 8 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_105.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3165
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 714795 n_event: 172948[0m
+file 9 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_106.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2354
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 797884 n_event: 193125[0m
+file 10 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_107.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3072
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 905660 n_event: 219149[0m
+file 11 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_108.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3417
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.02694e+06 n_event: 248653[0m
+file 12 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_109.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3152
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.13813e+06 n_event: 275718[0m
+file 13 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_11.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1585
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.19348e+06 n_event: 289085[0m
+file 14 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_110.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3155
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.30412e+06 n_event: 315972[0m
+file 15 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_111.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3905
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.44331e+06 n_event: 349382[0m
+file 16 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_112.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1962
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.51287e+06 n_event: 366151[0m
+file 17 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_113.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3174
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.62732e+06 n_event: 394018[0m
+file 18 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_114.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3567
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.75218e+06 n_event: 424228[0m
+file 19 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_115.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3244
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.86701e+06 n_event: 451933[0m
+file 20 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_116.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2498
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.95343e+06 n_event: 473214[0m
+file 21 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_117.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3164
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.06471e+06 n_event: 500137[0m
+file 22 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_118.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3818
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.19674e+06 n_event: 531968[0m
+file 23 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_119.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3590
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.32502e+06 n_event: 563163[0m
+file 24 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_12.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 194
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.33195e+06 n_event: 564882[0m
+file 25 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_120.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2539
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.42226e+06 n_event: 586505[0m
+file 26 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_121.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2636
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.51553e+06 n_event: 609525[0m
+file 27 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_122.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3197
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.6296e+06 n_event: 637395[0m
+file 28 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_123.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2483
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.71692e+06 n_event: 658480[0m
+file 29 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_124.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2370
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.80008e+06 n_event: 678851[0m
+file 30 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_125.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2097
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.87664e+06 n_event: 697543[0m
+file 31 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_126.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3239
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.99104e+06 n_event: 725147[0m
+file 32 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_127.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3044
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.09843e+06 n_event: 751207[0m
+file 33 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_128.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2974
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.20253e+06 n_event: 776568[0m
+file 34 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_129.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2432
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.28936e+06 n_event: 797463[0m
+file 35 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_13.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 833
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.32058e+06 n_event: 804900[0m
+file 36 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_130.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2347
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.40429e+06 n_event: 825174[0m
+file 37 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_131.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3994
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.54327e+06 n_event: 858680[0m
+file 38 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_132.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1693
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.6025e+06 n_event: 872826[0m
+file 39 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_133.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2670
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.69961e+06 n_event: 896182[0m
+file 40 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_134.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3015
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.80733e+06 n_event: 922253[0m
+file 41 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_135.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2085
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.88353e+06 n_event: 940916[0m
+file 42 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_136.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3036
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.99473e+06 n_event: 967803[0m
+file 43 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_137.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3536
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.11997e+06 n_event: 998043[0m
+file 44 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_138.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3609
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.24845e+06 n_event: 1.02899e+06[0m
+file 45 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_139.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2289
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.33174e+06 n_event: 1.04904e+06[0m
+file 46 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_14.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2196
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.40864e+06 n_event: 1.06736e+06[0m
+file 47 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_140.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3225
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.52249e+06 n_event: 1.09552e+06[0m
+file 48 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_141.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3255
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.63669e+06 n_event: 1.12335e+06[0m
+file 49 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_142.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1455
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.68859e+06 n_event: 1.13611e+06[0m
+file 50 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_143.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2240
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.76821e+06 n_event: 1.15544e+06[0m
+file 51 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_144.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3508
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.89337e+06 n_event: 1.18574e+06[0m
+file 52 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_145.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2936
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.9974e+06 n_event: 1.21097e+06[0m
+file 53 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_146.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3709
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.12894e+06 n_event: 1.24332e+06[0m
+file 54 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_147.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2545
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.21922e+06 n_event: 1.26514e+06[0m
+file 55 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_148.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2604
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.3131e+06 n_event: 1.28789e+06[0m
+file 56 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_149.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2345
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.39251e+06 n_event: 1.30745e+06[0m
+file 57 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_15.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2162
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.46861e+06 n_event: 1.32599e+06[0m
+file 58 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_150.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3064
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.5765e+06 n_event: 1.35228e+06[0m
+file 59 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_151.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3912
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.71527e+06 n_event: 1.38604e+06[0m
+file 60 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_152.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3045
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.82289e+06 n_event: 1.41245e+06[0m
+file 61 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_153.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2569
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.91276e+06 n_event: 1.43422e+06[0m
+file 62 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_154.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3523
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.03753e+06 n_event: 1.46459e+06[0m
+file 63 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_155.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3363
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.15894e+06 n_event: 1.49398e+06[0m
+file 64 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_156.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2896
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.26305e+06 n_event: 1.51891e+06[0m
+file 65 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_157.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2971
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.37055e+06 n_event: 1.54514e+06[0m
+file 66 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_158.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1590
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.42626e+06 n_event: 1.55856e+06[0m
+file 67 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_159.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3410
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.55089e+06 n_event: 1.5888e+06[0m
+file 68 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_16.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1127
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.59239e+06 n_event: 1.59883e+06[0m
+file 69 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_160.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2450
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.67913e+06 n_event: 1.61977e+06[0m
+file 70 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_161.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3499
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.80051e+06 n_event: 1.6491e+06[0m
+file 71 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_162.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3347
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.91842e+06 n_event: 1.67777e+06[0m
+file 72 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_163.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2487
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.0082e+06 n_event: 1.69989e+06[0m
+file 73 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_164.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3369
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.12626e+06 n_event: 1.72837e+06[0m
+file 74 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_165.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3049
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.2335e+06 n_event: 1.75453e+06[0m
+file 75 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_166.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3352
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.35196e+06 n_event: 1.78312e+06[0m
+file 76 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_167.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2528
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.44245e+06 n_event: 1.80478e+06[0m
+file 77 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_168.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3459
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.56341e+06 n_event: 1.83427e+06[0m
+file 78 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_169.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3359
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.68155e+06 n_event: 1.86298e+06[0m
+file 79 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_17.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 310
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.69195e+06 n_event: 1.86551e+06[0m
+file 80 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_170.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2079
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.76818e+06 n_event: 1.88395e+06[0m
+file 81 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_171.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2564
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.85851e+06 n_event: 1.90584e+06[0m
+file 82 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_172.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3952
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.99674e+06 n_event: 1.93988e+06[0m
+file 83 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_173.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3284
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.11494e+06 n_event: 1.96818e+06[0m
+file 84 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_174.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2163
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.19145e+06 n_event: 1.98638e+06[0m
+file 85 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_175.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2423
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.27478e+06 n_event: 2.00644e+06[0m
+file 86 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_176.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2800
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.37196e+06 n_event: 2.02998e+06[0m
+file 87 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_177.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2462
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.4587e+06 n_event: 2.05096e+06[0m
+file 88 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_178.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3193
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.56986e+06 n_event: 2.07738e+06[0m
+file 89 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_179.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2681
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.66664e+06 n_event: 2.10118e+06[0m
+file 90 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_18.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1428
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.7154e+06 n_event: 2.11288e+06[0m
+file 91 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_180.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3041
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.82217e+06 n_event: 2.13901e+06[0m
+file 92 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_181.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3627
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.94759e+06 n_event: 2.16915e+06[0m
+file 93 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_182.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2928
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.04791e+06 n_event: 2.19365e+06[0m
+file 94 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_183.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 4018
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.18664e+06 n_event: 2.22684e+06[0m
+file 95 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_184.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2657
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.2806e+06 n_event: 2.24948e+06[0m
+file 96 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_185.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3965
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.41939e+06 n_event: 2.28273e+06[0m
+file 97 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_186.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2452
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.5061e+06 n_event: 2.30373e+06[0m
+file 98 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_187.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3241
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.624e+06 n_event: 2.33227e+06[0m
+file 99 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_188.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1400
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.67243e+06 n_event: 2.34398e+06[0m
+file 100 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_189.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1645
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.72787e+06 n_event: 2.3575e+06[0m
+file 101 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_19.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1418
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.77643e+06 n_event: 2.36947e+06[0m
+file 102 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_190.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3145
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.887e+06 n_event: 2.39625e+06[0m
+file 103 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_191.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3245
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.00014e+07 n_event: 2.42406e+06[0m
+file 104 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_192.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2481
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.00881e+07 n_event: 2.44518e+06[0m
+file 105 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_193.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1295
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.01334e+07 n_event: 2.45619e+06[0m
+file 106 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_194.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2244
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.02095e+07 n_event: 2.47477e+06[0m
+file 107 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_195.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1667
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.02684e+07 n_event: 2.48899e+06[0m
+file 108 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_196.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1477
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.03202e+07 n_event: 2.50175e+06[0m
+file 109 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_197.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1228
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.03652e+07 n_event: 2.51248e+06[0m
+file 110 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_198.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1990
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.0438e+07 n_event: 2.53022e+06[0m
+file 111 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_199.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2565
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.05319e+07 n_event: 2.55298e+06[0m
+file 112 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_2.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 217
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.05389e+07 n_event: 2.55468e+06[0m
+file 113 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_20.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1193
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.05806e+07 n_event: 2.5648e+06[0m
+file 114 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_200.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1965
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.06497e+07 n_event: 2.58154e+06[0m
+file 115 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_201.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2675
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.07436e+07 n_event: 2.60449e+06[0m
+file 116 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_202.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 472
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.0761e+07 n_event: 2.60871e+06[0m
+file 117 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_203.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1409
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.08097e+07 n_event: 2.62039e+06[0m
+file 118 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_204.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2342
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.08932e+07 n_event: 2.64025e+06[0m
+file 119 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_205.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1275
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.09386e+07 n_event: 2.65106e+06[0m
+file 120 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_206.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1459
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.09907e+07 n_event: 2.6638e+06[0m
+file 121 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_207.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1580
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.10459e+07 n_event: 2.67731e+06[0m
+file 122 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_208.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2276
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.1126e+07 n_event: 2.69657e+06[0m
+file 123 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_209.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1381
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.11711e+07 n_event: 2.70734e+06[0m
+file 124 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_21.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1388
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.12234e+07 n_event: 2.71989e+06[0m
+file 125 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_210.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 575
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.12442e+07 n_event: 2.72488e+06[0m
+file 126 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_211.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2167
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.13172e+07 n_event: 2.74275e+06[0m
+file 127 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_212.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2538
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.14074e+07 n_event: 2.76462e+06[0m
+file 128 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_213.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2430
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.14907e+07 n_event: 2.785e+06[0m
+file 129 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_214.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2311
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.15706e+07 n_event: 2.80418e+06[0m
+file 130 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_215.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2024
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.16435e+07 n_event: 2.8219e+06[0m
+file 131 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_216.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1589
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.1699e+07 n_event: 2.83549e+06[0m
+file 132 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_217.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1206
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.17406e+07 n_event: 2.8458e+06[0m
+file 133 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_218.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1360
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.17889e+07 n_event: 2.85755e+06[0m
+file 134 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_219.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 486
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.18062e+07 n_event: 2.86178e+06[0m
+file 135 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_22.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1188
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.1848e+07 n_event: 2.87187e+06[0m
+file 136 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_220.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 569
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.18688e+07 n_event: 2.87682e+06[0m
+file 137 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_221.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2329
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.19486e+07 n_event: 2.89611e+06[0m
+file 138 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_222.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1654
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.20037e+07 n_event: 2.90975e+06[0m
+file 139 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_223.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 305
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.2014e+07 n_event: 2.91231e+06[0m
+file 140 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_224.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2182
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.20905e+07 n_event: 2.93099e+06[0m
+file 141 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_225.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 398
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.21043e+07 n_event: 2.93447e+06[0m
+file 142 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_226.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1393
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.21531e+07 n_event: 2.9462e+06[0m
+file 143 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_227.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1473
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.22052e+07 n_event: 2.95869e+06[0m
+file 144 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_228.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1392
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.22538e+07 n_event: 2.9705e+06[0m
+file 145 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_229.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1158
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.22953e+07 n_event: 2.98066e+06[0m
+file 146 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_23.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 355
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.23092e+07 n_event: 2.98396e+06[0m
+file 147 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_230.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1293
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.23544e+07 n_event: 2.99482e+06[0m
+file 148 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_231.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1162
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.23963e+07 n_event: 3.00493e+06[0m
+file 149 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_232.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 687
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.24206e+07 n_event: 3.01084e+06[0m
+file 150 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_233.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2164
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.2497e+07 n_event: 3.02947e+06[0m
+file 151 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_234.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1729
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.25559e+07 n_event: 3.04384e+06[0m
+file 152 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_235.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2103
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.26324e+07 n_event: 3.06235e+06[0m
+file 153 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_236.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 905
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.26638e+07 n_event: 3.06996e+06[0m
+file 154 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_237.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1405
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.27123e+07 n_event: 3.08172e+06[0m
+file 155 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_238.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 674
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.27365e+07 n_event: 3.08763e+06[0m
+file 156 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_239.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1573
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.27919e+07 n_event: 3.10116e+06[0m
+file 157 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_24.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2223
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.28681e+07 n_event: 3.11966e+06[0m
+file 158 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_240.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 294
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.28786e+07 n_event: 3.12223e+06[0m
+file 159 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_241.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1711
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.29378e+07 n_event: 3.13642e+06[0m
+file 160 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_242.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 280
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.29481e+07 n_event: 3.13894e+06[0m
+file 161 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_243.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2226
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.30245e+07 n_event: 3.1575e+06[0m
+file 162 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_244.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1586
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.30796e+07 n_event: 3.17098e+06[0m
+file 163 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_245.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 385
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.30934e+07 n_event: 3.1743e+06[0m
+file 164 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_246.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1878
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.31594e+07 n_event: 3.1902e+06[0m
+file 165 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_247.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2220
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.32392e+07 n_event: 3.20976e+06[0m
+file 166 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_248.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1921
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.33051e+07 n_event: 3.22582e+06[0m
+file 167 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_249.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1371
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.33537e+07 n_event: 3.23747e+06[0m
+file 168 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_25.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 757
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.33815e+07 n_event: 3.24424e+06[0m
+file 169 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_250.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2729
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.34791e+07 n_event: 3.26777e+06[0m
+file 170 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_251.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2154
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.35558e+07 n_event: 3.28631e+06[0m
+file 171 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_252.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1366
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.36042e+07 n_event: 3.29811e+06[0m
+file 172 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_253.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2295
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.36839e+07 n_event: 3.31736e+06[0m
+file 173 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_254.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2220
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.37603e+07 n_event: 3.33586e+06[0m
+file 174 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_255.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1588
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.3816e+07 n_event: 3.34942e+06[0m
+file 175 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_256.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2106
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.38925e+07 n_event: 3.36776e+06[0m
+file 176 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_257.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2258
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.39724e+07 n_event: 3.38702e+06[0m
+file 177 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_258.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2299
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.40521e+07 n_event: 3.40644e+06[0m
+file 178 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_259.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2170
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.41284e+07 n_event: 3.42505e+06[0m
+file 179 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_26.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2487
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.42185e+07 n_event: 3.44683e+06[0m
+file 180 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_260.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2170
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.42981e+07 n_event: 3.46616e+06[0m
+file 181 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_261.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1290
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.43435e+07 n_event: 3.47727e+06[0m
+file 182 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_262.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1779
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.44062e+07 n_event: 3.49211e+06[0m
+file 183 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_263.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1466
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.44584e+07 n_event: 3.50492e+06[0m
+file 184 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_264.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2497
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.4545e+07 n_event: 3.52587e+06[0m
+file 185 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_265.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1268
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.45901e+07 n_event: 3.53678e+06[0m
+file 186 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_266.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2235
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.46697e+07 n_event: 3.55607e+06[0m
+file 187 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_267.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1657
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.47287e+07 n_event: 3.57024e+06[0m
+file 188 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_268.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1556
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.47841e+07 n_event: 3.58376e+06[0m
+file 189 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_269.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1053
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.48226e+07 n_event: 3.59301e+06[0m
+file 190 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_27.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1567
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.48818e+07 n_event: 3.60731e+06[0m
+file 191 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_270.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2195
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.49582e+07 n_event: 3.62585e+06[0m
+file 192 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_271.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1347
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.50065e+07 n_event: 3.63769e+06[0m
+file 193 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_272.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2185
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.50828e+07 n_event: 3.65609e+06[0m
+file 194 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_273.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1653
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.51384e+07 n_event: 3.6693e+06[0m
+file 195 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_274.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2263
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.52183e+07 n_event: 3.68843e+06[0m
+file 196 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_275.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2335
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.53016e+07 n_event: 3.70848e+06[0m
+file 197 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_276.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 880
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.53331e+07 n_event: 3.71606e+06[0m
+file 198 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_277.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1812
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.53953e+07 n_event: 3.73126e+06[0m
+file 199 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_278.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1860
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.54613e+07 n_event: 3.74716e+06[0m
+file 200 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_279.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1743
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.55237e+07 n_event: 3.76228e+06[0m
+file 201 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_28.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 574
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.55445e+07 n_event: 3.7674e+06[0m
+file 202 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_280.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1205
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.55859e+07 n_event: 3.7774e+06[0m
+file 203 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_281.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1295
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.56309e+07 n_event: 3.78819e+06[0m
+file 204 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_282.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1719
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.56937e+07 n_event: 3.80298e+06[0m
+file 205 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_283.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1419
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.57418e+07 n_event: 3.81489e+06[0m
+file 206 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_284.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1844
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.58039e+07 n_event: 3.83017e+06[0m
+file 207 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_285.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 460
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.58213e+07 n_event: 3.83431e+06[0m
+file 208 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_286.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2204
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.58977e+07 n_event: 3.85272e+06[0m
+file 209 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_287.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1192
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.59393e+07 n_event: 3.86304e+06[0m
+file 210 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_288.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1652
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.5998e+07 n_event: 3.8772e+06[0m
+file 211 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_289.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1301
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.60431e+07 n_event: 3.88825e+06[0m
+file 212 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_29.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 368
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.60568e+07 n_event: 3.8916e+06[0m
+file 213 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_290.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2274
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.614e+07 n_event: 3.91176e+06[0m
+file 214 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_3.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1526
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.61922e+07 n_event: 3.92435e+06[0m
+file 215 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_30.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1545
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.62477e+07 n_event: 3.93785e+06[0m
+file 216 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_31.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2763
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.63441e+07 n_event: 3.96151e+06[0m
+file 217 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_32.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 190
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.6351e+07 n_event: 3.96323e+06[0m
+file 218 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_33.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 303
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.63614e+07 n_event: 3.96567e+06[0m
+file 219 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_34.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1008
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.6396e+07 n_event: 3.97407e+06[0m
+file 220 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_35.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1599
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.64515e+07 n_event: 3.98731e+06[0m
+file 221 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_36.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2401
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.65347e+07 n_event: 4.00731e+06[0m
+file 222 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_37.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2240
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.66146e+07 n_event: 4.02667e+06[0m
+file 223 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_38.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3228
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.67295e+07 n_event: 4.05423e+06[0m
+file 224 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_39.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3544
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.68546e+07 n_event: 4.08452e+06[0m
+file 225 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_4.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 491
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.68721e+07 n_event: 4.08856e+06[0m
+file 226 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_40.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3033
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.69832e+07 n_event: 4.1155e+06[0m
+file 227 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_41.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3131
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.70943e+07 n_event: 4.14232e+06[0m
+file 228 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_42.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3300
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.72122e+07 n_event: 4.17092e+06[0m
+file 229 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_43.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2367
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.72957e+07 n_event: 4.1911e+06[0m
+file 230 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_44.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3242
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.7407e+07 n_event: 4.21802e+06[0m
+file 231 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_45.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3980
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.75462e+07 n_event: 4.25121e+06[0m
+file 232 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_46.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3109
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.76542e+07 n_event: 4.27728e+06[0m
+file 233 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_47.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2771
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.77512e+07 n_event: 4.30108e+06[0m
+file 234 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_48.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3042
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.78587e+07 n_event: 4.32696e+06[0m
+file 235 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_49.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3211
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.79733e+07 n_event: 4.35476e+06[0m
+file 236 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_5.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1223
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.80183e+07 n_event: 4.36567e+06[0m
+file 237 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_50.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3856
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.81536e+07 n_event: 4.3985e+06[0m
+file 238 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_51.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3996
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.82924e+07 n_event: 4.43242e+06[0m
+file 239 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_52.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3894
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.84281e+07 n_event: 4.46508e+06[0m
+file 240 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_53.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1924
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.8494e+07 n_event: 4.481e+06[0m
+file 241 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_54.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3284
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.8612e+07 n_event: 4.50965e+06[0m
+file 242 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_55.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2845
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.87122e+07 n_event: 4.53411e+06[0m
+file 243 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_56.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1240
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.87571e+07 n_event: 4.54502e+06[0m
+file 244 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_57.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3348
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.88748e+07 n_event: 4.57363e+06[0m
+file 245 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_58.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2867
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.89755e+07 n_event: 4.59801e+06[0m
+file 246 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_59.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3006
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.90828e+07 n_event: 4.62411e+06[0m
+file 247 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_6.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1798
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.91457e+07 n_event: 4.63916e+06[0m
+file 248 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_60.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2912
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.92531e+07 n_event: 4.66539e+06[0m
+file 249 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_61.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2122
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.93293e+07 n_event: 4.68378e+06[0m
+file 250 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_62.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3535
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.94543e+07 n_event: 4.71386e+06[0m
+file 251 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_63.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1256
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.9503e+07 n_event: 4.72553e+06[0m
+file 252 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_64.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2229
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.95795e+07 n_event: 4.74414e+06[0m
+file 253 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_65.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3133
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.96938e+07 n_event: 4.77189e+06[0m
+file 254 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_66.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3139
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.98048e+07 n_event: 4.79854e+06[0m
+file 255 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_67.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3180
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.99158e+07 n_event: 4.8253e+06[0m
+file 256 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_68.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3418
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.0034e+07 n_event: 4.85402e+06[0m
+file 257 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_69.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3068
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.01452e+07 n_event: 4.8808e+06[0m
+file 258 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_7.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 588
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.01658e+07 n_event: 4.88586e+06[0m
+file 259 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_70.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2347
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.02492e+07 n_event: 4.90599e+06[0m
+file 260 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_71.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2829
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.03463e+07 n_event: 4.92958e+06[0m
+file 261 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_72.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2272
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.04261e+07 n_event: 4.94889e+06[0m
+file 262 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_73.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2464
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.0513e+07 n_event: 4.97017e+06[0m
+file 263 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_74.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2847
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.06138e+07 n_event: 4.99439e+06[0m
+file 264 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_75.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2883
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.07143e+07 n_event: 5.01875e+06[0m
+file 265 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_76.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3100
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.08218e+07 n_event: 5.04482e+06[0m
+file 266 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_77.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2995
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.09296e+07 n_event: 5.07074e+06[0m
+file 267 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_78.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3024
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.10371e+07 n_event: 5.09664e+06[0m
+file 268 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_79.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1778
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.10993e+07 n_event: 5.1119e+06[0m
+file 269 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_8.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1270
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.11447e+07 n_event: 5.1228e+06[0m
+file 270 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_80.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2176
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.12213e+07 n_event: 5.14104e+06[0m
+file 271 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_81.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1444
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.12734e+07 n_event: 5.15366e+06[0m
+file 272 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_82.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3222
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.13876e+07 n_event: 5.1814e+06[0m
+file 273 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_83.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2373
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.14706e+07 n_event: 5.20164e+06[0m
+file 274 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_84.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3270
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.15856e+07 n_event: 5.2292e+06[0m
+file 275 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_85.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3046
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.16925e+07 n_event: 5.25529e+06[0m
+file 276 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_86.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 1248
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.17379e+07 n_event: 5.26607e+06[0m
+file 277 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_87.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2133
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.18145e+07 n_event: 5.28467e+06[0m
+file 278 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_88.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3945
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.19533e+07 n_event: 5.31827e+06[0m
+file 279 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_89.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3414
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.20749e+07 n_event: 5.34774e+06[0m
+file 280 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_9.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 287
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.20853e+07 n_event: 5.35021e+06[0m
+file 281 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_90.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2821
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.21859e+07 n_event: 5.3746e+06[0m
+file 282 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_91.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2706
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.22831e+07 n_event: 5.39829e+06[0m
+file 283 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_92.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2402
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.23698e+07 n_event: 5.41936e+06[0m
+file 284 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_93.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3033
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.24774e+07 n_event: 5.44562e+06[0m
+file 285 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_94.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 2457
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.25606e+07 n_event: 5.46597e+06[0m
+file 286 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_95.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3938
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.26991e+07 n_event: 5.49948e+06[0m
+file 287 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_96.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3872
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.28378e+07 n_event: 5.5332e+06[0m
+file 288 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_97.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3212
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.29524e+07 n_event: 5.56098e+06[0m
+file 289 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_98.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3288
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.30701e+07 n_event: 5.58948e+06[0m
+file 290 : /data/pku/home/pengj/testvbs/data/for_analysis/full_run2_2018_tight_for_analysis_WGJets_PDF_Weight_version6/201201_165108/0000/treePKU_99.root
+LUMI : 59.74
+btag value cut :  0.4184
+Number of events to be analyzed : 3056
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.31779e+07 n_event: 5.61549e+06[0m

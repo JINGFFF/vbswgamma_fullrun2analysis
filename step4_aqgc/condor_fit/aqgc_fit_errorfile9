@@ -1,0 +1,11 @@
+WARNING: In non-interactive mode release checks e.g. deprecated releases, production architectures are disabled.
+Warning in <TClass::Init>: no dictionary for class ROOT::TIOFeatures is available
+Info in <TCanvas::Print>: png file aqgc_fit_out/2018_electron_fT1_fit_WGbin_0.png has been created
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c1
+Info in <TCanvas::Print>: png file aqgc_fit_out/2018_electron_fT1_fit_WGbin_1.png has been created
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c1
+Info in <TCanvas::Print>: png file aqgc_fit_out/2018_electron_fT1_fit_WGbin_2.png has been created
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c1
+Info in <TCanvas::Print>: png file aqgc_fit_out/2018_electron_fT1_fit_WGbin_3.png has been created
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c1
+Info in <TCanvas::Print>: png file aqgc_fit_out/2018_electron_fT1_fit_WGbin_4.png has been created

@@ -1,0 +1,40 @@
+imax 1   number of channels
+jmax 1   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 11.19
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel
+process	WGJJ	WGJets
+process	0	1
+rate	3.99	5.11
+------------
+lumi	lnN	1.025	1.025	#lumi
+WGJJ_muon_all_stat_bin_3_2018	lnN	1.1121652556	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muon_all_stat_bin_3_2018	lnN	-	1.46649407752	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_muon_all_stat_bin_3_2018	lnN	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_muon_all_stat_bin_3_2018	lnN	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_muon_all_stat_bin_3_2018	lnN	-	-	-	-	1	-	-	-	-	-	-	-	-	-	-
+ST_tW_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	2.0	-	-	-	-	-	-	-	-	-
+ST_tbarW_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-
+TTG_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	-	-	1.44539977009	-	-	-	-	-	-	-
+WW_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	-	-	-	1	-	-	-	-	-	-
+WZ_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-
+ZZ_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-
+ZG_muon_all_stat_bin_3_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-
+photon_ID_2018	lnN	1.06	1.05	1.00	1.00	1.00	1.00	1.00	1.06	1.00	1.00	1.00	1.00	-	-	-
+electron_ID_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_Reco_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_HLT_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_ID_2018	lnN	1.01	1.01	1.00	1.00	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.00	-	-	-
+muon_iso_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT_2018	lnN	1.01	1.01	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+btag_2018	lnN	1.01	1.00	1.00	1.00	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.00	-	-	-
+JEC_2018	lnN	1.03	1.39	1.00	1.00	1.00	1.00	1.00	1.21	1.00	1.00	1.00	1.00	-	-	-
+JER_2018	lnN	1.07	1.35	1.00	1.00	1.00	1.00	1.00	1.20	1.00	1.00	1.00	1.00	-	-	-

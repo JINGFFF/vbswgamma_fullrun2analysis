@@ -1,0 +1,40 @@
+imax 1   number of channels
+jmax 14   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 3197.11
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	VBS	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+rate	12.13	1460.29	0.44	0.00	2.73	17.24	14.45	98.34	24.04	4.43	2.64	197.41	302.67	814.63	245.66
+------------
+lumi	lnN	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	1.025	-	-	-	#lumi
+WGJJ_electron_barrel_stat_bin_1_2018	lnN	1.06152985167	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_electron_barrel_stat_bin_1_2018	lnN	-	1.01478296544	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_electron_barrel_stat_bin_1_2018	lnN	-	-	1.26873226475	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_electron_barrel_stat_bin_1_2018	lnN	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	1.14574956462	-	-	-	-	-	-	-	-	-	-
+ST_tW_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	1.11176983889	-	-	-	-	-	-	-	-	-
+ST_tbarW_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	-	1.13672694975	-	-	-	-	-	-	-	-
+TTG_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	-	-	1.0592305226	-	-	-	-	-	-	-
+WW_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	-	-	-	1.1529369378	-	-	-	-	-	-
+WZ_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	-	-	-	-	1.30245840788	-	-	-	-	-
+ZZ_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	-	-	-	-	-	1.35375932149	-	-	-	-
+ZG_electron_barrel_stat_bin_1_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	1.0517930297	-	-	-
+photon_ID_2018	lnN	1.02	1.02	1.03	1.00	1.03	1.02	1.03	1.02	1.02	1.02	1.02	1.03	-	-	-
+electron_ID_2018	lnN	1.04	1.03	1.01	1.00	1.05	1.03	1.03	1.01	1.01	1.10	1.01	1.03	-	-	-
+electron_Reco_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_HLT_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_ID_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+btag_2018	lnN	1.00	1.00	1.04	1.00	1.02	1.02	1.02	1.02	1.00	1.01	1.00	1.00	-	-	-
+JEC_2018	lnN	1.05	1.07	1.10	1.00	1.08	1.08	1.07	1.02	1.08	1.09	1.13	1.06	-	-	-
+JER_2018	lnN	1.03	1.08	1.15	1.00	1.14	1.08	1.08	1.01	1.07	1.17	1.13	1.16	-	-	-
