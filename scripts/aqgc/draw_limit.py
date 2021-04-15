@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from ROOT import *
 from array import array
 import sys
