@@ -402,6 +402,8 @@ public :
    void set_cut_value(TString year = "2018");
    void hist_Sumw2();
    void hist_Scale();
+   //void fill_hist(double fill_Mjj, double fill_deltaeta, TH1D* hist, double weight);
+   //void creat_hist();
    void fill_hist(TString region, double fill_Mjj, double fill_deltaeta, TH1D* hist, double weight);
    void creat_hist(TString region );
 

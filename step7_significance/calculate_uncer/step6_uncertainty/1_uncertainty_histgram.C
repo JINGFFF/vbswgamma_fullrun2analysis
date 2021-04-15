@@ -1,5 +1,5 @@
 #include "plugin/test.h"
-#include "plugin/test_mla_pdf.C"
+#include "plugin/test.C"
 //#include "plugin/test_pdf_scale.C"
 #include <algorithm>
 #include <cmath>

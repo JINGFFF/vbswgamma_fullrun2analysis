@@ -1,4 +1,0 @@
-/home/pku/pengj/testvbs/data/for_analysis/2016_ST_tbarW_treePKU1.root
-#/home/pku/pengj/testvbs/data/for_analysis/2016_ST_tbarW_treePKU2.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_ST_tbarW_treePKU3.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_ST_tbarW_treePKU4.root

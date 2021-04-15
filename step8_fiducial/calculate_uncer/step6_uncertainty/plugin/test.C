@@ -40,6 +40,8 @@ int nxx = 0;
    vector<double> vector_photon,vector_jet,vector_muon,vector_ele;
    vector<double>::iterator biggest_photon,biggest_jet1,biggest_jet2,biggest_muon1,biggest_ele1;
 
+   TH1D *h_detajj = new TH1D("h_detajj","h_detajj", 50, 0, 10);
+
 void test::ResetValue(){
     genMla=-10;gen_Dphiwajj=-10;genWGmass=-10;
     genlep1pt=-10;genlep1eta=-10;genlep1phi=-10;
@@ -119,7 +121,7 @@ void test::fill_hist(TString region,double fill_Mjj, double fill_deltaeta, TH1D*
 
 TH1D * h_pdf[400];
 char th2name[400];
-void test::creat_hist( TString region){
+void test::creat_hist(TString region){
    bins.push_back(Bins);
    int i = 0;
    const int BINS_size = bins[i].size();
@@ -134,10 +136,16 @@ void test::creat_hist( TString region){
    if(region == "signal") {
    for(int j = 0; j<21; j++){
       h[j] = new TH1D("hist_"+uncertainty_hist_name[j],"hist_" +uncertainty_hist_name[j], 12, 0, 12);
+      h_in[j] = new TH1D("hist_in_"+uncertainty_hist_name[j],"hist_in_" +uncertainty_hist_name[j], 12, 0, 12);
+      h_out[j] = new TH1D("hist_out_"+uncertainty_hist_name[j],"hist_out_" +uncertainty_hist_name[j], 12, 0, 12);
+
    }
 
    for(int j2 = 0; j2<4; j2++){
       h_jecr[j2] = new TH1D("hist_"+uncertainty_jecr[j2],"hist_"+uncertainty_jecr[j2], 12, 0, 12);
+      h_in_jecr[j2] = new TH1D("hist_in_"+uncertainty_jecr[j2],"hist_in_"+uncertainty_jecr[j2], 12, 0, 12);
+      h_out_jecr[j2] = new TH1D("hist_out_"+uncertainty_jecr[j2],"hist_out_"+uncertainty_jecr[j2], 12, 0, 12);
+
    }
 
 
@@ -150,10 +158,15 @@ void test::creat_hist( TString region){
    if(region == "control") {
    for(int j = 0; j<21; j++){
       h[j] = new TH1D("hist_"+uncertainty_hist_name[j],"hist_" +uncertainty_hist_name[j], 3, 0, 3);
+      h_in[j] = new TH1D("hist_in_"+uncertainty_hist_name[j],"hist_in_" +uncertainty_hist_name[j], 3, 0, 3);
+      h_out[j] = new TH1D("hist_out_"+uncertainty_hist_name[j],"hist_out_" +uncertainty_hist_name[j], 3, 0, 3);
+
    }
 
    for(int j2 = 0; j2<4; j2++){
       h_jecr[j2] = new TH1D("hist_"+uncertainty_jecr[j2],"hist_"+uncertainty_jecr[j2], 3, 0, 3);
+      h_in_jecr[j2] = new TH1D("hist_in_"+uncertainty_jecr[j2],"hist_in_"+uncertainty_jecr[j2], 3, 0, 3);
+      h_out_jecr[j2] = new TH1D("hist_out_"+uncertainty_jecr[j2],"hist_out_"+uncertainty_jecr[j2], 3, 0, 3);
    }
 
 
@@ -186,7 +199,7 @@ void test::endJob() {
       for(int k2 = 0; k2<400; k2++){
          h_pdf[k2]->Write();
       }
-
+h_detajj->Write();
    fout->Close();
    delete fout;
 }
@@ -222,7 +235,9 @@ void test::hist_Scale()
    if(m_type == "mc"){
          for(int j = 0; j<21; j++){
             h[j]->Scale(1/(p_event - n_event));
+
             h_in[j]->Scale(1/(p_event - n_event));
+
             h_out[j]->Scale(1/(p_event - n_event));
 
          }
@@ -893,7 +908,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
    cout << "Number of events to be analyzed : " << maxEntries << std::endl;
    while (fReader.Next()) {
 
-      if (jentry % 1000 == 0){ 
+      if (jentry % 10000 == 0){ 
          int ks = floor(50.*jentry/maxEntries);
          string s1(ks,'>');
          string s2(50-ks,'-');
@@ -907,7 +922,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
 
       //if (!(*hasphoton) == 1) continue;
       // apply selection
-      if(m_type == "data" || m_type == "mc" || m_type == "fakelepton"){
+      if(m_sample == "data" || m_type == "mc" || m_sample == "fakelepton"){
          fill_Mjj                 = (*Mjj_new);
          fill_Mjj_JEC_up          = (*Mjj_JEC_up);
          fill_Mjj_JEC_down        = (*Mjj_JEC_down);
@@ -1133,7 +1148,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
 
       }
 
-      else if(m_type == "fakephoton" || m_type == "doublefake"){
+      else if(m_sample == "fakephoton" || m_sample == "doublefake"){
          fill_Mjj                 = (*Mjj_new_f);
          fill_Mjj_JEC_up          = (*Mjj_JEC_up_f);
          fill_Mjj_JEC_down        = (*Mjj_JEC_down_f);
@@ -1368,6 +1383,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
       }
 
       int jet_index[2];
+      int jet1index, jet2index;
       ResetValue();
       int pho1_index=0,jet1_index=0,muon1_index=0,ele1_index=0;
       TLorentzVector for_gen_lep1p4;
@@ -1480,6 +1496,8 @@ void test::Loop(TDirectory * dir, TTree * tree)
                }
             }
          }
+jet1index = jetindexphoton12[0];
+jet2index = jetindexphoton12[1];
 
          jet_index[0] = jetindexphoton12[0];
          jet_index[1] = jetindexphoton12[1];
@@ -1526,15 +1544,17 @@ void test::Loop(TDirectory * dir, TTree * tree)
       vector_jet.clear();
       vector_muon.clear();
       vector_ele.clear();
+//cout<<jet_index[0]<< " "<<jet_index[1]<<endl;
+//if(jet1index ==0 && jet2index ==1) {
+//cout<<"pass"<<endl;
+h_detajj->Fill(gendetajj);
+//}
 
-
-      if(m_channel == "muon" &&  !(fill_HLT_muon==1 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1)) continue;
-      if(m_channel == "electron" && !(fill_HLT_electron==1 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1)) continue;
-      if(m_channel == "all" && !((fill_HLT_electron==1 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1)||(fill_HLT_muon==1 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1))) continue;
-
-	  //if(!())
       //if(fabs(fill_jet1eta)>2.65 && fabs(fill_jet1eta)<3.17) continue;
       //if(fabs(fill_jet2eta)>2.65 && fabs(fill_jet2eta)<3.17) continue;
+      //if(m_channel == "muon" &&  !(fill_HLT_muon==1 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1)) continue;
+      //if(m_channel == "electron" && !(fill_HLT_electron==1 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1)) continue;
+      //if(m_channel == "all" && !((fill_HLT_electron==1 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1)||(fill_HLT_muon==1 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1))) continue;
 
       // signal region cuts
       muon_cut_signal_region = pass_signal_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
@@ -1686,45 +1706,6 @@ void test::Loop(TDirectory * dir, TTree * tree)
          double JET2DEEPCSV      = (*jet2deepcsv_probb_new) + (*jet2deepcsv_probbb_new);
 
          //test
-         btag_jet1_SF     = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet1_up_SF  = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet1_low_SF = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet1_SF_JEC_up     = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet1_up_SF_JEC_up  = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet1_low_SF_JEC_up = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet1_SF_JEC_down     = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet1_up_SF_JEC_down  = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet1_low_SF_JEC_down = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet1_SF_JER_up     = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet1_up_SF_JER_up  = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet1_low_SF_JER_up = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet1_SF_JER_down     = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet1_up_SF_JER_down  = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet1_low_SF_JER_down = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet2_SF     = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet2_up_SF  = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet2_low_SF = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet2_SF_JEC_up     = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet2_up_SF_JEC_up  = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet2_low_SF_JEC_up = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet2_SF_JEC_down     = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet2_up_SF_JEC_down  = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet2_low_SF_JEC_down = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet2_SF_JER_up     = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet2_up_SF_JER_up  = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet2_low_SF_JER_up = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "low");
-
-         btag_jet2_SF_JER_down     = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet2_up_SF_JER_down  = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet2_low_SF_JER_down = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "low");
 
       } //add scalef for mc
 
@@ -1836,7 +1817,11 @@ void test::Loop(TDirectory * dir, TTree * tree)
          }
          else continue;
       }
-if(cut_gen) nxx  = nxx +1;
+//cout<<gen_electron_cut_signal_region<<gen_muon_cut_signal_region<<cut_gen<<endl;
+//if(cut_gen) {
+//nxx  = nxx +1;
+//cout<<nxx<<endl;
+//}
 //cout<<fill_Mva<<fill_Mva_JEC_up<<endl;
       // fill histogram
       weight = 1; weight_jec_up = 1; weight_jec_down = 1; weight_jer_up = 1; weight_jer_down = 1;
@@ -1864,13 +1849,13 @@ if(cut_gen) nxx  = nxx +1;
       if(m_bORe == "endcap") { pho_eta_low = 1.566; pho_eta_high = 2.5; }
       if (fabs(fill_photonsceta) < pho_eta_high && fabs(fill_photonsceta) > pho_eta_low){
 
-         if(m_type == "data") {
+         if(m_sample == "data") {
             weight = 1; 
          }
-         else if(m_type == "fakelepton") { 
+         else if(m_sample == "fakelepton") { 
             weight = fake_lepton_weight; weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
          }
-         else if(m_type == "fakephoton") { 
+         else if(m_sample == "fakephoton") { 
             if (m_bORe == "barrel"){
                weight = barrel_fake_photon_weight;
                weight_fakephoton_up = barrel_fake_photon_weight;
@@ -1882,7 +1867,7 @@ if(cut_gen) nxx  = nxx +1;
                weight_fakephoton_down = endcap_fake_photon_weight;
             }
          }
-         else if(m_type == "doublefake") { 
+         else if(m_sample == "doublefake") { 
             if (m_bORe == "barrel") weight = fake_lepton_weight * barrel_fake_photon_weight;;
             if (m_bORe == "endcap") weight = fake_lepton_weight * endcap_fake_photon_weight;
 
@@ -1928,33 +1913,21 @@ if(cut_gen) nxx  = nxx +1;
             double fill_var_jecr[4] = {fill_Mva_JEC_up, fill_Mva_JEC_down, fill_Mva_JER_up, fill_Mva_JER_down};
             double fill_weight[21] = {weight, weight_L1_up, weight_L1_down, weight_photon_ID_up, weight_photon_ID_down, weight_electron_ID_up, weight_electron_ID_down, weight_electron_Reco_up, weight_electron_Reco_down, weight_electron_HLT_up, weight_electron_HLT_down, weight_muon_ID_up, weight_muon_ID_down, weight_muon_iso_up, weight_muon_iso_down, weight_muon_HLT_up, weight_muon_HLT_down, weight_fakephoton_up, weight_fakephoton_down, weight_btag_up, weight_btag_down};
             double fill_weight_jecr[4] = { weight_jec_up, weight_jec_down, weight_jer_up, weight_jer_down};
-            if(cut1){ 
-//cout<<jentry<<" genjet_pt list:  "<<genjet_pt[0]<<" "<<genjet_pt[1]<<" "<<genjet_pt[2]<<" "<<genjet_pt[3]<<" "<<genjet_pt[4]<<" "<<genjet_pt[5]<<endl;
-//cout<<jentry<<" genjet_eta list: "<<genjet_eta[0]<<" "<<genjet_eta[1]<<" "<<genjet_eta[2]<<" "<<genjet_eta[3]<<" "<<genjet_eta[4]<<" "<<genjet_eta[5]<<endl;
-                  //cout<<jentry<<" eta: "<<genjet1eta<< " "<<genjet2eta << " "<<fill_jet1eta<<" "<<fill_jet2eta<<endl;
-                  //cout<<jentry<<" pt: "<<genjet1pt<< " "<<genjet2pt << " "<<fill_jet1pt<<" "<<fill_jet2pt<<endl;
+            if(cut1){
                for(int k2 = 0; k2<400; k2++){
                   fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
                }
 
-
                for(int j = 0; j<21; j++){
                   fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
-//cout<<jentry<<" genjet_pt list:  "<<genjet_pt[0]<<" "<<genjet_pt[1]<<" "<<genjet_pt[2]<<" "<<genjet_pt[3]<<" "<<genjet_pt[4]<<" "<<genjet_pt[5]<<endl;
-//cout<<jentry<<" genjet_eta list: "<<genjet_eta[0]<<" "<<genjet_eta[1]<<" "<<genjet_eta[2]<<" "<<genjet_eta[3]<<" "<<genjet_eta[4]<<" "<<genjet_eta[5]<<endl;
-//                  cout<<jentry<<" eta: "<<genjet1eta<< " "<<genjet2eta << " "<<fill_jet1eta<<" "<<fill_jet2eta<<endl;
-//                  cout<<jentry<<" pt: "<<genjet1pt<< " "<<genjet2pt << " "<<fill_jet1pt<<" "<<fill_jet2pt<<endl;
-
-                 if (cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_in[j], fill_weight[j]);
+                  if (cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_in[j], fill_weight[j]);
                   if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
-
                }
             }
             if (cut2) {
                fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
                if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_in_jecr[0], fill_weight_jecr[0]);
                if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
-
             }
             if (cut3) {
                fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
