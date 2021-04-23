@@ -1,7 +1,4 @@
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_B.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_C.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_D.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_E.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_F.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_G.root
-/home/pku/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_H.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_A.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_B.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_C.root
+/home/pku/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_D.root
