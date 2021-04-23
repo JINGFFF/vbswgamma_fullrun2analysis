@@ -37,8 +37,8 @@ for i in range(0, len(lines)):
     outfile.write('cd ../..'+'\n')
     outfile.write('cp -r ' + dir1 + '/scalef .'+'\n')
     #outfile.write('cp -r ' + dir1 + '/make_hist_control .'+'\n')
-    outfile.write('cp -r ' + dir1 + '/make_hist .'+'\n')
-    outfile.write('cp -r ' + dir1 + '/filelist_dir2 .'+'\n')
+    outfile.write('cp -r ' + dir1 + '/make_hist* .'+'\n')
+    outfile.write('cp -r ' + dir1 + '/filelist_dir* .'+'\n')
     outfile.write(x[0]+'\n')
     outfile.write('cp -r $1 ' + dir1 + '/'+condor_out_dir+'\n')
 

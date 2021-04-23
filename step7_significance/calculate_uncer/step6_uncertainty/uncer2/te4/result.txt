@@ -1,0 +1,10 @@
+ <<< Combine >>> 
+>>> including systematics
+>>> method used is Significance
+>>> random number generator seed is 123456
+RooArgSet:: = ()
+Computing results starting from expected outcome (a-priori)
+
+ -- Significance -- 
+Significance: 5.2288
+Done in 0.08 min (cpu), 0.08 min (real)

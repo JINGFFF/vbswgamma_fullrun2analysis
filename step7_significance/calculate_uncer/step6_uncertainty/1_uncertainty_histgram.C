@@ -1,6 +1,6 @@
 #include "plugin/test.h"
-#include "plugin/test.C"
-//#include "plugin/test_pdf_scale.C"
+//#include "plugin/test.C"
+#include "plugin/test_pujet.C"
 #include <algorithm>
 #include <cmath>
 #include <ctime>
@@ -42,6 +42,7 @@ int main(int argc, char** argv){
    TString barrel_or_endcap = argv[7]; // barrel or endcap
    TString which_sample = argv[8]; // SingleMuon, ...
    TString which_btag_workpoint = argv[9]; // tight, medium, loose ...
+   TString which_pujet_workpoint = argv[10]; // T, M, L
 
    ifstream infile(filetxt);
    string buffer;
@@ -50,7 +51,7 @@ int main(int argc, char** argv){
    int k=1;
    int n = 0;
    
-   TString outname= outdir + "/" + which_year + "_" + which_channel + "_" + which_type + "_" + which_region +"_"+barrel_or_endcap+ "_" +  which_btag_workpoint + "_btag_" + which_sample + "_uncertainty.root";
+   TString outname= outdir + "/" + which_year + "_" + which_channel + "_" + which_type + "_" + which_region +"_"+barrel_or_endcap+ "_" + which_sample + ".root";
 
    cout<<"\033[34myear             : "<<which_year<<"\033[0m"<<endl;
    cout<<"\033[34mregion           : "<<which_region<<" region"<<"\033[0m"<<endl;
@@ -60,6 +61,7 @@ int main(int argc, char** argv){
    cout<<"\033[34mtype             : "<<which_type<<"\033[0m"<<endl;
    cout<<"\033[34msample           : "<<which_sample<<"\033[0m"<<endl;
    cout<<"\033[34mbtag workpoint   : "<<which_btag_workpoint<<"\033[0m"<<endl;
+   cout<<"\033[34mpujet workpoint   : "<<which_pujet_workpoint<<"\033[0m"<<endl;
 
    cout<<"\033[34minput file list  : "<<filetxt<<"\033[0m"<<endl;
    cout<<"\033[34moutput file      : "<<outname<<"\033[0m"<<endl<<endl;
@@ -76,6 +78,8 @@ int main(int argc, char** argv){
    m.m_bORe = barrel_or_endcap;
 
    m.m_btag_workpoint = which_btag_workpoint;
+   m.m_pujet_workpoint = which_pujet_workpoint;
+
    m.Init();
    m.read_csv_info();
    m.creat_hist(which_region);

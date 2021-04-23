@@ -45,6 +45,7 @@ public :
    TString m_region;
    TString m_bORe;
    TString m_btag_workpoint;
+   TString m_pujet_workpoint;
 
    // fake lepton weight
    TFile * file_fake_muon_weight;
@@ -93,6 +94,28 @@ public :
    TFile * electron_HLT_weight_input;
    TH2D* h_electron_HLT_weight;
 
+
+   TFile*filexx;
+   TH2F*h2_eff_mc2017_L;
+   TH2F*h2_eff_mc2017_M;
+   TH2F*h2_eff_mc2017_T;
+   TH2F*h2_mistag_mc2017_L;
+   TH2F*h2_mistag_mc2017_M;
+   TH2F*h2_mistag_mc2017_T;
+
+   TFile*filexxx;
+   TH2F*h2_eff_sf2017_L;
+   TH2F*h2_eff_sf2017_M;
+   TH2F*h2_eff_sf2017_T;
+   TH2F*h2_mistag_sf2017_L;
+   TH2F*h2_mistag_sf2017_M;
+   TH2F*h2_mistag_sf2017_T;
+   TH2F*h2_eff_sf2017_L_Systuncty;
+   TH2F*h2_eff_sf2017_M_Systuncty;
+   TH2F*h2_eff_sf2017_T_Systuncty;
+   TH2F*h2_mistag_sf2017_L_Systuncty;
+   TH2F*h2_mistag_sf2017_M_Systuncty;
+   TH2F*h2_mistag_sf2017_T_Systuncty;
    // value to fill histogram or use for cut
    double fill_Mjj;
    double fill_Mjj_JEC_up;
@@ -256,6 +279,30 @@ public :
    double fill_Mva_JEC_down;
    double fill_Mva_JER_up;
    double fill_Mva_JER_down;
+
+   double fill_jet1phi;
+   double fill_jet1phi_JEC_up;
+   double fill_jet1phi_JEC_down;
+   double fill_jet1phi_JER_up;
+   double fill_jet1phi_JER_down;
+   double fill_jet2phi;
+   double fill_jet2phi_JEC_up;
+   double fill_jet2phi_JEC_down;
+   double fill_jet2phi_JER_up;
+   double fill_jet2phi_JER_down;
+   double fill_genjet_eta[6], fill_genjet_phi[6];
+
+   double fill_jet1puId;
+   double fill_jet1puId_JEC_up;
+   double fill_jet1puId_JEC_down;
+   double fill_jet1puId_JER_up;
+   double fill_jet1puId_JER_down;
+
+   double fill_jet2puId;
+   double fill_jet2puId_JEC_up;
+   double fill_jet2puId_JEC_down;
+   double fill_jet2puId_JER_up;
+   double fill_jet2puId_JER_down;
 
    // cut for muon and electron channel
    Bool_t muon_cut, electron_cut, cut;
@@ -517,6 +564,16 @@ void test::Init()
    // electron HLT weight
    electron_HLT_weight_input = new TFile ("./scalef/electron/2018_egamma_hlt_sf.root");
    h_electron_HLT_weight = (TH2D*)electron_HLT_weight_input->Get("EGamma_SF2D");
+
+   filexx=new TFile("./scalef/pujetID/PUIDMaps.root");
+   h2_eff_mc2017_T=(TH2F*)filexx->Get("h2_eff_mc"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_mc2017_T=(TH2F*)filexx->Get("h2_mistag_mc"+m_year+"_"+m_pujet_workpoint);
+
+   filexxx=new TFile("./scalef/pujetID/scalefactorsPUID_81Xtraining.root");
+   h2_eff_sf2017_T=(TH2F*)filexx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_sf2017_T=(TH2F*)filexx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_eff_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
+   h2_mistag_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
 
 //cout<<"ok1"<<endl;
    //int num = 148;

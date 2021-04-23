@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/calculate_uncer/step6_uncertainty/sig_out1/significance_89_condor.sh
+arguments    = test_sig6
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/calculate_uncer/step6_uncertainty/sig_out1/significance_outputfile89
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/calculate_uncer/step6_uncertainty/sig_out1/significance_errorfile89
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/calculate_uncer/step6_uncertainty/sig_out1/significance_myexe89.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

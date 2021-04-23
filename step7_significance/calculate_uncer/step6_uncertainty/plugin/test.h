@@ -31,6 +31,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "btag_eff.C"
 using namespace std;
 
 // Header file for the classes stored in the TTree if any.
@@ -45,6 +46,8 @@ public :
    TString m_region;
    TString m_bORe;
    TString m_btag_workpoint;
+   TString m_pujet_workpoint;
+
 
    // fake lepton weight
    TFile * file_fake_muon_weight;
@@ -63,6 +66,12 @@ public :
    // pile up weight
    TFile * pu_weight_input;
    TH1D* h_pu_weight;
+
+   TFile * pu_weight_up_input;
+   TH1D* h_pu_weight_up;
+
+   TFile * pu_weight_down_input;
+   TH1D* h_pu_weight_down;
 
    // photon medium ID weight
    TFile * photon_ID_weight_input;
@@ -92,6 +101,28 @@ public :
    // electron HLT scale
    TFile * electron_HLT_weight_input;
    TH2D* h_electron_HLT_weight;
+
+   TFile*filexx;
+   TH2F*h2_eff_mc2017_L;
+   TH2F*h2_eff_mc2017_M;
+   TH2F*h2_eff_mc2017_T;
+   TH2F*h2_mistag_mc2017_L;
+   TH2F*h2_mistag_mc2017_M;
+   TH2F*h2_mistag_mc2017_T;
+
+   TFile*filexxx;
+   TH2F*h2_eff_sf2017_L;
+   TH2F*h2_eff_sf2017_M;
+   TH2F*h2_eff_sf2017_T;
+   TH2F*h2_mistag_sf2017_L;
+   TH2F*h2_mistag_sf2017_M;
+   TH2F*h2_mistag_sf2017_T;
+   TH2F*h2_eff_sf2017_L_Systuncty;
+   TH2F*h2_eff_sf2017_M_Systuncty;
+   TH2F*h2_eff_sf2017_T_Systuncty;
+   TH2F*h2_mistag_sf2017_L_Systuncty;
+   TH2F*h2_mistag_sf2017_M_Systuncty;
+   TH2F*h2_mistag_sf2017_T_Systuncty;
    // value to fill histogram or use for cut
    double fill_Mjj;
    double fill_Mjj_JEC_up;
@@ -256,6 +287,29 @@ public :
    double fill_Mva_JER_up;
    double fill_Mva_JER_down;
 
+   double fill_jet1phi;
+   double fill_jet1phi_JEC_up;
+   double fill_jet1phi_JEC_down;
+   double fill_jet1phi_JER_up;
+   double fill_jet1phi_JER_down;
+   double fill_jet2phi;
+   double fill_jet2phi_JEC_up;
+   double fill_jet2phi_JEC_down;
+   double fill_jet2phi_JER_up;
+   double fill_jet2phi_JER_down;
+   double fill_genjet_eta[6], fill_genjet_phi[6];
+
+   double fill_jet1puId;
+   double fill_jet1puId_JEC_up;
+   double fill_jet1puId_JEC_down;
+   double fill_jet1puId_JER_up;
+   double fill_jet1puId_JER_down;
+
+   double fill_jet2puId;
+   double fill_jet2puId_JEC_up;
+   double fill_jet2puId_JEC_down;
+   double fill_jet2puId_JER_up;
+   double fill_jet2puId_JER_down;
    // cut for muon and electron channel
    Bool_t muon_cut, electron_cut, cut;
    Bool_t gen_muon_cut_signal_region, gen_muon_cut_control_region, gen_electron_cut_signal_region, gen_electron_cut_control_region, gen_muon_cut_aqgc_region, gen_electron_cut_aqgc_region;
@@ -325,8 +379,46 @@ public :
    Double_t        btag_jet2_up_SF_JER_down;
    Double_t        btag_jet2_low_SF_JER_down;
 
+   double pu_jet1_SF;
+   double pu_jet1_up_SF;
+   double pu_jet1_down_SF;
+
+   double pu_jet1_JEC_up_SF;
+   double pu_jet1_JEC_down_SF;
+   double pu_jet1_JER_up_SF;
+   double pu_jet1_JER_down_SF;
+
+   double pu_jet2_SF;
+   double pu_jet2_up_SF;
+   double pu_jet2_down_SF;
+
+   double pu_jet2_JEC_up_SF;
+   double pu_jet2_JEC_down_SF;
+   double pu_jet2_JER_up_SF;
+   double pu_jet2_JER_down_SF;
+
+   double pu_jet1_mistag_SF;
+   double pu_jet1_mistag_up_SF;
+   double pu_jet1_mistag_down_SF;
+
+   double pu_jet1_mistag_JEC_up_SF;
+   double pu_jet1_mistag_JEC_down_SF;
+   double pu_jet1_mistag_JER_up_SF;
+   double pu_jet1_mistag_JER_down_SF;
+
+   double pu_jet2_mistag_SF;
+   double pu_jet2_mistag_up_SF;
+   double pu_jet2_mistag_down_SF;
+
+   double pu_jet2_mistag_JEC_up_SF;
+   double pu_jet2_mistag_JEC_down_SF;
+   double pu_jet2_mistag_JER_up_SF;
+   double pu_jet2_mistag_JER_down_SF;
 
    Double_t        pu_weight_SF;
+   Double_t        pu_weight_up_SF;
+   Double_t        pu_weight_down_SF;
+
    Double_t        cross_section_SF;
 
    Double_t        p_event = 0, n_event = 0;
@@ -355,7 +447,7 @@ public :
    TString fuction_l_jet_tight[3];
    TString fuction_l_jet_medium[3];
    TString fuction_l_jet_loose[3];
-
+/*
    Double_t eff_b_jet_tight[10]  =  {0.375338, 0.493779, 0.553314, 0.575056, 0.579706, 0.563553, 0.491523, 0.327807, 0.105522, 0.0292929};
    Double_t eff_b_jet_medium[10] = {0.565127, 0.663282, 0.714194, 0.737916, 0.750325, 0.745599, 0.701239, 0.590619, 0.390365, 0.216667};
    Double_t eff_b_jet_loose[10] =  {0.753404, 0.813243, 0.850107, 0.87129, 0.88806, 0.89424, 0.881965, 0.846197, 0.798682, 0.70404};
@@ -365,7 +457,7 @@ public :
    Double_t eff_l_jet_tight[10]  =  {0.00115722, 0.000821689, 0.000900955, 0.00110315, 0.0014241, 0.00181297, 0.0020553, 0.00198708, 0.000801618, 0};
    Double_t eff_l_jet_medium[10] = {0.00904002, 0.00806116, 0.00810405, 0.00924306, 0.0113922, 0.0137251, 0.0159489, 0.0189461, 0.0130992, 0.004265};
    Double_t eff_l_jet_loose[10] =  {0.125149, 0.0924003, 0.0847756, 0.0946918, 0.113998, 0.134914, 0.15921, 0.19733, 0.229773, 0.206426};
-
+*/
    /// define histogram for fake lepton
 
    /// define histogram for fake photon
@@ -485,6 +577,10 @@ void test::Init()
    // pile up weight
    pu_weight_input = new TFile ("./scalef/puweight_2018.root");
    h_pu_weight = (TH1D*)pu_weight_input->Get("h2");
+   pu_weight_up_input = new TFile ("./scalef/puweight_up_2018.root");
+   h_pu_weight_up = (TH1D*)pu_weight_up_input->Get("h2");
+   pu_weight_down_input = new TFile ("./scalef/puweight_down_2018.root");
+   h_pu_weight_down = (TH1D*)pu_weight_down_input->Get("h2");
 
    // photon medium ID weight
    photon_ID_weight_input = new TFile ("./scalef/photon/2018_PhotonsMedium.root");
@@ -515,6 +611,16 @@ void test::Init()
    electron_HLT_weight_input = new TFile ("./scalef/electron/2018_egamma_hlt_sf.root");
    h_electron_HLT_weight = (TH2D*)electron_HLT_weight_input->Get("EGamma_SF2D");
 
+   //pujet ID
+   filexx=new TFile("./scalef/pujetID/PUIDMaps.root");
+   h2_eff_mc2017_T=(TH2F*)filexx->Get("h2_eff_mc"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_mc2017_T=(TH2F*)filexx->Get("h2_mistag_mc"+m_year+"_"+m_pujet_workpoint);
+
+   filexxx=new TFile("./scalef/pujetID/scalefactorsPUID_81Xtraining.root");
+   h2_eff_sf2017_T=(TH2F*)filexx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_sf2017_T=(TH2F*)filexx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_eff_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
+   h2_mistag_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
 
 //cout<<"ok1"<<endl;
    //int num = 148;
@@ -816,6 +922,9 @@ void test::init_sf()
       btag_jet2_low_SF = 1;
 
       pu_weight_SF = 1;
+      pu_weight_up_SF = 1;
+      pu_weight_down_SF = 1;
+
       cross_section_SF = 1;
 }
 

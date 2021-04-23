@@ -32,9 +32,9 @@ region    = sys.argv[5]
 eORb      = sys.argv[6]
 shape     = sys.argv[7]
 
-f_in_WGJJ_m_b   = TFile.Open(inputdir + "/" + year + "_" + channel + "_mc_" + region + "_" + eORb + "_medium_btag_WGJJ_uncertainty.root")
+f_in_WGJJ_m_b   = TFile.Open(inputdir + "/" + year + "_" + channel + "_mc_" + region + "_" + eORb + "_WGJJ.root")
 
-f_in_WGJets_m_b = TFile.Open(inputdir + "/" + year + "_" + channel + "_mc_" + region + "_" + eORb + "_medium_btag_WGJets_uncertainty.root")
+f_in_WGJets_m_b = TFile.Open(inputdir + "/" + year + "_" + channel + "_mc_" + region + "_" + eORb + "_WGJets.root")
 
 #ll = [1, 2, 3, 4]
 def scale(f, center_index, index2, index3):
@@ -90,7 +90,7 @@ ll_wgjets_muRmuF = scale(f_in_WGJets_m_b, 1, 5, 9)
 #print(ll_wgjets_m_b)
 #print(ll_wgjets_m_e)
 #print(ll_wgjets_e_b)
-print(ll_wgjj_pdf)
+#print(ll_wgjj_pdf)
 
 os.system("mkdir -p " + outputdir)
 outPYfile = open(outputdir + "/uncer_pdf_" + region + "_" + channel + "_" + eORb + ".py", 'w')

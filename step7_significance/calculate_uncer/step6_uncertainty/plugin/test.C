@@ -798,6 +798,11 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderValue<Double_t>    lumiWeight  = {fReader, "lumiWeight"};
    TTreeReaderValue<Double_t>    pileupWeight  = {fReader, "pileupWeight"};
    TTreeReaderValue<Bool_t>    _passecalBadCalibFilterUpdate  = {fReader, "_passecalBadCalibFilterUpdate"};
+   TTreeReaderArray<Double_t>    genjet_pt  = {fReader, "genjet_pt"};
+   TTreeReaderArray<Double_t>    genjet_eta  = {fReader, "genjet_eta"};
+   TTreeReaderArray<Double_t>    genjet_phi  = {fReader, "genjet_phi"};
+   TTreeReaderArray<Double_t>    genjet_e  = {fReader, "genjet_e"};
+
 //   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
 
   // TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
@@ -824,6 +829,12 @@ void test::Loop(TDirectory * dir, TTree * tree)
          if(!(*ispromptLep == 1 && *isprompt == 2)) continue;
       }
       // apply selection
+      for (int iii = 0; iii<6; iii++){
+         fill_genjet_eta[iii] = genjet_eta[iii];
+         fill_genjet_phi[iii] = genjet_phi[iii];
+
+      }
+
       if(m_sample == "data" || m_type == "mc" || m_sample == "fakelepton"){
          fill_Mjj                 = (*Mjj_new);
          fill_Mjj_JEC_up          = (*Mjj_JEC_up);
@@ -859,6 +870,19 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_jet2eta_JER_up      = (*jet2eta_JER_up);
          fill_jet2pt_JER_down     = (*jet2pt_JER_down);
          fill_jet2eta_JER_down    = (*jet2eta_JER_down);
+
+
+         fill_jet1phi             = (*jet1phi_new);
+         fill_jet1phi_JEC_up      = (*jet1phi_JEC_up);
+         fill_jet1phi_JEC_down    = (*jet1phi_JEC_down);
+         fill_jet1phi_JER_up      = (*jet1phi_JER_up);
+         fill_jet1phi_JER_down    = (*jet1phi_JER_down);
+
+         fill_jet2phi             = (*jet2phi_new);
+         fill_jet2phi_JEC_up      = (*jet2phi_JEC_up);
+         fill_jet2phi_JEC_down    = (*jet2phi_JEC_down);
+         fill_jet2phi_JER_up      = (*jet2phi_JER_up);
+         fill_jet2phi_JER_down    = (*jet2phi_JER_down);
 
          fill_jet2pf              = (*jet2pf_new);
          fill_jet2pf_JEC_up       = (*jet2pf_JEC_up);
@@ -1086,6 +1110,18 @@ photonp42.Delete();
          fill_jet2eta_JER_up      = (*jet2eta_JER_up_f);
          fill_jet2pt_JER_down     = (*jet2pt_JER_down_f);
          fill_jet2eta_JER_down    = (*jet2eta_JER_down_f);
+
+         fill_jet1phi             = (*jet1phi_new);
+         fill_jet1phi_JEC_up      = (*jet1phi_JEC_up);
+         fill_jet1phi_JEC_down    = (*jet1phi_JEC_down);
+         fill_jet1phi_JER_up      = (*jet1phi_JER_up);
+         fill_jet1phi_JER_down    = (*jet1phi_JER_down);
+
+         fill_jet2phi             = (*jet2phi_new);
+         fill_jet2phi_JEC_up      = (*jet2phi_JEC_up);
+         fill_jet2phi_JEC_down    = (*jet2phi_JEC_down);
+         fill_jet2phi_JER_up      = (*jet2phi_JER_up);
+         fill_jet2phi_JER_down    = (*jet2phi_JER_down);
 
          fill_jet2pf              = (*jet2pf_new_f);
          fill_jet2pf_JEC_up       = (*jet2pf_JEC_up_f);
