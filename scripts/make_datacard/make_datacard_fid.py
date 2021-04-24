@@ -5,6 +5,7 @@ import re
 #from uncertainty_unfold import *
 import ROOT
 from ROOT import gROOT, THStack, TH1D, TList, TFile, TH2D
+sys.path.append(os.path.abspath('.'))
 
 indir = sys.argv[1]
 outdir = sys.argv[2]
@@ -46,60 +47,58 @@ if region  == 'control':
 #print(ST_s_photon_ID[(i-1)*3 + j - 1])
 print ('-----begin to transfer TH2D to txt for Higgs-combine tool----- \n')
 histname = 'ptlep'
-f_in_WGJJ = TFile.Open(indir + "/"+year+"_"+channel+"_mc_" + region + "_" + bORe + "_medium_btag_WGJJ_uncertainty.root")
+f_in_WGJJ = TFile.Open(indir + "/"+year+"_"+channel+"_mc_" + region + "_" + bORe + "_WGJJ.root")
 VBS_in = f_in_WGJJ.Get("hist_in_")
 VBS_in.Scale(59.74)
 VBS_out = f_in_WGJJ.Get("hist_out_")
 VBS_out.Scale(59.74)
 
 
-f_in_ST_s = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_ST_s_uncertainty.root")
+f_in_ST_s = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_ST_s.root")
 #ST_s     =ROOT.TH2D()
 #f_in_ST_s.GetObject("hist_2D_Mjj_detajj",ST_s)
 ST_s = f_in_ST_s.Get("hist_")
 #ST_s.Scale(2)
-f_in_ST_t = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_ST_t_uncertainty.root")
+f_in_ST_t = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_ST_t.root")
 ST_t = f_in_ST_t.Get("hist_")
 
-f_in_ST_tbar = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_ST_tbar_uncertainty.root")
+f_in_ST_tbar = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_ST_tbar.root")
 ST_tbar = f_in_ST_tbar.Get("hist_")
 
-f_in_ST_tW = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_ST_tW_uncertainty.root")
+f_in_ST_tW = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_ST_tW.root")
 ST_tW = f_in_ST_tW.Get("hist_")
 
-f_in_ST_tbarW = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_ST_tbarW_uncertainty.root")
+f_in_ST_tbarW = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_ST_tbarW.root")
 ST_tbarW = f_in_ST_tbarW.Get("hist_")
 
-f_in_TTG = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_TTG_uncertainty.root")
+f_in_TTG = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_TTG.root")
 TTG = f_in_TTG.Get("hist_")
 
-f_in_WGJets = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_WGJets_uncertainty.root")
+f_in_WGJets = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_WGJets.root")
 WGJets = f_in_WGJets.Get("hist_")
 
-f_in_WW = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_WW_uncertainty.root")
+f_in_WW = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_WW.root")
 WW = f_in_WW.Get("hist_")
 
-f_in_WZ = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_WZ_uncertainty.root")
+f_in_WZ = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_WZ.root")
 WZ = f_in_WZ.Get("hist_")
 
-f_in_ZZ = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_medium_btag_ZZ_uncertainty.root")
+f_in_ZZ = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_" +bORe + "_ZZ.root")
 ZZ = f_in_ZZ.Get("hist_")
 
-f_in_ZG = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_"+ bORe+ "_medium_btag_ZG_uncertainty.root")
+f_in_ZG = TFile.Open(indir + "/scaled_"+year+"_"+channel+"_mc_" + region + "_"+ bORe+ "_ZG.root")
 ZG = f_in_ZG.Get("hist_")
 
-#f_in_data = TFile.Open(indir + "/"+year+"_"+channel+"_data_"+ region + "_" + +bORe + "_medium_btag_"+channel_name+"_uncertainty.root")
-#f_in_data = TFile.Open(indir + "/2016_muon_data_signal_barrel_medium_btag_SingleMuon_uncertainty.root")
-f_in_data = TFile.Open(indir + "/"+year+"_"+channel+"_data_" + region + "_" + bORe + "_medium_btag_"+channel_name+"_uncertainty.root")
+f_in_data = TFile.Open(indir + "/"+year+"_"+channel+"_data_" + region + "_" + bORe + "_data.root")
 data = f_in_data.Get("hist_")
 
-f_in_doublefake = TFile.Open(indir + "/"+year+"_"+channel+"_doublefake_" + region + "_" + bORe + "_medium_btag_"+channel_name+"_uncertainty.root")
+f_in_doublefake = TFile.Open(indir + "/"+year+"_"+channel+"_data_" + region + "_" + bORe + "_doublefake.root")
 doublefake = f_in_doublefake.Get("hist_")
 
-f_in_fakephoton = TFile.Open(indir + "/"+year+"_"+channel+"_fakephoton_" + region + "_" + bORe + "_medium_btag_"+channel_name+"_uncertainty.root")
+f_in_fakephoton = TFile.Open(indir + "/"+year+"_"+channel+"_data_" + region + "_" + bORe + "_fakephoton.root")
 fakephoton = f_in_fakephoton.Get("hist_")
 
-f_in_fakelepton = TFile.Open(indir + "/"+year+"_"+channel+"_fakelepton_" + region + "_" + bORe + "_medium_btag_"+channel_name+"_uncertainty.root")
+f_in_fakelepton = TFile.Open(indir + "/"+year+"_"+channel+"_data_" + region + "_" + bORe + "_fakelepton.root")
 fakelepton = f_in_fakelepton.Get("hist_")
 
 binNum = VBS_in.GetNbinsX();

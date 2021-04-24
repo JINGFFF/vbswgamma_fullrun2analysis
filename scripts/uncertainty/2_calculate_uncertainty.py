@@ -32,8 +32,14 @@ if which_year == "2017":
 
 if which_year == "2018":
     lumi = 59.74
- 
-uncer_list = ['L1', 'photon_ID', 'electron_ID', 'electron_Reco', 'electron_HLT', 'muon_ID', 'muon_iso', 'muon_HLT', 'btag']
+
+uncer_list_data = ['fakephoton'] 
+uncer_list_mc = ['pileup', 'L1', 'photon_ID', 'electron_ID', 'electron_Reco', 'electron_HLT', 'muon_ID', 'muon_iso', 'muon_HLT', 'btag', 'pujet', 'pujet_mistag']
+if which_type == 'mc':
+    uncer_list = uncer_list_mc
+else :
+    uncer_list = uncer_list_data
+
 def print_uncer(which_sample):
     infilename= indir + "/" + which_year + "_" + which_channel +  "_" + which_type + "_" + which_region + "_"+barrel_or_endcap+"_" +  which_btag_workpoint + "_btag_" + which_sample + "_uncertainty.root"
     f = open(py_uncer_dir + "/" + which_sample + ".py", "w")
@@ -60,7 +66,13 @@ def print_uncer(which_sample):
         if k2 < len(tmp2) -1 : f.write(str(1+tmp2[k2]) + ', ')
         if k2 == len(tmp2) -1 : f.write(str(1+tmp2[k2]) + '] ' + '\n')
 
-sample_list = ['WGJJ', 'WGJets', 'TTG', 'ZG', 'ST_s', 'ST_t', 'ST_tbar', 'ST_tW', 'ST_tbarW', 'WW', 'WZ', 'ZZ']
+sample_list_mc = ['WGJJ', 'WGJets', 'TTG', 'ZG', 'ST_s', 'ST_t', 'ST_tbar', 'ST_tW', 'ST_tbarW', 'WW', 'WZ', 'ZZ']
+sample_list_data = ['fakephoton']
+
+if which_type == 'mc': 
+    sample_list = sample_list_mc
+else :
+    sample_list = sample_list_data
 #for i in range(1):
 for i in range(len(sample_list)):
     print_uncer(sample_list[i])
