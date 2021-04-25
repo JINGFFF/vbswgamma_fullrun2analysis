@@ -31,6 +31,12 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "mytool/common_set.C"
+#include "mytool/hist.C"
+#include "mytool/ele_channel_scale.C"
+#include "mytool/muon_channel_scale.C"
+#include "mytool/add_cut.C"
+#include "mytool/pujetID.C"
 using namespace std;
 
 // Header file for the classes stored in the TTree if any.
@@ -45,53 +51,29 @@ public :
    TString m_region;
    TString m_bORe;
    TString m_btag_workpoint;
+   TString m_pujet_workpoint;
 
-   // fake lepton weight
-   TFile * file_fake_muon_weight;
-   TFile * file_fake_electron_weight;
-   TH2D* hist_fake_muon_weight;
-   TH2D* hist_fake_electron_weight;
-   // fake photon weight
-   TFile * file_fake_photon_weight;
-   TH1F* hist_barrel_fake_photon_weight;
-   TH1F* hist_endcap_fake_photon_weight;
+   TFile*filexx;
+   TH2F*h2_eff_mc2017_L;
+   TH2F*h2_eff_mc2017_M;
+   TH2F*h2_eff_mc2017_T;
+   TH2F*h2_mistag_mc2017_L;
+   TH2F*h2_mistag_mc2017_M;
+   TH2F*h2_mistag_mc2017_T;
 
-   TH1F* hist_barrel_fake_photon_weight_up;
-   TH1F* hist_endcap_fake_photon_weight_up;
-   TH1F* hist_barrel_fake_photon_weight_down;
-   TH1F* hist_endcap_fake_photon_weight_down;
-   // pile up weight
-   TFile * pu_weight_input;
-   TH1D* h_pu_weight;
-
-   // photon medium ID weight
-   TFile * photon_ID_weight_input;
-   TH2D* h_photon_ID_weight;
-
-   // muon HLT weight
-   TFile * muon_HLT_weight_input;
-   TDirectory * muon_HLT_weight_dir;
-   TH2D* h_muon_HLT_weight;
-
-   // muon ID weight
-   TFile * muon_ID_weight_input;
-   TH2D* h_muon_ID_weight;
-
-   // muon iso scale
-   TFile * muon_iso_weight_input;
-   TH2D* h_muon_iso_weight;
-
-   // electron reco scale
-   TFile * electron_reco_weight_input;
-   TH2D* h_electron_reco_weight;
-
-   // electron ID scale
-   TFile * electron_ID_weight_input;
-   TH2D* h_electron_ID_weight;
-
-   // electron HLT scale
-   TFile * electron_HLT_weight_input;
-   TH2D* h_electron_HLT_weight;
+   TFile*filexxx;
+   TH2F*h2_eff_sf2017_L;
+   TH2F*h2_eff_sf2017_M;
+   TH2F*h2_eff_sf2017_T;
+   TH2F*h2_mistag_sf2017_L;
+   TH2F*h2_mistag_sf2017_M;
+   TH2F*h2_mistag_sf2017_T;
+   TH2F*h2_eff_sf2017_L_Systuncty;
+   TH2F*h2_eff_sf2017_M_Systuncty;
+   TH2F*h2_eff_sf2017_T_Systuncty;
+   TH2F*h2_mistag_sf2017_L_Systuncty;
+   TH2F*h2_mistag_sf2017_M_Systuncty;
+   TH2F*h2_mistag_sf2017_T_Systuncty;
    // value to fill histogram or use for cut
    double fill_Mjj;
    double fill_Mjj_JEC_up;
@@ -256,6 +238,29 @@ public :
    double fill_Mva_JER_up;
    double fill_Mva_JER_down;
 
+   double fill_jet1phi;
+   double fill_jet1phi_JEC_up;
+   double fill_jet1phi_JEC_down;
+   double fill_jet1phi_JER_up;
+   double fill_jet1phi_JER_down;
+   double fill_jet2phi;
+   double fill_jet2phi_JEC_up;
+   double fill_jet2phi_JEC_down;
+   double fill_jet2phi_JER_up;
+   double fill_jet2phi_JER_down;
+   double fill_genjet_eta[6], fill_genjet_phi[6];
+
+   double fill_jet1puId;
+   double fill_jet1puId_JEC_up;
+   double fill_jet1puId_JEC_down;
+   double fill_jet1puId_JER_up;
+   double fill_jet1puId_JER_down;
+
+   double fill_jet2puId;
+   double fill_jet2puId_JEC_up;
+   double fill_jet2puId_JEC_down;
+   double fill_jet2puId_JER_up;
+   double fill_jet2puId_JER_down;
    // cut for muon and electron channel
    Bool_t muon_cut, electron_cut, cut;
    Bool_t gen_muon_cut_signal_region, gen_muon_cut_control_region, gen_electron_cut_signal_region, gen_electron_cut_control_region, gen_muon_cut_aqgc_region, gen_electron_cut_aqgc_region;
@@ -325,20 +330,50 @@ public :
    Double_t        btag_jet2_up_SF_JER_down;
    Double_t        btag_jet2_low_SF_JER_down;
 
+   double pu_jet1_SF;
+   double pu_jet1_up_SF;
+   double pu_jet1_down_SF;
+
+   double pu_jet1_JEC_up_SF;
+   double pu_jet1_JEC_down_SF;
+   double pu_jet1_JER_up_SF;
+   double pu_jet1_JER_down_SF;
+
+   double pu_jet2_SF;
+   double pu_jet2_up_SF;
+   double pu_jet2_down_SF;
+
+   double pu_jet2_JEC_up_SF;
+   double pu_jet2_JEC_down_SF;
+   double pu_jet2_JER_up_SF;
+   double pu_jet2_JER_down_SF;
+
+   double pu_jet1_mistag_SF;
+   double pu_jet1_mistag_up_SF;
+   double pu_jet1_mistag_down_SF;
+
+   double pu_jet1_mistag_JEC_up_SF;
+   double pu_jet1_mistag_JEC_down_SF;
+   double pu_jet1_mistag_JER_up_SF;
+   double pu_jet1_mistag_JER_down_SF;
+
+   double pu_jet2_mistag_SF;
+   double pu_jet2_mistag_up_SF;
+   double pu_jet2_mistag_down_SF;
+
+   double pu_jet2_mistag_JEC_up_SF;
+   double pu_jet2_mistag_JEC_down_SF;
+   double pu_jet2_mistag_JER_up_SF;
+   double pu_jet2_mistag_JER_down_SF;
 
    Double_t        pu_weight_SF;
+   Double_t        pu_weight_up_SF;
+   Double_t        pu_weight_down_SF;
+
    Double_t        cross_section_SF;
 
    Double_t        p_event = 0, n_event = 0;
 
-   int num = 400;
-   TH1D*th2[400];
-   TH1D*th2_barrel[400];
-   TH1D*th2_endcap[400];
-
-   char th2name[400];
-   char th2_barrel_name[400];
-   char th2_endcap_name[400];
 
    // aqgc histgrams
    double WGbin[6] = {150,400,600,800, 1000, 2000};
@@ -355,17 +390,6 @@ public :
    TString fuction_l_jet_tight[3];
    TString fuction_l_jet_medium[3];
    TString fuction_l_jet_loose[3];
-
-   Double_t eff_b_jet_tight[10]  =  {0.375338, 0.493779, 0.553314, 0.575056, 0.579706, 0.563553, 0.491523, 0.327807, 0.105522, 0.0292929};
-   Double_t eff_b_jet_medium[10] = {0.565127, 0.663282, 0.714194, 0.737916, 0.750325, 0.745599, 0.701239, 0.590619, 0.390365, 0.216667};
-   Double_t eff_b_jet_loose[10] =  {0.753404, 0.813243, 0.850107, 0.87129, 0.88806, 0.89424, 0.881965, 0.846197, 0.798682, 0.70404};
-   Double_t eff_c_jet_tight[10]  =  {0.0178263, 0.0219464, 0.0242307, 0.0269731, 0.0299322, 0.0316588, 0.0287384, 0.0180558, 0.00498598, 0.00366972};
-   Double_t eff_c_jet_medium[10] = {0.120439, 0.128175, 0.130494, 0.13781, 0.14765, 0.154195, 0.146221, 0.120963, 0.0666874, 0.0311927};
-   Double_t eff_c_jet_loose[10] =  {0.392685, 0.415126, 0.42917, 0.445494, 0.462387, 0.473021, 0.461477, 0.451609, 0.421237, 0.348624};
-   Double_t eff_l_jet_tight[10]  =  {0.00115722, 0.000821689, 0.000900955, 0.00110315, 0.0014241, 0.00181297, 0.0020553, 0.00198708, 0.000801618, 0};
-   Double_t eff_l_jet_medium[10] = {0.00904002, 0.00806116, 0.00810405, 0.00924306, 0.0113922, 0.0137251, 0.0159489, 0.0189461, 0.0130992, 0.004265};
-   Double_t eff_l_jet_loose[10] =  {0.125149, 0.0924003, 0.0847756, 0.0946918, 0.113998, 0.134914, 0.15921, 0.19733, 0.229773, 0.206426};
-
    /// define histogram for fake lepton
 
    /// define histogram for fake photon
@@ -399,10 +423,10 @@ public :
    void ResetValue();
    Double_t delta_R(Double_t eta1, Double_t phi1, Double_t eta2, Double_t phi2);
    void set_cut_value(TString year = "2018");
-   void hist_Sumw2();
-   void hist_Scale();
-   void fill_hist(double fill_Mva, TH1D* hist, double weight);
-   void creat_hist();
+   //void hist_Sumw2();
+   //void hist_Scale();
+   //void fill_hist(TString region, double fill_Mjj, double fill_deltaeta, TH1D* hist, double weight);
+   //void creat_hist(TString region);
 
    void init_sf();
    void read_csv_info();
@@ -465,81 +489,17 @@ void test::Init()
    //if (!f) return;
    //fCurrent = -1;
 
-   // fake lepton weight
-   file_fake_muon_weight = TFile::Open("./scalef/data_driven_weight/muon_fakerate.root");
-   file_fake_electron_weight = TFile::Open("./scalef/data_driven_weight/electron_fakerate.root");
-   hist_fake_muon_weight = (TH2D*)file_fake_muon_weight->Get("weight");
-   hist_fake_electron_weight = (TH2D*)file_fake_electron_weight->Get("weight");
+   //pujet ID
+   filexx=new TFile("./scalef/pujetID/PUIDMaps.root");
+   h2_eff_mc2017_T=(TH2F*)filexx->Get("h2_eff_mc"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_mc2017_T=(TH2F*)filexx->Get("h2_mistag_mc"+m_year+"_"+m_pujet_workpoint);
 
-   // fake photon weight
-   file_fake_photon_weight = TFile::Open("./scalef/data_driven_weight/fake_photon_weight.root");
-   hist_barrel_fake_photon_weight = (TH1F*)file_fake_photon_weight->Get("barrel_fake_photon_weight");
-   hist_endcap_fake_photon_weight = (TH1F*)file_fake_photon_weight->Get("endcap_fake_photon_weight");
+   filexxx=new TFile("./scalef/pujetID/scalefactorsPUID_81Xtraining.root");
+   h2_eff_sf2017_T=(TH2F*)filexx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_sf2017_T=(TH2F*)filexx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_eff_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
+   h2_mistag_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
 
-   hist_barrel_fake_photon_weight_up = (TH1F*)file_fake_photon_weight->Get("barrel_fake_photon_weight_up");
-   hist_endcap_fake_photon_weight_up = (TH1F*)file_fake_photon_weight->Get("endcap_fake_photon_weight_up");
-
-   hist_barrel_fake_photon_weight_down = (TH1F*)file_fake_photon_weight->Get("barrel_fake_photon_weight_down");
-   hist_endcap_fake_photon_weight_down = (TH1F*)file_fake_photon_weight->Get("endcap_fake_photon_weight_down");
-
-   // pile up weight
-   pu_weight_input = new TFile ("./scalef/puweight_2018.root");
-   h_pu_weight = (TH1D*)pu_weight_input->Get("h2");
-
-   // photon medium ID weight
-   photon_ID_weight_input = new TFile ("./scalef/photon/2018_PhotonsMedium.root");
-   h_photon_ID_weight = (TH2D*)photon_ID_weight_input->Get("EGamma_SF2D");
-
-   // muon HLT weight
-   muon_HLT_weight_input = new TFile ("./scalef/muon/EfficienciesAndSF_2018Data_AfterMuonHLTUpdate.root");
-   muon_HLT_weight_dir  = (TDirectory*)muon_HLT_weight_input->Get("IsoMu24_PtEtaBins");
-   h_muon_HLT_weight = (TH2D*)muon_HLT_weight_dir->Get("abseta_pt_ratio");
-
-   // muon ID weight
-   muon_ID_weight_input = new TFile ("./scalef/muon/RunABCD_SF_ID.root");
-   h_muon_ID_weight = (TH2D*)muon_ID_weight_input->Get("NUM_TightID_DEN_TrackerMuons_pt_abseta");
-
-   // muon iso weight
-   muon_iso_weight_input = new TFile ("./scalef/muon/RunABCD_SF_ISO.root");
-   h_muon_iso_weight = (TH2D*)muon_iso_weight_input->Get("NUM_TightRelIso_DEN_TightIDandIPCut_pt_abseta");
-
-   // electron reco weight
-   electron_reco_weight_input = new TFile ("./scalef/electron/EGM2D_electron_Reco.root");
-   h_electron_reco_weight = (TH2D*)electron_reco_weight_input->Get("EGamma_SF2D");
-
-   // electron ID weight
-   electron_ID_weight_input = new TFile ("./scalef/electron/2018_ElectronTight.root");
-   h_electron_ID_weight = (TH2D*)electron_ID_weight_input->Get("EGamma_SF2D");
-
-   // electron HLT weight
-   electron_HLT_weight_input = new TFile ("./scalef/electron/2018_egamma_hlt_sf.root");
-   h_electron_HLT_weight = (TH2D*)electron_HLT_weight_input->Get("EGamma_SF2D");
-
-
-//cout<<"ok1"<<endl;
-   //int num = 148;
-   for(Int_t i=0;i<num;i++){
-       sprintf(th2name,"th2_%d",i);
-           th2[i] = new TH1D(th2name,th2name,5,WGbin);
-           th2[i]->Sumw2();
-
-       sprintf(th2_barrel_name,"th2_barrel_%d",i);
-           th2_barrel[i] = new TH1D(th2_barrel_name,th2_barrel_name,5,WGbin);
-           th2_barrel[i]->Sumw2();
-
-
-       sprintf(th2_endcap_name,"th2_endcap_%d",i);
-           th2_endcap[i] = new TH1D(th2_endcap_name,th2_endcap_name,5,WGbin);
-           th2_endcap[i]->Sumw2();
-   }   
-
-//cout<<"ok2"<<endl;
-/*
-   for (int k =0; k<=9; k++){
-      cout<<eff_b_jet_tight[k]<<" "<<eff_b_jet_medium[k]<<" "<<eff_b_jet_loose[k]<<endl;
-
-   }
-*/
 }
 
 Bool_t test::Notify()
@@ -556,7 +516,7 @@ Bool_t test::Notify()
 void test::read_csv_info()
 {
    cout<<"start load Btag info!"<<endl;
-   ifstream fin("./scalef/jet/DeepCSV_102XSF_WP_V1.csv");
+   //ifstream fin("./scalef/jet/DeepCSV_102XSF_WP_V1.csv");
    string line_info,input_result;
    vector<string> vectorString;
    if(fin) 
@@ -734,7 +694,7 @@ void test::read_csv_info()
 
 
          //for(int j=0;j<vectorString.size();j++){
-            //cout<<vectorString[j]<<endl;
+         //   cout<<vectorString[j]<<endl;
          //}
          vectorString.clear();
       }
@@ -744,9 +704,10 @@ void test::read_csv_info()
       cout<<"no such file"<<endl;;
    }
 
-//   for (int j=0;j<19;j++){
+   //for (int j=0;j<19;j++){
+     // cout<<fuction_c_jet_medium[j]<<endl;
       cout<<"Btag info has been loaded!"<<endl;
-//   }
+   //}
 }
 
 
@@ -815,6 +776,9 @@ void test::init_sf()
       btag_jet2_low_SF = 1;
 
       pu_weight_SF = 1;
+      pu_weight_up_SF = 1;
+      pu_weight_down_SF = 1;
+
       cross_section_SF = 1;
 }
 
@@ -871,6 +835,8 @@ Double_t test::btag_SF(Double_t pt, Double_t eta, Int_t pf, Double_t CSV, Double
       }
 
       if(fabs(pf)!=4 && fabs(pf)!=5){
+//cout<<"l jet"<<endl;
+
          if(CSV>cut_value){
             tmp_SF     = l_scale(up_and_low,workpoint,pt);
          }
