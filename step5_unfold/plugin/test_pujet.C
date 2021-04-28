@@ -1754,6 +1754,8 @@ photonp42.Delete();
 
 
             if(cut1){ 
+cout<<weight<<"  "<<weight_pileup_up<<"   "<<weight_pileup_down<<endl;
+
                for(int k2 = 0; k2<400; k2++){
                   fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
                }

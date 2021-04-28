@@ -1753,7 +1753,44 @@ photonp42.Delete();
 
             double fill_weight_jecr[4] = { weight_jec_up, weight_jec_down, weight_jer_up, weight_jer_down};
 
+            if(cut1){
+               for(int k2 = 0; k2<400; k2++){
+                  fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
+               }
 
+               for(int j = 0; j<length; j++){
+                  int num1 = fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
+                  //cout<<num1<<endl;
+                  if (cut_gen && num1>=0) fill_hist(m_region, genMjj, genMla, h_in[num1][j], fill_weight[j]);
+
+                  if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
+               }
+            }
+            if (cut2) {
+               int num2 = fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
+               if (cut_gen && num2>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num2][0], fill_weight_jecr[0]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
+            }
+            if (cut3) {
+               int num3 = fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
+               if (cut_gen && num3>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num3][1], fill_weight_jecr[1]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_out_jecr[1], fill_weight_jecr[1]);
+
+            }
+            if (cut4) {
+               int num4 = fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_jecr[2], fill_weight_jecr[2]);
+               if (cut_gen &&num4>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num4][2], fill_weight_jecr[2]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_out_jecr[2], fill_weight_jecr[2]);
+
+            }
+            if (cut5) {
+               int num5 = fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_jecr[3], fill_weight_jecr[3]);
+               if (cut_gen &&num5>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num5][3], fill_weight_jecr[3]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_out_jecr[3], fill_weight_jecr[3]);
+            }
+
+
+/*
             if(cut1){ 
                for(int k2 = 0; k2<400; k2++){
                   fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
@@ -1761,33 +1798,33 @@ photonp42.Delete();
 
                for(int j = 0; j<length; j++){
                   fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
-                  if (cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_in[j], fill_weight[j]);
-                  if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
+                  //if (cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_in[j], fill_weight[j]);
+                  //if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
                }
             }
             if (cut2) {
                fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
-               if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_in_jecr[0], fill_weight_jecr[0]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_in_jecr[0], fill_weight_jecr[0]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
             }
             if (cut3) {
                fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
-               if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_in_jecr[1], fill_weight_jecr[1]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_out_jecr[1], fill_weight_jecr[1]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_in_jecr[1], fill_weight_jecr[1]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_out_jecr[1], fill_weight_jecr[1]);
 
             }
             if (cut4) {
                fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_jecr[2], fill_weight_jecr[2]);
-               if (cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_in_jecr[2], fill_weight_jecr[2]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_out_jecr[2], fill_weight_jecr[2]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_in_jecr[2], fill_weight_jecr[2]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_out_jecr[2], fill_weight_jecr[2]);
 
             }
             if (cut5) {
                fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_jecr[3], fill_weight_jecr[3]);
-               if (cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_in_jecr[3], fill_weight_jecr[3]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_out_jecr[3], fill_weight_jecr[3]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_in_jecr[3], fill_weight_jecr[3]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_out_jecr[3], fill_weight_jecr[3]);
             }
-
+*/
 
       }
 

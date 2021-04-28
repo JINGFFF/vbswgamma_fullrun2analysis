@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfolding_out2/unfolding_90_condor.sh
+arguments    = test_unfolding1
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfolding_out2/unfolding_outputfile90
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfolding_out2/unfolding_errorfile90
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfolding_out2/unfolding_myexe90.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

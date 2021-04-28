@@ -11,12 +11,12 @@ using namespace std;
    Double_t eff_l_jet_loose[10] =  {0.125149, 0.0924003, 0.0847756, 0.0946918, 0.113998, 0.134914, 0.15921, 0.19733, 0.229773, 0.206426};
    ifstream fin("./scalef/jet/DeepCSV_102XSF_WP_V1.csv");
 
-   TFile * pu_weight_input = new TFile ("./scalef/puweight_2018.root");
+   TFile * pu_weight_input = new TFile ("./scalef/pileup/puweight2018.root");
    TH1D* h_pu_weight = (TH1D*)pu_weight_input->Get("h2");
-   TFile * pu_weight_up_input = new TFile ("./scalef/puweight_2018.root");
-   TH1D* h_pu_weight_up = (TH1D*)pu_weight_input->Get("h2");
-   TFile * pu_weight_down_input = new TFile ("./scalef/puweight_2018.root");
-   TH1D* h_pu_weight_down = (TH1D*)pu_weight_input->Get("h2");
+   TFile * pu_weight_up_input = new TFile ("./scalef/pileup/puweight2018_up.root");
+   TH1D* h_pu_weight_up = (TH1D*)pu_weight_up_input->Get("h2");
+   TFile * pu_weight_down_input = new TFile ("./scalef/pileup/puweight2018_down.root");
+   TH1D* h_pu_weight_down = (TH1D*)pu_weight_down_input->Get("h2");
 
    // photon medium ID weight
    TFile * photon_ID_weight_input = new TFile ("./scalef/photon/2018_PhotonsMedium.root");
