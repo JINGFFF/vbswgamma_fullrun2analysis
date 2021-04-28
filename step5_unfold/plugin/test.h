@@ -31,6 +31,13 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "mytool/common_set.C"
+#include "mytool/hist.C"
+#include "mytool/ele_channel_scale.C"
+#include "mytool/muon_channel_scale.C"
+#include "mytool/add_cut.C"
+#include "mytool/pujetID.C"
+#include "mytool/gen.C"
 using namespace std;
 
 // Header file for the classes stored in the TTree if any.
@@ -43,68 +50,31 @@ public :
    TString m_type;
    TString m_channel;
    TString m_region;
+   TString m_bORe;
    TString m_btag_workpoint;
+   TString m_pujet_workpoint;
 
-   // fake lepton weight
-   TFile * file_fake_muon_weight;
-   TFile * file_fake_electron_weight;
-   TH2D* hist_fake_muon_weight;
-   TH2D* hist_fake_electron_weight;
-   // fake photon weight
-   TFile * file_fake_photon_weight;
-   TH1F* hist_barrel_fake_photon_weight;
-   TH1F* hist_endcap_fake_photon_weight;
+   TFile*filexx;
+   TH2F*h2_eff_mc2017_L;
+   TH2F*h2_eff_mc2017_M;
+   TH2F*h2_eff_mc2017_T;
+   TH2F*h2_mistag_mc2017_L;
+   TH2F*h2_mistag_mc2017_M;
+   TH2F*h2_mistag_mc2017_T;
 
-   TH1F* hist_barrel_fake_photon_weight_up;
-   TH1F* hist_endcap_fake_photon_weight_up;
-   TH1F* hist_barrel_fake_photon_weight_down;
-   TH1F* hist_endcap_fake_photon_weight_down;
-   // pile up weight
-   TFile * pu_weight_input;
-   TH1D* h_pu_weight;
-
-   // photon medium ID weight
-   TFile * photon_ID_weight_input;
-   TH2D* h_photon_ID_weight;
-
-   // muon HLT weight
-   TFile * muon_HLT_weight_B_F_input;
-   TDirectory * muon_HLT_weight_B_F_dir;
-   TH2D* h_muon_HLT_B_F_weight;
-
-   // muon ID weight
-   TFile * muon_ID_weight_B_F_input;
-   TH2D* h_muon_ID_B_F_weight;
-
-   // muon iso scale
-   TFile * muon_iso_weight_B_F_input;
-   TH2D* h_muon_iso_B_F_weight;
-
-   // muon HLT weight
-   TFile * muon_HLT_weight_G_H_input;
-   TDirectory * muon_HLT_weight_G_H_dir;
-   TH2D* h_muon_HLT_G_H_weight;
-
-   // muon ID weight
-   TFile * muon_ID_weight_G_H_input;
-   TH2D* h_muon_ID_G_H_weight;
-
-   // muon iso scale
-   TFile * muon_iso_weight_G_H_input;
-   TH2D* h_muon_iso_G_H_weight;
-
-   // electron reco scale
-   TFile * electron_reco_weight_input;
-   TH2D* h_electron_reco_weight;
-
-   // electron ID scale
-   TFile * electron_ID_weight_input;
-   TH2D* h_electron_ID_weight;
-
-   // electron HLT scale
-   TFile * electron_HLT_weight_input;
-   TH2D* h_electron_HLT_weight;
-
+   TFile*filexxx;
+   TH2F*h2_eff_sf2017_L;
+   TH2F*h2_eff_sf2017_M;
+   TH2F*h2_eff_sf2017_T;
+   TH2F*h2_mistag_sf2017_L;
+   TH2F*h2_mistag_sf2017_M;
+   TH2F*h2_mistag_sf2017_T;
+   TH2F*h2_eff_sf2017_L_Systuncty;
+   TH2F*h2_eff_sf2017_M_Systuncty;
+   TH2F*h2_eff_sf2017_T_Systuncty;
+   TH2F*h2_mistag_sf2017_L_Systuncty;
+   TH2F*h2_mistag_sf2017_M_Systuncty;
+   TH2F*h2_mistag_sf2017_T_Systuncty;
    // value to fill histogram or use for cut
    double fill_Mjj;
    double fill_Mjj_JEC_up;
@@ -269,6 +239,33 @@ public :
    double fill_Mva_JER_up;
    double fill_Mva_JER_down;
 
+   double fill_jet1phi;
+   double fill_jet1phi_JEC_up;
+   double fill_jet1phi_JEC_down;
+   double fill_jet1phi_JER_up;
+   double fill_jet1phi_JER_down;
+   double fill_jet2phi;
+   double fill_jet2phi_JEC_up;
+   double fill_jet2phi_JEC_down;
+   double fill_jet2phi_JER_up;
+   double fill_jet2phi_JER_down;
+   //double fill_genjet_eta[6], fill_genjet_phi[6];
+   double fill_genphoton_pt[6], fill_genphoton_eta[6], fill_genphoton_phi[6];
+   double fill_genjet_pt[6], fill_genjet_eta[6], fill_genjet_phi[6], fill_genjet_e[6];
+   double fill_genmuon_pt[6], fill_genmuon_eta[6], fill_genmuon_phi[6];
+   double fill_genelectron_pt[6], fill_genelectron_eta[6], fill_genelectron_phi[6];
+
+   double fill_jet1puId;
+   double fill_jet1puId_JEC_up;
+   double fill_jet1puId_JEC_down;
+   double fill_jet1puId_JER_up;
+   double fill_jet1puId_JER_down;
+
+   double fill_jet2puId;
+   double fill_jet2puId_JEC_up;
+   double fill_jet2puId_JEC_down;
+   double fill_jet2puId_JER_up;
+   double fill_jet2puId_JER_down;
    // cut for muon and electron channel
    Bool_t muon_cut, electron_cut, cut;
    Bool_t gen_muon_cut_signal_region, gen_muon_cut_control_region, gen_electron_cut_signal_region, gen_electron_cut_control_region, gen_muon_cut_aqgc_region, gen_electron_cut_aqgc_region;
@@ -338,20 +335,50 @@ public :
    Double_t        btag_jet2_up_SF_JER_down;
    Double_t        btag_jet2_low_SF_JER_down;
 
+   double pu_jet1_SF;
+   double pu_jet1_up_SF;
+   double pu_jet1_down_SF;
+
+   double pu_jet1_JEC_up_SF;
+   double pu_jet1_JEC_down_SF;
+   double pu_jet1_JER_up_SF;
+   double pu_jet1_JER_down_SF;
+
+   double pu_jet2_SF;
+   double pu_jet2_up_SF;
+   double pu_jet2_down_SF;
+
+   double pu_jet2_JEC_up_SF;
+   double pu_jet2_JEC_down_SF;
+   double pu_jet2_JER_up_SF;
+   double pu_jet2_JER_down_SF;
+
+   double pu_jet1_mistag_SF;
+   double pu_jet1_mistag_up_SF;
+   double pu_jet1_mistag_down_SF;
+
+   double pu_jet1_mistag_JEC_up_SF;
+   double pu_jet1_mistag_JEC_down_SF;
+   double pu_jet1_mistag_JER_up_SF;
+   double pu_jet1_mistag_JER_down_SF;
+
+   double pu_jet2_mistag_SF;
+   double pu_jet2_mistag_up_SF;
+   double pu_jet2_mistag_down_SF;
+
+   double pu_jet2_mistag_JEC_up_SF;
+   double pu_jet2_mistag_JEC_down_SF;
+   double pu_jet2_mistag_JER_up_SF;
+   double pu_jet2_mistag_JER_down_SF;
 
    Double_t        pu_weight_SF;
+   Double_t        pu_weight_up_SF;
+   Double_t        pu_weight_down_SF;
+
    Double_t        cross_section_SF;
 
    Double_t        p_event = 0, n_event = 0;
 
-   int num = 400;
-   TH1D*th2[400];
-   TH1D*th2_barrel[400];
-   TH1D*th2_endcap[400];
-
-   char th2name[400];
-   char th2_barrel_name[400];
-   char th2_endcap_name[400];
 
    // aqgc histgrams
    double WGbin[6] = {150,400,600,800, 1000, 2000};
@@ -368,17 +395,6 @@ public :
    TString fuction_l_jet_tight[3];
    TString fuction_l_jet_medium[3];
    TString fuction_l_jet_loose[3];
-
-Double_t eff_b_jet_tight[10] ={ 0.320501, 0.438741, 0.494037, 0.516037, 0.521717, 0.511363, 0.463285, 0.380385, 0.268077, 0.22774};
-Double_t eff_b_jet_medium[10] ={ 0.494944, 0.604301, 0.655748, 0.680486, 0.693248, 0.693765, 0.667501, 0.616062, 0.535007, 0.505137};
-Double_t eff_b_jet_loose[10] ={ 0.686011, 0.764027, 0.805729, 0.831279, 0.849252, 0.860238, 0.858505, 0.849354, 0.843092, 0.849315};
-Double_t eff_c_jet_tight[10] ={ 0.0183726, 0.0223202, 0.0220486, 0.0226769, 0.024171, 0.0263377, 0.0265894, 0.0277639, 0.032798, 0.0315315};
-Double_t eff_c_jet_medium[10] ={ 0.106603, 0.119726, 0.114486, 0.114447, 0.118432, 0.12676, 0.128575, 0.138768, 0.151776, 0.189189};
-Double_t eff_c_jet_loose[10] ={ 0.354013, 0.383178, 0.384509, 0.389559, 0.39991, 0.416174, 0.426847, 0.467101, 0.51934, 0.617117};
-Double_t eff_l_jet_tight[10] ={ 0.00116083, 0.00108697, 0.0010221, 0.00107856, 0.00123402, 0.00159878, 0.00193249, 0.00285934, 0.00374868, 0.00664452};
-Double_t eff_l_jet_medium[10] ={ 0.0130506, 0.0120923, 0.00997784, 0.00970286, 0.0105707, 0.0128526, 0.0161229, 0.0244205, 0.0325238, 0.0340532};
-Double_t eff_l_jet_loose[10] ={ 0.113448, 0.109686, 0.0945654, 0.0941139, 0.102728, 0.122753, 0.15118, 0.205856, 0.277138, 0.35299};
-
    /// define histogram for fake lepton
 
    /// define histogram for fake photon
@@ -409,11 +425,13 @@ Double_t eff_l_jet_loose[10] ={ 0.113448, 0.109686, 0.0945654, 0.0941139, 0.1027
    virtual Double_t c_scale(TString type, TString workpoint, Double_t x);
    virtual Double_t l_scale(TString type, TString workpoint, Double_t x);
    virtual Double_t btag_SF(Double_t pt, Double_t eta, Int_t pf, Double_t CSV, Double_t cut_value, TString workpoint, TString up_and_low);
-   void ResetValue();
+   //void ResetValue();
    Double_t delta_R(Double_t eta1, Double_t phi1, Double_t eta2, Double_t phi2);
    void set_cut_value(TString year = "2018");
-   void hist_Sumw2();
-   void hist_Scale();
+   //void hist_Sumw2();
+   //void hist_Scale();
+   //void fill_hist(TString region, double fill_Mjj, double fill_deltaeta, TH1D* hist, double weight);
+   //void creat_hist(TString region);
 
    void init_sf();
    void read_csv_info();
@@ -476,94 +494,17 @@ void test::Init()
    //if (!f) return;
    //fCurrent = -1;
 
-   // fake lepton weight
-   file_fake_muon_weight = TFile::Open("./scalef/data_driven_weight/muon_fakerate.root");
-   file_fake_electron_weight = TFile::Open("./scalef/data_driven_weight/electron_fakerate.root");
-   hist_fake_muon_weight = (TH2D*)file_fake_muon_weight->Get("weight");
-   hist_fake_electron_weight = (TH2D*)file_fake_electron_weight->Get("weight");
+   //pujet ID
+   filexx=new TFile("./scalef/pujetID/PUIDMaps.root");
+   h2_eff_mc2017_T=(TH2F*)filexx->Get("h2_eff_mc"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_mc2017_T=(TH2F*)filexx->Get("h2_mistag_mc"+m_year+"_"+m_pujet_workpoint);
 
-   // fake photon weight
-   file_fake_photon_weight = TFile::Open("./scalef/data_driven_weight/fake_photon_weight.root");
-   hist_barrel_fake_photon_weight = (TH1F*)file_fake_photon_weight->Get("barrel_fake_photon_weight");
-   hist_endcap_fake_photon_weight = (TH1F*)file_fake_photon_weight->Get("endcap_fake_photon_weight");
+   filexxx=new TFile("./scalef/pujetID/scalefactorsPUID_81Xtraining.root");
+   h2_eff_sf2017_T=(TH2F*)filexx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_mistag_sf2017_T=(TH2F*)filexx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint);
+   h2_eff_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_eff_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
+   h2_mistag_sf2017_T_Systuncty=(TH2F*)filexxx->Get("h2_mistag_sf"+m_year+"_"+m_pujet_workpoint+"_Systuncty");
 
-   hist_barrel_fake_photon_weight_up = (TH1F*)file_fake_photon_weight->Get("barrel_fake_photon_weight_up");
-   hist_endcap_fake_photon_weight_up = (TH1F*)file_fake_photon_weight->Get("endcap_fake_photon_weight_up");
-
-   hist_barrel_fake_photon_weight_down = (TH1F*)file_fake_photon_weight->Get("barrel_fake_photon_weight_down");
-   hist_endcap_fake_photon_weight_down = (TH1F*)file_fake_photon_weight->Get("endcap_fake_photon_weight_down");
-
-   // pile up weight
-   pu_weight_input = new TFile ("./scalef/puweight_2016.root");
-   h_pu_weight = (TH1D*)pu_weight_input->Get("h2");
-
-   // photon medium ID weight
-   photon_ID_weight_input = new TFile ("./scalef/photon/Fall17V2_2016_Medium_photons.root");
-   h_photon_ID_weight = (TH2D*)photon_ID_weight_input->Get("EGamma_SF2D");
-
-   // muon HLT weight
-   muon_HLT_weight_B_F_input = new TFile ("./scalef/muon/EfficienciesAndSF_RunBtoF.root");
-   muon_HLT_weight_G_H_input = new TFile ("./scalef/muon/EfficienciesAndSF_Period4.root");
-
-   muon_HLT_weight_B_F_dir  = (TDirectory*)muon_HLT_weight_G_H_input->Get("IsoMu24_OR_IsoTkMu24_PtEtaBins");
-   muon_HLT_weight_G_H_dir  = (TDirectory*)muon_HLT_weight_G_H_input->Get("IsoMu24_OR_IsoTkMu24_PtEtaBins");
-
-   h_muon_HLT_B_F_weight = (TH2D*)muon_HLT_weight_B_F_dir->Get("abseta_pt_ratio");
-   h_muon_HLT_G_H_weight = (TH2D*)muon_HLT_weight_G_H_dir->Get("abseta_pt_ratio");
-
-
-   // muon ID weight
-   muon_ID_weight_B_F_input = new TFile ("./scalef/muon/RunBCDEF_SF_ID.root");
-   h_muon_ID_B_F_weight = (TH2D*)muon_ID_weight_B_F_input->Get("NUM_TightID_DEN_genTracks_eta_pt");
-
-   muon_ID_weight_G_H_input = new TFile ("./scalef/muon/RunGH_SF_ID.root");
-   h_muon_ID_G_H_weight = (TH2D*)muon_ID_weight_G_H_input->Get("NUM_TightID_DEN_genTracks_eta_pt");
-
-
-   // muon iso weight
-   muon_iso_weight_B_F_input = new TFile ("./scalef/muon/RunBCDEF_SF_ISO.root");
-   h_muon_iso_B_F_weight = (TH2D*)muon_iso_weight_B_F_input->Get("NUM_TightRelIso_DEN_TightIDandIPCut_eta_pt");
-
-   muon_iso_weight_G_H_input = new TFile ("./scalef/muon/RunGH_SF_ISO.root");
-   h_muon_iso_G_H_weight = (TH2D*)muon_iso_weight_G_H_input->Get("NUM_TightRelIso_DEN_TightIDandIPCut_eta_pt");
-
-   // electron reco weight
-   electron_reco_weight_input = new TFile ("./scalef/electron/EGM2D_BtoH_GT20GeV_RecoSF_Legacy2016.root");
-   h_electron_reco_weight = (TH2D*)electron_reco_weight_input->Get("EGamma_SF2D");
-
-   // electron ID weight
-   electron_ID_weight_input = new TFile ("./scalef/electron/2016LegacyReReco_ElectronTight_Fall17V2.root");
-   h_electron_ID_weight = (TH2D*)electron_ID_weight_input->Get("EGamma_SF2D");
-
-   // electron HLT weight
-   electron_HLT_weight_input = new TFile ("./scalef/electron/egammaEffi.txt_EGM2D.root");
-   h_electron_HLT_weight = (TH2D*)electron_HLT_weight_input->Get("EGamma_SF2D");
-
-
-//cout<<"ok1"<<endl;
-   //int num = 148;
-   for(Int_t i=0;i<num;i++){
-       sprintf(th2name,"th2_%d",i);
-           th2[i] = new TH1D(th2name,th2name,5,WGbin);
-           th2[i]->Sumw2();
-
-       sprintf(th2_barrel_name,"th2_barrel_%d",i);
-           th2_barrel[i] = new TH1D(th2_barrel_name,th2_barrel_name,5,WGbin);
-           th2_barrel[i]->Sumw2();
-
-
-       sprintf(th2_endcap_name,"th2_endcap_%d",i);
-           th2_endcap[i] = new TH1D(th2_endcap_name,th2_endcap_name,5,WGbin);
-           th2_endcap[i]->Sumw2();
-   }   
-
-//cout<<"ok2"<<endl;
-/*
-   for (int k =0; k<=9; k++){
-      cout<<eff_b_jet_tight[k]<<" "<<eff_b_jet_medium[k]<<" "<<eff_b_jet_loose[k]<<endl;
-
-   }
-*/
 }
 
 Bool_t test::Notify()
@@ -580,7 +521,7 @@ Bool_t test::Notify()
 void test::read_csv_info()
 {
    cout<<"start load Btag info!"<<endl;
-   ifstream fin("./scalef/jet/DeepCSV_2016LegacySF_WP_V1.csv");
+   //ifstream fin("./scalef/jet/DeepCSV_102XSF_WP_V1.csv");
    string line_info,input_result;
    vector<string> vectorString;
    if(fin) 
@@ -758,7 +699,7 @@ void test::read_csv_info()
 
 
          //for(int j=0;j<vectorString.size();j++){
-            //cout<<vectorString[j]<<endl;
+         //   cout<<vectorString[j]<<endl;
          //}
          vectorString.clear();
       }
@@ -768,9 +709,10 @@ void test::read_csv_info()
       cout<<"no such file"<<endl;;
    }
 
-//   for (int j=0;j<19;j++){
+   //for (int j=0;j<19;j++){
+     // cout<<fuction_c_jet_medium[j]<<endl;
       cout<<"Btag info has been loaded!"<<endl;
-//   }
+   //}
 }
 
 
@@ -839,6 +781,9 @@ void test::init_sf()
       btag_jet2_low_SF = 1;
 
       pu_weight_SF = 1;
+      pu_weight_up_SF = 1;
+      pu_weight_down_SF = 1;
+
       cross_section_SF = 1;
 }
 
@@ -895,6 +840,8 @@ Double_t test::btag_SF(Double_t pt, Double_t eta, Int_t pf, Double_t CSV, Double
       }
 
       if(fabs(pf)!=4 && fabs(pf)!=5){
+//cout<<"l jet"<<endl;
+
          if(CSV>cut_value){
             tmp_SF     = l_scale(up_and_low,workpoint,pt);
          }
@@ -956,36 +903,37 @@ Double_t test::beff(TString workpoint, Double_t x)  //befficiency   x=pt
 Double_t test::b_scale(TString type, TString workpoint, Double_t x) //central scale   x=pt partonflavour b=5  c=4 
 {
    TF1 * f1;
+   double tmp_sf;
 
    if(workpoint == "loose"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_loose[1],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_loose[2],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_loose[3],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_loose[4],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_loose[5],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_loose[6],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_loose[7],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_loose[8],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[9],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_loose[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_loose[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_loose[3],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_loose[4],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_loose[5],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_loose[6],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_loose[7],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_loose[8],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[9],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_loose[10],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_loose[11],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_loose[12],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_loose[13],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_loose[14],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_loose[15],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_loose[16],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_loose[17],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[18],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_loose[10],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_loose[11],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_loose[12],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_loose[13],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_loose[14],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_loose[15],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_loose[16],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_loose[17],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[18],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -993,33 +941,33 @@ Double_t test::b_scale(TString type, TString workpoint, Double_t x) //central sc
 
    if(workpoint == "medium"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_medium[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_medium[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_medium[1],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_medium[2],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_medium[3],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_medium[4],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_medium[5],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_medium[6],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_medium[7],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_medium[8],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_medium[9],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_medium[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_medium[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_medium[3],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_medium[4],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_medium[5],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_medium[6],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_medium[7],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_medium[8],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_medium[9],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_medium[10],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_medium[11],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_medium[12],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_medium[13],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_medium[14],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_medium[15],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_medium[16],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_medium[17],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_medium[18],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_medium[10],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_medium[11],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_medium[12],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_medium[13],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_medium[14],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_medium[15],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_medium[16],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_medium[17],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_medium[18],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1027,33 +975,33 @@ Double_t test::b_scale(TString type, TString workpoint, Double_t x) //central sc
 
    if(workpoint == "tight"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_tight[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_tight[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_tight[1],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_tight[2],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_tight[3],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_tight[4],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_tight[5],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_tight[6],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_tight[7],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_tight[8],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_tight[9],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_tight[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_tight[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_tight[3],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_tight[4],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_tight[5],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_tight[6],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_tight[7],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_tight[8],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_tight[9],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_tight[10],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_tight[11],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_tight[12],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_tight[13],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_tight[14],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_tight[15],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_tight[16],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_tight[17],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_tight[18],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_b_jet_tight[10],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_b_jet_tight[11],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_b_jet_tight[12],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_b_jet_tight[13],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_b_jet_tight[14],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_b_jet_tight[15],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_b_jet_tight[16],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_b_jet_tight[17],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_b_jet_tight[18],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1108,36 +1056,37 @@ Double_t test::ceff(TString workpoint, Double_t x)  //befficiency   x=pt
 Double_t test::c_scale(TString type, TString workpoint, Double_t x) //central scale   x=pt partonflavour b=5  c=4 
 {
    TF1 * f1;
+   double tmp_sf;
 
    if(workpoint == "loose"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_b_jet_loose[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_loose[1],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_loose[2],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_loose[3],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_loose[4],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_loose[5],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_loose[6],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_loose[7],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_loose[8],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_loose[9],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_loose[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_loose[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_loose[3],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_loose[4],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_loose[5],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_loose[6],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_loose[7],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_loose[8],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_loose[9],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_loose[10],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_loose[11],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_loose[12],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_loose[13],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_loose[14],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_loose[15],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_loose[16],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_loose[17],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_loose[18],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_loose[10],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_loose[11],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_loose[12],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_loose[13],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_loose[14],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_loose[15],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_loose[16],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_loose[17],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_loose[18],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1145,33 +1094,33 @@ Double_t test::c_scale(TString type, TString workpoint, Double_t x) //central sc
 
    if(workpoint == "medium"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_c_jet_medium[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_c_jet_medium[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_medium[1],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_medium[2],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_medium[3],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_medium[4],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_medium[5],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_medium[6],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_medium[7],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_medium[8],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_medium[9],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_medium[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_medium[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_medium[3],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_medium[4],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_medium[5],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_medium[6],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_medium[7],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_medium[8],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_medium[9],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_medium[10],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_medium[11],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_medium[12],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_medium[13],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_medium[14],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_medium[15],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_medium[16],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_medium[17],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_medium[18],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_medium[10],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_medium[11],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_medium[12],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_medium[13],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_medium[14],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_medium[15],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_medium[16],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_medium[17],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_medium[18],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1179,33 +1128,33 @@ Double_t test::c_scale(TString type, TString workpoint, Double_t x) //central sc
 
    if(workpoint == "tight"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_c_jet_tight[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_c_jet_tight[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_tight[1],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_tight[2],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_tight[3],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_tight[4],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_tight[5],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_tight[6],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_tight[7],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_tight[8],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_tight[9],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_tight[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_tight[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_tight[3],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_tight[4],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_tight[5],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_tight[6],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_tight[7],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_tight[8],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_tight[9],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_tight[10],19.0,1001.);return  f1->Eval(x);}
-         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_tight[11],19.0,1001.);return  f1->Eval(x);}
-         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_tight[12],19.0,1001.);return  f1->Eval(x);}
-         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_tight[13],19.0,1001.);return  f1->Eval(x);}
-         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_tight[14],19.0,1001.);return  f1->Eval(x);}
-         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_tight[15],19.0,1001.);return  f1->Eval(x);}
-         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_tight[16],19.0,1001.);return  f1->Eval(x);}
-         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_tight[17],19.0,1001.);return  f1->Eval(x);}
-         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_tight[18],19.0,1001.);return  f1->Eval(x);}
+         if(x>=20 && x<30)    {f1 = new TF1("f1",fuction_c_jet_tight[10],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=30 && x<50)    {f1 = new TF1("f1",fuction_c_jet_tight[11],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=50 && x<70)    {f1 = new TF1("f1",fuction_c_jet_tight[12],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=70 && x<100)   {f1 = new TF1("f1",fuction_c_jet_tight[13],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=100 && x<140)  {f1 = new TF1("f1",fuction_c_jet_tight[14],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=140 && x<200)  {f1 = new TF1("f1",fuction_c_jet_tight[15],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=200 && x<300)  {f1 = new TF1("f1",fuction_c_jet_tight[16],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=300 && x<600)  {f1 = new TF1("f1",fuction_c_jet_tight[17],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
+         if(x>=600 && x<1000) {f1 = new TF1("f1",fuction_c_jet_tight[18],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1257,20 +1206,21 @@ Double_t test::leff(TString workpoint, Double_t x)  //befficiency   x=pt
 Double_t test::l_scale(TString type, TString workpoint, Double_t x) //central scale   x=pt partonflavour b=5  c=4 
 {
    TF1 * f1;
+   double tmp_sf;
 
    if(workpoint == "loose"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_loose[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_loose[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_loose[1],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_loose[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_loose[2],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_loose[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1278,17 +1228,17 @@ Double_t test::l_scale(TString type, TString workpoint, Double_t x) //central sc
 
    if(workpoint == "medium"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_medium[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_medium[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_medium[1],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_medium[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_medium[2],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_medium[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
@@ -1296,17 +1246,17 @@ Double_t test::l_scale(TString type, TString workpoint, Double_t x) //central sc
 
    if(workpoint == "tight"){
       if(type == "central"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_tight[0],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_tight[0],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "up"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_tight[1],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_tight[1],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 
       if(type == "low"){
-         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_tight[2],19.0,1001.);return  f1->Eval(x);}
+         if(x>20 && x<1000) {f1 = new TF1("f1",fuction_l_jet_tight[2],19.0,1001.);tmp_sf = f1->Eval(x); delete f1; return tmp_sf;}
          else return 1;
       }
 

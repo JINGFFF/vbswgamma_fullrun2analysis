@@ -1,1 +1,0 @@
-/home/pku/pengj/testvbs/data/for_analysis/2016_tight_for_analysis_single_WGJets.root

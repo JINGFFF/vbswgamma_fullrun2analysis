@@ -1,0 +1,52 @@
+imax 1   number of channels
+jmax 15   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 18.63
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	VBS_in	VBS_out	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+rate	1.21	0.60	4.28	0.00	0.03	0.07	0.00	0.25	0.26	0.00	0.00	0.00	2.12	3.29	4.82	1.69
+------------
+lumi	lnN	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	-	-	-	#lumi
+WGJJ_hist_in__signal_electron_endcap_stat_bin_4_2018	lnN	1.20988762596	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJJ_hist_out__signal_electron_endcap_stat_bin_4_2018	lnN	-	1.41973805529	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	1.36766461998	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	2	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	1.70921960407	-	-	-	-	-	-	-	-	-	-
+ST_tW_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-
+ST_tbarW_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	-	2.0	-	-	-	-	-	-	-	-
+TTG_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	-	-	1.89178284272	-	-	-	-	-	-	-
+WW_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-	-
+WZ_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-
+ZZ_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-
+ZG_signal_electron_endcap_stat_bin_4_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	1.42076081369	-	-	-
+photon_ID_2018	lnN	1.03	1.03	1.02	1.00	1.00	1.04	1.00	1.04	1.05	1.00	1.00	1.00	1.03	-	-	-
+electron_ID_2018	lnN	1.05	1.02	1.01	1.00	1.01	1.01	1.00	1.00	1.01	1.00	1.00	1.00	1.01	-	-	-
+electron_Reco_2018	lnN	1.00	1.01	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_HLT_2018	lnN	1.00	1.01	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_ID_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT_2018	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+btag_2018	lnN	1.00	1.00	1.00	1.00	1.04	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+JEC_2018	lnN	1.07	1.11	1.22	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.21	-	-	-
+JER_2018	lnN	1.21	1.07	1.27	1.00	2.00	1.79	1.00	1.00	1.00	1.00	1.00	1.00	1.43	-	-	-
+pujet_2018	lnN	1.02	1.03	1.02	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.02	-	-	-
+pujet_mistag_2018	lnN	1.00	1.00	1.03	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+pileup_2018	lnN	1.01	1.05	1.07	1.00	1.78	1.24	1.00	1.08	1.06	1.00	1.00	1.00	1.21	-	-	-
+fakephoton_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	1.10	-	1.10
+fakelepton_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1.30	1.30
+WGJJ_pdf	lnN	1.01422990388	1.01422990388	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJJ_scale	lnN	1.02674431364	1.02674431364	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_pdf	lnN	-	-	1.00461332991	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muF1	lnN	-	-	1.02877505626	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muR1	lnN	-	-	1.00808702708	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muRmuF	lnN	-	-	1.01939666799	-	-	-	-	-	-	-	-	-	-	-	-	-

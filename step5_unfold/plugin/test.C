@@ -4,112 +4,18 @@
 #include <TStyle.h>
 #include <TCanvas.h>
 #include <TLorentzVector.h>
-#include "ele_channel_scale.C"
-#include "muon_channel_scale.C"
-double Pi =3.1415926;
-   Bool_t LEPmu,LEPele,genmuon[6],genele[6],genjet[6],genphoton[6];
-   Bool_t photon,jet,dr,SignalRegion;
-   Bool_t GenLEPmu,GenLEPele,GenPhoton,GenJet,GenDr,GenSignalRegion;
-   Bool_t Reco,Gen, GenDrmu,GenDrele,Genmu,Genele;
+#include <vector>
+Double_t mjj_bins[4]={500, 800, 1200, 2000};
+Double_t detajj_bins[4]={2.5, 4.5,  6, 6.5};
 
-int n=0, n1=0,n2=0, s1=0, s2=0, s3=0, s4=0, s5=0, s6=0, s7=0, s8=0, s9=0, s10=0, s11=0;
-   double genyVlep;
-   double genphiVlep;
-   double genptVlep;
-   double genmassVlep;
-   double genWGmass;
-   double genmuon1pt,genmuon1phi,genmuon1eta;
-   double genele1pt,genele1phi,genele1eta;
-   double genlep1pt,genlep1eta,genlep1phi,gendrjj,drjj;
-   int    genlep;
-   double genjet1pt,genjet2pt,genjet1eta,genjet2eta,genjet1phi,genjet2phi;
-   double genjet1e,genjet2e;
-   double genphotonet,genphotoneta,genphotonphi;
-   double gendrj1m1,gendrj1m2,gendrj2m1,gendrj2m2;
-   double gendrj1e1,gendrj2e1;
-   double gendrj1a,gendrj2a,gendrj1l,gendrj2l;
-   double gendrma1,gendrma2;
-   double gendrea1,gendrea2;
-   double genMjj,gendetajj,genzepp;
-   double gendrla1;
-   double gendelta_phi,genZGmass;
-   double genMla,gen_Dphiwajj;
-   vector<double> vector_photon,vector_jet,vector_muon,vector_ele;
-   vector<double>::iterator biggest_photon,biggest_jet1,biggest_jet2,biggest_muon1,biggest_ele1;
-
-void test::ResetValue(){
-    genMla=-10;gen_Dphiwajj=-10;genWGmass=-10;
-	genlep1pt=-10;genlep1eta=-10;genlep1phi=-10;
-	genjet1pt=-10;genjet2pt=-10;genjet1eta=-10;genjet2eta=-10;genjet1phi=-10;genjet2phi=-10;
-	genjet1e=-10;genjet2e=-10;
-	genphotonet=-10;genphotoneta=-10;genphotonphi=-10;
-	gendrj1a=-10;gendrj2a=-10;gendrj1l=-10;gendrj2l=-10;
-    gendrla1=-10;
-	genMjj=-10;gendetajj=-10;genzepp=-10;gendelta_phi=-10;genZGmass=-10;
-    genmassVlep=-10;genyVlep=-10;genphiVlep=-10;genptVlep=-10;
-    genlep=-10;gendrjj=-10;drjj=-10;
-	genmuon1pt=-10;genmuon1eta=-10;genmuon1phi=-10;
-	genele1pt=-10;genele1eta=-10;genele1phi=-10;
-    GenDrmu=false;GenDrele=false;Genmu=false;Genele=false;
-	for(int i=0;i<6;i++){
-		genmuon[i]=false;
-		genele[i]=false;
-        genphoton[i]=false;
-		genjet[i]=false;
-	}
-}
-
-
-double ptlepBins[5]={20,40,70,110,400};
-vector<double> Bins={20,40,70,110,400};
-
-TH1D * hist = new TH1D("hist","hist", 4, ptlepBins);
-
-TH2D * hist_gen = new TH2D("hist_gen","hist_gen", 4, ptlepBins,4, ptlepBins);
-
-TH1D * hist_outgen = new TH1D("hist_outgen","hist_outgen", 4, ptlepBins);
+int nm = 0, nm2 = 0;
+int ne = 0, ne2 = 0;
 
 void test::endJob() {
-   fout = new TFile(m_dataset, "RECREATE");
-   fout->cd();
-   hist->Write();
 
-   hist_gen->Write();
+   hist_Scale(m_type, p_event, n_event);
+   savefile(fout, m_dataset);
 
-   hist_outgen->Write();
-
-   fout->Close();
-   delete fout;
-}
-
-void test::hist_Sumw2()
-{
-   hist->Sumw2();
-
-   hist_gen->Sumw2();
-
-   hist_outgen->Sumw2();
-
-}
-
-void test::hist_Scale()
-{
-   if(m_type == "mc"){
-      hist->Scale(1/(p_event - n_event));
-
-      hist_gen->Scale(1/(p_event - n_event));
-
-      hist_outgen->Scale(1/(p_event - n_event));
-   }
-  
-}
-
-Double_t test::delta_R(Double_t eta1, Double_t phi1, Double_t eta2, Double_t phi2)
-{
-        Double_t dp = phi1-phi2;
-        if(fabs(dp) > Pi) dp = 2*Pi - fabs(dp);
-        Double_t dr = sqrt((eta1-eta2)*(eta1-eta2)+dp*dp);
-        return dr;
 }
 
 void test::Loop(TDirectory * dir, TTree * tree)
@@ -119,8 +25,6 @@ void test::Loop(TDirectory * dir, TTree * tree)
    if(m_btag_workpoint == "tight") btag_cut_value = cut_value[0];
    if(m_btag_workpoint == "medium") btag_cut_value = cut_value[1];
    if(m_btag_workpoint == "loose") btag_cut_value = cut_value[2];
-   if(m_channel == "muon") n = tree->GetEntries("lep == 13");
-   if(m_channel == "electron") n = tree->GetEntries("lep == 11");
 
    if(!(m_type == "mc")){
       p_event = 1;//p_event + tree->GetEntries("theWeight>0");
@@ -135,8 +39,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
 
    }
 
-
-   cout<<"LUMI : "<<lumi<<endl<<"btag value cut :  "<<cut_value[1]<<endl;
+   cout<<"LUMI : "<<lumi<<endl<<"btag value cut :  "<<btag_cut_value<<endl;
 
    Long64_t nbytes = 0, nb = 0;
    set_cut_value(m_year);
@@ -185,12 +88,12 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderValue<Double_t>    nump  = {fReader, "nump"};
    TTreeReaderValue<Double_t>    numm  = {fReader, "numm"};
    TTreeReaderValue<Double_t>    npT  = {fReader, "npT"};
-   //TTreeReaderArray<Double_t>    pweight = {fReader, "pweight"};//for EW and QCD WG PDF
+   TTreeReaderArray<Double_t>    pweight = {fReader, "pweight"};//for EW and QCD WG PDF
    
-   double pweight[703];
-   for (int ip=0; ip<703; ip++){
-      pweight[ip] = 1;
-   }
+   //double pweight[703];
+   //for (int ip=0; ip<703; ip++){
+     // pweight[ip] = 1;
+   //}
    
    TTreeReaderValue<Int_t>    lep  = {fReader, "lep"};
    TTreeReaderValue<Double_t>    ptVlep  = {fReader, "ptVlep"};
@@ -230,8 +133,6 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderValue<Double_t>    Mva_f  = {fReader, "Mva_f"};
    TTreeReaderValue<Int_t>    nlooseeles  = {fReader, "nlooseeles"};
    TTreeReaderValue<Int_t>    nloosemus  = {fReader, "nloosemus"};
-   //TTreeReaderArray<Double_t>    photon_hoe  = {fReader, "photon_hoe"};
-
    TTreeReaderArray<Double_t>    genphoton_pt  = {fReader, "genphoton_pt"};
    TTreeReaderArray<Double_t>    genphoton_eta  = {fReader, "genphoton_eta"};
    TTreeReaderArray<Double_t>    genphoton_phi  = {fReader, "genphoton_phi"};
@@ -241,13 +142,6 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderArray<Double_t>    genelectron_pt  = {fReader, "genelectron_pt"};
    TTreeReaderArray<Double_t>    genelectron_eta  = {fReader, "genelectron_eta"};
    TTreeReaderArray<Double_t>    genelectron_phi  = {fReader, "genelectron_phi"};
-
-   TTreeReaderArray<Double_t>    genjet_pt  = {fReader, "genjet_pt"};
-   TTreeReaderArray<Double_t>    genjet_eta  = {fReader, "genjet_eta"};
-   TTreeReaderArray<Double_t>    genjet_phi  = {fReader, "genjet_phi"};
-   TTreeReaderArray<Double_t>    genjet_e  = {fReader, "genjet_e"};
-
-
    TTreeReaderValue<Double_t>    photon_pt  = {fReader, "photon_pt"};
    TTreeReaderValue<Double_t>    photon_eta  = {fReader, "photon_eta"};
    TTreeReaderValue<Double_t>    photon_phi  = {fReader, "photon_phi"};
@@ -759,25 +653,130 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderValue<Double_t>    lumiWeight  = {fReader, "lumiWeight"};
    TTreeReaderValue<Double_t>    pileupWeight  = {fReader, "pileupWeight"};
    TTreeReaderValue<Bool_t>    _passecalBadCalibFilterUpdate  = {fReader, "_passecalBadCalibFilterUpdate"};
+/*
+   TTreeReaderValue<Double_t>    jet1puIdTight_new       = {fReader, "jet1puIdTight_new"};
+   TTreeReaderValue<Double_t>    jet1puIdTight_JEC_up    = {fReader, "jet1puIdTight_JEC_up"};
+   TTreeReaderValue<Double_t>    jet1puIdTight_JEC_down  = {fReader, "jet1puIdTight_JEC_down"};
+   TTreeReaderValue<Double_t>    jet1puIdTight_JER_up    = {fReader, "jet1puIdTight_JER_up"};
+   TTreeReaderValue<Double_t>    jet1puIdTight_JER_down  = {fReader, "jet1puIdTight_JER_down"};
+   TTreeReaderValue<Double_t>    jet2puIdTight_new       = {fReader, "jet2puIdTight_new"};
+   TTreeReaderValue<Double_t>    jet2puIdTight_JEC_up    = {fReader, "jet2puIdTight_JEC_up"};
+   TTreeReaderValue<Double_t>    jet2puIdTight_JEC_down  = {fReader, "jet2puIdTight_JEC_down"};
+   TTreeReaderValue<Double_t>    jet2puIdTight_JER_up    = {fReader, "jet2puIdTight_JER_up"};
+   TTreeReaderValue<Double_t>    jet2puIdTight_JER_down  = {fReader, "jet2puIdTight_JER_down"};
+   TTreeReaderValue<Double_t>    jet1puIdMedium_new       = {fReader, "jet1puIdMedium_new"};
+   TTreeReaderValue<Double_t>    jet1puIdMedium_JEC_up    = {fReader, "jet1puIdMedium_JEC_up"};
+   TTreeReaderValue<Double_t>    jet1puIdMedium_JEC_down  = {fReader, "jet1puIdMedium_JEC_down"};
+   TTreeReaderValue<Double_t>    jet1puIdMedium_JER_up    = {fReader, "jet1puIdMedium_JER_up"};
+   TTreeReaderValue<Double_t>    jet1puIdMedium_JER_down  = {fReader, "jet1puIdMedium_JER_down"};
+   TTreeReaderValue<Double_t>    jet2puIdMedium_new       = {fReader, "jet2puIdMedium_new"};
+   TTreeReaderValue<Double_t>    jet2puIdMedium_JEC_up    = {fReader, "jet2puIdMedium_JEC_up"};
+   TTreeReaderValue<Double_t>    jet2puIdMedium_JEC_down  = {fReader, "jet2puIdMedium_JEC_down"};
+   TTreeReaderValue<Double_t>    jet2puIdMedium_JER_up    = {fReader, "jet2puIdMedium_JER_up"};
+   TTreeReaderValue<Double_t>    jet2puIdMedium_JER_down  = {fReader, "jet2puIdMedium_JER_down"};
+   TTreeReaderValue<Double_t>    jet1puIdLoose_new       = {fReader, "jet1puIdLoose_new"};
+   TTreeReaderValue<Double_t>    jet1puIdLoose_JEC_up    = {fReader, "jet1puIdLoose_JEC_up"};
+   TTreeReaderValue<Double_t>    jet1puIdLoose_JEC_down  = {fReader, "jet1puIdLoose_JEC_down"};
+   TTreeReaderValue<Double_t>    jet1puIdLoose_JER_up    = {fReader, "jet1puIdLoose_JER_up"};
+   TTreeReaderValue<Double_t>    jet1puIdLoose_JER_down  = {fReader, "jet1puIdLoose_JER_down"};
+   TTreeReaderValue<Double_t>    jet2puIdLoose_new       = {fReader, "jet2puIdLoose_new"};
+   TTreeReaderValue<Double_t>    jet2puIdLoose_JEC_up    = {fReader, "jet2puIdLoose_JEC_up"};
+   TTreeReaderValue<Double_t>    jet2puIdLoose_JEC_down  = {fReader, "jet2puIdLoose_JEC_down"};
+   TTreeReaderValue<Double_t>    jet2puIdLoose_JER_up    = {fReader, "jet2puIdLoose_JER_up"};
+   TTreeReaderValue<Double_t>    jet2puIdLoose_JER_down  = {fReader, "jet2puIdLoose_JER_down"};
+*/
+   TTreeReaderArray<Double_t>    genjet_pt  = {fReader, "genjet_pt"};
+   TTreeReaderArray<Double_t>    genjet_eta  = {fReader, "genjet_eta"};
+   TTreeReaderArray<Double_t>    genjet_phi  = {fReader, "genjet_phi"};
+   TTreeReaderArray<Double_t>    genjet_e  = {fReader, "genjet_e"};
+
+//   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
+
+  // TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
+  // TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
+
    Long64_t maxEntries = fReader.GetEntries(false);
    cout << "Number of events to be analyzed : " << maxEntries << std::endl;
    while (fReader.Next()) {
-//cout<<"ok"<<endl;
+
       if (jentry % 10000 == 0){ 
          int ks = floor(50.*jentry/maxEntries);
          string s1(ks,'>');
          string s2(50-ks,'-');
          cout<<"processing : ["<<"\033[32m"<<s1<<"\033[0m"<<s2<<"]  "<<"\033[33m"<<100.*jentry/maxEntries<<"%  "<<"p_event: "<<p_event<<" n_event: "<<n_event<<"\033[0m"<<endl;
          }
-
+//cout<<jentry<<endl;
       jentry++;
-
+      //if(jentry>1000) break;
       //if(*theWeight>0) p_event++;
       //if(*theWeight<0) n_event++;
 
       if (!(*hasphoton) == 1) continue;
+      if(m_type == "mc"){
+         if(!(*ispromptLep == 1 && *isprompt == 2)) continue;
+      }
       // apply selection
-      if(m_type == "data" || m_type == "mc" || m_type == "fakelepton"){
+
+      for (int iii = 0; iii<6; iii++){
+         fill_genjet_eta[iii] = genjet_eta[iii];
+         fill_genjet_phi[iii] = genjet_phi[iii];
+         fill_genphoton_pt[iii] = genphoton_pt[iii];
+         fill_genphoton_eta[iii] =  genphoton_eta[iii];
+         fill_genphoton_phi[iii] = genphoton_phi[iii];
+         fill_genjet_pt[iii] = genjet_pt[iii];
+         fill_genjet_e[iii] = genjet_e[iii];
+         fill_genmuon_pt[iii] = genmuon_pt[iii];
+         fill_genmuon_eta[iii] = genmuon_eta[iii];
+         fill_genmuon_phi[iii] = genmuon_phi[iii];
+         fill_genelectron_pt[iii] = genelectron_pt[iii];
+         fill_genelectron_eta[iii] = genelectron_eta[iii];
+         fill_genelectron_phi[iii] = genelectron_phi[iii];
+
+      }
+/*
+
+      if (m_pujet_workpoint == "T"){
+         fill_jet1puId          = *jet1puIdTight_new;
+         fill_jet1puId_JEC_up   = *jet1puIdTight_JEC_up;
+         fill_jet1puId_JEC_down = *jet1puIdTight_JEC_down;
+         fill_jet1puId_JER_up   = *jet1puIdTight_JER_up;
+         fill_jet1puId_JER_down = *jet1puIdTight_JER_down;
+
+         fill_jet2puId          = *jet2puIdTight_new;
+         fill_jet2puId_JEC_up   = *jet2puIdTight_JEC_up;
+         fill_jet2puId_JEC_down = *jet2puIdTight_JEC_down;
+         fill_jet2puId_JER_up   = *jet2puIdTight_JER_up;
+         fill_jet2puId_JER_down = *jet2puIdTight_JER_down;
+      }
+      if (m_pujet_workpoint == "M"){
+         fill_jet1puId          = *jet1puIdMedium_new;
+         fill_jet1puId_JEC_up   = *jet1puIdMedium_JEC_up;
+         fill_jet1puId_JEC_down = *jet1puIdMedium_JEC_down;
+         fill_jet1puId_JER_up   = *jet1puIdMedium_JER_up;
+         fill_jet1puId_JER_down = *jet1puIdMedium_JER_down;
+
+         fill_jet2puId          = *jet2puIdMedium_new;
+         fill_jet2puId_JEC_up   = *jet2puIdMedium_JEC_up;
+         fill_jet2puId_JEC_down = *jet2puIdMedium_JEC_down;
+         fill_jet2puId_JER_up   = *jet2puIdMedium_JER_up;
+         fill_jet2puId_JER_down = *jet2puIdMedium_JER_down;
+      } 
+
+      if (m_pujet_workpoint == "L"){
+         fill_jet1puId          = *jet1puIdLoose_new;
+         fill_jet1puId_JEC_up   = *jet1puIdLoose_JEC_up;
+         fill_jet1puId_JEC_down = *jet1puIdLoose_JEC_down;
+         fill_jet1puId_JER_up   = *jet1puIdLoose_JER_up;
+         fill_jet1puId_JER_down = *jet1puIdLoose_JER_down;
+
+         fill_jet2puId          = *jet2puIdLoose_new;
+         fill_jet2puId_JEC_up   = *jet2puIdLoose_JEC_up;
+         fill_jet2puId_JEC_down = *jet2puIdLoose_JEC_down;
+         fill_jet2puId_JER_up   = *jet2puIdLoose_JER_up;
+         fill_jet2puId_JER_down = *jet2puIdLoose_JER_down;
+      } 
+*/
+      if(m_sample == "data" || m_type == "mc" || m_sample == "fakelepton"){
          fill_Mjj                 = (*Mjj_new);
          fill_Mjj_JEC_up          = (*Mjj_JEC_up);
          fill_Mjj_JEC_down        = (*Mjj_JEC_down);
@@ -818,6 +817,18 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_jet2pf_JEC_down     = (*jet2pf_JEC_down);
          fill_jet2pf_JER_up       = (*jet2pf_JER_up);
          fill_jet2pf_JER_down     = (*jet2pf_JER_down);
+
+         fill_jet1phi             = (*jet1phi_new);
+         fill_jet1phi_JEC_up      = (*jet1phi_JEC_up);
+         fill_jet1phi_JEC_down    = (*jet1phi_JEC_down);
+         fill_jet1phi_JER_up      = (*jet1phi_JER_up);
+         fill_jet1phi_JER_down    = (*jet1phi_JER_down);
+
+         fill_jet2phi             = (*jet2phi_new);
+         fill_jet2phi_JEC_up      = (*jet2phi_JEC_up);
+         fill_jet2phi_JEC_down    = (*jet2phi_JEC_down);
+         fill_jet2phi_JER_up      = (*jet2phi_JER_up);
+         fill_jet2phi_JER_down    = (*jet2phi_JER_down);
 
          fill_lep                 = (*lep);
          fill_HLT_muon            = (*HLT_Mu2);
@@ -953,7 +964,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_Dphiwajj            = (*Dphiwajj_new);
 
          fill_Dphiwajj_JEC_up = fabs((vp4_jec_up + photonp42).Phi() - (j1p4_jec_up + j2p4_jec_up).Phi());
-         //double Pi =3.1415926;
+         double Pi =3.1415926;
          if (fill_Dphiwajj_JEC_up > Pi) {
             fill_Dphiwajj_JEC_up = 2.0 * Pi - fill_Dphiwajj_JEC_up;
          }
@@ -984,9 +995,26 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_Mva_JER_up          = (photonp42 + vp4_jer_up).M();
          fill_Mva_JER_down        = (photonp42 + vp4_jer_down).M();
 
+vp4.Delete();
+vp4_jec_up.Delete();
+vp4_jec_down.Delete();
+vp4_jer_up.Delete();
+vp4_jer_down.Delete();
+j2p4.Delete();
+j2p4_jec_up.Delete();
+j2p4_jec_down.Delete();
+j2p4_jer_up.Delete();
+j2p4_jer_down.Delete();
+j2p4.Delete();
+j2p4_jec_up.Delete();
+j2p4_jec_down.Delete();
+j2p4_jer_up.Delete();
+j2p4_jer_down.Delete();
+photonp42.Delete();
+
       }
 
-      else if(m_type == "fakephoton" || m_type == "doublefake"){
+      else if(m_sample == "fakephoton" || m_sample == "doublefake"){
          fill_Mjj                 = (*Mjj_new_f);
          fill_Mjj_JEC_up          = (*Mjj_JEC_up_f);
          fill_Mjj_JEC_down        = (*Mjj_JEC_down_f);
@@ -1028,6 +1056,18 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_jet2pf_JEC_down     = (*jet2pf_JEC_down_f);
          fill_jet2pf_JER_up       = (*jet2pf_JER_up_f);
          fill_jet2pf_JER_down     = (*jet2pf_JER_down_f);
+
+         fill_jet1phi             = (*jet1phi_new_f);
+         fill_jet1phi_JEC_up      = (*jet1phi_JEC_up_f);
+         fill_jet1phi_JEC_down    = (*jet1phi_JEC_down_f);
+         fill_jet1phi_JER_up      = (*jet1phi_JER_up_f);
+         fill_jet1phi_JER_down    = (*jet1phi_JER_down_f);
+
+         fill_jet2phi             = (*jet2phi_new_f);
+         fill_jet2phi_JEC_up      = (*jet2phi_JEC_up_f);
+         fill_jet2phi_JEC_down    = (*jet2phi_JEC_down_f);
+         fill_jet2phi_JER_up      = (*jet2phi_JER_up_f);
+         fill_jet2phi_JER_down    = (*jet2phi_JER_down_f);
 
          fill_lep                 = (*lep);
          fill_HLT_muon            = (*HLT_Mu2);
@@ -1197,409 +1237,114 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_Mla                 = (*Mla_f);
          fill_Mva                 = (*Mva_f);
          fill_Mva_JEC_up          = (photonp42 + vp4_jec_up).M();
+//cout<<fill_Mva_JEC_up<<endl;
          fill_Mva_JEC_down        = (photonp42 + vp4_jec_down).M();
          fill_Mva_JER_up          = (photonp42 + vp4_jer_up).M();
          fill_Mva_JER_down        = (photonp42 + vp4_jer_down).M();
+vp4.Delete();
+vp4_jec_up.Delete();
+vp4_jec_down.Delete();
+vp4_jer_up.Delete();
+vp4_jer_down.Delete();
+j2p4.Delete();
+j2p4_jec_up.Delete();
+j2p4_jec_down.Delete();
+j2p4_jer_up.Delete();
+j2p4_jer_down.Delete();
+j2p4.Delete();
+j2p4_jec_up.Delete();
+j2p4_jec_down.Delete();
+j2p4_jer_up.Delete();
+j2p4_jer_down.Delete();
+photonp42.Delete();
       }
 
 
-      int jet_index[2];
-      // gen information
       ResetValue();
-	  int pho1_index=0,jet1_index=0,muon1_index=0,ele1_index=0;
-      TLorentzVector for_gen_lep1p4;
-	  TLorentzVector for_gen_photonp42;
-	  TLorentzVector for_gen_vp4;
+      init_gen(fill_genphoton_pt, fill_genphoton_eta, 
+               fill_genjet_pt, fill_genjet_eta, 
+               fill_genmuon_pt, fill_genmuon_eta, 
+               fill_genelectron_pt, fill_genelectron_eta);
+      match_genlep(fill_genphoton_pt, fill_genphoton_eta, fill_genphoton_phi,
+                   fill_genjet_pt, fill_genjet_eta, fill_genjet_phi,
+                   fill_genmuon_pt, fill_genmuon_eta, fill_genmuon_phi,
+                   fill_genelectron_pt, fill_genelectron_eta, fill_genelectron_phi);
+      match_genphoton_genjet(fill_genphoton_pt, fill_genphoton_eta, fill_genphoton_phi,
+                   fill_genjet_pt, fill_genjet_eta, fill_genjet_phi, fill_genjet_e,
+                   fill_genmuon_pt, fill_genmuon_eta, fill_genmuon_phi,
+                   fill_genelectron_pt, fill_genelectron_eta, fill_genelectron_phi);
+      gen_clear();
+ 
+      // gen cut
+      gen_muon_cut_signal_region = pass_gen_signal_region_cuts( "muon", genlep, genlep1pt, genlep1eta, genphotonet, genjet1pt, genjet2pt, genjet1eta, genjet2eta, *genMET, gendrla1, gendrj1a, gendrj2a, gendrj1l, gendrj2l, genMjj, gendetajj);
+      gen_electron_cut_signal_region = pass_gen_signal_region_cuts( "electron", genlep, genlep1pt, genlep1eta, genphotonet, genjet1pt, genjet2pt, genjet1eta, genjet2eta, *genMET, gendrla1, gendrj1a, gendrj2a, gendrj1l, gendrj2l, genMjj, gendetajj);
+      gen_muon_cut_control_region = pass_gen_control_region_cuts( "muon", genlep, genlep1pt, genlep1eta, genphotonet, genjet1pt, genjet2pt, genjet1eta, genjet2eta, *genMET, gendrla1, gendrj1a, gendrj2a, gendrj1l, gendrj2l, genMjj, gendetajj);
+      gen_electron_cut_control_region = pass_gen_control_region_cuts( "electron", genlep, genlep1pt, genlep1eta, genphotonet, genjet1pt, genjet2pt, genjet1eta, genjet2eta, *genMET, gendrla1, gendrj1a, gendrj2a, gendrj1l, gendrj2l, genMjj, gendetajj);
 
-      for(int i=0;i<6;i++){
-         genphoton[i] = genphoton_pt[i]>20 &&( (fabs(genphoton_eta[i])<1.4442) || ( fabs(genphoton_eta[i])<2.5 && fabs(genphoton_eta[i])>1.566 ) );
-         genjet[i] = genjet_pt[i]>30 && fabs(genjet_eta[i])<4.7;
-         genmuon[i] = genmuon_pt[i]>20 && fabs(genmuon_eta[i])<2.4;
-         genele[i] = genelectron_pt[i]>25 && fabs(genelectron_eta[i])<2.5;
-
-         if(genjet[i]) vector_jet.push_back(genjet_pt[i]);
-         else vector_jet.push_back(0);
-
-         if(genphoton[i]) vector_photon.push_back(genphoton_pt[i]);
-         else vector_photon.push_back(0);
-
-         if(genmuon[i]) vector_muon.push_back(genmuon_pt[i]);
-         else vector_muon.push_back(0);
-
-         if(genele[i]) vector_ele.push_back(genelectron_pt[i]);
-         else vector_ele.push_back(0);
-	
-      }
-
-
-      
-      biggest_muon1=max_element(begin(vector_muon),end(vector_muon));
-	  muon1_index = distance( begin(vector_muon), biggest_muon1);
-
-      biggest_ele1=max_element(begin(vector_ele),end(vector_ele));
-      ele1_index = distance( begin(vector_ele), biggest_ele1);
-      if(genmuon_pt[muon1_index]>genelectron_pt[ele1_index]){
-         genlep = 13;
-         genlep1pt  = genmuon_pt[muon1_index];
-         genlep1eta = genmuon_eta[muon1_index];
-         genlep1phi = genmuon_phi[muon1_index];
-         for_gen_lep1p4.SetPtEtaPhiM(genlep1pt, genlep1eta, genlep1phi, 0.105666);
-
-         for(int for_gen_iphoton=0; for_gen_iphoton<6; for_gen_iphoton++){
-            TLorentzVector for_gen_photon_temp;
-            for_gen_photon_temp.SetPtEtaPhiM(genphoton_pt[for_gen_iphoton],genphoton_eta[for_gen_iphoton],genphoton_phi[for_gen_iphoton],0);
-            if( for_gen_lep1p4.DeltaR(for_gen_photon_temp)<0.1) {for_gen_lep1p4+=for_gen_photon_temp;continue;}
-         }
-         genlep1pt  = for_gen_lep1p4.Pt();
-         genlep1eta = for_gen_lep1p4.Eta();
-         genlep1phi = for_gen_lep1p4.Phi();
-
-
-      }
-      else if(genmuon_pt[muon1_index]<=genelectron_pt[ele1_index]){
-         genlep = 11;
-         genlep1pt  = genelectron_pt[ele1_index];
-         genlep1eta = genelectron_eta[ele1_index];
-         genlep1phi = genelectron_phi[ele1_index];
-         for_gen_lep1p4.SetPtEtaPhiM(genlep1pt, genlep1eta, genlep1phi, 0.00051);
-
-         for(int for_gen_iphoton=0; for_gen_iphoton<6; for_gen_iphoton++){
-            TLorentzVector for_gen_photon_temp;
-            for_gen_photon_temp.SetPtEtaPhiM(genphoton_pt[for_gen_iphoton],genphoton_eta[for_gen_iphoton],genphoton_phi[for_gen_iphoton],0);
-            if( for_gen_lep1p4.DeltaR(for_gen_photon_temp)<0.1) {for_gen_lep1p4+=for_gen_photon_temp;continue;}
-         }
-         genlep1pt  = for_gen_lep1p4.Pt();
-         genlep1eta = for_gen_lep1p4.Eta();
-         genlep1phi = for_gen_lep1p4.Phi();
-
-     }
-
-      genyVlep  =(for_gen_lep1p4).Eta();
-	  genphiVlep=(for_gen_lep1p4).Phi();
-	  genptVlep =(for_gen_lep1p4).Pt();
-	  genmassVlep=(for_gen_lep1p4).M();
-	  for_gen_vp4.SetPtEtaPhiM(genptVlep,genyVlep,genphiVlep,genmassVlep);
-
-      for(int gen_photon_index = 0; gen_photon_index<6; gen_photon_index++){
-         delta_R(genphoton_eta[gen_photon_index],genphoton_phi[gen_photon_index], genlep1eta,genlep1phi) < 0.5;
-         //cout<<"drla:  "<<delta_R(genphoton_eta[gen_photon_index],genphoton_phi[gen_photon_index], genlep1eta,genlep1phi)<<endl;
-         vector_photon[gen_photon_index] = 0;
-
-      }
-
-      biggest_photon=max_element(begin(vector_photon),end(vector_photon));
-      //cout<<"pho index:"<<*biggest_photon<<endl;
-      if(*biggest_photon>=0){
-         pho1_index = distance( begin(vector_photon), biggest_photon);
-         //cout<<pho1_index<<" "<<genphoton_pt[pho1_index];
-         genphotonet= genphoton_pt[pho1_index];
-         genphotoneta= genphoton_eta[pho1_index];
-         genphotonphi= genphoton_phi[pho1_index];
-         for_gen_photonp42.SetPtEtaPhiM(genphotonet, genphotoneta, genphotonphi,0); 
-         genWGmass=(for_gen_vp4+for_gen_photonp42).M();
-         gendrla1 = delta_R(genphotoneta,genphotonphi,genlep1eta,genlep1phi);
-	
-         Int_t jetindexphoton12[2] = {-1,-1};
-         for(Int_t i=0; i<6; i++)
-         {
-            if(genphotonet>0){
-               double drtmp1=delta_R(genjet_eta[i], genjet_phi[i], genphotoneta,genphotonphi);
-               double drjlep1 = delta_R(genjet_eta[i], genjet_phi[i],genlep1eta,genlep1phi);
-               if(genjet_pt[i]>0 && drtmp1>0.5 &&drjlep1>0.5  && jetindexphoton12[0]==-1&&jetindexphoton12[1]==-1) {
-                  jetindexphoton12[0] = i;
-                  continue;
-               }
-               if(genjet_pt[i]>0 && drtmp1>0.5 &&drjlep1>0.5  && jetindexphoton12[0]!=-1&&jetindexphoton12[1]==-1) {
-                  if(delta_R(genjet_eta[i], genjet_phi[i],genjet_eta[jetindexphoton12[0]], genjet_phi[jetindexphoton12[0]])>0.5){
-                     jetindexphoton12[1] = i;
-                     continue;
-                  }
-               }
-            }
-         }
-
-
-         jet_index[0] = jetindexphoton12[0];
-         jet_index[1] = jetindexphoton12[1];
-         if(jetindexphoton12[0]>-1 && jetindexphoton12[1]>-1)
-         {
-            genjet1pt  = genjet_pt[jetindexphoton12[0]];
-            genjet1eta = genjet_eta[jetindexphoton12[0]];
-			genjet1phi = genjet_phi[jetindexphoton12[0]];
-            genjet1e   = genjet_e[jetindexphoton12[0]];
-            genjet2pt  = genjet_pt[jetindexphoton12[1]];
-            genjet2eta = genjet_eta[jetindexphoton12[1]];
-            genjet2phi = genjet_phi[jetindexphoton12[1]];
-            genjet2e   = genjet_e[jetindexphoton12[1]];
-            gendrj1a= delta_R(genjet1eta,genjet1phi,genphotoneta,genphotonphi);
-            gendrj2a= delta_R(genjet2eta,genjet2phi,genphotoneta,genphotonphi);
-            gendrj1l= delta_R(genjet1eta,genjet1phi,genlep1eta,genlep1phi);
-            gendrj2l= delta_R(genjet2eta,genjet2phi,genlep1eta,genlep1phi);
-			
-            TLorentzVector for_gen_j1p4;
-            for_gen_j1p4.SetPtEtaPhiE(genjet1pt, genjet1eta, genjet1phi, genjet1e);
-			
-            TLorentzVector for_gen_j2p4;
-            for_gen_j2p4.SetPtEtaPhiE(genjet2pt, genjet2eta, genjet2phi, genjet2e);
-			
-            TLorentzVector photonp4;
-            photonp4.SetPtEtaPhiM(genphotonet, genphotoneta, genphotonphi, 0);
-			
-			
-            genMla = (photonp4+for_gen_vp4).M();
-            genMjj=(for_gen_j1p4 + for_gen_j2p4).M();
-            genzepp = fabs((for_gen_vp4+photonp4).Rapidity() - (for_gen_j1p4.Rapidity() + for_gen_j2p4.Rapidity())/ 2.0);
-            gendetajj = fabs(genjet1eta - genjet2eta);
-            gendelta_phi=fabs((for_gen_vp4+photonp4).Phi()-(for_gen_j1p4+for_gen_j2p4).Phi());
-			
-            if (gendelta_phi>Pi) gendelta_phi=2*Pi-gendelta_phi;
-            if (fabs(genjet1phi-genjet2phi)>Pi) gendrjj = sqrt((genjet1eta-genjet2eta)*(genjet1eta-genjet2eta)+(2*Pi-fabs(genjet1phi-genjet2phi))*(2*Pi-fabs(genjet1phi-genjet2phi)));
-            else gendrjj = sqrt((genjet1eta-genjet2eta)*(genjet1eta-genjet2eta)+(fabs(genjet1phi-genjet2phi))*(fabs(genjet1phi-genjet2phi)));
-		
-         }
-
-      }
-      
-      vector_photon.clear();
-      vector_jet.clear();
-      vector_muon.clear();
-      vector_ele.clear();
-
-
-
-      if(m_channel == "muon" &&  !(fill_HLT_muon==1 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1)) continue;
-      if(m_channel == "electron" && !(fill_HLT_electron==1 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1)) continue;
 
       // signal region cuts
-      muon_cut_signal_region = fill_HLT_muon==1
-                 && fill_Mjj>500. 
-                 //&& fill_Mva > 100. 
-                 ////////&& fill_Mla > 30.
-                 && fill_deltaeta > 2.5
-                 //&& fill_Dphiwajj >1.8
-                 //&& fill_zepp < 0.9
-                 && fill_jet1pt>40. && fabs(fill_jet1eta)<4.7 && fill_jet2pt>30. && fabs(fill_jet2eta)<4.7
-                 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4
-                 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1
-                 && fill_photonhaspixelseed==0 
-                 && fill_photonet>25. 
-                 //&& fill_photonet < 400.
-                 && fill_MET_et>30. 
-                 //&& fill_mtVlepJECnew>30
-                 && fill_drla>0.5 && fill_drj1l>0.5 && fill_drj2l>0.5 && fill_drj1a>0.5 && fill_drj2a>0.5
-                 //&& fabs(fill_j1metPhi)>0.5 && fabs(fill_j2metPhi)>0.5
-                 //&& fill_jet1deepcsv < cut_value[1] && fill_jet2deepcsv < cut_value[1]
-                 ;
+      muon_cut_signal_region = pass_signal_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
 
-     gen_muon_cut_signal_region = genlep==13 && genlep1pt>30 && fabs(genlep1eta)<2.4
-                 && genphotonet>25 
-                 //&& genphotonet<400 
-                 && fabs(genphotoneta)<2.5 && (fabs(genphotoneta)>1.566 || fabs(genphotoneta)<1.4442)
-                 && genjet1pt>40 && genjet2pt>30 
-                 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7
-                 && gendrla1>0.5 
-                 && gendrj1a>0.5 && gendrj2a>0.5 && gendrj1l>0.5 && gendrj2l>0.5
-                 && genMjj >500 && gendetajj>2.5 
-                 //&& genWGmass >100 
-                 //&& genMla > 30 
-                 //&& gendelta_phi >1.8
-                 //&& genzepp <0.9 
-                 && *genMET >30
-                 ;
+      muon_cut_signal_region_jec_up = pass_signal_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet2pt_JEC_up,fill_jet2eta_JEC_up, fill_MET_et_JEC_up, fill_mtVlepJECnew_JEC_up, fill_drla, fill_drj1l_JEC_up, fill_drj2l_JEC_up, fill_drj1a_JEC_up, fill_drj2a_JEC_up, fill_j1metPhi_JEC_up, fill_j2metPhi_JEC_up, fill_jet1deepcsv_JEC_up, fill_jet2deepcsv_JEC_up, fill_Mjj_JEC_up, fill_Mva_JEC_up, fill_deltaeta_JEC_up, fill_Dphiwajj_JEC_up, fill_zepp_JEC_up, btag_cut_value);
 
-      electron_cut_signal_region = fill_HLT_electron==1
-                 && fill_Mjj>500.
-                 //&& fill_Mva > 100. 
-                 //&& fill_Mla > 30.
-                 && fill_deltaeta > 2.5
-                 //&& fill_Dphiwajj >1.8
-                 //&& fill_zepp < 0.9
-                 && fill_jet1pt>40. && fabs(fill_jet1eta)<4.7 && fill_jet2pt>30. && fabs(fill_jet2eta)<4.7
-                 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5
-                 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1
-                 && fill_photonhaspixelseed==0 
-                 && fill_photonet>25. 
-                 //&& fill_photonet < 400.
-                 && fill_MET_et>30. 
-                 //&& fill_mtVlepJECnew>30
-                 && fill_drla>0.5 && fill_drj1l>0.5 && fill_drj2l>0.5 && fill_drj1a>0.5 && fill_drj2a>0.5
-                 //&& fabs(fill_j1metPhi)>0.5 && fabs(fill_j2metPhi)>0.5
-                 //&& fill_jet1deepcsv < cut_value[1] && fill_jet2deepcsv < cut_value[1]
-                 && fabs(fill_Mla - 91.2) > 10
-                 ;
+      muon_cut_signal_region_jec_down = pass_signal_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet2pt_JEC_down,fill_jet2eta_JEC_down, fill_MET_et_JEC_down, fill_mtVlepJECnew_JEC_down, fill_drla, fill_drj1l_JEC_down, fill_drj2l_JEC_down, fill_drj1a_JEC_down, fill_drj2a_JEC_down, fill_j1metPhi_JEC_down, fill_j2metPhi_JEC_down, fill_jet1deepcsv_JEC_down, fill_jet2deepcsv_JEC_down, fill_Mjj_JEC_down, fill_Mva_JEC_down, fill_deltaeta_JEC_down, fill_Dphiwajj_JEC_down, fill_zepp_JEC_down, btag_cut_value);
 
-     gen_electron_cut_signal_region = genlep==11 && genlep1pt>30 && fabs(genlep1eta)<2.5
-                 && genphotonet>25 
-                 //&& genphotonet<400
-                 && fabs(genphotoneta)<2.5 && (fabs(genphotoneta)>1.566 || fabs(genphotoneta)<1.4442)
-                 && genjet1pt>40 && genjet2pt>30 
-                 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7
-                 && gendrla1>0.5 
-                 && gendrj1a>0.5 && gendrj2a>0.5 && gendrj1l>0.5 && gendrj2l>0.5
-                 && genMjj >500 && gendetajj>2.5 
-                 //&& genWGmass >100 
-                 //&& genMla > 30 
-                 //&& gendelta_phi >1.8
-                 //&& genzepp <0.9 
-                 && *genMET >30
-                 && fabs(genMla - 91.2) > 10
-                 ;
+      muon_cut_signal_region_jer_up = pass_signal_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet2pt_JER_up,fill_jet2eta_JER_up, fill_MET_et_JER_up, fill_mtVlepJECnew_JER_up, fill_drla, fill_drj1l_JER_up, fill_drj2l_JER_up, fill_drj1a_JER_up, fill_drj2a_JER_up, fill_j1metPhi_JER_up, fill_j2metPhi_JER_up, fill_jet1deepcsv_JER_up, fill_jet2deepcsv_JER_up, fill_Mjj_JER_up, fill_Mva_JER_up, fill_deltaeta_JER_up, fill_Dphiwajj_JER_up, fill_zepp_JER_up, btag_cut_value);
 
+      muon_cut_signal_region_jer_down = pass_signal_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet2pt_JER_down,fill_jet2eta_JER_down, fill_MET_et_JER_down, fill_mtVlepJECnew_JER_down, fill_drla, fill_drj1l_JER_down, fill_drj2l_JER_down, fill_drj1a_JER_down, fill_drj2a_JER_down, fill_j1metPhi_JER_down, fill_j2metPhi_JER_down, fill_jet1deepcsv_JER_down, fill_jet2deepcsv_JER_down, fill_Mjj_JER_down, fill_Mva_JER_down, fill_deltaeta_JER_down, fill_Dphiwajj_JER_down, fill_zepp_JER_down, btag_cut_value);
+
+      electron_cut_signal_region = pass_signal_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
+
+      electron_cut_signal_region_jec_up = pass_signal_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet2pt_JEC_up,fill_jet2eta_JEC_up, fill_MET_et_JEC_up, fill_mtVlepJECnew_JEC_up, fill_drla, fill_drj1l_JEC_up, fill_drj2l_JEC_up, fill_drj1a_JEC_up, fill_drj2a_JEC_up, fill_j1metPhi_JEC_up, fill_j2metPhi_JEC_up, fill_jet1deepcsv_JEC_up, fill_jet2deepcsv_JEC_up, fill_Mjj_JEC_up, fill_Mva_JEC_up, fill_deltaeta_JEC_up, fill_Dphiwajj_JEC_up, fill_zepp_JEC_up, btag_cut_value);
+
+      electron_cut_signal_region_jec_down = pass_signal_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet2pt_JEC_down,fill_jet2eta_JEC_down, fill_MET_et_JEC_down, fill_mtVlepJECnew_JEC_down, fill_drla, fill_drj1l_JEC_down, fill_drj2l_JEC_down, fill_drj1a_JEC_down, fill_drj2a_JEC_down, fill_j1metPhi_JEC_down, fill_j2metPhi_JEC_down, fill_jet1deepcsv_JEC_down, fill_jet2deepcsv_JEC_down, fill_Mjj_JEC_down, fill_Mva_JEC_down, fill_deltaeta_JEC_down, fill_Dphiwajj_JEC_down, fill_zepp_JEC_down, btag_cut_value);
+
+      electron_cut_signal_region_jer_up = pass_signal_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet2pt_JER_up,fill_jet2eta_JER_up, fill_MET_et_JER_up, fill_mtVlepJECnew_JER_up, fill_drla, fill_drj1l_JER_up, fill_drj2l_JER_up, fill_drj1a_JER_up, fill_drj2a_JER_up, fill_j1metPhi_JER_up, fill_j2metPhi_JER_up, fill_jet1deepcsv_JER_up, fill_jet2deepcsv_JER_up, fill_Mjj_JER_up, fill_Mva_JER_up, fill_deltaeta_JER_up, fill_Dphiwajj_JER_up, fill_zepp_JER_up, btag_cut_value);
+
+      electron_cut_signal_region_jer_down = pass_signal_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet2pt_JER_down,fill_jet2eta_JER_down, fill_MET_et_JER_down, fill_mtVlepJECnew_JER_down, fill_drla, fill_drj1l_JER_down, fill_drj2l_JER_down, fill_drj1a_JER_down, fill_drj2a_JER_down, fill_j1metPhi_JER_down, fill_j2metPhi_JER_down, fill_jet1deepcsv_JER_down, fill_jet2deepcsv_JER_down, fill_Mjj_JER_down, fill_Mva_JER_down, fill_deltaeta_JER_down, fill_Dphiwajj_JER_down, fill_zepp_JER_down, btag_cut_value);
 
       // control region cuts
-      muon_cut_control_region = fill_HLT_muon==1
-                 && fill_Mjj>200. && fill_Mjj<400.
-                 && fill_jet1pt>40. && fabs(fill_jet1eta)<4.7 && fill_jet2pt>30. && fabs(fill_jet2eta)<4.7
-                 && abs(fill_lep)==13 && fill_ptlep1>30. && fabs(fill_etalep1)<2.4
-                 && fill_ngoodmus==1 && fill_ngoodeles==0 &&(fill_nloosemus+fill_nlooseeles)==1
-                 && fill_photonhaspixelseed==0 && fill_photonet>25. //&& fill_photonet < 400.
-                 && fill_MET_et>30. 
-                 //&& fill_mtVlepJECnew>30
-                 && fill_drla>0.5 && fill_drj1l>0.5 && fill_drj2l>0.5 && fill_drj1a>0.5 && fill_drj2a>0.5
-                 //&& fabs(fill_j1metPhi)>0.5 && fabs(fill_j2metPhi)>0.5
-                 && fill_jet1deepcsv < cut_value[1] && fill_jet2deepcsv < cut_value[1];
+      muon_cut_control_region = pass_control_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
 
-     gen_muon_cut_control_region = genlep==13 && genlep1pt>30 && fabs(genlep1eta)<2.4
-                 && genphotonet>25 //&& genphotonet<400 
-                 && fabs(genphotoneta)<2.5 && (fabs(genphotoneta)>1.566 || fabs(genphotoneta)<1.4442)
-                 && genjet1pt>40 && genjet2pt>30 
-                 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7
-                 && gendrla1>0.5 
-                 && gendrj1a>0.5 && gendrj2a>0.5 && gendrj1l>0.5 && gendrj2l>0.5
-                 && genMjj>200 && genMjj<400
-                 && *genMET >30;
+      muon_cut_control_region_jec_up = pass_control_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet2pt_JEC_up,fill_jet2eta_JEC_up, fill_MET_et_JEC_up, fill_mtVlepJECnew_JEC_up, fill_drla, fill_drj1l_JEC_up, fill_drj2l_JEC_up, fill_drj1a_JEC_up, fill_drj2a_JEC_up, fill_j1metPhi_JEC_up, fill_j2metPhi_JEC_up, fill_jet1deepcsv_JEC_up, fill_jet2deepcsv_JEC_up, fill_Mjj_JEC_up, fill_Mva_JEC_up, fill_deltaeta_JEC_up, fill_Dphiwajj_JEC_up, fill_zepp_JEC_up, btag_cut_value);
 
-      electron_cut_control_region = fill_HLT_electron==1
-                 && fill_Mjj>200. && fill_Mjj<400.
-                 && fill_jet1pt>40. && fabs(fill_jet1eta)<4.7 && fill_jet2pt>30. && fabs(fill_jet2eta)<4.7
-                 && abs(fill_lep)==11 && fill_ptlep1>30. && fabs(fill_etalep1)<2.5
-                 && fill_ngoodmus==0 && fill_ngoodeles==1 &&(fill_nloosemus+fill_nlooseeles)==1
-                 && fill_photonhaspixelseed==0 && fill_photonet>25. //&& fill_photonet < 400.
-                 && fill_MET_et>30. //&& fill_mtVlepJECnew>30
-                 && fill_drla>0.5 && fill_drj1l>0.5 && fill_drj2l>0.5 && fill_drj1a>0.5 && fill_drj2a>0.5
-                 //&& fabs(fill_j1metPhi)>0.5 && fabs(fill_j2metPhi)>0.5
-                 && fill_jet1deepcsv < cut_value[1] && fill_jet2deepcsv < cut_value[1]
-                 && fabs(fill_Mla - 91.2) > 10;
+      muon_cut_control_region_jec_down = pass_control_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet2pt_JEC_down,fill_jet2eta_JEC_down, fill_MET_et_JEC_down, fill_mtVlepJECnew_JEC_down, fill_drla, fill_drj1l_JEC_down, fill_drj2l_JEC_down, fill_drj1a_JEC_down, fill_drj2a_JEC_down, fill_j1metPhi_JEC_down, fill_j2metPhi_JEC_down, fill_jet1deepcsv_JEC_down, fill_jet2deepcsv_JEC_down, fill_Mjj_JEC_down, fill_Mva_JEC_down, fill_deltaeta_JEC_down, fill_Dphiwajj_JEC_down, fill_zepp_JEC_down, btag_cut_value);
 
-     gen_electron_cut_control_region = genlep==11 && genlep1pt>30 && fabs(genlep1eta)<2.5
-                 && genphotonet>25 //&& genphotonet<400 
-                 && fabs(genphotoneta)<2.5 && (fabs(genphotoneta)>1.566 || fabs(genphotoneta)<1.4442)
-                 && genjet1pt>40 && genjet2pt>30 
-                 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7
-                 && gendrla1>0.5 
-                 && gendrj1a>0.5 && gendrj2a>0.5 && gendrj1l>0.5 && gendrj2l>0.5
-                 && genMjj >200 && genMjj<400
-                 && *genMET >30
-                 && fabs(genMla - 91.2) > 10;
+      muon_cut_control_region_jer_up = pass_control_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet2pt_JER_up,fill_jet2eta_JER_up, fill_MET_et_JER_up, fill_mtVlepJECnew_JER_up, fill_drla, fill_drj1l_JER_up, fill_drj2l_JER_up, fill_drj1a_JER_up, fill_drj2a_JER_up, fill_j1metPhi_JER_up, fill_j2metPhi_JER_up, fill_jet1deepcsv_JER_up, fill_jet2deepcsv_JER_up, fill_Mjj_JER_up, fill_Mva_JER_up, fill_deltaeta_JER_up, fill_Dphiwajj_JER_up, fill_zepp_JER_up, btag_cut_value);
 
-      bool cut1, cut2, cut3, cut4, cut5;
+      muon_cut_control_region_jer_down = pass_control_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet2pt_JER_down,fill_jet2eta_JER_down, fill_MET_et_JER_down, fill_mtVlepJECnew_JER_down, fill_drla, fill_drj1l_JER_down, fill_drj2l_JER_down, fill_drj1a_JER_down, fill_drj2a_JER_down, fill_j1metPhi_JER_down, fill_j2metPhi_JER_down, fill_jet1deepcsv_JER_down, fill_jet2deepcsv_JER_down, fill_Mjj_JER_down, fill_Mva_JER_down, fill_deltaeta_JER_down, fill_Dphiwajj_JER_down, fill_zepp_JER_down, btag_cut_value);
 
-      if(m_channel == "muon"){
-         if (m_region == "signal"){
-            cut1 = muon_cut_signal_region;
-            cut2 = gen_muon_cut_signal_region;
-         }
-         else if (m_region == "control"){
-            cut1 = muon_cut_control_region;
-            cut2 = gen_muon_cut_control_region;
+      electron_cut_control_region = pass_control_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
 
-         }
-         else if (m_region == "aqgc"){
-            cut1 = muon_cut_aqgc_region;
-            cut2 = gen_muon_cut_aqgc_region;
+      electron_cut_control_region_jec_up = pass_control_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet2pt_JEC_up,fill_jet2eta_JEC_up, fill_MET_et_JEC_up, fill_mtVlepJECnew_JEC_up, fill_drla, fill_drj1l_JEC_up, fill_drj2l_JEC_up, fill_drj1a_JEC_up, fill_drj2a_JEC_up, fill_j1metPhi_JEC_up, fill_j2metPhi_JEC_up, fill_jet1deepcsv_JEC_up, fill_jet2deepcsv_JEC_up, fill_Mjj_JEC_up, fill_Mva_JEC_up, fill_deltaeta_JEC_up, fill_Dphiwajj_JEC_up, fill_zepp_JEC_up, btag_cut_value);
 
-         }
-         else continue;
-      }
+      electron_cut_control_region_jec_down = pass_control_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet2pt_JEC_down,fill_jet2eta_JEC_down, fill_MET_et_JEC_down, fill_mtVlepJECnew_JEC_down, fill_drla, fill_drj1l_JEC_down, fill_drj2l_JEC_down, fill_drj1a_JEC_down, fill_drj2a_JEC_down, fill_j1metPhi_JEC_down, fill_j2metPhi_JEC_down, fill_jet1deepcsv_JEC_down, fill_jet2deepcsv_JEC_down, fill_Mjj_JEC_down, fill_Mva_JEC_down, fill_deltaeta_JEC_down, fill_Dphiwajj_JEC_down, fill_zepp_JEC_down, btag_cut_value);
 
+      electron_cut_control_region_jer_up = pass_control_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet2pt_JER_up,fill_jet2eta_JER_up, fill_MET_et_JER_up, fill_mtVlepJECnew_JER_up, fill_drla, fill_drj1l_JER_up, fill_drj2l_JER_up, fill_drj1a_JER_up, fill_drj2a_JER_up, fill_j1metPhi_JER_up, fill_j2metPhi_JER_up, fill_jet1deepcsv_JER_up, fill_jet2deepcsv_JER_up, fill_Mjj_JER_up, fill_Mva_JER_up, fill_deltaeta_JER_up, fill_Dphiwajj_JER_up, fill_zepp_JER_up, btag_cut_value);
 
-      if(m_channel == "electron"){
-         if (m_region == "signal"){
-            cut1 = electron_cut_signal_region;
-            cut2 = gen_electron_cut_signal_region;
+      electron_cut_control_region_jer_down = pass_control_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet2pt_JER_down,fill_jet2eta_JER_down, fill_MET_et_JER_down, fill_mtVlepJECnew_JER_down, fill_drla, fill_drj1l_JER_down, fill_drj2l_JER_down, fill_drj1a_JER_down, fill_drj2a_JER_down, fill_j1metPhi_JER_down, fill_j2metPhi_JER_down, fill_jet1deepcsv_JER_down, fill_jet2deepcsv_JER_down, fill_Mjj_JER_down, fill_Mva_JER_down, fill_deltaeta_JER_down, fill_Dphiwajj_JER_down, fill_zepp_JER_down, btag_cut_value);
 
-         }
-         else if (m_region == "control"){
-            cut1 = electron_cut_control_region;
-            cut2 = gen_electron_cut_control_region;
+      // aqgc region
+      muon_cut_aqgc_region = pass_aqgc_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
 
-         }
-         else if (m_region == "aqgc"){
-            cut1 = electron_cut_aqgc_region;
-            cut2 = gen_electron_cut_aqgc_region;
+      muon_cut_aqgc_region_jec_up = pass_aqgc_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet2pt_JEC_up,fill_jet2eta_JEC_up, fill_MET_et_JEC_up, fill_mtVlepJECnew_JEC_up, fill_drla, fill_drj1l_JEC_up, fill_drj2l_JEC_up, fill_drj1a_JEC_up, fill_drj2a_JEC_up, fill_j1metPhi_JEC_up, fill_j2metPhi_JEC_up, fill_jet1deepcsv_JEC_up, fill_jet2deepcsv_JEC_up, fill_Mjj_JEC_up, fill_Mva_JEC_up, fill_deltaeta_JEC_up, fill_Dphiwajj_JEC_up, fill_zepp_JEC_up, btag_cut_value);
 
-         }
-         else continue;
-      }
+      muon_cut_aqgc_region_jec_down = pass_aqgc_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet2pt_JEC_down,fill_jet2eta_JEC_down, fill_MET_et_JEC_down, fill_mtVlepJECnew_JEC_down, fill_drla, fill_drj1l_JEC_down, fill_drj2l_JEC_down, fill_drj1a_JEC_down, fill_drj2a_JEC_down, fill_j1metPhi_JEC_down, fill_j2metPhi_JEC_down, fill_jet1deepcsv_JEC_down, fill_jet2deepcsv_JEC_down, fill_Mjj_JEC_down, fill_Mva_JEC_down, fill_deltaeta_JEC_down, fill_Dphiwajj_JEC_down, fill_zepp_JEC_down, btag_cut_value);
 
+      muon_cut_aqgc_region_jer_up = pass_aqgc_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet2pt_JER_up,fill_jet2eta_JER_up, fill_MET_et_JER_up, fill_mtVlepJECnew_JER_up, fill_drla, fill_drj1l_JER_up, fill_drj2l_JER_up, fill_drj1a_JER_up, fill_drj2a_JER_up, fill_j1metPhi_JER_up, fill_j2metPhi_JER_up, fill_jet1deepcsv_JER_up, fill_jet2deepcsv_JER_up, fill_Mjj_JER_up, fill_Mva_JER_up, fill_deltaeta_JER_up, fill_Dphiwajj_JER_up, fill_zepp_JER_up, btag_cut_value);
 
-n++;
-if(cut1){
-n1=n1+1;
-if(genlep1pt>30 ) s1 = s1+1;
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4) s2 = s2+1;
+      muon_cut_aqgc_region_jer_down = pass_aqgc_region_cuts("muon", fill_HLT_muon, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet2pt_JER_down,fill_jet2eta_JER_down, fill_MET_et_JER_down, fill_mtVlepJECnew_JER_down, fill_drla, fill_drj1l_JER_down, fill_drj2l_JER_down, fill_drj1a_JER_down, fill_drj2a_JER_down, fill_j1metPhi_JER_down, fill_j2metPhi_JER_down, fill_jet1deepcsv_JER_down, fill_jet2deepcsv_JER_down, fill_Mjj_JER_down, fill_Mva_JER_down, fill_deltaeta_JER_down, fill_Dphiwajj_JER_down, fill_zepp_JER_down, btag_cut_value);
 
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 ) s3 = s3+1;
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) ) s4 = s4+1;
+      electron_cut_aqgc_region = pass_aqgc_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt, fill_jet1eta, fill_jet2pt,fill_jet2eta, fill_MET_et, fill_mtVlepJECnew, fill_drla, fill_drj1l, fill_drj2l, fill_drj1a, fill_drj2a, fill_j1metPhi, fill_j2metPhi, fill_jet1deepcsv, fill_jet2deepcsv, fill_Mjj, fill_Mva, fill_deltaeta, fill_Dphiwajj, fill_zepp, btag_cut_value);
 
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 ) s5 = s5+1;
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7) s6 = s6+1;
+      electron_cut_aqgc_region_jec_up = pass_aqgc_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet2pt_JEC_up,fill_jet2eta_JEC_up, fill_MET_et_JEC_up, fill_mtVlepJECnew_JEC_up, fill_drla, fill_drj1l_JEC_up, fill_drj2l_JEC_up, fill_drj1a_JEC_up, fill_drj2a_JEC_up, fill_j1metPhi_JEC_up, fill_j2metPhi_JEC_up, fill_jet1deepcsv_JEC_up, fill_jet2deepcsv_JEC_up, fill_Mjj_JEC_up, fill_Mva_JEC_up, fill_deltaeta_JEC_up, fill_Dphiwajj_JEC_up, fill_zepp_JEC_up, btag_cut_value);
 
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7 && gendrla1>0.5) s7 = s7+1;
+      electron_cut_aqgc_region_jec_down = pass_aqgc_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet2pt_JEC_down,fill_jet2eta_JEC_down, fill_MET_et_JEC_down, fill_mtVlepJECnew_JEC_down, fill_drla, fill_drj1l_JEC_down, fill_drj2l_JEC_down, fill_drj1a_JEC_down, fill_drj2a_JEC_down, fill_j1metPhi_JEC_down, fill_j2metPhi_JEC_down, fill_jet1deepcsv_JEC_down, fill_jet2deepcsv_JEC_down, fill_Mjj_JEC_down, fill_Mva_JEC_down, fill_deltaeta_JEC_down, fill_Dphiwajj_JEC_down, fill_zepp_JEC_down, btag_cut_value);
 
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7 && gendrla1>0.5 && gendrj1a>0.5 ) s8 = s8+1;
+      electron_cut_aqgc_region_jer_up = pass_aqgc_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet2pt_JER_up,fill_jet2eta_JER_up, fill_MET_et_JER_up, fill_mtVlepJECnew_JER_up, fill_drla, fill_drj1l_JER_up, fill_drj2l_JER_up, fill_drj1a_JER_up, fill_drj2a_JER_up, fill_j1metPhi_JER_up, fill_j2metPhi_JER_up, fill_jet1deepcsv_JER_up, fill_jet2deepcsv_JER_up, fill_Mjj_JER_up, fill_Mva_JER_up, fill_deltaeta_JER_up, fill_Dphiwajj_JER_up, fill_zepp_JER_up, btag_cut_value);
 
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7 && gendrla1>0.5 && gendrj1a>0.5 && gendrj2a>0.5 ) s9 = s9+1;
+      electron_cut_aqgc_region_jer_down = pass_aqgc_region_cuts("electron", fill_HLT_electron, fill_lep, fill_ptlep1, fill_etalep1, fill_ngoodmus, fill_ngoodeles, fill_nloosemus, fill_nlooseeles, fill_photonhaspixelseed, fill_photonet, fill_Mla, fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet2pt_JER_down,fill_jet2eta_JER_down, fill_MET_et_JER_down, fill_mtVlepJECnew_JER_down, fill_drla, fill_drj1l_JER_down, fill_drj2l_JER_down, fill_drj1a_JER_down, fill_drj2a_JER_down, fill_j1metPhi_JER_down, fill_j2metPhi_JER_down, fill_jet1deepcsv_JER_down, fill_jet2deepcsv_JER_down, fill_Mjj_JER_down, fill_Mva_JER_down, fill_deltaeta_JER_down, fill_Dphiwajj_JER_down, fill_zepp_JER_down, btag_cut_value);
 
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7 && gendrla1>0.5 && gendrj1a>0.5 && gendrj2a>0.5 && gendrj1l>0.5) s10 = s10+1;
-
-if(genlep1pt>30 &&fabs(genlep1eta)<2.4 && genphotonet>25 && genphotonet<400 && ((fabs(genphotoneta)<2.5&&fabs(genphotoneta)>1.566) || (fabs(genphotoneta)<1.4442)) && genjet1pt>40 && genjet2pt>30 && fabs(genjet1eta)<4.7 && fabs(genjet2eta)<4.7 && gendrla1>0.5 && gendrj1a>0.5 && gendrj2a>0.5 && gendrj1l>0.5 && gendrj2l>0.5) s11 = s11+1;
-
-
-
-
-if(cut2)n2=n2+1;
-if(!cut2){
-
-cout<<n1<<"  reco: "<<cut1<<"   gen: "<<cut2<<endl;
-cout<<"reco lep: "<<fill_lep<<"   gen lep: "<<genlep<<endl;
-//cout<<"reco Mjj: "<<fill_Mjj<<"   gen Mjj: "<<genMjj<<endl;
-//cout<<"reco Mva: "<<fill_Mva<<"   gen Mva: "<<genWGmass<<endl;
-cout<<"reco ptlep: "<<fill_ptlep1<<"   gen ptlep: "<<genlep1pt<<endl;
-cout<<"reco Met: "<<fill_MET_et<<"   gen Met: "<<*genMET<<endl;
-cout<<"reco photonpt: "<<fill_photonet<<"   gen photonpt: "<<genphotonet<<endl;
-
-cout<<"genjetptlist: "<<genjet_pt[0]<<" "<<genjet_pt[1]<<" "<<genjet_pt[2]<<" "<<genjet_pt[3]<<" "<<genjet_pt[4]<<" "<<genjet_pt[5]<<endl;
-
-cout<<"reco jet1pt: "<<fill_jet1pt<<"   gen jet1pt: "<<genjet1pt<<" "<<jet_index[0]<<endl;
-cout<<"reco jet2pt: "<<fill_jet2pt<<"   gen jet2pt: "<<genjet2pt<<" "<<jet_index[1]<<endl;
-cout<<"reco jet1eta: "<<fill_jet1eta<<"   gen jet1eta: "<<genjet1eta<<"   genjetetalist: "<<genjet_eta[0]<<" "<<genjet_eta[1]<<" "<<genjet_eta[2]<<" "<<genjet_eta[3]<<" "<<genjet_eta[4]<<" "<<genjet_eta[5]<<endl;
-cout<<"reco jet2eta: "<<fill_jet2eta<<"   gen jet2eta: "<<genjet2eta<<endl;
-cout<<"reco drla: "<<fill_drla<<"   gen drla: "<<gendrla1<<endl;
-cout<<"reco drj1l: "<<fill_drj1l<<"   gen drj1l: "<<gendrj1l<<endl;
-cout<<"reco drj2l: "<<fill_drj2l<<"   gen drj2l: "<<gendrj2l<<endl;
-cout<<"reco drj1a: "<<fill_drj1a<<"   gen drj1a: "<<gendrj1a<<endl;
-cout<<"reco drj2a: "<<fill_drj2a<<"   gen dj2a: "<<gendrj2a<<endl;
-//cout<<"reco zepp: "<<fill_zepp<<"   gen zepp: "<<genzepp<<endl;
-//cout<<"reco detajj: "<<fill_deltaeta<<"   gen detajj: "<<gendetajj<<endl;
-//cout<<"reco deta_phi: "<<fill_Dphiwajj<<"   gen deta_phi: "<<gendelta_phi<<endl;
-
-}
-}
-cout<<n<<" "<<n1<<"   "<<s1<<" "<<s2<<" "<<s3<<" "<<s4<<" "<<s5<<" "<< s6<<" "<<s7<<" "<<s8<<" "<<s9<<" "<<s10<<" "<<s11<<" "<<n2<<endl;
-
-
-//n++;
-//if(cut1){
-//n1=n1+1;
-//if(cut2)n2=n2+1;
-//}
-//cout<<n<<"  "<<n1<<"   "<<n2<<endl;
-
-//cout<<"ok"<<endl;
-      if(!cut1) continue;
-//cout<<"pass cut1"<<endl;
-//cout<<"pass"<<endl;
       // init all SF
       init_sf();
       // cross section SF
@@ -1626,8 +1371,10 @@ cout<<n<<" "<<n1<<"   "<<s1<<" "<<s2<<" "<<s3<<" "<<s4<<" "<<s5<<" "<< s6<<" "<<
       // add scalef for mc
       if(m_type == "mc") {
          // pu weight
-         pu_weight_SF = h_pu_weight->GetBinContent(h_pu_weight->GetXaxis()->FindBin(*npT));
-         
+         pu_weight_SF      = h_pu_weight->GetBinContent(h_pu_weight->GetXaxis()->FindBin(*npT));
+         pu_weight_up_SF   = h_pu_weight_up->GetBinContent(h_pu_weight_up->GetXaxis()->FindBin(*npT));
+         pu_weight_down_SF = h_pu_weight_down->GetBinContent(h_pu_weight_down->GetXaxis()->FindBin(*npT));
+
          // photon medium ID scalefactor
          if(fabs(*photonsceta)<2.5){
             photon_ID_SF = get_photon_ID(*photonsceta, *photonet, h_photon_ID_weight, " ");
@@ -1639,20 +1386,19 @@ cout<<n<<" "<<n1<<"   "<<s1<<" "<<s2<<" "<<s3<<" "<<s4<<" "<<s5<<" "<< s6<<" "<<
          if(abs(*lep)==13)
          {
             //------muon trigger scalefactor
-            muon_HLT_SF = bf*get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_B_F_weight, " ") + gh*get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_G_H_weight, " ");
-            muon_HLT_up_SF = bf*get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_B_F_weight, "up") + gh*get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_G_H_weight, "up");
-            muon_HLT_low_SF = bf*get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_B_F_weight, "low") + gh*get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_G_H_weight, "low");
+            muon_HLT_SF = get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_weight, " ");
+            muon_HLT_up_SF = get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_weight, "up");
+            muon_HLT_low_SF = get_muon_HLT(*etalep1, *ptlep1, h_muon_HLT_weight, "low");
             //------muon tight ID  scalefactor
-            muon_ID_SF = bf*get_muon_ID(*etalep1, *ptlep1, h_muon_ID_B_F_weight, " ") + gh*get_muon_ID(*etalep1, *ptlep1, h_muon_ID_G_H_weight, " ");
-            muon_ID_up_SF = bf*get_muon_ID(*etalep1, *ptlep1, h_muon_ID_B_F_weight, "up") + gh*get_muon_ID(*etalep1, *ptlep1, h_muon_ID_G_H_weight, "up");
-            muon_ID_low_SF = bf*get_muon_ID(*etalep1, *ptlep1, h_muon_ID_B_F_weight, "low") + gh*get_muon_ID(*etalep1, *ptlep1, h_muon_ID_G_H_weight, "low");
+            muon_ID_SF = get_muon_ID(*etalep1, *ptlep1, h_muon_ID_weight, " ");
+            muon_ID_up_SF = get_muon_ID(*etalep1, *ptlep1, h_muon_ID_weight, "up");
+            muon_ID_low_SF = get_muon_ID(*etalep1, *ptlep1, h_muon_ID_weight, "low");
             //------muon tight ISO scalefactor
-            muon_iso_SF = bf*get_muon_iso(*etalep1, *ptlep1, h_muon_iso_B_F_weight, " ") + gh*get_muon_iso(*etalep1, *ptlep1, h_muon_iso_G_H_weight, " ");
-            muon_iso_up_SF = bf*get_muon_iso(*etalep1, *ptlep1, h_muon_iso_B_F_weight, "up") + gh*get_muon_iso(*etalep1, *ptlep1, h_muon_iso_G_H_weight, "up");
-            muon_iso_low_SF = bf*get_muon_iso(*etalep1, *ptlep1, h_muon_iso_B_F_weight, "low") + gh*get_muon_iso(*etalep1, *ptlep1, h_muon_iso_G_H_weight, "low");
+            muon_iso_SF = get_muon_iso(*etalep1, *ptlep1, h_muon_iso_weight, " ");
+            muon_iso_up_SF = get_muon_iso(*etalep1, *ptlep1, h_muon_iso_weight, "up");
+            muon_iso_low_SF = get_muon_iso(*etalep1, *ptlep1, h_muon_iso_weight, "low");
          }
-         
-		 // add factor for electron
+         // add factor for electron
          if(abs(*lep)==11)
          {
             //------electron reco scalefactor
@@ -1671,6 +1417,44 @@ cout<<n<<" "<<n1<<"   "<<s1<<" "<<s2<<" "<<s3<<" "<<s4<<" "<<s5<<" "<< s6<<" "<<
          // add factor for jets b, c
          // jet1 : center, jec_up, jec_down, jer_up, jer_down
          // jet1 : center
+//cout<<"memory: "<<physical_memory_used_by_process()<<endl;
+
+         pu_jet1_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "center");
+         pu_jet1_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
+         pu_jet1_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
+
+         pu_jet1_JEC_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_up, fill_jet1phi_JEC_up, fill_jet1pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_up, "center");
+         pu_jet1_JEC_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_down, fill_jet1phi_JEC_down, fill_jet1pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_down, "center");
+         pu_jet1_JER_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_up, fill_jet1phi_JER_up, fill_jet1pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_up, "center");
+         pu_jet1_JER_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_down, fill_jet1phi_JER_down, fill_jet1pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_down, "center");
+
+         pu_jet2_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "center");
+         pu_jet2_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "up");
+         pu_jet2_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "down");
+
+         pu_jet2_JEC_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_up, fill_jet2phi_JEC_up, fill_jet2pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_up, "center");
+         pu_jet2_JEC_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
+         pu_jet2_JER_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
+         pu_jet2_JER_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
+
+         pu_jet1_mistag_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "center");
+         pu_jet1_mistag_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
+         pu_jet1_mistag_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
+
+         pu_jet1_mistag_JEC_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_up, fill_jet1phi_JEC_up, fill_jet1pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_up, "center");
+         pu_jet1_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_down, fill_jet1phi_JEC_down, fill_jet1pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_down, "center");
+         pu_jet1_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_up, fill_jet1phi_JER_up, fill_jet1pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_up, "center");
+         pu_jet1_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_down, fill_jet1phi_JER_down, fill_jet1pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_down, "center");
+
+         pu_jet2_mistag_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "center");
+         pu_jet2_mistag_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "up");
+         pu_jet2_mistag_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "down");
+
+         pu_jet2_mistag_JEC_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_up, fill_jet2phi_JEC_up, fill_jet2pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_up, "center");
+         pu_jet2_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
+         pu_jet2_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
+         pu_jet2_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
+
          double JET1DEEPCSV      = (*jet1deepcsv_probb_new) + (*jet1deepcsv_probbb_new);
          double JET2DEEPCSV      = (*jet2deepcsv_probb_new) + (*jet2deepcsv_probbb_new);
 
@@ -1678,12 +1462,43 @@ cout<<n<<" "<<n1<<"   "<<s1<<" "<<s2<<" "<<s3<<" "<<s4<<" "<<s5<<" "<< s6<<" "<<
          btag_jet1_SF     = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "central");
          btag_jet1_up_SF  = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
          btag_jet1_low_SF = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
+//cout<<btag_jet1_SF<<" "<<btag_jet1_up_SF<<" "<<btag_jet1_low_SF<<endl;
+
+         btag_jet1_SF_JEC_up     = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_up_SF_JEC_up  = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet1_low_SF_JEC_up = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "low");
+
+         btag_jet1_SF_JEC_down     = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_up_SF_JEC_down  = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet1_low_SF_JEC_down = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "low");
+
+         btag_jet1_SF_JER_up     = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_up_SF_JER_up  = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet1_low_SF_JER_up = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "low");
+
+         btag_jet1_SF_JER_down     = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_up_SF_JER_down  = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet1_low_SF_JER_down = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "low");
 
          btag_jet2_SF     = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "central");
          btag_jet2_up_SF  = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
          btag_jet2_low_SF = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
 
+         btag_jet2_SF_JEC_up     = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_up_SF_JEC_up  = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet2_low_SF_JEC_up = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "low");
 
+         btag_jet2_SF_JEC_down     = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_up_SF_JEC_down  = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet2_low_SF_JEC_down = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "low");
+
+         btag_jet2_SF_JER_up     = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_up_SF_JER_up  = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet2_low_SF_JER_up = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "low");
+
+         btag_jet2_SF_JER_down     = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_up_SF_JER_down  = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet2_low_SF_JER_down = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "low");
 
       } //add scalef for mc
 
@@ -1691,89 +1506,328 @@ cout<<n<<" "<<n1<<"   "<<s1<<" "<<s2<<" "<<s3<<" "<<s4<<" "<<s5<<" "<< s6<<" "<<
       if (ptl1 >= 50) ptl1 = 45;
 
       // data driven weight
-      double fake_lepton_weight, barrel_fake_photon_weight, endcap_fake_photon_weight, barrel_fake_photon_weight_up, barrel_fake_photon_weight_down, endcap_fake_photon_weight_up, endcap_fake_photon_weight_down;
+      double fake_lepton_weight, fake_lepton_weight_up, fake_lepton_weight_down, barrel_fake_photon_weight, endcap_fake_photon_weight, barrel_fake_photon_weight_up, barrel_fake_photon_weight_down, endcap_fake_photon_weight_up, endcap_fake_photon_weight_down;
+      if(abs(*lep)==13){
+         fake_lepton_weight = hist_fake_muon_weight->GetBinContent(hist_fake_muon_weight->GetXaxis()->FindBin(fabs(fill_etalep1)),hist_fake_muon_weight->GetYaxis()->FindBin(ptl1));
+         fake_lepton_weight_up = fake_lepton_weight*1.3;
+         fake_lepton_weight_down = fake_lepton_weight*0.7;
 
-      if(abs(*lep) == 13)fake_lepton_weight = hist_fake_muon_weight->GetBinContent(hist_fake_muon_weight->GetXaxis()->FindBin(fabs(fill_etalep1)),hist_fake_muon_weight->GetYaxis()->FindBin(ptl1));
-      if(abs(*lep) == 11)fake_lepton_weight = hist_fake_electron_weight->GetBinContent(hist_fake_electron_weight->GetXaxis()->FindBin(fabs(fill_etalep1)),hist_fake_electron_weight->GetYaxis()->FindBin(ptl1));
+      } //fake lepton weight
+      if(abs(*lep)==11){
+         fake_lepton_weight = hist_fake_electron_weight->GetBinContent(hist_fake_electron_weight->GetXaxis()->FindBin(fabs(fill_etalep1)),hist_fake_electron_weight->GetYaxis()->FindBin(ptl1)); //fake lepton weight
+         fake_lepton_weight_up = fake_lepton_weight*1.3;
+         fake_lepton_weight_down = fake_lepton_weight*0.7;
 
-      barrel_fake_photon_weight = hist_barrel_fake_photon_weight->GetBinContent(hist_barrel_fake_photon_weight->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
+      }
+	  
+      if (fill_photonet>390.) fill_photonet = 390.;
+	  barrel_fake_photon_weight = hist_barrel_fake_photon_weight->GetBinContent(hist_barrel_fake_photon_weight->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
+
+//cout<<barrel_fake_photon_weight<<" "<<fill_photonet<<" " <<fill_Mla<<" "<<fill_Mjj<<endl;
+      barrel_fake_photon_weight_up = hist_barrel_fake_photon_weight_up->GetBinContent(hist_barrel_fake_photon_weight_up->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
+      barrel_fake_photon_weight_down = hist_barrel_fake_photon_weight_down->GetBinContent(hist_barrel_fake_photon_weight_down->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
 
       endcap_fake_photon_weight = hist_endcap_fake_photon_weight->GetBinContent(hist_endcap_fake_photon_weight->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
+      endcap_fake_photon_weight_up = hist_endcap_fake_photon_weight_up->GetBinContent(hist_endcap_fake_photon_weight_up->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
+      endcap_fake_photon_weight_down = hist_endcap_fake_photon_weight_down->GetBinContent(hist_endcap_fake_photon_weight_down->GetXaxis()->FindBin(fill_photonet)); //fake photon weight
 
-      double weight = 1;
+      double weight = 1, weight_fakephoton_up = 1, weight_fakephoton_down = 1,  weight_jec_up = 1, weight_jec_down = 1, weight_jer_up = 1, weight_jer_down = 1;
+     
+      double weight_pileup_up = 1, weight_pileup_down =1; 
+      double weight_L1_up = 1, weight_L1_down =1;
+      double weight_photon_ID_up = 1, weight_photon_ID_down = 1;
+      double weight_electron_ID_up = 1, weight_electron_ID_down = 1, weight_electron_Reco_up = 1, weight_electron_Reco_down = 1, weight_electron_HLT_up = 1, weight_electron_HLT_down = 1, weight_electron_up = 1, weight_electron_down = 1;
+      double weight_muon_ID_up = 1, weight_muon_ID_down = 1, weight_muon_iso_up = 1, weight_muon_iso_down = 1, weight_muon_HLT_up = 1, weight_muon_HLT_down = 1, weight_muon_up = 1, weight_muon_down = 1;
+      double weight_btag_up = 1, weight_btag_down = 1;
+      double weight_fakelepton_up = 1, weight_fakelepton_down = 1;
+      double weight_pujet_up = 1, weight_pujet_down = 1;
+      double weight_pujet_mistag_up = 1, weight_pujet_mistag_down = 1;
 
-      if(fill_Mva>2000) fill_Mva =1999;
+      // cut to apply
+      bool cut1, cut_gen, cut2, cut3, cut4, cut5;
+      if(m_channel == "muon"){
+         if (m_region == "signal"){
+            cut_gen = gen_muon_cut_signal_region;
+            cut1 = muon_cut_signal_region;
+            cut2 = muon_cut_signal_region_jec_up;
+            cut3 = muon_cut_signal_region_jec_down;
+            cut4 = muon_cut_signal_region_jer_up;
+            cut5 = muon_cut_signal_region_jer_down;
+         }
+         else if (m_region == "control"){
+            cut_gen = gen_muon_cut_control_region;
+            cut1 = muon_cut_control_region;
+            cut2 = muon_cut_control_region_jec_up;
+            cut3 = muon_cut_control_region_jec_down;
+            cut4 = muon_cut_control_region_jer_up;
+            cut5 = muon_cut_control_region_jer_down;
+         }
+         else if (m_region == "aqgc"){
+            cut1 = muon_cut_aqgc_region;
+            cut2 = muon_cut_aqgc_region_jec_up;
+            cut3 = muon_cut_aqgc_region_jec_down;
+            cut4 = muon_cut_aqgc_region_jer_up;
+            cut5 = muon_cut_aqgc_region_jer_down;
+         }
+         else continue;
+      }
+
+      if(m_channel == "electron"){
+         if (m_region == "signal"){
+            cut_gen = gen_electron_cut_signal_region;
+
+            cut1 = electron_cut_signal_region;
+            cut2 = electron_cut_signal_region_jec_up;
+            cut3 = electron_cut_signal_region_jec_down;
+            cut4 = electron_cut_signal_region_jer_up;
+            cut5 = electron_cut_signal_region_jer_down;
+         }
+         else if (m_region == "control"){
+            cut_gen = gen_electron_cut_control_region;
+            cut1 = electron_cut_control_region;
+            cut2 = electron_cut_control_region_jec_up;
+            cut3 = electron_cut_control_region_jec_down;
+            cut4 = electron_cut_control_region_jer_up;
+            cut5 = electron_cut_control_region_jer_down;
+         }
+         else if (m_region == "aqgc"){
+            cut1 = electron_cut_aqgc_region;
+            cut2 = electron_cut_aqgc_region_jec_up;
+            cut3 = electron_cut_aqgc_region_jec_down;
+            cut4 = electron_cut_aqgc_region_jer_up;
+            cut5 = electron_cut_aqgc_region_jer_down;
+         }
+         else continue;
+      }
+
+      if(m_channel == "all"){
+         if (m_region == "signal"){
+            cut_gen = gen_electron_cut_signal_region || gen_muon_cut_signal_region;
+
+            cut1 = electron_cut_signal_region || muon_cut_signal_region;
+            cut2 = electron_cut_signal_region_jec_up || muon_cut_signal_region_jec_up;
+            cut3 = electron_cut_signal_region_jec_down || muon_cut_signal_region_jec_down;
+            cut4 = electron_cut_signal_region_jer_up || muon_cut_signal_region_jer_up;
+            cut5 = electron_cut_signal_region_jer_down || muon_cut_signal_region_jer_down;
+         }
+         else if (m_region == "control"){
+            cut_gen = gen_electron_cut_control_region || gen_muon_cut_control_region;
+            cut1 = electron_cut_control_region || muon_cut_control_region;
+            cut2 = electron_cut_control_region_jec_up || muon_cut_control_region_jec_up;
+            cut3 = electron_cut_control_region_jec_down || muon_cut_control_region_jec_down;
+            cut4 = electron_cut_control_region_jer_up || muon_cut_control_region_jer_up;
+            cut5 = electron_cut_control_region_jer_down || muon_cut_control_region_jer_down;
+         }
+         else if (m_region == "aqgc"){
+            cut1 = electron_cut_aqgc_region || muon_cut_aqgc_region;
+            cut2 = electron_cut_aqgc_region_jec_up || muon_cut_aqgc_region_jec_up;
+            cut3 = electron_cut_aqgc_region_jec_down || muon_cut_aqgc_region_jec_down;
+            cut4 = electron_cut_aqgc_region_jer_up || muon_cut_aqgc_region_jer_up;
+            cut5 = electron_cut_aqgc_region_jer_down || muon_cut_aqgc_region_jer_down;
+         }
+         else continue;
+      }
 
 //cout<<fill_Mva<<fill_Mva_JEC_up<<endl;
       // fill histogram
-      // barrel
-      if (fabs(fill_photonsceta) < 1.4442){
-         if(m_type == "data") { 
-            weight = 1; //weight_jec_up = 1; weight_jec_down = 1; weight_jer_up = 1; weight_jer_down = 1;
+      weight = 1; weight_jec_up = 1; weight_jec_down = 1; weight_jer_up = 1; weight_jer_down = 1;
+      weight_pileup_up = 1;
+      weight_pileup_down =1;
+      weight_L1_up = 1;
+      weight_L1_down =1;
+      weight_photon_ID_up = 1;
+      weight_photon_ID_down = 1;
+      weight_electron_ID_up = 1;
+      weight_electron_ID_down = 1;
+      weight_electron_Reco_up = 1;
+      weight_electron_Reco_down = 1;
+      weight_electron_HLT_up = 1;
+      weight_electron_HLT_down = 1;
+      weight_muon_ID_up = 1;
+      weight_muon_ID_down = 1;
+      weight_muon_iso_up = 1;
+      weight_muon_iso_down = 1;
+      weight_muon_HLT_up = 1;
+      weight_muon_HLT_down = 1;
+      weight_btag_up = 1;
+      weight_btag_down = 1;
+      weight_pujet_up = 1;
+      weight_pujet_down = 1;
+      weight_pujet_mistag_up = 1;
+      weight_pujet_mistag_down = 1;
+
+      double pho_eta_low, pho_eta_high;
+      if(m_bORe == "barrel") { pho_eta_low = 0; pho_eta_high = 1.4442; }
+      if(m_bORe == "endcap") { pho_eta_low = 1.566; pho_eta_high = 2.5; }
+      if (fabs(fill_photonsceta) < pho_eta_high && fabs(fill_photonsceta) > pho_eta_low){
+
+         if(m_sample == "data") {
+            weight = 1; 
          }
-         else if(m_type == "fakelepton") { 
-            weight = fake_lepton_weight; //weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
-         }
-         else if(m_type == "fakephoton") { 
-            weight = barrel_fake_photon_weight; //weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
+        else if(m_sample == "fakelepton") { 
+            weight = fake_lepton_weight; weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
+            weight_fakelepton_up = fake_lepton_weight_up;
+            weight_fakelepton_down = fake_lepton_weight_down;
 
          }
-         else if(m_type == "doublefake") { 
-            weight = fake_lepton_weight * barrel_fake_photon_weight; //weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
+         else if(m_sample == "fakephoton") { 
+            if (m_bORe == "barrel"){
+               weight = barrel_fake_photon_weight;
+               weight_fakephoton_up = barrel_fake_photon_weight_up;
+               weight_fakephoton_down = barrel_fake_photon_weight_down;
+            }
+            if (m_bORe == "endcap"){
+               weight = endcap_fake_photon_weight; 
+               weight_fakephoton_up = endcap_fake_photon_weight_up;
+               weight_fakephoton_down = endcap_fake_photon_weight_down;
+            }
+         }
+         else if(m_sample == "doublefake") { 
+            if (m_bORe == "barrel") {
+               weight = fake_lepton_weight * barrel_fake_photon_weight;
+               weight_fakephoton_up = fake_lepton_weight * barrel_fake_photon_weight_up;
+               weight_fakephoton_down = fake_lepton_weight * barrel_fake_photon_weight_down;
+               weight_fakelepton_up = fake_lepton_weight_up * barrel_fake_photon_weight;
+               weight_fakelepton_down = fake_lepton_weight_down * barrel_fake_photon_weight;
+            }
+            if (m_bORe == "endcap") {
+               weight = fake_lepton_weight * endcap_fake_photon_weight;
+               weight_fakephoton_up = fake_lepton_weight * endcap_fake_photon_weight_up;
+               weight_fakephoton_down = fake_lepton_weight * endcap_fake_photon_weight_down;
+               weight_fakelepton_up = fake_lepton_weight_up * endcap_fake_photon_weight;
+               weight_fakelepton_down = fake_lepton_weight_down * endcap_fake_photon_weight;
 
+            }
          }
          else if(m_type == "mc") {
-            weight = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF;
+            weight =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_pileup_up =  cross_section_SF * pu_weight_up_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pileup_down =  cross_section_SF * pu_weight_down_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_L1_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_L1_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_photon_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_up_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_photon_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_low_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_electron_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_up_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_low_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_electron_Reco_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_up_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_Reco_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_low_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_electron_HLT_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_up_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_HLT_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_low_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+
+            weight_muon_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_up_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_low_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_muon_iso_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_up_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_iso_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_low_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_muon_HLT_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_up_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_HLT_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_low_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_btag_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_up_SF * btag_jet2_up_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_btag_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_low_SF * btag_jet2_low_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_pujet_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_up_SF * pu_jet2_up_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pujet_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_down_SF * pu_jet2_down_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+
+            weight_pujet_mistag_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_up_SF * pu_jet2_mistag_up_SF;
+            weight_pujet_mistag_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_down_SF * pu_jet2_mistag_down_SF;
+
+            weight_jec_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_up * btag_jet2_SF_JEC_up * pu_jet1_JEC_up_SF * pu_jet2_JEC_up_SF * pu_jet1_mistag_JEC_up_SF * pu_jet2_mistag_JEC_up_SF;
+            weight_jec_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_down * btag_jet2_SF_JEC_down * pu_jet1_JEC_down_SF * pu_jet2_JEC_down_SF * pu_jet1_mistag_JEC_down_SF * pu_jet2_mistag_JEC_down_SF;
+            weight_jer_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_up * btag_jet2_SF_JER_up * pu_jet1_JER_up_SF * pu_jet2_JER_up_SF * pu_jet1_mistag_JER_up_SF * pu_jet2_mistag_JER_up_SF;
+            weight_jer_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_down * btag_jet2_SF_JER_down * pu_jet1_JER_down_SF * pu_jet2_JER_down_SF * pu_jet1_mistag_JER_down_SF * pu_jet2_mistag_JER_down_SF;
 
          }
-//cout<<photon_ID_SF<<" "<<electron_ID_SF<<" "<<electron_Reco_SF<<" "<<electron_HLT_SF<<" "<<muon_ID_SF<<" "<<muon_iso_SF<<" "<<muon_HLT_SF<<endl;
 
-         
-         hist->Fill(fill_ptlep1, weight);
+            double fill_var = fill_Mva;
+            double fill_var_jecr[4] = {fill_Mva_JEC_up, fill_Mva_JEC_down, fill_Mva_JER_up, fill_Mva_JER_down};
+            double fill_weight[length] = {weight, weight_pileup_up, weight_pileup_down, weight_L1_up, weight_L1_down, weight_photon_ID_up, weight_photon_ID_down, weight_electron_ID_up, weight_electron_ID_down, weight_electron_Reco_up, weight_electron_Reco_down, weight_electron_HLT_up, weight_electron_HLT_down, weight_muon_ID_up, weight_muon_ID_down, weight_muon_iso_up, weight_muon_iso_down, weight_muon_HLT_up, weight_muon_HLT_down, weight_fakephoton_up, weight_fakephoton_down, weight_btag_up, weight_btag_down, weight_pujet_up, weight_pujet_down, weight_pujet_mistag_up, weight_pujet_mistag_down, weight_fakelepton_up, weight_fakelepton_down};//cout<<weight<<" "<<weight_pujet_up<<" "<<weight_pujet_down<<" "<<weight_pujet_mistag_up<<" "<<weight_pujet_mistag_down<<endl;
 
-         if(cut2){
-            hist_gen->Fill(genlep1pt, fill_ptlep1, weight);
-         }
-         else{
-            hist_outgen->Fill(genlep1pt, weight);
 
-         }
+            double fill_weight_jecr[4] = { weight_jec_up, weight_jec_down, weight_jer_up, weight_jer_down};
+
+            if(cut1){
+               for(int k2 = 0; k2<400; k2++){
+                  fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
+               }
+
+               for(int j = 0; j<length; j++){
+                  int num1 = fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
+                  //cout<<num1<<endl;
+                  if (cut_gen && num1>=0) fill_hist(m_region, genMjj, genMla, h_in[num1][j], fill_weight[j]);
+
+                  if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
+               }
+            }
+            if (cut2) {
+               int num2 = fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
+               if (cut_gen && num2>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num2][0], fill_weight_jecr[0]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
+            }
+            if (cut3) {
+               int num3 = fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
+               if (cut_gen && num3>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num3][1], fill_weight_jecr[1]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_out_jecr[1], fill_weight_jecr[1]);
+
+            }
+            if (cut4) {
+               int num4 = fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_jecr[2], fill_weight_jecr[2]);
+               if (cut_gen &&num4>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num4][2], fill_weight_jecr[2]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_out_jecr[2], fill_weight_jecr[2]);
+
+            }
+            if (cut5) {
+               int num5 = fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_jecr[3], fill_weight_jecr[3]);
+               if (cut_gen &&num5>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num5][3], fill_weight_jecr[3]);
+               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_out_jecr[3], fill_weight_jecr[3]);
+            }
+
+
+/*
+            if(cut1){ 
+               for(int k2 = 0; k2<400; k2++){
+                  fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
+               }
+
+               for(int j = 0; j<length; j++){
+                  fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
+                  //if (cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_in[j], fill_weight[j]);
+                  //if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
+               }
+            }
+            if (cut2) {
+               fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_in_jecr[0], fill_weight_jecr[0]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
+            }
+            if (cut3) {
+               fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_in_jecr[1], fill_weight_jecr[1]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_out_jecr[1], fill_weight_jecr[1]);
+
+            }
+            if (cut4) {
+               fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_jecr[2], fill_weight_jecr[2]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_in_jecr[2], fill_weight_jecr[2]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_out_jecr[2], fill_weight_jecr[2]);
+
+            }
+            if (cut5) {
+               fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_jecr[3], fill_weight_jecr[3]);
+               //if (cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_in_jecr[3], fill_weight_jecr[3]);
+               //if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_out_jecr[3], fill_weight_jecr[3]);
+            }
+*/
 
       }
 
-      // endcap
-      if (fabs(fill_photonsceta) > 1.566 && fabs(fill_photonsceta) < 2.5){
-         if(m_type == "data") { 
-            weight = 1; //weight_jec_up = 1; weight_jec_down = 1; weight_jer_up = 1; weight_jer_down = 1;
-
-         }
-         else if(m_type == "fakelepton") { 
-            weight = fake_lepton_weight; //weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
-
-         }
-         else if(m_type == "fakephoton") { 
-            weight = endcap_fake_photon_weight; //weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
-         }
-         else if(m_type == "doublefake") { 
-            weight = fake_lepton_weight * barrel_fake_photon_weight; //weight_jec_up = weight; weight_jec_down = weight; weight_jer_up = weight; weight_jer_down = weight;
-
-         }
-         else if(m_type == "mc") {
-            weight = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF;            
-
-         }
-
-         hist->Fill(fill_ptlep1,weight);
-         if(cut2){
-            hist_gen->Fill(genlep1pt, fill_ptlep1, weight);
-
-
-         }
-         else{
-            hist_outgen->Fill(genlep1pt, weight);
-
-         }
-      }
       //jentry++;
    }
 }

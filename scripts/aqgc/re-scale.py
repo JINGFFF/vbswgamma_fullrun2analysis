@@ -11,6 +11,8 @@ year = sys.argv[1]
 operator = sys.argv[2]
 indir = sys.argv[3]
 outdir = sys.argv[4]
+a_type = sys.argv[5] #one year or combine
+
 if not os.path.exists(outdir):
     os.makedirs(outdir)
 
@@ -24,18 +26,30 @@ print input_filename_m
 output_filename = outdir + '/' + year + "_" + operator +'_scaling_refined.root'
 outfile_newF = TFile.Open(output_filename,'RECREATE')
 nGridPointsForNewF=200
-par1GridMin = float(sys.argv[5])
-par1GridMax = float(sys.argv[6])
-newFormatInput1 = TH1D('aqgc' + str(year) +'_scaling_bin_1','aqgc' + str(year) +'_scaling_bin_1',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput2 = TH1D('aqgc' + str(year) +'_scaling_bin_2','aqgc' + str(year) +'_scaling_bin_2',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput3 = TH1D('aqgc' + str(year) +'_scaling_bin_3','aqgc' + str(year) +'_scaling_bin_3',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput4 = TH1D('aqgc' + str(year) +'_scaling_bin_4','aqgc' + str(year) +'_scaling_bin_4',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput5 = TH1D('aqgc' + str(year) +'_scaling_bin_5','aqgc' + str(year) +'_scaling_bin_5',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput6 = TH1D('aqgc' + str(year) +'_scaling_bin_6','aqgc' + str(year) +'_scaling_bin_6',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput7 = TH1D('aqgc' + str(year) +'_scaling_bin_7','aqgc' + str(year) +'_scaling_bin_7',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput8 = TH1D('aqgc' + str(year) +'_scaling_bin_8','aqgc' + str(year) +'_scaling_bin_8',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput9 = TH1D('aqgc' + str(year) +'_scaling_bin_9','aqgc' + str(year) +'_scaling_bin_9',nGridPointsForNewF,par1GridMin,par1GridMax)
-newFormatInput10 = TH1D('aqgc' + str(year) +'_scaling_bin_10', 'aqgc' + str(year) +'_scaling_bin_10',nGridPointsForNewF,par1GridMin,par1GridMax)
+par1GridMin = float(sys.argv[6])
+par1GridMax = float(sys.argv[7])
+if a_type == 'one':
+    newFormatInput1 = TH1D('aqgc_scaling_bin_1','aqgc_scaling_bin_1',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput2 = TH1D('aqgc_scaling_bin_2','aqgc_scaling_bin_2',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput3 = TH1D('aqgc_scaling_bin_3','aqgc_scaling_bin_3',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput4 = TH1D('aqgc_scaling_bin_4','aqgc_scaling_bin_4',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput5 = TH1D('aqgc_scaling_bin_5','aqgc_scaling_bin_5',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput6 = TH1D('aqgc_scaling_bin_6','aqgc_scaling_bin_6',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput7 = TH1D('aqgc_scaling_bin_7','aqgc_scaling_bin_7',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput8 = TH1D('aqgc_scaling_bin_8','aqgc_scaling_bin_8',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput9 = TH1D('aqgc_scaling_bin_9','aqgc_scaling_bin_9',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput10 = TH1D('aqgc_scaling_bin_10', 'aqgc_scaling_bin_10',nGridPointsForNewF,par1GridMin,par1GridMax)
+if a_type == 'combine':
+    newFormatInput1 = TH1D('aqgc' + str(year) +'_scaling_bin_1','aqgc' + str(year) +'_scaling_bin_1',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput2 = TH1D('aqgc' + str(year) +'_scaling_bin_2','aqgc' + str(year) +'_scaling_bin_2',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput3 = TH1D('aqgc' + str(year) +'_scaling_bin_3','aqgc' + str(year) +'_scaling_bin_3',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput4 = TH1D('aqgc' + str(year) +'_scaling_bin_4','aqgc' + str(year) +'_scaling_bin_4',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput5 = TH1D('aqgc' + str(year) +'_scaling_bin_5','aqgc' + str(year) +'_scaling_bin_5',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput6 = TH1D('aqgc' + str(year) +'_scaling_bin_6','aqgc' + str(year) +'_scaling_bin_6',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput7 = TH1D('aqgc' + str(year) +'_scaling_bin_7','aqgc' + str(year) +'_scaling_bin_7',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput8 = TH1D('aqgc' + str(year) +'_scaling_bin_8','aqgc' + str(year) +'_scaling_bin_8',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput9 = TH1D('aqgc' + str(year) +'_scaling_bin_9','aqgc' + str(year) +'_scaling_bin_9',nGridPointsForNewF,par1GridMin,par1GridMax)
+    newFormatInput10 = TH1D('aqgc' + str(year) +'_scaling_bin_10', 'aqgc' + str(year) +'_scaling_bin_10',nGridPointsForNewF,par1GridMin,par1GridMax)
 hists = []
 hists.append(newFormatInput1)
 hists.append(newFormatInput2)
