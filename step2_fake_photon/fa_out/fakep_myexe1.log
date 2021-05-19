@@ -1,0 +1,68 @@
+000 (1041974.000.000) 04/28 21:45:57 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1041974.000.000) 04/28 21:46:19 Job executing on host: <192.168.1.3:9618?addrs=192.168.1.3-9618&noUDP&sock=69109_eb16_3>
+...
+006 (1041974.000.000) 04/28 21:46:27 Image size of job updated: 84260
+	81  -  MemoryUsage of job (MB)
+	82424  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 21:51:27 Image size of job updated: 115752
+	112  -  MemoryUsage of job (MB)
+	113936  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 21:56:27 Image size of job updated: 137124
+	133  -  MemoryUsage of job (MB)
+	135308  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 22:01:28 Image size of job updated: 165116
+	160  -  MemoryUsage of job (MB)
+	163300  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 22:06:28 Image size of job updated: 188740
+	183  -  MemoryUsage of job (MB)
+	186924  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 22:11:28 Image size of job updated: 197500
+	192  -  MemoryUsage of job (MB)
+	195684  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 22:16:29 Image size of job updated: 214128
+	208  -  MemoryUsage of job (MB)
+	212312  -  ResidentSetSize of job (KB)
+...
+006 (1041974.000.000) 04/28 22:21:29 Image size of job updated: 230240
+	224  -  MemoryUsage of job (MB)
+	228424  -  ResidentSetSize of job (KB)
+...
+007 (1041974.000.000) 04/28 22:24:13 Shadow exception!
+	Error from slot1_2@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2018/step2_fake_photon/make_hist: (errno 26) Text file busy
+	15091019  -  Run Bytes Sent By Job
+	554  -  Run Bytes Received By Job
+...
+012 (1041974.000.000) 04/28 22:24:13 Job was held.
+	Error from slot1_2@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2018/step2_fake_photon/make_hist: (errno 26) Text file busy
+	Code 12 Subcode 26
+...
+009 (1041974.000.000) 04/28 22:26:28 Job was aborted by the user.
+	via condor_rm (by user pengj)
+...
+000 (1041982.000.000) 04/28 22:27:04 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1041982.000.000) 04/28 22:27:05 Job executing on host: <192.168.1.3:9618?addrs=192.168.1.3-9618&noUDP&sock=69109_eb16_3>
+...
+006 (1041982.000.000) 04/28 22:27:14 Image size of job updated: 115204
+	82  -  MemoryUsage of job (MB)
+	83012  -  ResidentSetSize of job (KB)
+...
+007 (1041982.000.000) 04/28 22:27:46 Shadow exception!
+	Error from slot1_1@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2018/step2_fake_photon/make_hist: (errno 26) Text file busy
+	642299  -  Run Bytes Sent By Job
+	542  -  Run Bytes Received By Job
+...
+012 (1041982.000.000) 04/28 22:27:46 Job was held.
+	Error from slot1_1@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2018/step2_fake_photon/make_hist: (errno 26) Text file busy
+	Code 12 Subcode 26
+...
+009 (1041982.000.000) 05/02 15:47:17 Job was aborted by the user.
+	via condor_rm (by user condor)
+...

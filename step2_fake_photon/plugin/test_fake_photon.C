@@ -6,6 +6,16 @@
 #include "ele_channel_scale.C"
 #include "muon_channel_scale.C"
 
+double pi =3.1415926;
+
+Double_t delta_R(Double_t eta1, Double_t phi1, Double_t eta2, Double_t phi2)
+{
+        Double_t dp = phi1-phi2;
+        if(fabs(dp) > pi) dp = 2*pi - fabs(dp);
+        Double_t dr = sqrt((eta1-eta2)*(eta1-eta2)+dp*dp);
+        return dr;
+}
+
    int barrel_Nbins = 128;
    double barrel_sieie_lower = 0.00;
    double barrel_sieie_upper = 0.04;
@@ -775,7 +785,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
    double real_weight;
 
    while (fReader.Next()) {
-      if (jentry % 5000 == 0){ 
+      if (jentry % 100000 == 0){ 
          int ks = floor(50.*jentry/maxEntries);
          string s1(ks,'>');
          string s2(50-ks,'-');
@@ -784,8 +794,8 @@ void test::Loop(TDirectory * dir, TTree * tree)
       jentry++;
 
       // apply selection
-      muon_cut     = *HLT_Mu2==1  && abs(*lep) == 13 && *ngoodmus==1 && *ngoodeles==0 && *ptlep1>30. &&fabs(*etalep1)<2.4 && *MET_et>30.;
-      electron_cut = *HLT_Ele2==1 && abs(*lep) == 11 && *ngoodmus==0 && *ngoodeles==1 && *ptlep1>30. &&fabs(*etalep1)<2.5 && *MET_et>30.;
+      muon_cut     = *HLT_Mu2==1  && abs(*lep) == 13 && *ngoodmus==1 && *ngoodeles==0 && *ptlep1>30. &&fabs(*etalep1)<2.4 && *MET_et_new>30. &&*mtVlepJECnew_new>30.;
+      electron_cut = *HLT_Ele2==1 && abs(*lep) == 11 && *ngoodmus==0 && *ngoodeles==1 && *ptlep1>30. &&fabs(*etalep1)<2.5 && *MET_et_new>30. &&*mtVlepJECnew_new>30.;
 
 	  if(m_channel == "muon"){
 	     cut = *hasphoton ==1. && muon_cut;
@@ -887,6 +897,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
       int barrel_pt = -1, endcap_pt = -1;
 
       // for barrel 
+
       set_for_barrel_and_endcap("barrel");
       for (int barrel_iphoton_index = 0; barrel_iphoton_index < 6; barrel_iphoton_index++){
 
@@ -939,8 +950,9 @@ void test::Loop(TDirectory * dir, TTree * tree)
      // weight and hist fill
       if (m_type == "data") real_weight = 1;
       if (m_type == "mc"  ) real_weight = cross_section_SF * (*lumiWeight) * pu_weight_SF;
-
+      
       if (barrel_flag != -1){
+         if (!( *lep ==11 && fabs(photon_mla[barrel_flag] - 91.2) < 10 )){
             if(photon_pt[barrel_flag] > 25 && photon_pt[barrel_flag] <= 30) hist_barrel_25to30->Fill(photon_sieie[barrel_flag], real_weight);
             if(photon_pt[barrel_flag] > 30 && photon_pt[barrel_flag] <= 40) hist_barrel_30to40->Fill(photon_sieie[barrel_flag], real_weight);
             if(photon_pt[barrel_flag] > 40 && photon_pt[barrel_flag] <= 50) hist_barrel_40to50->Fill(photon_sieie[barrel_flag], real_weight);
@@ -948,9 +960,11 @@ void test::Loop(TDirectory * dir, TTree * tree)
             if(photon_pt[barrel_flag] > 70 && photon_pt[barrel_flag] <= 100) hist_barrel_70to100->Fill(photon_sieie[barrel_flag], real_weight);
             if(photon_pt[barrel_flag] > 100 && photon_pt[barrel_flag] <= 135) hist_barrel_100to135->Fill(photon_sieie[barrel_flag], real_weight);
             if(photon_pt[barrel_flag] > 135 && photon_pt[barrel_flag] <= 400) hist_barrel_135to400->Fill(photon_sieie[barrel_flag], real_weight);
+         }   
       }
 
       if (endcap_flag != -1){
+         if (!( *lep ==11 && fabs(photon_mla[endcap_flag] - 91.2) < 10 )){
             if(photon_pt[endcap_flag] > 25 && photon_pt[endcap_flag] <= 30) hist_endcap_25to30->Fill(photon_sieie[endcap_flag], real_weight);
             if(photon_pt[endcap_flag] > 30 && photon_pt[endcap_flag] <= 40) hist_endcap_30to40->Fill(photon_sieie[endcap_flag], real_weight);
             if(photon_pt[endcap_flag] > 40 && photon_pt[endcap_flag] <= 50) hist_endcap_40to50->Fill(photon_sieie[endcap_flag], real_weight);
@@ -958,23 +972,50 @@ void test::Loop(TDirectory * dir, TTree * tree)
             if(photon_pt[endcap_flag] > 70 && photon_pt[endcap_flag] <= 100) hist_endcap_70to100->Fill(photon_sieie[endcap_flag], real_weight);
             if(photon_pt[endcap_flag] > 100 && photon_pt[endcap_flag] <= 135) hist_endcap_100to135->Fill(photon_sieie[endcap_flag], real_weight);
             if(photon_pt[endcap_flag] > 135 && photon_pt[endcap_flag] <= 400) hist_endcap_135to400->Fill(photon_sieie[endcap_flag], real_weight);
+         }
       }
 
+      double m_photonsc_eta[6], m_photonsc_phi[6];
+      for (int iii = 0; iii<6; iii++){
+         m_photonsc_eta[iii] = photonsc_eta[iii];
+         m_photonsc_phi[iii] = photonsc_phi[iii];
+
+      }
+      //double m_iphoton = iphoton;
+      //double m_iphoton_f = iphoton_f;
+
+
+      double drla   = delta_R(m_photonsc_eta[*iphoton], m_photonsc_phi[*iphoton], *etalep1, *philep1);
+      double drla_f = delta_R(m_photonsc_eta[*iphoton_f], m_photonsc_phi[*iphoton_f], *etalep1, *philep1);
+
+      //if(!cut) continue;
+      //if(*lep == 11){
+      //      if (fabs(*Mla - 91.2) < 10) continue;
+
+      //}
       // histogram for fake photon weight
       if(m_template_type == "data"){
-         if( *photonhaspixelseed==0){
+         //if( *photonhaspixelseed==0){
+         if(*lep == 11){
+            if (fabs(*Mla - 91.2) < 10) continue;
 
-         //if(*drla>0.5 && *drj1l_new>0.5 && *drj2l_new>0.5 && *drj1a_new>0.5 && *drj2a_new>0.5 && *photonhaspixelseed==0 && *jet1pt_new>40 &&fabs(*jet1eta_new)<4.7 && *jet2pt_new>30 &&fabs(*jet2eta_new)<4.7 &&fabs(*j1metPhi_new)>0.5 &&fabs(*j2metPhi_new)>0.5 &&(*jet1deepcsv_probb + *jet1deepcsv_probbb)<btag_cut_value &&(*jet2deepcsv_probb + *jet2deepcsv_probbb)<btag_cut_value){
+         }
+
+         if(drla>0.5 && *photonhaspixelseed==0 && *photonet > 25 ){
             if (fabs(*photonsceta) < 1.4442) barrel_photonpt->Fill(*photonet);
             if (fabs(*photonsceta) > 1.566 && fabs(*photonsceta) < 2.5) endcap_photonpt->Fill(*photonet);
          }
 
       }
 
-      if(m_template_type == "fake"){
-         if( *photonhaspixelseed==0){
+      if(m_template_type == "data_fake"){
+         //if( *photonhaspixelseed==0){
+         if(*lep == 11){
+            if (fabs(*Mla_f - 91.2) < 10) continue;
 
-         //if(*drla_f>0.5 && *drj1l_new_f>0.5 && *drj2l_new_f>0.5 && *drj1a_new_f>0.5 && *drj2a_new_f>0.5 && *photonhaspixelseed_f==0 && *jet1pt_new_f>40 &&fabs(*jet1eta_new_f)<4.7 && *jet2pt_new_f>30 &&fabs(*jet2eta_new_f)<4.7 &&fabs(*j1metPhi_new_f)>0.5 &&fabs(*j2metPhi_new_f)>0.5 &&(*jet1deepcsv_probb_f + *jet1deepcsv_probbb_f)<btag_cut_value &&(*jet2deepcsv_probb_f + *jet2deepcsv_probbb_f)<btag_cut_value){
+         }
+
+         if(drla_f>0.5 && *photonhaspixelseed_f==0 && *photonet_f > 25){
             if (fabs(*photonsceta_f) < 1.4442) barrel_photonpt->Fill(*photonet_f);
             if (fabs(*photonsceta_f) > 1.566 && fabs(*photonsceta_f) < 2.5) endcap_photonpt->Fill(*photonet_f);
          }

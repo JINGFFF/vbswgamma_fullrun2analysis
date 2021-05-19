@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfold_photonet/unfold_76_condor.sh
+arguments    = test_1
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfold_photonet/unfold_outputfile76
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfold_photonet/unfold_errorfile76
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2018/step5_unfold/unfold_photonet/unfold_myexe76.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

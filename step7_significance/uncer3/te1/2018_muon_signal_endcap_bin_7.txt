@@ -1,0 +1,51 @@
+imax 1   number of channels
+jmax 14   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 26.65
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	VBS	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+rate	4.55	8.22	0.00	0.25	0.04	0.00	0.00	0.42	0.79	0.28	0.00	0.64	3.86	6.83	0.75
+------------
+lumi	lnN	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	1.015	-	-	-	#lumi
+WGJJ_muon_endcap_stat_bin_8	lnN	1.10892774005	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muon_endcap_stat_bin_8	lnN	-	1.20256043395	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_muon_endcap_stat_bin_8	lnN	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_muon_endcap_stat_bin_8	lnN	-	-	-	1.45515978851	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_muon_endcap_stat_bin_8	lnN	-	-	-	-	2	-	-	-	-	-	-	-	-	-	-
+ST_tW_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-
+ST_tbarW_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-
+TTG_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	-	-	2	-	-	-	-	-	-	-
+WW_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	-	-	-	2	-	-	-	-	-	-
+WZ_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	-	-	-	-	2	-	-	-	-	-
+ZZ_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-
+ZG_muon_endcap_stat_bin_8	lnN	-	-	-	-	-	-	-	-	-	-	-	1.71567116636	-	-	-
+photon_ID	lnN	1.03	1.02	1.00	1.03	1.00	1.00	1.00	1.01	1.02	1.04	1.00	1.03	-	-	-
+electron_ID	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_Reco	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_HLT	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_ID	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.01	1.00	1.00	-	-	-
+btag	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.02	1.00	1.00	1.00	1.00	-	-	-
+JEC_2018	lnN	1.03	1.22	1.00	1.50	1.00	1.00	1.00	1.00	2.00	2.32	1.00	1.42	-	-	-
+JER_2018	lnN	1.05	1.29	1.00	1.22	3.33	1.00	1.00	1.55	2.00	2.32	1.00	2.18	-	-	-
+pujet_2018	lnN	1.00	1.01	1.00	1.03	1.10	1.00	1.00	1.06	1.00	1.00	1.00	1.04	-	-	-
+pujet_mistag_2018	lnN	1.00	1.01	1.00	1.01	1.00	1.00	1.00	1.05	1.15	1.00	1.00	1.00	-	-	-
+pileup_2018	lnN	1.08	1.07	1.00	1.10	1.08	1.00	1.00	1.13	1.06	1.24	1.00	1.08	-	-	-
+fakephoton_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	1.09	-	1.11
+fakelepton_2018	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	1.30	1.30
+WGJJ_pdf	lnN	1.00184241564	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJJ_scale	lnN	1.02027869023	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_pdf	lnN	-	1.00135462286	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muF1	lnN	-	1.02013341749	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muR1	lnN	-	1.05518492653	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muRmuF	lnN	-	1.03489531023	-	-	-	-	-	-	-	-	-	-	-	-	-

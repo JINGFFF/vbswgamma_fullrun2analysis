@@ -1,0 +1,18 @@
+ <<< Combine >>> 
+>>> including systematics
+>>> method used is MultiDimFit
+>>> random number generator seed is 123456
+Set Default Value of Parameter r_Bin1 To : 1
+Set Default Value of Parameter r_Bin2 To : 1
+Set Default Value of Parameter r_Bin3 To : 1
+Error parsing physics model parameter expression : r_Bin4=1=1
+RooArgSet:: = ()
+Computing results starting from expected outcome (a-priori)
+
+ --- MultiDimFit ---
+best fit parameter values and profile-likelihood uncertainties: 
+   r_Bin4 :    +1.000   -0.414/+0.418 (68%)
+   r_Bin2 :    +1.000   -0.790/+0.792 (68%)
+   r_Bin3 :    +1.000   -0.581/+0.585 (68%)
+   r_Bin1 :    +1.000   -0.973/+0.965 (68%)
+Done in 0.08 min (cpu), 0.08 min (real)

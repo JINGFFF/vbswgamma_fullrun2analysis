@@ -1,0 +1,87 @@
+000 (1045642.000.000) 05/17 16:51:02 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+009 (1045642.000.000) 05/17 16:51:46 Job was aborted by the user.
+	via condor_rm (by user pengj)
+...
+000 (1046154.000.000) 05/17 16:56:44 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+000 (1046278.000.000) 05/17 16:57:12 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1046154.000.000) 05/17 16:57:36 Job executing on host: <192.168.1.4:9618?addrs=192.168.1.4-9618&noUDP&sock=115268_2729_3>
+...
+006 (1046154.000.000) 05/17 16:57:37 Image size of job updated: 26808
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (1046154.000.000) 05/17 16:57:37 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	550238  -  Run Bytes Sent By Job
+	540  -  Run Bytes Received By Job
+	550238  -  Total Bytes Sent By Job
+	540  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :        0        1         1 
+	   Disk (KB)            :     2097     1024    705744 
+	   Memory (MB)          :        0     1024      1024 
+...
+009 (1046278.000.000) 05/17 16:58:04 Job was aborted by the user.
+	via condor_rm (by user pengj)
+...
+000 (1046523.000.000) 05/17 16:58:51 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1046523.000.000) 05/17 17:21:21 Job executing on host: <192.168.1.3:9618?addrs=192.168.1.3-9618&noUDP&sock=69109_eb16_3>
+...
+006 (1046523.000.000) 05/17 17:21:30 Image size of job updated: 95220
+	93  -  MemoryUsage of job (MB)
+	94856  -  ResidentSetSize of job (KB)
+...
+006 (1046523.000.000) 05/17 17:21:42 Image size of job updated: 350732
+	93  -  MemoryUsage of job (MB)
+	94856  -  ResidentSetSize of job (KB)
+...
+005 (1046523.000.000) 05/17 17:21:42 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:15, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:15, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	1325013  -  Run Bytes Sent By Job
+	541  -  Run Bytes Received By Job
+	1325013  -  Total Bytes Sent By Job
+	541  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            :  3102        1024    704796 
+	   Memory (MB)          :    93        1024      1024 
+...
+000 (1046651.000.000) 05/17 17:39:15 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1046651.000.000) 05/17 17:39:37 Job executing on host: <192.168.1.4:9618?addrs=192.168.1.4-9618&noUDP&sock=115268_2729_3>
+...
+006 (1046651.000.000) 05/17 17:39:45 Image size of job updated: 93676
+	91  -  MemoryUsage of job (MB)
+	93108  -  ResidentSetSize of job (KB)
+...
+006 (1046651.000.000) 05/17 17:40:04 Image size of job updated: 95456
+	91  -  MemoryUsage of job (MB)
+	93108  -  ResidentSetSize of job (KB)
+...
+005 (1046651.000.000) 05/17 17:40:04 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:13, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:13, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	1747845  -  Run Bytes Sent By Job
+	541  -  Run Bytes Received By Job
+	1747845  -  Total Bytes Sent By Job
+	541  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.93        1         1 
+	   Disk (KB)            :  3515        1024    705744 
+	   Memory (MB)          :    91        1024      1024 
+...

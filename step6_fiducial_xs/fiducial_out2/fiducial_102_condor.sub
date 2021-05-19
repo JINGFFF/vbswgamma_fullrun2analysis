@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out2/fiducial_102_condor.sh
+arguments    = test_fiducial1
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out2/fiducial_outputfile102
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out2/fiducial_errorfile102
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out2/fiducial_myexe102.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

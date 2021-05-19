@@ -32,7 +32,7 @@
 #include <string>
 #include <vector>
 #include "mytool/common_set.C"
-#include "mytool/hist.C"
+//#include "mytool/hist.C"
 #include "mytool/ele_channel_scale.C"
 #include "mytool/muon_channel_scale.C"
 #include "mytool/add_cut.C"
@@ -458,7 +458,7 @@ test::test()
    //m_dataset = outname;
    //m_year = year;
    //Init(f);
-   hist_Sumw2();
+   //hist_Sumw2();
 }
 
 test::~test()
