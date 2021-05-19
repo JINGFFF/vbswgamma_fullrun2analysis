@@ -8,6 +8,8 @@ export PATH="${PATH}:${PWD}/uncertainty/bash"
 export PATH="${PATH}:${PWD}/condor"
 export PATH="${PATH}:${PWD}/common"
 export PATH="${PATH}:${PWD}/combine_scripts"
+export PATH="${PATH}:${PWD}/unfolding"
+export PATH="${PATH}:${PWD}/plot"
 
 export PYTHONPATH="$PYTHONPATH:${PWD}/uncertainty"
 chmod +x aqgc/*py
@@ -19,3 +21,5 @@ chmod +x uncertainty/bash/*sh
 chmod +x condor/*py
 chmod +x common/*py
 chmod +x combine_scripts/*sh
+chmod +x unfolding/*py
+chmod +x plot/*py

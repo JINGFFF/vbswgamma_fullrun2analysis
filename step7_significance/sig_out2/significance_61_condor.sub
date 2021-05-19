@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2017/step7_significance/sig_out2/significance_61_condor.sh
+arguments    = test_signi2
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2017/step7_significance/sig_out2/significance_outputfile61
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2017/step7_significance/sig_out2/significance_errorfile61
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2017/step7_significance/sig_out2/significance_myexe61.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

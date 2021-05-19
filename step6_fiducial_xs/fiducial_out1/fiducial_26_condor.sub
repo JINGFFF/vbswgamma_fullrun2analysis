@@ -1,10 +1,10 @@
 +AcctGroup = "pku"
 +AcctGroupUser  = "pengj"
-executable   = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out1/fiducial_26_condor.sh
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2017/step6_fiducial_xs/fiducial_out1/fiducial_26_condor.sh
 arguments    = test_fiducial1
-output       = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out1/fiducial_outputfile26
-error        = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out1/fiducial_errorfile26
-log          = /data/pku/home/pengj/testvbs/analysis/analysis2018/step6_fiducial_xs/fiducial_out1/fiducial_myexe26.log
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2017/step6_fiducial_xs/fiducial_out1/fiducial_outputfile26
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2017/step6_fiducial_xs/fiducial_out1/fiducial_errorfile26
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2017/step6_fiducial_xs/fiducial_out1/fiducial_myexe26.log
 request_cpus   = 1
 request_memory = 1024
 request_disk   = 1024

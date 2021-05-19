@@ -1,0 +1,12 @@
++AcctGroup = "pku"
++AcctGroupUser  = "pengj"
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2017/step2_fake_photon/test_sideband/fakephoton_3_condor.sh
+arguments    = test_sideband4
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2017/step2_fake_photon/test_sideband/fakephoton_outputfile3
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2017/step2_fake_photon/test_sideband/fakephoton_errorfile3
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2017/step2_fake_photon/test_sideband/fakephoton_myexe3.log
+request_cpus   = 1
+request_memory = 1024
+request_disk   = 1024
+should_transfer_files = yes
+queue

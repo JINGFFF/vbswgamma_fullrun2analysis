@@ -1,0 +1,20 @@
+000 (1044326.000.000) 05/15 10:06:39 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1044326.000.000) 05/15 10:07:02 Job executing on host: <192.168.1.3:9618?addrs=192.168.1.3-9618&noUDP&sock=69109_eb16_3>
+...
+006 (1044326.000.000) 05/15 10:07:10 Image size of job updated: 102464
+	89  -  MemoryUsage of job (MB)
+	90812  -  ResidentSetSize of job (KB)
+...
+007 (1044326.000.000) 05/15 10:07:15 Shadow exception!
+	Error from slot1_45@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2017/step7_significance/make_hist_mc: (errno 26) Text file busy
+	1612651  -  Run Bytes Sent By Job
+	550  -  Run Bytes Received By Job
+...
+012 (1044326.000.000) 05/15 10:07:15 Job was held.
+	Error from slot1_45@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2017/step7_significance/make_hist_mc: (errno 26) Text file busy
+	Code 12 Subcode 26
+...
+009 (1044326.000.000) 05/15 11:24:51 Job was aborted by the user.
+	via condor_rm (by user pengj)
+...

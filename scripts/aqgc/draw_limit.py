@@ -213,6 +213,9 @@ if year == '2017':
     lumiText = "41.50  fb^{#minus1} (13 TeV)";
 if year == '2018': 
     lumiText = "59.74  fb^{#minus1} (13 TeV)";
+else :
+    lumiText = "137  fb^{#minus1} (13 TeV)";
+
 lumiTextSize = 0.55;
 lumiTextOffset = 0.2;
 relExtraDY = 1.2;

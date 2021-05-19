@@ -1,27 +1,27 @@
-000 (1040402.000.000) 04/26 13:37:12 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+000 (1045086.000.000) 05/16 22:31:36 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
 ...
-001 (1040402.000.000) 04/26 13:37:35 Job executing on host: <192.168.1.3:9618?addrs=192.168.1.3-9618&noUDP&sock=69109_eb16_3>
+001 (1045086.000.000) 05/16 22:31:56 Job executing on host: <192.168.1.4:9618?addrs=192.168.1.4-9618&noUDP&sock=115268_2729_3>
 ...
-006 (1040402.000.000) 04/26 13:37:44 Image size of job updated: 880
-	1  -  MemoryUsage of job (MB)
-	880  -  ResidentSetSize of job (KB)
+006 (1045086.000.000) 05/16 22:32:05 Image size of job updated: 49696
+	47  -  MemoryUsage of job (MB)
+	47420  -  ResidentSetSize of job (KB)
 ...
-006 (1040402.000.000) 04/26 13:38:38 Image size of job updated: 8116
-	2  -  MemoryUsage of job (MB)
-	1044  -  ResidentSetSize of job (KB)
+006 (1045086.000.000) 05/16 22:34:26 Image size of job updated: 49696
+	47  -  MemoryUsage of job (MB)
+	47920  -  ResidentSetSize of job (KB)
 ...
-005 (1040402.000.000) 04/26 13:38:38 Job terminated.
+005 (1045086.000.000) 05/16 22:34:27 Job terminated.
 	(1) Normal termination (return value 0)
-		Usr 0 00:00:10, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:07, Sys 0 00:00:00  -  Run Remote Usage
 		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
-		Usr 0 00:00:10, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:07, Sys 0 00:00:00  -  Total Remote Usage
 		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
-	899111  -  Run Bytes Sent By Job
+	891283  -  Run Bytes Sent By Job
 	567  -  Run Bytes Received By Job
-	899111  -  Total Bytes Sent By Job
+	891283  -  Total Bytes Sent By Job
 	567  -  Total Bytes Received By Job
 	Partitionable Resources :    Usage  Request Allocated 
-	   Cpus                 :     0.33        1         1 
-	   Disk (KB)            :  3147        1024    704796 
-	   Memory (MB)          :     2        1024      1024 
+	   Cpus                 :     0.01        1         1 
+	   Disk (KB)            :  7964        1024    705744 
+	   Memory (MB)          :    47        1024      1024 
 ...

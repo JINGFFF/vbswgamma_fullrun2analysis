@@ -1,0 +1,4 @@
+WARNING: In non-interactive mode release checks e.g. deprecated releases, production architectures are disabled.
+Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
+Warning in <TClass::Init>: no dictionary for class ROOT::TIOFeatures is available
+cp: cannot create directory `/data/pku/home/pengj/testvbs/analysis/analysis2017/step5_unfold/unfold_ptlep/test_1': File exists

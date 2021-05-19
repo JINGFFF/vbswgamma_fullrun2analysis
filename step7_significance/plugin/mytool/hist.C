@@ -17,6 +17,14 @@ TH1D * h_out_jecr[4];
 
 TH1D * h_pdf[400];
 char th2name[400];
+double a_mjj[9] = {100, 200, 300, 400, 500, 600, 700, 1000, 1100};
+double a_phoet[8] = {25, 30, 40, 50, 70, 100, 135, 400};
+TH2D * mjj_photonet = new TH2D("mjj_photonet", "mjj_photonet", 8, a_mjj, 7, a_phoet);
+TH2D * mjj_photonet_w = new TH2D("mjj_photonet_w", "mjj_photonet_w", 8, a_mjj, 7, a_phoet);
+
+TH1D * mjj = new TH1D("mjj", "mjj", 8, a_mjj);
+TH1D * mjj_w = new TH1D("mjj_w", "mjj_w", 8, a_mjj);
+
 
 void fill_hist(TString region,double fill_Mjj, double fill_deltaeta, TH1D* hist, double weight){
       if(region == "signal"){
@@ -132,6 +140,10 @@ cout<<"ok"<<endl;
 void savefile(TFile* fout, TString m_dataset) {
    fout = new TFile(m_dataset, "RECREATE");
    fout->cd();
+   mjj_photonet->Write();
+   mjj_photonet_w->Write();
+   mjj->Write();
+   mjj_w->Write();
 
       for(int j = 0; j<length; j++){
          h[j]->Write();

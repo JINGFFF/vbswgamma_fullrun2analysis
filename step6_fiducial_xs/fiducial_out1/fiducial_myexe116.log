@@ -1,27 +1,23 @@
-000 (1040417.000.000) 04/26 13:37:12 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+000 (1045101.000.000) 05/16 22:31:37 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
 ...
-001 (1040417.000.000) 04/26 13:37:35 Job executing on host: <192.168.1.8:9618?addrs=192.168.1.8-9618&noUDP&sock=4966_27cf_67>
+001 (1045101.000.000) 05/16 22:31:57 Job executing on host: <192.168.1.8:9618?addrs=192.168.1.8-9618&noUDP&sock=4966_27cf_67>
 ...
-006 (1040417.000.000) 04/26 13:37:45 Image size of job updated: 22908
-	22  -  MemoryUsage of job (MB)
-	22472  -  ResidentSetSize of job (KB)
+006 (1045101.000.000) 05/16 22:32:06 Image size of job updated: 87340
+	85  -  MemoryUsage of job (MB)
+	86776  -  ResidentSetSize of job (KB)
 ...
-006 (1040417.000.000) 04/26 13:38:06 Image size of job updated: 22908
-	23  -  MemoryUsage of job (MB)
-	23372  -  ResidentSetSize of job (KB)
-...
-005 (1040417.000.000) 04/26 13:38:06 Job terminated.
+005 (1045101.000.000) 05/16 22:32:11 Job terminated.
 	(1) Normal termination (return value 0)
-		Usr 0 00:00:02, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Run Remote Usage
 		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
-		Usr 0 00:00:02, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Total Remote Usage
 		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
-	883104  -  Run Bytes Sent By Job
+	873981  -  Run Bytes Sent By Job
 	555  -  Run Bytes Received By Job
-	883104  -  Total Bytes Sent By Job
+	873981  -  Total Bytes Sent By Job
 	555  -  Total Bytes Received By Job
 	Partitionable Resources :    Usage  Request Allocated 
-	   Cpus                 :     0.57        1         1 
-	   Disk (KB)            :  3122        1024    175383 
-	   Memory (MB)          :    23        1024      1024 
+	   Cpus                 :     0.12        1         1 
+	   Disk (KB)            :  7946        1024    175383 
+	   Memory (MB)          :    85        1024      1024 
 ...

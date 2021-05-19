@@ -1,0 +1,2730 @@
+WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
+         Developer's area is created for available architecture slc6_amd64_gcc630.
+ok0
+ok1
+ok2
+ok3
+invert_chiso : 4-10
+ok4
+[34myear            : 2017[0m
+[34mchannel         : all channel[0m
+[34mtemplate type   : real_fake[0m
+[34msample          : W1Jets[0m
+[34mbtag workpoint  : medium[0m
+[34minput file list : filelist_dir/tight_for_fakephoton_WJets_1j.txt[0m
+[34moutput file     : test_closure4/2017_medium_btag_W1Jets_real_fake_4_10.root[0m
+
+start load Btag info!
+Btag info has been loaded!
+20210503 - 14h 59m 25s
+file 1 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_100.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20378
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 104010 n_event: 38146[0m
+file 2 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_101.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27394
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 242971 n_event: 89579[0m
+file 3 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_102.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27081
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 380180 n_event: 140482[0m
+file 4 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_103.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23697
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 500303 n_event: 184840[0m
+file 5 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_104.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26321
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 633889 n_event: 234232[0m
+file 6 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_105.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20067
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 736416 n_event: 272358[0m
+file 7 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_106.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23712
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 856388 n_event: 316429[0m
+file 8 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_107.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23864
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 977183 n_event: 361202[0m
+file 9 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_109.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27682
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.11622e+06 n_event: 413035[0m
+file 10 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_10.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 11283
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.1727e+06 n_event: 434392[0m
+file 11 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_110.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26943
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.31026e+06 n_event: 485787[0m
+file 12 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_111.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20321
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.41306e+06 n_event: 523628[0m
+file 13 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_112.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23762
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.53381e+06 n_event: 568138[0m
+file 14 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_113.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23904
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.65463e+06 n_event: 613329[0m
+file 15 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_114.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20317
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.75814e+06 n_event: 651699[0m
+file 16 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_115.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20272
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.86062e+06 n_event: 689612[0m
+file 17 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_116.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19698
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.96025e+06 n_event: 726444[0m
+file 18 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_117.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27289
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.09735e+06 n_event: 777419[0m
+file 19 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_118.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26539
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.233e+06 n_event: 827724[0m
+file 20 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_119.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23940
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.35377e+06 n_event: 872453[0m
+file 21 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_11.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26902
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.48998e+06 n_event: 923302[0m
+file 22 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_120.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23722
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.60987e+06 n_event: 968031[0m
+file 23 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_121.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20663
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.71372e+06 n_event: 1.00642e+06[0m
+file 24 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_122.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20167
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.81694e+06 n_event: 1.04462e+06[0m
+file 25 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_123.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24023
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.938e+06 n_event: 1.08943e+06[0m
+file 26 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_124.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23736
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.05883e+06 n_event: 1.13392e+06[0m
+file 27 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_126.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25713
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.19017e+06 n_event: 1.18254e+06[0m
+file 28 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_127.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24019
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.31094e+06 n_event: 1.22725e+06[0m
+file 29 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_128.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26774
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.447e+06 n_event: 1.27775e+06[0m
+file 30 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_129.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23923
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.5681e+06 n_event: 1.32304e+06[0m
+file 31 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_12.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27213
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.7055e+06 n_event: 1.37425e+06[0m
+file 32 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_130.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18306
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.79799e+06 n_event: 1.40824e+06[0m
+file 33 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_131.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26104
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.92885e+06 n_event: 1.45674e+06[0m
+file 34 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_132.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17050
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.01538e+06 n_event: 1.48883e+06[0m
+file 35 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_134.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23603
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.13546e+06 n_event: 1.53293e+06[0m
+file 36 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_135.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16979
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.22139e+06 n_event: 1.56492e+06[0m
+file 37 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_136.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20274
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.32415e+06 n_event: 1.60284e+06[0m
+file 38 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_137.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22608
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.43937e+06 n_event: 1.64545e+06[0m
+file 39 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_138.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23698
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.55876e+06 n_event: 1.69051e+06[0m
+file 40 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_139.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21537
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.66735e+06 n_event: 1.73075e+06[0m
+file 41 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_13.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23661
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.78593e+06 n_event: 1.77494e+06[0m
+file 42 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_140.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24501
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.91042e+06 n_event: 1.8212e+06[0m
+file 43 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_141.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23874
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.03082e+06 n_event: 1.86604e+06[0m
+file 44 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_142.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16912
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.1169e+06 n_event: 1.89775e+06[0m
+file 45 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_143.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23680
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.23614e+06 n_event: 1.94234e+06[0m
+file 46 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_144.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 12787
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.30057e+06 n_event: 1.96628e+06[0m
+file 47 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_146.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26998
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.43733e+06 n_event: 2.0171e+06[0m
+file 48 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_147.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27123
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.57554e+06 n_event: 2.06878e+06[0m
+file 49 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_148.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27192
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.71259e+06 n_event: 2.12005e+06[0m
+file 50 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_14.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 13646
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.78152e+06 n_event: 2.1459e+06[0m
+file 51 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_150.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27225
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.91796e+06 n_event: 2.19685e+06[0m
+file 52 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_151.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23382
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.03726e+06 n_event: 2.24129e+06[0m
+file 53 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_152.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23423
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.15694e+06 n_event: 2.28601e+06[0m
+file 54 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_153.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27016
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.29378e+06 n_event: 2.33656e+06[0m
+file 55 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_154.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22172
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.40547e+06 n_event: 2.37823e+06[0m
+file 56 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_155.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20025
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.50796e+06 n_event: 2.41605e+06[0m
+file 57 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_156.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17862
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.5978e+06 n_event: 2.44965e+06[0m
+file 58 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_157.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23743
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.71798e+06 n_event: 2.49421e+06[0m
+file 59 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_158.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27229
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.85536e+06 n_event: 2.54545e+06[0m
+file 60 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_159.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16868
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.94126e+06 n_event: 2.5775e+06[0m
+file 61 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_15.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20314
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.04366e+06 n_event: 2.61548e+06[0m
+file 62 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_160.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27139
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.18031e+06 n_event: 2.66644e+06[0m
+file 63 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_161.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27026
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.317e+06 n_event: 2.7175e+06[0m
+file 64 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_162.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23742
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.43786e+06 n_event: 2.76275e+06[0m
+file 65 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_163.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 13513
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.5071e+06 n_event: 2.78862e+06[0m
+file 66 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_164.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23674
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.627e+06 n_event: 2.83304e+06[0m
+file 67 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_165.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23810
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.74704e+06 n_event: 2.87734e+06[0m
+file 68 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_166.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20409
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.84995e+06 n_event: 2.9153e+06[0m
+file 69 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_167.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18587
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.94495e+06 n_event: 2.95052e+06[0m
+file 70 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_168.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19122
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.04107e+06 n_event: 2.98636e+06[0m
+file 71 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_169.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23621
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.16086e+06 n_event: 3.03096e+06[0m
+file 72 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_16.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23679
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.28111e+06 n_event: 3.07547e+06[0m
+file 73 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_170.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18490
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.37482e+06 n_event: 3.11068e+06[0m
+file 74 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_171.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 13489
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.44331e+06 n_event: 3.1364e+06[0m
+file 75 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_172.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24074
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.56322e+06 n_event: 3.18127e+06[0m
+file 76 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_173.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26726
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.69976e+06 n_event: 3.23224e+06[0m
+file 77 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_174.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 14794
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.77405e+06 n_event: 3.25991e+06[0m
+file 78 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_175.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 28157
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.91677e+06 n_event: 3.31286e+06[0m
+file 79 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_176.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25216
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.04525e+06 n_event: 3.36051e+06[0m
+file 80 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_177.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19868
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.14704e+06 n_event: 3.3983e+06[0m
+file 81 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_178.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18881
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.24298e+06 n_event: 3.43416e+06[0m
+file 82 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_179.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20068
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.34531e+06 n_event: 3.47241e+06[0m
+file 83 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_17.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20546
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.44981e+06 n_event: 3.51099e+06[0m
+file 84 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_180.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19949
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.55208e+06 n_event: 3.54896e+06[0m
+file 85 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_181.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22404
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.66494e+06 n_event: 3.59086e+06[0m
+file 86 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_182.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25100
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.79272e+06 n_event: 3.6384e+06[0m
+file 87 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_183.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26511
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.92588e+06 n_event: 3.68825e+06[0m
+file 88 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_184.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27206
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.00624e+07 n_event: 3.73921e+06[0m
+file 89 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_185.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21654
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.01724e+07 n_event: 3.77997e+06[0m
+file 90 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_186.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27339
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.03089e+07 n_event: 3.83092e+06[0m
+file 91 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_187.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25573
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.04398e+07 n_event: 3.87991e+06[0m
+file 92 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_188.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23741
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.05605e+07 n_event: 3.9251e+06[0m
+file 93 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_189.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23993
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.0681e+07 n_event: 3.96986e+06[0m
+file 94 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_18.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26969
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.0817e+07 n_event: 4.02064e+06[0m
+file 95 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_190.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23615
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.09368e+07 n_event: 4.06526e+06[0m
+file 96 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_191.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22636
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.10508e+07 n_event: 4.10807e+06[0m
+file 97 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_192.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20380
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.11533e+07 n_event: 4.14638e+06[0m
+file 98 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_193.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26862
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.12898e+07 n_event: 4.19701e+06[0m
+file 99 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_194.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20379
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.13934e+07 n_event: 4.23534e+06[0m
+file 100 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_195.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20341
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.14962e+07 n_event: 4.27352e+06[0m
+file 101 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_196.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22094
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.16079e+07 n_event: 4.3151e+06[0m
+file 102 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_197.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21790
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.17187e+07 n_event: 4.35638e+06[0m
+file 103 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_198.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23695
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.18394e+07 n_event: 4.40126e+06[0m
+file 104 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_199.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26420
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.19733e+07 n_event: 4.45097e+06[0m
+file 105 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_19.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23095
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.20914e+07 n_event: 4.49467e+06[0m
+file 106 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_1.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20497
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.21941e+07 n_event: 4.5327e+06[0m
+file 107 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_200.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23809
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.23137e+07 n_event: 4.57718e+06[0m
+file 108 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_201.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23245
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.24327e+07 n_event: 4.62129e+06[0m
+file 109 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_202.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23592
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.25525e+07 n_event: 4.66532e+06[0m
+file 110 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_203.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22447
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.26661e+07 n_event: 4.70736e+06[0m
+file 111 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_204.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26594
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.28001e+07 n_event: 4.75709e+06[0m
+file 112 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_205.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26942
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.29361e+07 n_event: 4.80776e+06[0m
+file 113 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_206.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20292
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.30395e+07 n_event: 4.84596e+06[0m
+file 114 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_207.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23696
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.31597e+07 n_event: 4.89057e+06[0m
+file 115 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_208.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18268
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.32527e+07 n_event: 4.92491e+06[0m
+file 116 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_209.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20240
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.33555e+07 n_event: 4.96343e+06[0m
+file 117 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_20.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20118
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.3458e+07 n_event: 5.00158e+06[0m
+file 118 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_210.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20944
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.35645e+07 n_event: 5.04125e+06[0m
+file 119 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_211.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23678
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.36843e+07 n_event: 5.08564e+06[0m
+file 120 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_212.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21867
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.3793e+07 n_event: 5.12587e+06[0m
+file 121 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_213.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23252
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.39111e+07 n_event: 5.16944e+06[0m
+file 122 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_214.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27097
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.40489e+07 n_event: 5.22049e+06[0m
+file 123 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_215.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22650
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.41629e+07 n_event: 5.26294e+06[0m
+file 124 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_216.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24011
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.42835e+07 n_event: 5.30807e+06[0m
+file 125 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_217.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23735
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.44038e+07 n_event: 5.35266e+06[0m
+file 126 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_218.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26173
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.45353e+07 n_event: 5.4015e+06[0m
+file 127 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_219.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18253
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.4628e+07 n_event: 5.43619e+06[0m
+file 128 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_21.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26950
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.47656e+07 n_event: 5.48759e+06[0m
+file 129 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_220.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22017
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.48765e+07 n_event: 5.52892e+06[0m
+file 130 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_222.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23855
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.49968e+07 n_event: 5.57396e+06[0m
+file 131 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_223.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23222
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.51139e+07 n_event: 5.61728e+06[0m
+file 132 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_224.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26375
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.52481e+07 n_event: 5.66728e+06[0m
+file 133 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_225.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23603
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.53685e+07 n_event: 5.71194e+06[0m
+file 134 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_226.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20430
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.54718e+07 n_event: 5.75037e+06[0m
+file 135 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_227.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23061
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.55881e+07 n_event: 5.79356e+06[0m
+file 136 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_228.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23526
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.57077e+07 n_event: 5.83817e+06[0m
+file 137 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_22.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22354
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.58213e+07 n_event: 5.88042e+06[0m
+file 138 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_230.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27983
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.59639e+07 n_event: 5.93321e+06[0m
+file 139 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_231.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20036
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.60661e+07 n_event: 5.97124e+06[0m
+file 140 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_232.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22305
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.61791e+07 n_event: 6.01327e+06[0m
+file 141 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_233.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21652
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.62874e+07 n_event: 6.05391e+06[0m
+file 142 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_234.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21991
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.63992e+07 n_event: 6.09518e+06[0m
+file 143 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_235.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23644
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.6519e+07 n_event: 6.13978e+06[0m
+file 144 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_236.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27014
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.66556e+07 n_event: 6.19056e+06[0m
+file 145 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_237.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22480
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.67696e+07 n_event: 6.23269e+06[0m
+file 146 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_238.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19809
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.68718e+07 n_event: 6.27008e+06[0m
+file 147 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_239.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20131
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.69743e+07 n_event: 6.30791e+06[0m
+file 148 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_23.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18708
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.70694e+07 n_event: 6.34349e+06[0m
+file 149 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_240.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27891
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.72103e+07 n_event: 6.39547e+06[0m
+file 150 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_241.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23592
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.73309e+07 n_event: 6.43986e+06[0m
+file 151 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_242.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22113
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.74429e+07 n_event: 6.4818e+06[0m
+file 152 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_243.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20400
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.75463e+07 n_event: 6.52035e+06[0m
+file 153 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_244.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21337
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.76551e+07 n_event: 6.56035e+06[0m
+file 154 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_245.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20398
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.77582e+07 n_event: 6.5986e+06[0m
+file 155 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_246.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23947
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.7879e+07 n_event: 6.6435e+06[0m
+file 156 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_247.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23169
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.79979e+07 n_event: 6.68773e+06[0m
+file 157 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_248.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23618
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.81181e+07 n_event: 6.73266e+06[0m
+file 158 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_249.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23630
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.82377e+07 n_event: 6.77769e+06[0m
+file 159 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_24.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23409
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.83578e+07 n_event: 6.82199e+06[0m
+file 160 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_250.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23951
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.84795e+07 n_event: 6.86705e+06[0m
+file 161 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_251.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23576
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.86e+07 n_event: 6.91148e+06[0m
+file 162 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_255.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23883
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.87202e+07 n_event: 6.95616e+06[0m
+file 163 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_256.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26940
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.8857e+07 n_event: 7.00741e+06[0m
+file 164 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_257.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23473
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.89756e+07 n_event: 7.05196e+06[0m
+file 165 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_258.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18849
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.90721e+07 n_event: 7.08727e+06[0m
+file 166 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_259.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27451
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.921e+07 n_event: 7.13862e+06[0m
+file 167 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_25.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23854
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.93302e+07 n_event: 7.18351e+06[0m
+file 168 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_260.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20187
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.94321e+07 n_event: 7.22127e+06[0m
+file 169 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_261.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25076
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.95584e+07 n_event: 7.26804e+06[0m
+file 170 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_262.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20149
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.96609e+07 n_event: 7.30588e+06[0m
+file 171 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_263.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21980
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.97732e+07 n_event: 7.34788e+06[0m
+file 172 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_264.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21466
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.98829e+07 n_event: 7.38873e+06[0m
+file 173 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_265.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27060
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.00212e+07 n_event: 7.43979e+06[0m
+file 174 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_266.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23951
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.01441e+07 n_event: 7.48521e+06[0m
+file 175 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_267.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26888
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.02804e+07 n_event: 7.53549e+06[0m
+file 176 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_268.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17780
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.03705e+07 n_event: 7.56914e+06[0m
+file 177 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_269.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 14848
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.04454e+07 n_event: 7.59669e+06[0m
+file 178 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_26.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23861
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.05656e+07 n_event: 7.64144e+06[0m
+file 179 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_270.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18676
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.06605e+07 n_event: 7.67688e+06[0m
+file 180 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_271.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22188
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.0773e+07 n_event: 7.71859e+06[0m
+file 181 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_272.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18776
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.08679e+07 n_event: 7.75402e+06[0m
+file 182 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_273.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20541
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.09715e+07 n_event: 7.79235e+06[0m
+file 183 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_274.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21560
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.10814e+07 n_event: 7.83341e+06[0m
+file 184 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_275.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23817
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.12021e+07 n_event: 7.87815e+06[0m
+file 185 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_276.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22488
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.13159e+07 n_event: 7.92046e+06[0m
+file 186 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_277.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 13382
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.13832e+07 n_event: 7.94574e+06[0m
+file 187 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_278.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27113
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.15205e+07 n_event: 7.99662e+06[0m
+file 188 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_279.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27310
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.16594e+07 n_event: 8.04816e+06[0m
+file 189 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_27.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23900
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.17796e+07 n_event: 8.09282e+06[0m
+file 190 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_280.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26142
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.19126e+07 n_event: 8.14199e+06[0m
+file 191 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_281.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26870
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.205e+07 n_event: 8.19263e+06[0m
+file 192 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_282.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24004
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.21707e+07 n_event: 8.23798e+06[0m
+file 193 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_283.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23537
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.22913e+07 n_event: 8.28271e+06[0m
+file 194 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_284.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22961
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.24083e+07 n_event: 8.32637e+06[0m
+file 195 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_285.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22196
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.25212e+07 n_event: 8.36835e+06[0m
+file 196 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_286.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20332
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.26242e+07 n_event: 8.40645e+06[0m
+file 197 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_287.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21857
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.27341e+07 n_event: 8.44758e+06[0m
+file 198 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_288.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18261
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.2827e+07 n_event: 8.48185e+06[0m
+file 199 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_289.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20447
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.29297e+07 n_event: 8.51979e+06[0m
+file 200 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_28.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27122
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.30669e+07 n_event: 8.57079e+06[0m
+file 201 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_290.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20397
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.31697e+07 n_event: 8.60911e+06[0m
+file 202 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_291.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17892
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.32602e+07 n_event: 8.6428e+06[0m
+file 203 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_292.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21664
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.33702e+07 n_event: 8.68362e+06[0m
+file 204 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_293.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27221
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.35078e+07 n_event: 8.73432e+06[0m
+file 205 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_294.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23892
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.36281e+07 n_event: 8.77919e+06[0m
+file 206 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_295.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23811
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.37491e+07 n_event: 8.82376e+06[0m
+file 207 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_296.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27050
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.38862e+07 n_event: 8.87474e+06[0m
+file 208 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_297.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23781
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.40055e+07 n_event: 8.91925e+06[0m
+file 209 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_298.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25189
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.41334e+07 n_event: 8.96645e+06[0m
+file 210 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_299.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20225
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.42367e+07 n_event: 9.00484e+06[0m
+file 211 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_29.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23552
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.43564e+07 n_event: 9.04931e+06[0m
+file 212 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_2.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22470
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.44715e+07 n_event: 9.09195e+06[0m
+file 213 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_300.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23584
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.45915e+07 n_event: 9.13651e+06[0m
+file 214 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_302.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26924
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.47275e+07 n_event: 9.18688e+06[0m
+file 215 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_303.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23218
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.48448e+07 n_event: 9.23049e+06[0m
+file 216 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_304.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20212
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.4948e+07 n_event: 9.26838e+06[0m
+file 217 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_305.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27348
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.50859e+07 n_event: 9.31956e+06[0m
+file 218 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_306.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17971
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.51776e+07 n_event: 9.35366e+06[0m
+file 219 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_307.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23800
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.52982e+07 n_event: 9.39804e+06[0m
+file 220 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_308.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26606
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.54352e+07 n_event: 9.44868e+06[0m
+file 221 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_309.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23826
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.55556e+07 n_event: 9.49357e+06[0m
+file 222 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_30.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27503
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.56946e+07 n_event: 9.54506e+06[0m
+file 223 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_310.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20329
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.57979e+07 n_event: 9.58338e+06[0m
+file 224 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_311.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22564
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.59128e+07 n_event: 9.62618e+06[0m
+file 225 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_312.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23655
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.60328e+07 n_event: 9.67067e+06[0m
+file 226 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_313.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21456
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.61407e+07 n_event: 9.71101e+06[0m
+file 227 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_314.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21831
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.62522e+07 n_event: 9.75238e+06[0m
+file 228 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_315.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22644
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.63671e+07 n_event: 9.79476e+06[0m
+file 229 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_316.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20550
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.64708e+07 n_event: 9.83326e+06[0m
+file 230 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_317.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26274
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.66048e+07 n_event: 9.88297e+06[0m
+file 231 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_318.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27431
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.67437e+07 n_event: 9.93476e+06[0m
+file 232 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_319.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20217
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.6845e+07 n_event: 9.9725e+06[0m
+file 233 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_31.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16721
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.69298e+07 n_event: 1.00037e+07[0m
+file 234 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_320.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21141
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.70372e+07 n_event: 1.00435e+07[0m
+file 235 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_321.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23557
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.71571e+07 n_event: 1.00881e+07[0m
+file 236 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_322.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22025
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.72696e+07 n_event: 1.013e+07[0m
+file 237 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_323.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23793
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.73902e+07 n_event: 1.01751e+07[0m
+file 238 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_324.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23282
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.75075e+07 n_event: 1.02188e+07[0m
+file 239 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_325.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21658
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.76163e+07 n_event: 1.02591e+07[0m
+file 240 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_326.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26984
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.77529e+07 n_event: 1.03098e+07[0m
+file 241 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_327.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23567
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.78724e+07 n_event: 1.03544e+07[0m
+file 242 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_328.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26720
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.80086e+07 n_event: 1.0405e+07[0m
+file 243 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_329.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27339
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.81462e+07 n_event: 1.0456e+07[0m
+file 244 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_32.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20376
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.82492e+07 n_event: 1.04945e+07[0m
+file 245 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_330.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23737
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.83689e+07 n_event: 1.05391e+07[0m
+file 246 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_331.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20291
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.8472e+07 n_event: 1.05776e+07[0m
+file 247 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_332.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 28027
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.86133e+07 n_event: 1.06302e+07[0m
+file 248 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_333.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23791
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.87336e+07 n_event: 1.06743e+07[0m
+file 249 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_334.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27117
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.88705e+07 n_event: 1.07253e+07[0m
+file 250 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_335.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20128
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.89729e+07 n_event: 1.07634e+07[0m
+file 251 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_336.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27028
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.91099e+07 n_event: 1.08145e+07[0m
+file 252 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_337.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21756
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.92202e+07 n_event: 1.08557e+07[0m
+file 253 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_338.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27311
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.93583e+07 n_event: 1.09066e+07[0m
+file 254 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_339.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27209
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.94944e+07 n_event: 1.09574e+07[0m
+file 255 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_33.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27497
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.96314e+07 n_event: 1.10081e+07[0m
+file 256 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_340.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26635
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.97673e+07 n_event: 1.10586e+07[0m
+file 257 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_341.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20941
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.98736e+07 n_event: 1.10979e+07[0m
+file 258 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_342.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23665
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.99945e+07 n_event: 1.11424e+07[0m
+file 259 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_343.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27281
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.01322e+07 n_event: 1.11938e+07[0m
+file 260 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_344.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25537
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.0262e+07 n_event: 1.1242e+07[0m
+file 261 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_345.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26768
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.03978e+07 n_event: 1.12925e+07[0m
+file 262 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_346.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23784
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.05175e+07 n_event: 1.13371e+07[0m
+file 263 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_348.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23801
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.06385e+07 n_event: 1.1382e+07[0m
+file 264 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_349.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26523
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.07751e+07 n_event: 1.14325e+07[0m
+file 265 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_34.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23426
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.08949e+07 n_event: 1.14775e+07[0m
+file 266 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_350.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23620
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.10145e+07 n_event: 1.15218e+07[0m
+file 267 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_351.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26960
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.11527e+07 n_event: 1.15734e+07[0m
+file 268 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_352.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27245
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.12897e+07 n_event: 1.16244e+07[0m
+file 269 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_353.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23659
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.14093e+07 n_event: 1.16689e+07[0m
+file 270 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_354.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27198
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.15473e+07 n_event: 1.17204e+07[0m
+file 271 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_355.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27496
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.16854e+07 n_event: 1.17718e+07[0m
+file 272 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_356.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27350
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.18228e+07 n_event: 1.18229e+07[0m
+file 273 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_357.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26962
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.19597e+07 n_event: 1.18735e+07[0m
+file 274 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_358.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27551
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.20972e+07 n_event: 1.19245e+07[0m
+file 275 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_359.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20560
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.22012e+07 n_event: 1.19631e+07[0m
+file 276 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_35.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23731
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.23215e+07 n_event: 1.20077e+07[0m
+file 277 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_360.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23598
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.24411e+07 n_event: 1.20525e+07[0m
+file 278 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_361.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27105
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.25781e+07 n_event: 1.21038e+07[0m
+file 279 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_362.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18065
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.26688e+07 n_event: 1.21375e+07[0m
+file 280 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_363.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27166
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.28066e+07 n_event: 1.21885e+07[0m
+file 281 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_364.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26447
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.29398e+07 n_event: 1.2238e+07[0m
+file 282 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_365.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26803
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.3077e+07 n_event: 1.22889e+07[0m
+file 283 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_366.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27025
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.32142e+07 n_event: 1.23397e+07[0m
+file 284 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_367.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24282
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.33371e+07 n_event: 1.2385e+07[0m
+file 285 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_368.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26813
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.34738e+07 n_event: 1.24361e+07[0m
+file 286 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_369.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19102
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.35717e+07 n_event: 1.24727e+07[0m
+file 287 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_36.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23711
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.36922e+07 n_event: 1.25173e+07[0m
+file 288 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_370.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22784
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.38077e+07 n_event: 1.25611e+07[0m
+file 289 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_371.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27003
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.39455e+07 n_event: 1.26119e+07[0m
+file 290 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_372.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27409
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.40839e+07 n_event: 1.26633e+07[0m
+file 291 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_373.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26892
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.42211e+07 n_event: 1.27144e+07[0m
+file 292 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_374.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23615
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.43425e+07 n_event: 1.27591e+07[0m
+file 293 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_375.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23598
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.44628e+07 n_event: 1.28032e+07[0m
+file 294 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_376.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23239
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.45799e+07 n_event: 1.28469e+07[0m
+file 295 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_377.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27197
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.47182e+07 n_event: 1.28978e+07[0m
+file 296 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_378.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22877
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.48345e+07 n_event: 1.29411e+07[0m
+file 297 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_379.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26744
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.49698e+07 n_event: 1.29913e+07[0m
+file 298 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_37.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23569
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.509e+07 n_event: 1.30357e+07[0m
+file 299 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_380.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22835
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.52059e+07 n_event: 1.30787e+07[0m
+file 300 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_381.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23631
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.53259e+07 n_event: 1.31233e+07[0m
+file 301 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_382.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27413
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.54642e+07 n_event: 1.31745e+07[0m
+file 302 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_383.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26978
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.5602e+07 n_event: 1.32252e+07[0m
+file 303 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_384.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26934
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.57388e+07 n_event: 1.32759e+07[0m
+file 304 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_385.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23830
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.58599e+07 n_event: 1.33211e+07[0m
+file 305 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_386.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23351
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.59778e+07 n_event: 1.33651e+07[0m
+file 306 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_387.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27010
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.61141e+07 n_event: 1.34162e+07[0m
+file 307 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_388.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23625
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.6234e+07 n_event: 1.34612e+07[0m
+file 308 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_389.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27094
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.63707e+07 n_event: 1.35119e+07[0m
+file 309 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_38.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23812
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.64909e+07 n_event: 1.35565e+07[0m
+file 310 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_390.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23539
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.66106e+07 n_event: 1.36012e+07[0m
+file 311 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_391.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27242
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.67488e+07 n_event: 1.36524e+07[0m
+file 312 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_392.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16966
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.68342e+07 n_event: 1.36842e+07[0m
+file 313 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_393.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26990
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.69704e+07 n_event: 1.37345e+07[0m
+file 314 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_394.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21719
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.7081e+07 n_event: 1.37752e+07[0m
+file 315 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_395.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23998
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.72026e+07 n_event: 1.38202e+07[0m
+file 316 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_396.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23551
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.7322e+07 n_event: 1.38647e+07[0m
+file 317 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_397.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20311
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.74252e+07 n_event: 1.39029e+07[0m
+file 318 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_398.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26679
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.75597e+07 n_event: 1.39529e+07[0m
+file 319 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_399.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26659
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.76955e+07 n_event: 1.40034e+07[0m
+file 320 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_39.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23806
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.78164e+07 n_event: 1.40481e+07[0m
+file 321 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_3.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 10988
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.78726e+07 n_event: 1.4069e+07[0m
+file 322 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_400.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20125
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.79752e+07 n_event: 1.41072e+07[0m
+file 323 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_401.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27138
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.81137e+07 n_event: 1.41577e+07[0m
+file 324 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_402.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26811
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.82502e+07 n_event: 1.42087e+07[0m
+file 325 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_403.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23763
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.83707e+07 n_event: 1.42536e+07[0m
+file 326 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_404.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23492
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.849e+07 n_event: 1.42978e+07[0m
+file 327 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_405.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23446
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.86099e+07 n_event: 1.43425e+07[0m
+file 328 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_406.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27025
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.87479e+07 n_event: 1.43938e+07[0m
+file 329 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_407.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27238
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.88869e+07 n_event: 1.44451e+07[0m
+file 330 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_408.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27154
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.9024e+07 n_event: 1.44959e+07[0m
+file 331 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_409.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27021
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.91605e+07 n_event: 1.45469e+07[0m
+file 332 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_40.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20102
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.92632e+07 n_event: 1.4585e+07[0m
+file 333 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_410.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18874
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.93597e+07 n_event: 1.46204e+07[0m
+file 334 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_411.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26864
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.94963e+07 n_event: 1.46711e+07[0m
+file 335 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_412.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23900
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.96173e+07 n_event: 1.47162e+07[0m
+file 336 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_413.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20862
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.9723e+07 n_event: 1.47559e+07[0m
+file 337 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_414.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27094
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.98606e+07 n_event: 1.48073e+07[0m
+file 338 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_415.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26579
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.99965e+07 n_event: 1.48582e+07[0m
+file 339 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_416.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26728
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.01331e+07 n_event: 1.49086e+07[0m
+file 340 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_417.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23973
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.02544e+07 n_event: 1.49536e+07[0m
+file 341 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_418.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22645
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.03694e+07 n_event: 1.49968e+07[0m
+file 342 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_419.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20087
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.04713e+07 n_event: 1.50348e+07[0m
+file 343 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_41.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23774
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.05922e+07 n_event: 1.50795e+07[0m
+file 344 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_420.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27207
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.07292e+07 n_event: 1.51298e+07[0m
+file 345 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_421.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20575
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.08322e+07 n_event: 1.51686e+07[0m
+file 346 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_422.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18948
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.09274e+07 n_event: 1.5204e+07[0m
+file 347 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_423.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26922
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.10628e+07 n_event: 1.52546e+07[0m
+file 348 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_424.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27047
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.12003e+07 n_event: 1.53056e+07[0m
+file 349 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_425.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23581
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.13193e+07 n_event: 1.53497e+07[0m
+file 350 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_426.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23755
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.14394e+07 n_event: 1.53948e+07[0m
+file 351 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_427.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23700
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.1559e+07 n_event: 1.54393e+07[0m
+file 352 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_428.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27219
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.16966e+07 n_event: 1.54902e+07[0m
+file 353 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_429.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27235
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.18344e+07 n_event: 1.55418e+07[0m
+file 354 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_42.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20231
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.19369e+07 n_event: 1.55801e+07[0m
+file 355 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_430.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26862
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.20738e+07 n_event: 1.56308e+07[0m
+file 356 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_431.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27013
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.22095e+07 n_event: 1.5682e+07[0m
+file 357 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_432.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22463
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.23232e+07 n_event: 1.57242e+07[0m
+file 358 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_433.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24666
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.24479e+07 n_event: 1.57703e+07[0m
+file 359 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_434.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27324
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.25865e+07 n_event: 1.58219e+07[0m
+file 360 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_435.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27033
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.27249e+07 n_event: 1.5873e+07[0m
+file 361 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_436.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20187
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.28281e+07 n_event: 1.59115e+07[0m
+file 362 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_437.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23944
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.29491e+07 n_event: 1.59563e+07[0m
+file 363 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_438.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23745
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.30694e+07 n_event: 1.60013e+07[0m
+file 364 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_439.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23810
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.31897e+07 n_event: 1.60463e+07[0m
+file 365 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_43.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22729
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.33044e+07 n_event: 1.60888e+07[0m
+file 366 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_440.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22790
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.34203e+07 n_event: 1.6132e+07[0m
+file 367 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_441.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23372
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.35397e+07 n_event: 1.61762e+07[0m
+file 368 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_442.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27037
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.3678e+07 n_event: 1.62269e+07[0m
+file 369 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_443.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27221
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.38162e+07 n_event: 1.6278e+07[0m
+file 370 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_444.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23695
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.39366e+07 n_event: 1.63224e+07[0m
+file 371 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_445.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24154
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.40595e+07 n_event: 1.6368e+07[0m
+file 372 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_446.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24163
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.41828e+07 n_event: 1.64136e+07[0m
+file 373 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_447.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18613
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.42756e+07 n_event: 1.64482e+07[0m
+file 374 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_448.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26942
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.44118e+07 n_event: 1.64989e+07[0m
+file 375 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_449.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27056
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.4548e+07 n_event: 1.65496e+07[0m
+file 376 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_44.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20253
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.46509e+07 n_event: 1.65878e+07[0m
+file 377 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_450.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27280
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.47893e+07 n_event: 1.66389e+07[0m
+file 378 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_451.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24763
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.49143e+07 n_event: 1.66856e+07[0m
+file 379 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_452.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23579
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.50346e+07 n_event: 1.67302e+07[0m
+file 380 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_453.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23720
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.51548e+07 n_event: 1.67749e+07[0m
+file 381 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_454.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26946
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.5291e+07 n_event: 1.68255e+07[0m
+file 382 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_455.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23985
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.5411e+07 n_event: 1.68703e+07[0m
+file 383 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_456.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27247
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.5549e+07 n_event: 1.69219e+07[0m
+file 384 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_457.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26826
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.56855e+07 n_event: 1.69727e+07[0m
+file 385 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_458.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23789
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.58058e+07 n_event: 1.70172e+07[0m
+file 386 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_459.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27238
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.59436e+07 n_event: 1.70687e+07[0m
+file 387 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_45.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23116
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.60603e+07 n_event: 1.71122e+07[0m
+file 388 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_460.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22358
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.61737e+07 n_event: 1.71545e+07[0m
+file 389 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_461.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26729
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.63097e+07 n_event: 1.72052e+07[0m
+file 390 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_462.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26921
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.64459e+07 n_event: 1.72552e+07[0m
+file 391 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_463.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27345
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.65837e+07 n_event: 1.73065e+07[0m
+file 392 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_464.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22322
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.66973e+07 n_event: 1.73487e+07[0m
+file 393 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_465.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26783
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.68339e+07 n_event: 1.73993e+07[0m
+file 394 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_466.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26900
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.69706e+07 n_event: 1.74502e+07[0m
+file 395 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_467.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 15664
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.70507e+07 n_event: 1.74801e+07[0m
+file 396 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_468.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23742
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.71708e+07 n_event: 1.75245e+07[0m
+file 397 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_469.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26826
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.73066e+07 n_event: 1.75753e+07[0m
+file 398 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_46.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23524
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.74263e+07 n_event: 1.76196e+07[0m
+file 399 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_470.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27474
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.75661e+07 n_event: 1.76712e+07[0m
+file 400 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_471.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23846
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.76869e+07 n_event: 1.77158e+07[0m
+file 401 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_472.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23879
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.78084e+07 n_event: 1.77612e+07[0m
+file 402 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_473.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26861
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.7945e+07 n_event: 1.78117e+07[0m
+file 403 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_474.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27503
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.8085e+07 n_event: 1.78635e+07[0m
+file 404 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_475.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27114
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.82231e+07 n_event: 1.79147e+07[0m
+file 405 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_476.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23438
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.83421e+07 n_event: 1.7959e+07[0m
+file 406 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_477.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27296
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.84806e+07 n_event: 1.80104e+07[0m
+file 407 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_478.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26970
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.86179e+07 n_event: 1.80616e+07[0m
+file 408 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_479.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27003
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.87549e+07 n_event: 1.81127e+07[0m
+file 409 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_47.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27308
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.88925e+07 n_event: 1.81635e+07[0m
+file 410 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_480.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23713
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.90127e+07 n_event: 1.82083e+07[0m
+file 411 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_481.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23544
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.9132e+07 n_event: 1.82524e+07[0m
+file 412 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_482.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26974
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.9269e+07 n_event: 1.83032e+07[0m
+file 413 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_483.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23419
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.93886e+07 n_event: 1.83477e+07[0m
+file 414 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_484.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27114
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.95268e+07 n_event: 1.83987e+07[0m
+file 415 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_485.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25381
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.96551e+07 n_event: 1.84465e+07[0m
+file 416 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_486.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22212
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.97677e+07 n_event: 1.84887e+07[0m
+file 417 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_487.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27717
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.99086e+07 n_event: 1.85408e+07[0m
+file 418 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_488.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26976
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.00455e+07 n_event: 1.85916e+07[0m
+file 419 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_489.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26869
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.01826e+07 n_event: 1.86425e+07[0m
+file 420 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_48.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16373
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.02659e+07 n_event: 1.86737e+07[0m
+file 421 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_490.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 13438
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.03343e+07 n_event: 1.86992e+07[0m
+file 422 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_491.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23706
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.04545e+07 n_event: 1.87434e+07[0m
+file 423 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_492.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23843
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.05748e+07 n_event: 1.87879e+07[0m
+file 424 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_493.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23605
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.06948e+07 n_event: 1.88328e+07[0m
+file 425 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_494.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26908
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.08316e+07 n_event: 1.8884e+07[0m
+file 426 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_495.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27672
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.09694e+07 n_event: 1.89354e+07[0m
+file 427 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_496.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27165
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.11078e+07 n_event: 1.89864e+07[0m
+file 428 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_497.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 28019
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.12503e+07 n_event: 1.90394e+07[0m
+file 429 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_498.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20431
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.13535e+07 n_event: 1.9078e+07[0m
+file 430 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_499.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25861
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.14844e+07 n_event: 1.91267e+07[0m
+file 431 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_49.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23814
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.16037e+07 n_event: 1.91709e+07[0m
+file 432 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_4.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27322
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.17418e+07 n_event: 1.92226e+07[0m
+file 433 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_500.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26852
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.18787e+07 n_event: 1.92734e+07[0m
+file 434 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_501.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22216
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.1992e+07 n_event: 1.93154e+07[0m
+file 435 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_502.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27108
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.21296e+07 n_event: 1.93665e+07[0m
+file 436 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_503.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18678
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.22238e+07 n_event: 1.94014e+07[0m
+file 437 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_504.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27171
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.23614e+07 n_event: 1.94523e+07[0m
+file 438 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_505.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23422
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.24802e+07 n_event: 1.94963e+07[0m
+file 439 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_506.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26855
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.26183e+07 n_event: 1.95469e+07[0m
+file 440 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_507.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26759
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.27544e+07 n_event: 1.95976e+07[0m
+file 441 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_508.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20239
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.28581e+07 n_event: 1.96361e+07[0m
+file 442 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_509.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27187
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.29957e+07 n_event: 1.96874e+07[0m
+file 443 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_50.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23868
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.31152e+07 n_event: 1.97321e+07[0m
+file 444 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_510.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22245
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.32281e+07 n_event: 1.9774e+07[0m
+file 445 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_512.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23813
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.33485e+07 n_event: 1.9819e+07[0m
+file 446 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_513.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23531
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.34685e+07 n_event: 1.98631e+07[0m
+file 447 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_514.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24042
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.3589e+07 n_event: 1.99082e+07[0m
+file 448 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_515.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27135
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.37263e+07 n_event: 1.99589e+07[0m
+file 449 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_516.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23933
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.38471e+07 n_event: 2.00035e+07[0m
+file 450 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_517.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23800
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.39681e+07 n_event: 2.00486e+07[0m
+file 451 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_518.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27064
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.41044e+07 n_event: 2.0099e+07[0m
+file 452 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_519.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27149
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.42423e+07 n_event: 2.01506e+07[0m
+file 453 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_51.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23787
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.43629e+07 n_event: 2.01958e+07[0m
+file 454 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_520.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23203
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.44812e+07 n_event: 2.02393e+07[0m
+file 455 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_521.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27137
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.46185e+07 n_event: 2.029e+07[0m
+file 456 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_522.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23751
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.4738e+07 n_event: 2.03346e+07[0m
+file 457 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_523.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23426
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.48571e+07 n_event: 2.03788e+07[0m
+file 458 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_524.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26942
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.49943e+07 n_event: 2.043e+07[0m
+file 459 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_525.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 19350
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.50926e+07 n_event: 2.04661e+07[0m
+file 460 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_526.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21705
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.52025e+07 n_event: 2.05072e+07[0m
+file 461 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_527.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26956
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.53393e+07 n_event: 2.05581e+07[0m
+file 462 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_528.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23465
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.54588e+07 n_event: 2.06027e+07[0m
+file 463 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_529.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23941
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.55798e+07 n_event: 2.06479e+07[0m
+file 464 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_52.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23524
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.56999e+07 n_event: 2.06927e+07[0m
+file 465 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_530.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22641
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.58156e+07 n_event: 2.07354e+07[0m
+file 466 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_531.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23320
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.59352e+07 n_event: 2.07799e+07[0m
+file 467 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_532.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27017
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.60724e+07 n_event: 2.08302e+07[0m
+file 468 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_533.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22806
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.61886e+07 n_event: 2.08736e+07[0m
+file 469 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_534.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20207
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.62914e+07 n_event: 2.09121e+07[0m
+file 470 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_535.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27156
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.64282e+07 n_event: 2.09629e+07[0m
+file 471 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_536.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22124
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.65421e+07 n_event: 2.1005e+07[0m
+file 472 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_537.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22486
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.66562e+07 n_event: 2.10472e+07[0m
+file 473 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_538.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18005
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.6748e+07 n_event: 2.10814e+07[0m
+file 474 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_539.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 25800
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.68784e+07 n_event: 2.11298e+07[0m
+file 475 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_53.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23656
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.69988e+07 n_event: 2.1174e+07[0m
+file 476 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_540.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23791
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.71192e+07 n_event: 2.12188e+07[0m
+file 477 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_541.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23591
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.724e+07 n_event: 2.12636e+07[0m
+file 478 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_542.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20238
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.73421e+07 n_event: 2.13014e+07[0m
+file 479 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_543.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26959
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.74785e+07 n_event: 2.13521e+07[0m
+file 480 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_544.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23663
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.75981e+07 n_event: 2.1397e+07[0m
+file 481 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_545.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23970
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.77192e+07 n_event: 2.14417e+07[0m
+file 482 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_546.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23926
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.78398e+07 n_event: 2.14865e+07[0m
+file 483 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_548.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27561
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.79784e+07 n_event: 2.1538e+07[0m
+file 484 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_54.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23644
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.80988e+07 n_event: 2.15826e+07[0m
+file 485 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_55.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22608
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.82131e+07 n_event: 2.16253e+07[0m
+file 486 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_56.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27142
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.83516e+07 n_event: 2.16765e+07[0m
+file 487 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_57.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23610
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.84719e+07 n_event: 2.17211e+07[0m
+file 488 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_59.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20147
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.85745e+07 n_event: 2.17591e+07[0m
+file 489 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_5.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21692
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.86846e+07 n_event: 2.18003e+07[0m
+file 490 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_60.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23366
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.88047e+07 n_event: 2.18451e+07[0m
+file 491 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_61.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23796
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.89252e+07 n_event: 2.18897e+07[0m
+file 492 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_62.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27150
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.90626e+07 n_event: 2.19409e+07[0m
+file 493 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_63.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26008
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.91939e+07 n_event: 2.19896e+07[0m
+file 494 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_64.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20909
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.92999e+07 n_event: 2.20287e+07[0m
+file 495 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_65.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27133
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.94368e+07 n_event: 2.20794e+07[0m
+file 496 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_66.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20291
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.95401e+07 n_event: 2.21175e+07[0m
+file 497 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_67.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20926
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.96471e+07 n_event: 2.21574e+07[0m
+file 498 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_68.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20286
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.975e+07 n_event: 2.21957e+07[0m
+file 499 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_69.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17163
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.98359e+07 n_event: 2.22276e+07[0m
+file 500 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_6.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20387
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.99393e+07 n_event: 2.2266e+07[0m
+file 501 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_70.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16865
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.00249e+07 n_event: 2.2298e+07[0m
+file 502 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_71.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27242
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.01621e+07 n_event: 2.23488e+07[0m
+file 503 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_72.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27186
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.02996e+07 n_event: 2.23996e+07[0m
+file 504 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_73.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23634
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.04184e+07 n_event: 2.24435e+07[0m
+file 505 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_74.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20452
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.05213e+07 n_event: 2.24818e+07[0m
+file 506 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_75.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16859
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.06071e+07 n_event: 2.25133e+07[0m
+file 507 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_76.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18382
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.07e+07 n_event: 2.25477e+07[0m
+file 508 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_77.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20099
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.08026e+07 n_event: 2.25858e+07[0m
+file 509 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_78.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27076
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.09401e+07 n_event: 2.26365e+07[0m
+file 510 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_79.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27076
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.10775e+07 n_event: 2.26879e+07[0m
+file 511 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_7.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23533
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.11976e+07 n_event: 2.27324e+07[0m
+file 512 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_80.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 26830
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.13331e+07 n_event: 2.27829e+07[0m
+file 513 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_81.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22536
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.14478e+07 n_event: 2.28254e+07[0m
+file 514 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_82.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23929
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.15689e+07 n_event: 2.28704e+07[0m
+file 515 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_83.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27200
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.17069e+07 n_event: 2.2922e+07[0m
+file 516 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_84.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18368
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.18007e+07 n_event: 2.29567e+07[0m
+file 517 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_85.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 18326
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.18933e+07 n_event: 2.29911e+07[0m
+file 518 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_86.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27297
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.20313e+07 n_event: 2.30424e+07[0m
+file 519 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_87.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23767
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.21518e+07 n_event: 2.30873e+07[0m
+file 520 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_88.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23746
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.22715e+07 n_event: 2.3132e+07[0m
+file 521 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_89.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 27236
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.24091e+07 n_event: 2.31834e+07[0m
+file 522 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_8.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23741
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.25286e+07 n_event: 2.32278e+07[0m
+file 523 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_90.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21182
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.26356e+07 n_event: 2.32677e+07[0m
+file 524 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_91.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16891
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.27213e+07 n_event: 2.32992e+07[0m
+file 525 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_92.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17642
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.281e+07 n_event: 2.33321e+07[0m
+file 526 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_94.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23628
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.293e+07 n_event: 2.33768e+07[0m
+file 527 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_95.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20264
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.30324e+07 n_event: 2.34148e+07[0m
+file 528 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_96.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 24067
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.31531e+07 n_event: 2.34596e+07[0m
+file 529 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_97.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16756
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.32386e+07 n_event: 2.34912e+07[0m
+file 530 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_98.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23462
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.33585e+07 n_event: 2.35358e+07[0m
+file 531 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_99.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17913
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.34494e+07 n_event: 2.35694e+07[0m
+file 532 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v1_/treePKU_9.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23714
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.35692e+07 n_event: 2.36142e+07[0m
+file 533 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_100.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 16605
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.36534e+07 n_event: 2.36456e+07[0m
+file 534 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_101.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 23834
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.37749e+07 n_event: 2.36907e+07[0m
+file 535 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_102.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 21524
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.38832e+07 n_event: 2.37309e+07[0m
+file 536 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_103.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22173
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.3995e+07 n_event: 2.37729e+07[0m
+file 537 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_104.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20844
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.40998e+07 n_event: 2.38118e+07[0m
+file 538 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_105.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22880
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.42155e+07 n_event: 2.38549e+07[0m
+file 539 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_106.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 20618
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.43199e+07 n_event: 2.38938e+07[0m
+file 540 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_107.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 17292
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.44071e+07 n_event: 2.39264e+07[0m
+file 541 : /data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_108.root
+LUMI : 41.35
+btag value cut :  0.4941
+Number of events to be analyzed : 22607
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.4521e+07 n_event: 2.39689e+07[0m
+file 542 : #/data/pku/home/pengj/testvbs/data/fakephoton/2017/full_run2_2017_for_fakephoton_version5_WJets_1j_v2/treePKU_109.root
+Do not run this file !!!
+
+
+time start : 2021-05-03 14:59:25
+time end   : 2021-05-03 15:02:11

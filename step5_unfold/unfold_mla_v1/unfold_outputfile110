@@ -1,0 +1,313 @@
+WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
+         Developer's area is created for available architecture slc6_amd64_gcc630.
+[34myear             : 2017[0m
+[34mregion           : control region[0m
+[34mchannel          : electron channel[0m
+[34mbarrel_or_endcap : endcap[0m
+[34mtype             : mc[0m
+[34msample           : ST_t[0m
+[34mbtag workpoint   : medium[0m
+[34mpujet workpoint   : T[0m
+[34minput file list  : filelist_dir3/tight_for_analysis_ST_t.txt[0m
+[34moutput file      : test_1/2017_electron_mc_control_endcap_ST_t.root[0m
+
+start load Btag info!
+Btag info has been loaded!
+hist_
+hist_pileup_up
+hist_pileup_down
+hist_L1_up
+hist_L1_down
+hist_photon_ID_up
+hist_photon_ID_down
+hist_electron_ID_up
+hist_electron_ID_down
+hist_electron_Reco_up
+hist_electron_Reco_down
+hist_electron_HLT_up
+hist_electron_HLT_down
+hist_muon_ID_up
+hist_muon_ID_down
+hist_muon_iso_up
+hist_muon_iso_down
+hist_muon_HLT_up
+hist_muon_HLT_down
+hist_fakephoton_up
+hist_fakephoton_down
+hist_btag_up
+hist_btag_down
+hist_pujet_up
+hist_pujet_down
+hist_pujet_mistag_up
+hist_pujet_mistag_down
+hist_fakelepton_up
+hist_fakelepton_down
+file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_1.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 719
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 161020 n_event: 0[0m
+file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_10.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 656
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 320830 n_event: 0[0m
+file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_11.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 579
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 442288 n_event: 0[0m
+file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_12.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 530
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 559349 n_event: 0[0m
+file 5 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_13.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 549
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 684656 n_event: 0[0m
+file 6 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_14.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 603
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 813443 n_event: 0[0m
+file 7 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_15.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 506
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 940109 n_event: 0[0m
+file 8 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_16.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 613
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.08308e+06 n_event: 0[0m
+file 9 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_17.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 418
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.17636e+06 n_event: 0[0m
+file 10 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_18.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 704
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.31936e+06 n_event: 0[0m
+file 11 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_19.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 533
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.43557e+06 n_event: 0[0m
+file 12 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_2.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 524
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.55415e+06 n_event: 0[0m
+file 13 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_20.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 563
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.67457e+06 n_event: 0[0m
+file 14 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_21.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 445
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.78219e+06 n_event: 0[0m
+file 15 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_22.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 680
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.92718e+06 n_event: 0[0m
+file 16 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_23.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 597
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.06978e+06 n_event: 0[0m
+file 17 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_24.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 683
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.21374e+06 n_event: 0[0m
+file 18 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_25.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 446
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.30766e+06 n_event: 0[0m
+file 19 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_26.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 550
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.43157e+06 n_event: 0[0m
+file 20 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_27.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 524
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.5519e+06 n_event: 0[0m
+file 21 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_28.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 631
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.6959e+06 n_event: 0[0m
+file 22 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_29.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 657
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.83674e+06 n_event: 0[0m
+file 23 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_3.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 613
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.97104e+06 n_event: 0[0m
+file 24 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_30.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 529
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.08962e+06 n_event: 0[0m
+file 25 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_31.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 607
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.23149e+06 n_event: 0[0m
+file 26 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_32.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 524
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.34972e+06 n_event: 0[0m
+file 27 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_33.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 493
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.46655e+06 n_event: 0[0m
+file 28 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_34.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 625
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.60743e+06 n_event: 0[0m
+file 29 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_35.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 638
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.74803e+06 n_event: 0[0m
+file 30 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_36.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 635
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.89015e+06 n_event: 0[0m
+file 31 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_37.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 422
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.9833e+06 n_event: 0[0m
+file 32 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_38.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 588
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.12342e+06 n_event: 0[0m
+file 33 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_39.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 536
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.25045e+06 n_event: 0[0m
+file 34 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_4.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 595
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.3918e+06 n_event: 0[0m
+file 35 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_40.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 573
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.52484e+06 n_event: 0[0m
+file 36 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_41.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 573
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.64802e+06 n_event: 0[0m
+file 37 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_42.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 453
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.74966e+06 n_event: 0[0m
+file 38 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_43.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 611
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.8905e+06 n_event: 0[0m
+file 39 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_44.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 514
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.01557e+06 n_event: 0[0m
+file 40 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_45.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 530
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.13348e+06 n_event: 0[0m
+file 41 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_46.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 622
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.27407e+06 n_event: 0[0m
+file 42 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_47.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 321
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.34518e+06 n_event: 0[0m
+file 43 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_5.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 572
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.48554e+06 n_event: 0[0m
+file 44 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_6.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 572
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.60551e+06 n_event: 0[0m
+file 45 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_7.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 580
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.73863e+06 n_event: 0[0m
+file 46 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_8.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 438
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.83615e+06 n_event: 0[0m
+file 47 : /data/pku/home/pengj/testvbs/data/for_analysis/2017_puietID/full_run2_2017_for_analysis_PUJetID_version6_ST_t_v1_2/210121_002338/0000/treePKU_9.root
+LUMI : 41.5
+btag value cut :  0.4941
+Number of events to be analyzed : 641
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.98175e+06 n_event: 0[0m
+5.98175e+06 0
+hist_
+hist_pileup_up
+hist_pileup_down
+hist_L1_up
+hist_L1_down
+hist_photon_ID_up
+hist_photon_ID_down
+hist_electron_ID_up
+hist_electron_ID_down
+hist_electron_Reco_up
+hist_electron_Reco_down
+hist_electron_HLT_up
+hist_electron_HLT_down
+hist_muon_ID_up
+hist_muon_ID_down
+hist_muon_iso_up
+hist_muon_iso_down
+hist_muon_HLT_up
+hist_muon_HLT_down
+hist_fakephoton_up
+hist_fakephoton_down
+hist_btag_up
+hist_btag_down
+hist_pujet_up
+hist_pujet_down
+hist_pujet_mistag_up
+hist_pujet_mistag_down
+hist_fakelepton_up
+hist_fakelepton_down
+
+
+time start : 2021-05-17 22:00:44
+time end   : 2021-05-17 22:00:52

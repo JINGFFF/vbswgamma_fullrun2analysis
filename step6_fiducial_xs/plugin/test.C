@@ -684,16 +684,16 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderValue<Double_t>    jet2puIdLoose_JEC_down  = {fReader, "jet2puIdLoose_JEC_down"};
    TTreeReaderValue<Double_t>    jet2puIdLoose_JER_up    = {fReader, "jet2puIdLoose_JER_up"};
    TTreeReaderValue<Double_t>    jet2puIdLoose_JER_down  = {fReader, "jet2puIdLoose_JER_down"};
-*/
+
    TTreeReaderArray<Double_t>    genjet_pt  = {fReader, "genjet_pt"};
    TTreeReaderArray<Double_t>    genjet_eta  = {fReader, "genjet_eta"};
    TTreeReaderArray<Double_t>    genjet_phi  = {fReader, "genjet_phi"};
    TTreeReaderArray<Double_t>    genjet_e  = {fReader, "genjet_e"};
+*/
+   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
 
-//   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
-
-  // TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
-  // TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
+   TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
+   TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
 
    Long64_t maxEntries = fReader.GetEntries(false);
    cout << "Number of events to be analyzed : " << maxEntries << std::endl;
@@ -716,7 +716,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
          if(!(*ispromptLep == 1 && *isprompt == 2)) continue;
       }
       // apply selection
-
+/*
       for (int iii = 0; iii<6; iii++){
          fill_genjet_eta[iii] = genjet_eta[iii];
          fill_genjet_phi[iii] = genjet_phi[iii];
@@ -733,7 +733,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_genelectron_phi[iii] = genelectron_phi[iii];
 
       }
-/*
+
 
       if (m_pujet_workpoint == "T"){
          fill_jet1puId          = *jet1puIdTight_new;
@@ -1348,7 +1348,7 @@ photonp42.Delete();
       // init all SF
       init_sf();
       // cross section SF
-      if(m_sample == "WGJJ")          { cross_section_SF=1000.*0.5439   *fabs(*theWeight)/(*theWeight); }
+      if(m_sample == "WGJJ")          { cross_section_SF=1000.*0.776   *fabs(*theWeight)/(*theWeight); }
       if(m_sample == "WGJets")        { cross_section_SF=1000.*192.3    *fabs(*theWeight)/(*theWeight); }
       if(m_sample == "W0Jets")        { cross_section_SF=1000.*55971.0  *fabs(*theWeight)/(*theWeight); }
       if(m_sample == "W1Jets")        { cross_section_SF=1000.*6942.0   *fabs(*theWeight)/(*theWeight); }
@@ -1418,7 +1418,7 @@ photonp42.Delete();
          // jet1 : center, jec_up, jec_down, jer_up, jer_down
          // jet1 : center
 //cout<<"memory: "<<physical_memory_used_by_process()<<endl;
-
+/*
          pu_jet1_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "center");
          pu_jet1_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
          pu_jet1_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
@@ -1454,7 +1454,7 @@ photonp42.Delete();
          pu_jet2_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
          pu_jet2_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
          pu_jet2_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
-
+*/
          double JET1DEEPCSV      = (*jet1deepcsv_probb_new) + (*jet1deepcsv_probbb_new);
          double JET2DEEPCSV      = (*jet2deepcsv_probb_new) + (*jet2deepcsv_probbb_new);
 
@@ -1700,49 +1700,49 @@ photonp42.Delete();
             }
          }
          else if(m_type == "mc") {
-            weight =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_pileup_up =  cross_section_SF * pu_weight_up_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_pileup_down =  cross_section_SF * pu_weight_down_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pileup_up =  (*prefWeightUp) * cross_section_SF * pu_weight_up_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pileup_down =  (*prefWeightDown) * cross_section_SF * pu_weight_down_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_L1_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_L1_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_L1_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_L1_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_photon_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_up_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_photon_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_low_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_photon_ID_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_up_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_photon_ID_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_low_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_electron_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_up_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_electron_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_low_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_ID_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_up_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_ID_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_low_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_electron_Reco_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_up_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_electron_Reco_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_low_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_Reco_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_up_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_Reco_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_low_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_electron_HLT_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_up_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_electron_HLT_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_low_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_HLT_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_up_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_HLT_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_low_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
 
-            weight_muon_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_up_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_muon_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_low_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_ID_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_up_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_ID_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_low_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_muon_iso_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_up_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_muon_iso_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_low_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_iso_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_up_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_iso_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_low_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_muon_HLT_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_up_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_muon_HLT_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_low_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_HLT_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_up_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_HLT_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_low_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_btag_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_up_SF * btag_jet2_up_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_btag_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_low_SF * btag_jet2_low_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_btag_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_up_SF * btag_jet2_up_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_btag_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_low_SF * btag_jet2_low_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_pujet_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_up_SF * pu_jet2_up_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_pujet_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_down_SF * pu_jet2_down_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pujet_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_up_SF * pu_jet2_up_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pujet_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_down_SF * pu_jet2_down_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_pujet_mistag_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_up_SF * pu_jet2_mistag_up_SF;
-            weight_pujet_mistag_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_down_SF * pu_jet2_mistag_down_SF;
+            weight_pujet_mistag_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_up_SF * pu_jet2_mistag_up_SF;
+            weight_pujet_mistag_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_down_SF * pu_jet2_mistag_down_SF;
 
-            weight_jec_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_up * btag_jet2_SF_JEC_up * pu_jet1_JEC_up_SF * pu_jet2_JEC_up_SF * pu_jet1_mistag_JEC_up_SF * pu_jet2_mistag_JEC_up_SF;
-            weight_jec_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_down * btag_jet2_SF_JEC_down * pu_jet1_JEC_down_SF * pu_jet2_JEC_down_SF * pu_jet1_mistag_JEC_down_SF * pu_jet2_mistag_JEC_down_SF;
-            weight_jer_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_up * btag_jet2_SF_JER_up * pu_jet1_JER_up_SF * pu_jet2_JER_up_SF * pu_jet1_mistag_JER_up_SF * pu_jet2_mistag_JER_up_SF;
-            weight_jer_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_down * btag_jet2_SF_JER_down * pu_jet1_JER_down_SF * pu_jet2_JER_down_SF * pu_jet1_mistag_JER_down_SF * pu_jet2_mistag_JER_down_SF;
+            weight_jec_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_up * btag_jet2_SF_JEC_up * pu_jet1_JEC_up_SF * pu_jet2_JEC_up_SF * pu_jet1_mistag_JEC_up_SF * pu_jet2_mistag_JEC_up_SF;
+            weight_jec_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_down * btag_jet2_SF_JEC_down * pu_jet1_JEC_down_SF * pu_jet2_JEC_down_SF * pu_jet1_mistag_JEC_down_SF * pu_jet2_mistag_JEC_down_SF;
+            weight_jer_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_up * btag_jet2_SF_JER_up * pu_jet1_JER_up_SF * pu_jet2_JER_up_SF * pu_jet1_mistag_JER_up_SF * pu_jet2_mistag_JER_up_SF;
+            weight_jer_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_down * btag_jet2_SF_JER_down * pu_jet1_JER_down_SF * pu_jet2_JER_down_SF * pu_jet1_mistag_JER_down_SF * pu_jet2_mistag_JER_down_SF;
 
          }
 

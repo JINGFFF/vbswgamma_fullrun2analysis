@@ -30,7 +30,7 @@ if which_year == "2018":
     lumi = 59.74
 
 def read_hist(tmp_hist, indir, which_year, which_channel, which_type, which_region, barrel_or_endcap, which_sample) :
-    infilename= indir + "/" + which_year + "_" + which_channel +  "_" + which_type + "_" + which_region + "_"+barrel_or_endcap+"_medium_btag_" + which_sample + "_uncertainty.root"
+    infilename= indir + "/" + which_year + "_" + which_channel +  "_" + which_type + "_" + which_region + "_"+barrel_or_endcap+"_" + which_sample + ".root"
     f_in = TFile.Open(infilename)
     hist       = f_in.Get("hist_")
     hist.Print()
@@ -107,10 +107,10 @@ setting_for_h = [
 ['ST_tW',    'mc',         9],
 ['ST_tbarW', 'mc',         9],
 ['TTG',      'mc',         6],
-[data_name,  'data',       1],
-[data_name,  'fakelepton', 5],
-[data_name,  'fakephoton',15],
-[data_name,  'doublefake',30],
+['data',  'data',       1],
+['fakelepton',  'data', 5],
+['fakephoton',  'data',15],
+['doublefake',  'data',30],
 ['WGJets',   'mc',         7],
 ['WGJJ',     'mc',         2],
 ]
@@ -241,7 +241,7 @@ latex.SetTextSize(0.8*extraTextSize*t);
 #cv.cd()
 #latex.DrawLatex(1.3*l, posY_- relExtraDY*cmsTextSize*t, extraText);
 
-hs.SetMaximum(50 * hs.GetMaximum())
+hs.SetMaximum(80 * hs.GetMaximum())
 
 #bin_with = [150,400,600,800, 1000, 1500]
 #for i in range(len(bin_with)-1) :

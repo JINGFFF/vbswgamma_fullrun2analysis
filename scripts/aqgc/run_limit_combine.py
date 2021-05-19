@@ -1,0 +1,41 @@
+#!/usr/bin/python
+
+import sys
+import time
+import os   
+year              = sys.argv[1];
+fit_parameter_2016_dir = sys.argv[2];
+fit_parameter_2017_dir = sys.argv[3];
+fit_parameter_2018_dir = sys.argv[4];
+
+datacard          = sys.argv[5];
+outdir            = sys.argv[6];
+a_type            = sys.argv[7];
+
+os.system("mkdir -p " + outdir);
+   
+operator = ["fM0","fM1","fM2","fM3","fM4","fM5","fM6","fM7","fT0","fT1","fT2","fT5","fT6","fT7"]
+operator_latex = ["F_{M,0}","F_{M,1}","F_{M,2}","F_{M,3}","F_{M,4}","F_{M,5}","F_{M,6}","F_{M,7}","F_{T,0}","F_{T,1}","F_{T,2}","F_{T,5}","F_{T,6}","F_{T,7}"]
+#lower = ["-120", "-200", "-50", "-80", "-80", "-90", "-200", "-200", "-10", "-10", "-20", "-8", "-8", "-15"]
+#upper = ["120", "200", "50", "80", "80", "90", "200", "200", "10", "10", "20", "8", "8", "15"]
+lower = ["-20", "-25", "-10", "-15", "-20", "-30", "-40", "-40", "-5", "-5", "-5", "-5", "-5", "-5"]
+upper = ["20", "25", "10", "15", "20", "30", "40", "40", "5", "5", "5", "5", "5", "5"]
+
+my_1d_model = ''
+if a_type == "one":
+    my_1d_model = 'my_1d_model2'
+if a_type == "combine":
+    my_1d_model = 'my_1d_model3'
+
+#for i in range(1,2) :
+for i in range(len(operator)) :
+    print("operator: " + lower[i] + " " +upper[i])
+    os.system("re-scale.py " + "2016" + " " + operator[i] + " " + fit_parameter_2016_dir + " " + outdir + " " + a_type + " " + lower[i] + " " + upper[i])
+    os.system("re-scale.py " + "2017" + " " + operator[i] + " " + fit_parameter_2017_dir + " " + outdir + " " + a_type + " " + lower[i] + " " + upper[i])
+    os.system("re-scale.py " + "2018" + " " + operator[i] + " " + fit_parameter_2018_dir + " " + outdir + " " + a_type + " " + lower[i] + " " + upper[i])
+    os.system("hadd " +outdir+"/" + year + "_" + operator[i] + "_scaling_refined.root " + outdir + "/20*"+ operator[i]+  "*root")
+    os.system("text2workspace.py -m 126 " + datacard+ " -o " + outdir + "/os_" + year + "_" + operator[i] + ".root -P HiggsAnalysis.CombinedLimit.OneParameterPhysicsModel:"+my_1d_model+" --PO range_param=[" + lower[i] + "," + upper[i] + "] --PO scaling_filename="+outdir+"/" + year + "_" + operator[i] + "_scaling_refined.root")
+
+    os.system("combine " + outdir + "/os_" + year + "_" + operator[i] + ".root -M MultiDimFit -t -1 -P param --floatOtherPOIs=0 --algo=grid --points=100 --cminDefaultMinimizerStrategy=2")
+    os.system("mv higgsCombineTest.MultiDimFit.mH120.root " + outdir + "/higgsCombineTest.MultiDimFit.mH120.observed." + year + "." + operator[i] + ".root")
+    os.system("draw_limit.py " + year + " " + outdir + " " + operator[i] + " '" + operator_latex[i] + "/#Lambda^{4} [TeV^{-4}]' " + "'Observed 95% CL interval' " + outdir + "/higgsCombineTest.MultiDimFit.mH120.observed." + year + "." + operator[i] + ".root 'Observed 2#DeltaNLL'");

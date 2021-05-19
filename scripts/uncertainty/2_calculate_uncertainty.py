@@ -89,7 +89,10 @@ else :
     sample_list = sample_list_data
 #for i in range(1):
 for i in range(len(sample_list)):
-    genbins = print_uncer(sample_list[i], 'hist_', draw_op)
+    if sample_list[i] == 'WGJJ' or sample_list[i] == 'WGJets':
+        genbins = print_uncer(sample_list[i], 'hist_', 'on')
+    else :
+        genbins = print_uncer(sample_list[i], 'hist_', draw_op)
     if analysis_type == 'fiducialXS':
         if sample_list[i] == 'WGJJ':
             print_uncer(sample_list[i], 'hist_in_', draw_op)
