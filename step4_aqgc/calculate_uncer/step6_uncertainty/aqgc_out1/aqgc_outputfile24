@@ -1,6 +1,6 @@
 WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
          Developer's area is created for available architecture slc6_amd64_gcc630.
-[34myear             : 2018[0m
+[34myear             : 2016[0m
 [34mregion           : aqgc region[0m
 [34mchannel          : electron channel[0m
 [34mbarrel_or_endcap : all[0m
@@ -9,962 +9,1657 @@ WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700
 [34mbtag workpoint   : medium[0m
 [34mpujet workpoint   : T[0m
 [34minput file list  : filelist_dir3/tight_for_analysis_TTG.txt[0m
-[34moutput file      : test_aqgc1/2018_electron_mc_aqgc_all_TTG.root[0m
+[34moutput file      : test_aqgc2/2016_electron_mc_aqgc_all_TTG.root[0m
 
 start load Btag info!
 Btag info has been loaded!
-file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_1.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5590
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 30084 n_event: 12901[0m
+file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_1.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 11575
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 57251 n_event: 29265[0m
 pass
 pass
 pass
-file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_10.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5639
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 59504 n_event: 25792[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------]  [33m86.3931%  p_event: 57251 n_event: 29265[0m
 pass
+file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_10.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 11563
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 113666 n_event: 58297[0m
 pass
-file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_100.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5605
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 89075 n_event: 38546[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------]  [33m86.4827%  p_event: 113666 n_event: 58297[0m
+file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_11.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19304
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 209162 n_event: 107379[0m
 pass
 pass
-file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_101.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5601
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 118521 n_event: 51527[0m
 pass
 pass
-file 5 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_102.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 763
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 122604 n_event: 53334[0m
-file 6 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_103.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5632
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 152231 n_event: 66130[0m
 pass
 pass
 pass
 pass
-file 7 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_104.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5673
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 181539 n_event: 78945[0m
 pass
-file 8 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_105.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5740
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 210894 n_event: 91988[0m
 pass
-file 9 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_106.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 7996
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 252767 n_event: 110054[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8027%  p_event: 209162 n_event: 107379[0m
 pass
-file 10 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_107.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 6262
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 285805 n_event: 124273[0m
 pass
 pass
 pass
-file 11 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_108.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5637
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 315285 n_event: 136982[0m
 pass
 pass
 pass
+file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_12.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19321
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 304521 n_event: 156335[0m
 pass
 pass
-file 12 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_109.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4962
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 341367 n_event: 148390[0m
 pass
 pass
-file 13 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_11.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5714
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 370840 n_event: 160997[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.7572%  p_event: 304521 n_event: 156335[0m
 pass
 pass
-file 14 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_110.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5559
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 400237 n_event: 173695[0m
+file 5 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_13.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19456
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 400724 n_event: 205320[0m
 pass
 pass
 pass
-file 15 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_111.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 3052
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 416702 n_event: 180807[0m
 pass
-file 16 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_112.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 2356
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 429035 n_event: 186189[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.398%  p_event: 400724 n_event: 205320[0m
 pass
 pass
-file 17 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_113.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5693
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 458675 n_event: 199095[0m
 pass
 pass
-file 18 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_114.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4906
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 484675 n_event: 210584[0m
+file 6 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_14.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10232
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 451127 n_event: 230950[0m
 pass
 pass
-file 19 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_115.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5469
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 513925 n_event: 223369[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m--]  [33m97.7326%  p_event: 451127 n_event: 230950[0m
+file 7 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_15.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19365
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 547320 n_event: 279880[0m
 pass
 pass
-file 20 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_116.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 138
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 514609 n_event: 223680[0m
-file 21 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_117.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5508
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 543920 n_event: 236438[0m
 pass
-file 22 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_118.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5633
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 573172 n_event: 249255[0m
 pass
 pass
 pass
-file 23 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_119.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5671
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 602553 n_event: 262087[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6396%  p_event: 547320 n_event: 279880[0m
 pass
 pass
 pass
-file 24 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_12.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5650
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 632145 n_event: 274796[0m
 pass
-file 25 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_120.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5607
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 661447 n_event: 287688[0m
 pass
 pass
+file 8 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_16.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19424
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 643054 n_event: 328596[0m
 pass
 pass
-file 26 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_121.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5595
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 690620 n_event: 300414[0m
 pass
-file 27 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_122.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 3502
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 709019 n_event: 308545[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4827%  p_event: 643054 n_event: 328596[0m
 pass
-file 28 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_123.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 643
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 712414 n_event: 310050[0m
 pass
 pass
-file 29 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_124.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5599
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 741886 n_event: 322800[0m
 pass
 pass
 pass
 pass
-file 30 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_125.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5558
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 771222 n_event: 335685[0m
+file 9 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_17.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19557
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 738985 n_event: 377514[0m
 pass
-file 31 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_126.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5695
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 800554 n_event: 348669[0m
 pass
-file 32 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_127.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5654
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 829943 n_event: 361606[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1326%  p_event: 738985 n_event: 377514[0m
 pass
 pass
 pass
 pass
 pass
-file 33 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_128.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 2852
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 844964 n_event: 368129[0m
 pass
+file 10 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_18.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19262
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 834543 n_event: 426353[0m
 pass
-file 34 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_129.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5523
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 874418 n_event: 380923[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.9157%  p_event: 834543 n_event: 426353[0m
 pass
-file 35 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_13.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 668
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 877896 n_event: 382382[0m
-file 36 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_130.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5455
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 907313 n_event: 395137[0m
 pass
-file 37 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_131.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4990
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 933227 n_event: 406613[0m
 pass
 pass
-file 38 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_132.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5556
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 962685 n_event: 419444[0m
 pass
+file 11 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_19.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19569
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 930341 n_event: 475110[0m
 pass
-file 39 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_133.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5618
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 992160 n_event: 432288[0m
-file 40 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_14.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 3111
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.00876e+06 n_event: 439489[0m
 pass
-file 41 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_15.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5575
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.03826e+06 n_event: 452259[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1012%  p_event: 930341 n_event: 475110[0m
 pass
 pass
 pass
-file 42 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_16.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1947
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.04848e+06 n_event: 456835[0m
-file 43 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_17.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5587
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.07781e+06 n_event: 469601[0m
+file 12 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_2.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 11260
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 985493 n_event: 503500[0m
 pass
-file 44 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_18.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 7101
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.11471e+06 n_event: 485750[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------]  [33m88.8099%  p_event: 985493 n_event: 503500[0m
+file 13 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_20.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 6111
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.01496e+06 n_event: 518821[0m
 pass
 pass
+file 14 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_21.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 17316
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.09972e+06 n_event: 562432[0m
 pass
-file 45 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_19.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5583
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.1439e+06 n_event: 498607[0m
 pass
-file 46 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_2.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 3470
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.16228e+06 n_event: 506719[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----------------------]  [33m57.7501%  p_event: 1.09972e+06 n_event: 562432[0m
 pass
 pass
-file 47 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_20.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5545
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.19169e+06 n_event: 519418[0m
 pass
+file 15 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_22.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19216
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.19534e+06 n_event: 611129[0m
 pass
 pass
-file 48 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_21.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 2246
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.20338e+06 n_event: 524593[0m
-file 49 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_22.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5577
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.23266e+06 n_event: 537435[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.04%  p_event: 1.19534e+06 n_event: 611129[0m
 pass
-file 50 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_23.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5321
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.26075e+06 n_event: 549748[0m
 pass
 pass
+file 16 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_23.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19267
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.29107e+06 n_event: 660165[0m
 pass
-file 51 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_24.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5586
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.29031e+06 n_event: 562448[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.9022%  p_event: 1.29107e+06 n_event: 660165[0m
 pass
 pass
 pass
-file 52 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_25.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5580
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.31963e+06 n_event: 575522[0m
+file 17 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_24.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 5827
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.32011e+06 n_event: 674949[0m
 pass
 pass
+file 18 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_25.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19403
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.4154e+06 n_event: 723670[0m
 pass
 pass
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.5384%  p_event: 1.4154e+06 n_event: 723670[0m
 pass
 pass
-file 53 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_26.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5611
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.3492e+06 n_event: 588239[0m
 pass
-file 54 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_27.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 918
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.35389e+06 n_event: 590342[0m
-file 55 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_28.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5606
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.38323e+06 n_event: 603201[0m
 pass
+file 19 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_26.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 7118
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.45008e+06 n_event: 741287[0m
 pass
 pass
+file 20 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_27.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9442
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.49681e+06 n_event: 765381[0m
 pass
 pass
 pass
 pass
 pass
-file 56 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_29.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5594
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.41258e+06 n_event: 616065[0m
+file 21 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_28.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 17113
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.58124e+06 n_event: 808843[0m
 pass
-file 57 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_3.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5596
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.44188e+06 n_event: 628935[0m
 pass
-file 58 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_30.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5682
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.47174e+06 n_event: 641942[0m
 pass
 pass
-file 59 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_31.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 845
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.47585e+06 n_event: 643736[0m
 pass
-file 60 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_32.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5535
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.50534e+06 n_event: 656526[0m
 pass
-file 61 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_33.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4953
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.53147e+06 n_event: 667860[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------------------]  [33m58.4351%  p_event: 1.58124e+06 n_event: 808843[0m
 pass
 pass
 pass
+file 22 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_29.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 11214
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.63709e+06 n_event: 837250[0m
 pass
-file 62 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_34.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5600
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.56107e+06 n_event: 680658[0m
 pass
 pass
 pass
-file 63 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_35.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5632
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.59057e+06 n_event: 693356[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------]  [33m89.1742%  p_event: 1.63709e+06 n_event: 837250[0m
 pass
-file 64 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_36.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5509
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.61972e+06 n_event: 706219[0m
 pass
+file 23 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_3.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19460
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.7331e+06 n_event: 886057[0m
 pass
-file 65 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_37.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 6753
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.65459e+06 n_event: 721550[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.3875%  p_event: 1.7331e+06 n_event: 886057[0m
 pass
-file 66 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_38.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5568
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.68413e+06 n_event: 734237[0m
 pass
+file 24 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_30.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19346
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.82902e+06 n_event: 934680[0m
 pass
 pass
-file 67 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_39.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 6733
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.71919e+06 n_event: 749338[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6903%  p_event: 1.82902e+06 n_event: 934680[0m
 pass
+file 25 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_31.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19300
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.92431e+06 n_event: 983715[0m
 pass
 pass
-file 68 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_4.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1436
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.72676e+06 n_event: 752657[0m
-file 69 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_40.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5647
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.75606e+06 n_event: 765663[0m
 pass
 pass
-file 70 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_41.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5597
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.78517e+06 n_event: 778666[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8135%  p_event: 1.92431e+06 n_event: 983715[0m
 pass
 pass
 pass
 pass
-file 71 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_42.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5703
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.81457e+06 n_event: 791615[0m
 pass
+file 26 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_32.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19534
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.02046e+06 n_event: 1.0325e+06[0m
 pass
 pass
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1928%  p_event: 2.02046e+06 n_event: 1.0325e+06[0m
 pass
-file 72 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_43.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5564
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.84409e+06 n_event: 804602[0m
 pass
 pass
-file 73 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_44.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5632
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.87364e+06 n_event: 817321[0m
 pass
 pass
+file 27 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_33.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19403
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.11656e+06 n_event: 1.08156e+06[0m
 pass
-file 74 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_45.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 668
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.87708e+06 n_event: 818833[0m
-file 75 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_46.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5627
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.90658e+06 n_event: 831796[0m
 pass
 pass
 pass
-file 76 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_47.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 112
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.90723e+06 n_event: 832103[0m
-file 77 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_48.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5551
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.93644e+06 n_event: 844978[0m
 pass
-file 78 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_49.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5595
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.96573e+06 n_event: 857827[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.5384%  p_event: 2.11656e+06 n_event: 1.08156e+06[0m
 pass
 pass
-file 79 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_5.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5545
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.99504e+06 n_event: 870767[0m
+file 28 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_34.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19188
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.21208e+06 n_event: 1.1304e+06[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.1159%  p_event: 2.21208e+06 n_event: 1.1304e+06[0m
 pass
 pass
-file 80 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_50.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5501
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.02458e+06 n_event: 883459[0m
 pass
 pass
 pass
-file 81 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_51.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 8258
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.06811e+06 n_event: 902628[0m
 pass
+file 29 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_35.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19428
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.3077e+06 n_event: 1.17946e+06[0m
 pass
 pass
 pass
-file 82 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_52.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4378
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.0914e+06 n_event: 912808[0m
 pass
 pass
-file 83 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_53.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5720
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.12095e+06 n_event: 925647[0m
-file 84 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_54.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1973
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.13129e+06 n_event: 930083[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4721%  p_event: 2.3077e+06 n_event: 1.17946e+06[0m
 pass
-file 85 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_55.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5546
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.16068e+06 n_event: 943012[0m
 pass
 pass
 pass
 pass
 pass
-file 86 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_56.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5582
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.19004e+06 n_event: 955936[0m
+file 30 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_36.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19490
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.40355e+06 n_event: 1.22865e+06[0m
 pass
 pass
 pass
-file 87 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_57.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4683
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.21456e+06 n_event: 966677[0m
 pass
-file 88 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_58.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 631
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.21794e+06 n_event: 968175[0m
-file 89 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_59.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5531
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.24748e+06 n_event: 980792[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.3084%  p_event: 2.40355e+06 n_event: 1.22865e+06[0m
 pass
 pass
 pass
-file 90 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_6.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5602
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.27716e+06 n_event: 993533[0m
 pass
 pass
 pass
 pass
 pass
-file 91 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_60.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5675
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.30651e+06 n_event: 1.00641e+06[0m
 pass
-file 92 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_61.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5563
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.33591e+06 n_event: 1.01922e+06[0m
+file 31 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_37.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 8023
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.44368e+06 n_event: 1.24884e+06[0m
 pass
 pass
-file 93 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_62.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5573
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.3652e+06 n_event: 1.03211e+06[0m
 pass
-file 94 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_63.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5600
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.39451e+06 n_event: 1.04508e+06[0m
 pass
 pass
+file 32 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_38.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 16467
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.5257e+06 n_event: 1.29061e+06[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m--------------------]  [33m60.7275%  p_event: 2.5257e+06 n_event: 1.29061e+06[0m
 pass
-file 95 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_64.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1644
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.40335e+06 n_event: 1.04886e+06[0m
 pass
-file 96 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_65.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 2485
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.41626e+06 n_event: 1.05454e+06[0m
 pass
-file 97 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_66.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5670
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.44554e+06 n_event: 1.06742e+06[0m
 pass
+file 33 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_39.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19501
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.62144e+06 n_event: 1.33945e+06[0m
 pass
 pass
-file 98 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_67.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5579
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.47489e+06 n_event: 1.0802e+06[0m
 pass
 pass
-file 99 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_68.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5679
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.50434e+06 n_event: 1.09298e+06[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.2794%  p_event: 2.62144e+06 n_event: 1.33945e+06[0m
 pass
+file 34 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_4.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10865
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.67584e+06 n_event: 1.36723e+06[0m
 pass
 pass
-file 100 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_69.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5544
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.53364e+06 n_event: 1.10578e+06[0m
 pass
 pass
 pass
-file 101 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_7.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 2769
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.54797e+06 n_event: 1.112e+06[0m
 pass
 pass
-file 102 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_70.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5666
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.57727e+06 n_event: 1.12485e+06[0m
-file 103 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_71.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5582
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.60667e+06 n_event: 1.13756e+06[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----]  [33m92.0387%  p_event: 2.67584e+06 n_event: 1.36723e+06[0m
 pass
+file 35 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_40.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10581
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.72784e+06 n_event: 1.39341e+06[0m
 pass
 pass
-file 104 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_72.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5533
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.63588e+06 n_event: 1.15054e+06[0m
 pass
 pass
-file 105 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_73.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5498
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.66519e+06 n_event: 1.16325e+06[0m
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---]  [33m94.509%  p_event: 2.72784e+06 n_event: 1.39341e+06[0m
+file 36 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_41.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19161
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.82327e+06 n_event: 1.44238e+06[0m
 pass
 pass
-file 106 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_74.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1941
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.67546e+06 n_event: 1.16766e+06[0m
-file 107 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_75.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 678
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.67891e+06 n_event: 1.16912e+06[0m
 pass
-file 108 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_76.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5575
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.70844e+06 n_event: 1.18196e+06[0m
 pass
 pass
-file 109 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_77.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5512
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.73777e+06 n_event: 1.19478e+06[0m
 pass
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.1893%  p_event: 2.82327e+06 n_event: 1.44238e+06[0m
 pass
 pass
-file 110 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_78.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5611
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.76744e+06 n_event: 1.20727e+06[0m
 pass
+file 37 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_42.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19230
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.91916e+06 n_event: 1.49147e+06[0m
 pass
-file 111 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_79.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1951
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.77768e+06 n_event: 1.21173e+06[0m
 pass
-file 112 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_8.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5635
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.80721e+06 n_event: 1.22441e+06[0m
 pass
-file 113 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_80.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5427
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.83606e+06 n_event: 1.23697e+06[0m
 pass
 pass
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.0021%  p_event: 2.91916e+06 n_event: 1.49147e+06[0m
 pass
 pass
 pass
-file 114 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_81.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5528
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.86534e+06 n_event: 1.24981e+06[0m
 pass
+file 38 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_43.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10093
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.96913e+06 n_event: 1.5171e+06[0m
 pass
 pass
 pass
-file 115 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_82.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5619
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.89464e+06 n_event: 1.26267e+06[0m
 pass
 pass
-file 116 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_83.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 669
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.89811e+06 n_event: 1.26413e+06[0m
-file 117 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_84.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5542
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.92762e+06 n_event: 1.27679e+06[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-]  [33m99.0786%  p_event: 2.96913e+06 n_event: 1.5171e+06[0m
 pass
+file 39 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_44.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 11129
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.02371e+06 n_event: 1.54532e+06[0m
 pass
 pass
-file 118 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_85.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5754
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.95697e+06 n_event: 1.2896e+06[0m
 pass
 pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------]  [33m89.8553%  p_event: 3.02371e+06 n_event: 1.54532e+06[0m
 pass
-file 119 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_86.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 3158
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.97344e+06 n_event: 1.29688e+06[0m
+file 40 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_45.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 13376
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.0895e+06 n_event: 1.5793e+06[0m
 pass
-file 120 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_87.root
-LUMI : 59.74
-btag value cut :  0.4184
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------]  [33m74.7608%  p_event: 3.0895e+06 n_event: 1.5793e+06[0m
+pass
+file 41 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_46.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19606
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.18549e+06 n_event: 1.6289e+06[0m
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.0048%  p_event: 3.18549e+06 n_event: 1.6289e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 42 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_47.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9968
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.23395e+06 n_event: 1.65379e+06[0m
+pass
+file 43 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_48.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19587
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.3297e+06 n_event: 1.7027e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.0543%  p_event: 3.3297e+06 n_event: 1.7027e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 44 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_49.root
+LUMI : 35.92
+btag value cut :  0.6321
 Number of events to be analyzed : 5565
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.00278e+06 n_event: 1.30982e+06[0m
-file 121 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_88.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1999
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.0131e+06 n_event: 1.31442e+06[0m
-pass
-file 122 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_89.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 1347
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.02e+06 n_event: 1.31742e+06[0m
-pass
-file 123 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_9.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5685
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.04936e+06 n_event: 1.33016e+06[0m
-pass
-file 124 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_90.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 2255
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.06102e+06 n_event: 1.33524e+06[0m
-pass
-pass
-file 125 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_91.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5564
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.0903e+06 n_event: 1.34815e+06[0m
-pass
-pass
-file 126 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_92.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5484
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.11987e+06 n_event: 1.36083e+06[0m
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.35728e+06 n_event: 1.71684e+06[0m
+file 45 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_5.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19574
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.45346e+06 n_event: 1.7658e+06[0m
 pass
 pass
 pass
-file 127 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_93.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 778
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.12402e+06 n_event: 1.36256e+06[0m
-file 128 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_94.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 4167
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.14657e+06 n_event: 1.37239e+06[0m
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.0882%  p_event: 3.45346e+06 n_event: 1.7658e+06[0m
 pass
 pass
-file 129 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_95.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5494
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.17589e+06 n_event: 1.38519e+06[0m
 pass
 pass
-file 130 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_96.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5584
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.20525e+06 n_event: 1.398e+06[0m
-file 131 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_97.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 777
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.20939e+06 n_event: 1.39976e+06[0m
-file 132 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_98.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5663
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.23874e+06 n_event: 1.41259e+06[0m
+file 46 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_50.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19485
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.54876e+06 n_event: 1.81465e+06[0m
 pass
-file 133 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_PUJetID/full_run2_2018_PUJetID_TTG_version1/210312_072139/0000/treePKU_99.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 5320
-processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.26692e+06 n_event: 1.42465e+06[0m
 pass
-3.26692e+06 1.42465e+06
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.3215%  p_event: 3.54876e+06 n_event: 1.81465e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 47 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_51.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 18277
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.63919e+06 n_event: 1.86072e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----------------------]  [33m54.7136%  p_event: 3.63919e+06 n_event: 1.86072e+06[0m
+pass
+pass
+pass
+pass
+file 48 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_52.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 8747
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.68255e+06 n_event: 1.88244e+06[0m
+pass
+pass
+pass
+pass
+file 49 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_53.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19302
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.77866e+06 n_event: 1.93142e+06[0m
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8081%  p_event: 3.77866e+06 n_event: 1.93142e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 50 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_54.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19242
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.87433e+06 n_event: 1.9806e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.9696%  p_event: 3.87433e+06 n_event: 1.9806e+06[0m
+pass
+pass
+pass
+file 51 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_55.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19613
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.97033e+06 n_event: 2.02922e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m50.9866%  p_event: 3.97033e+06 n_event: 2.02922e+06[0m
+pass
+pass
+file 52 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_56.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19118
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.06568e+06 n_event: 2.07829e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.3067%  p_event: 4.06568e+06 n_event: 2.07829e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 53 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_57.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19308
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.16168e+06 n_event: 2.1267e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.792%  p_event: 4.16168e+06 n_event: 2.1267e+06[0m
+pass
+pass
+pass
+file 54 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_58.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19724
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.25734e+06 n_event: 2.17567e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m50.6997%  p_event: 4.25734e+06 n_event: 2.17567e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 55 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_59.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 13156
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.3221e+06 n_event: 2.20891e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------]  [33m76.0109%  p_event: 4.3221e+06 n_event: 2.20891e+06[0m
+file 56 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_6.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 6223
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.35263e+06 n_event: 2.22451e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 57 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_60.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 8391
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.39387e+06 n_event: 2.24547e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 58 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_61.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19504
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.48974e+06 n_event: 2.29456e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.2715%  p_event: 4.48974e+06 n_event: 2.29456e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 59 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_62.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19143
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.58567e+06 n_event: 2.34318e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.2384%  p_event: 4.58567e+06 n_event: 2.34318e+06[0m
+pass
+pass
+pass
+file 60 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_63.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 8171
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.62563e+06 n_event: 2.36367e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 61 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_64.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19242
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.72134e+06 n_event: 2.41268e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.9696%  p_event: 4.72134e+06 n_event: 2.41268e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 62 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_65.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10286
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.77144e+06 n_event: 2.43831e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m--]  [33m97.2195%  p_event: 4.77144e+06 n_event: 2.43831e+06[0m
+file 63 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_66.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19343
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.86714e+06 n_event: 2.48712e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6983%  p_event: 4.86714e+06 n_event: 2.48712e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 64 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_67.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19513
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 4.96287e+06 n_event: 2.53623e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.2479%  p_event: 4.96287e+06 n_event: 2.53623e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 65 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_68.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19234
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.05875e+06 n_event: 2.58509e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.9913%  p_event: 5.05875e+06 n_event: 2.58509e+06[0m
+pass
+pass
+pass
+file 66 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_69.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 7847
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.09721e+06 n_event: 2.60491e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 67 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_7.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10014
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.14628e+06 n_event: 2.63015e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-]  [33m99.8602%  p_event: 5.14628e+06 n_event: 2.63015e+06[0m
+file 68 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_70.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19277
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.24178e+06 n_event: 2.67908e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8753%  p_event: 5.24178e+06 n_event: 2.67908e+06[0m
+pass
+pass
+pass
+pass
+file 69 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_71.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19338
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.33755e+06 n_event: 2.72782e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.7117%  p_event: 5.33755e+06 n_event: 2.72782e+06[0m
+pass
+pass
+pass
+file 70 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_72.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19411
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.43357e+06 n_event: 2.77672e+06[0m
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.5172%  p_event: 5.43357e+06 n_event: 2.77672e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 71 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_73.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19201
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.52976e+06 n_event: 2.82595e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.0806%  p_event: 5.52976e+06 n_event: 2.82595e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 72 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_74.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19584
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.62555e+06 n_event: 2.87474e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.0621%  p_event: 5.62555e+06 n_event: 2.87474e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 73 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_75.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19234
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.72084e+06 n_event: 2.92356e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.9913%  p_event: 5.72084e+06 n_event: 2.92356e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 74 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_76.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19434
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.81644e+06 n_event: 2.97207e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4562%  p_event: 5.81644e+06 n_event: 2.97207e+06[0m
+pass
+pass
+pass
+pass
+file 75 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_77.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 8302
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.85678e+06 n_event: 2.99256e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 76 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_78.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 18944
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.95222e+06 n_event: 3.04127e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.7872%  p_event: 5.95222e+06 n_event: 3.04127e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 77 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_79.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 7726
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 5.9901e+06 n_event: 3.06054e+06[0m
+pass
+pass
+file 78 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_8.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19293
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.08504e+06 n_event: 3.10943e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8323%  p_event: 6.08504e+06 n_event: 3.10943e+06[0m
+pass
+file 79 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_80.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 14136
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.15452e+06 n_event: 3.14505e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------------]  [33m70.7414%  p_event: 6.15452e+06 n_event: 3.14505e+06[0m
+pass
+pass
+pass
+file 80 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_81.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19272
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.25028e+06 n_event: 3.19385e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8888%  p_event: 6.25028e+06 n_event: 3.19385e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 81 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_82.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19405
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.34566e+06 n_event: 3.24255e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.5331%  p_event: 6.34566e+06 n_event: 3.24255e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 82 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_83.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19154
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.44086e+06 n_event: 3.29172e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.2084%  p_event: 6.44086e+06 n_event: 3.29172e+06[0m
+pass
+pass
+file 83 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v1/210312_072349/0000/treePKU_9.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19404
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.53706e+06 n_event: 3.34052e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.5358%  p_event: 6.53706e+06 n_event: 3.34052e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 84 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_1.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9170
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.58322e+06 n_event: 3.36371e+06[0m
+pass
+pass
+pass
+file 85 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_10.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 18912
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.67688e+06 n_event: 3.41134e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.8765%  p_event: 6.67688e+06 n_event: 3.41134e+06[0m
+pass
+pass
+pass
+file 86 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_11.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19489
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.77278e+06 n_event: 3.46034e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.311%  p_event: 6.77278e+06 n_event: 3.46034e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 87 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_12.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19621
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.869e+06 n_event: 3.50926e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m50.9658%  p_event: 6.869e+06 n_event: 3.50926e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 88 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_13.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19438
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 6.96454e+06 n_event: 3.55862e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4456%  p_event: 6.96454e+06 n_event: 3.55862e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 89 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_14.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 13440
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.03119e+06 n_event: 3.59282e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------]  [33m74.4048%  p_event: 7.03119e+06 n_event: 3.59282e+06[0m
+pass
+pass
+file 90 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_15.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9218
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.07652e+06 n_event: 3.61601e+06[0m
+pass
+pass
+file 91 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_16.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19421
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.17252e+06 n_event: 3.66516e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4907%  p_event: 7.17252e+06 n_event: 3.66516e+06[0m
+pass
+pass
+pass
+pass
+file 92 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_17.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19370
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.2685e+06 n_event: 3.71403e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6262%  p_event: 7.2685e+06 n_event: 3.71403e+06[0m
+pass
+pass
+pass
+pass
+file 93 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_18.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9539
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.31529e+06 n_event: 3.73777e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 94 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_19.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19538
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.41108e+06 n_event: 3.7869e+06[0m
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1823%  p_event: 7.41108e+06 n_event: 3.7869e+06[0m
+pass
+pass
+file 95 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_2.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19549
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.50714e+06 n_event: 3.83599e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1535%  p_event: 7.50714e+06 n_event: 3.83599e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+file 96 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_20.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19511
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.60304e+06 n_event: 3.88533e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.2531%  p_event: 7.60304e+06 n_event: 3.88533e+06[0m
+pass
+file 97 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_21.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19305
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.69878e+06 n_event: 3.93471e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.8001%  p_event: 7.69878e+06 n_event: 3.93471e+06[0m
+pass
+pass
+pass
+file 98 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_22.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 5034
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.72345e+06 n_event: 3.94772e+06[0m
+pass
+pass
+file 99 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_23.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19636
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.81942e+06 n_event: 3.99676e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m50.9269%  p_event: 7.81942e+06 n_event: 3.99676e+06[0m
+pass
+pass
+pass
+file 100 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_24.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 10736
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.87289e+06 n_event: 4.02399e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----]  [33m93.1446%  p_event: 7.87289e+06 n_event: 4.02399e+06[0m
+pass
+file 101 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_25.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19225
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 7.96909e+06 n_event: 4.07315e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.0156%  p_event: 7.96909e+06 n_event: 4.07315e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 102 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_26.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9212
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.01362e+06 n_event: 4.096e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 103 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_27.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 6897
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.04792e+06 n_event: 4.1136e+06[0m
+file 104 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_28.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19550
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.14391e+06 n_event: 4.16262e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1509%  p_event: 8.14391e+06 n_event: 4.16262e+06[0m
+pass
+pass
+pass
+pass
+file 105 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_29.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19590
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.23981e+06 n_event: 4.21171e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.0465%  p_event: 8.23981e+06 n_event: 4.21171e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 106 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_3.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19508
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.33588e+06 n_event: 4.2607e+06[0m
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.261%  p_event: 8.33588e+06 n_event: 4.2607e+06[0m
+pass
+pass
+file 107 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_30.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 6788
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.36881e+06 n_event: 4.2774e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 108 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_31.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19437
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.46481e+06 n_event: 4.32648e+06[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4483%  p_event: 8.46481e+06 n_event: 4.32648e+06[0m
+pass
+pass
+pass
+file 109 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_32.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 9327
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.51007e+06 n_event: 4.34952e+06[0m
+pass
+pass
+pass
+file 110 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_33.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 12047
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.57018e+06 n_event: 4.3796e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------]  [33m83.0082%  p_event: 8.57018e+06 n_event: 4.3796e+06[0m
+pass
+file 111 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_34.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 12329
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.63158e+06 n_event: 4.41086e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----------]  [33m81.1096%  p_event: 8.63158e+06 n_event: 4.41086e+06[0m
+file 112 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_35.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19026
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.7263e+06 n_event: 4.45958e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.5597%  p_event: 8.7263e+06 n_event: 4.45958e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 113 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_36.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19551
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.82254e+06 n_event: 4.50828e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.1483%  p_event: 8.82254e+06 n_event: 4.50828e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+file 114 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_37.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19361
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 8.91853e+06 n_event: 4.55738e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6502%  p_event: 8.91853e+06 n_event: 4.55738e+06[0m
+pass
+file 115 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_38.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19367
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.01452e+06 n_event: 4.60634e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6342%  p_event: 9.01452e+06 n_event: 4.60634e+06[0m
+pass
+pass
+file 116 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_39.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19349
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.11085e+06 n_event: 4.65528e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6823%  p_event: 9.11085e+06 n_event: 4.65528e+06[0m
+pass
+pass
+file 117 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_4.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19367
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.20684e+06 n_event: 4.70446e+06[0m
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6342%  p_event: 9.20684e+06 n_event: 4.70446e+06[0m
+pass
+file 118 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_40.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19373
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.30279e+06 n_event: 4.7534e+06[0m
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.6182%  p_event: 9.30279e+06 n_event: 4.7534e+06[0m
+pass
+pass
+pass
+pass
+pass
+file 119 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_41.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19321
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.39868e+06 n_event: 4.8026e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.7572%  p_event: 9.39868e+06 n_event: 4.8026e+06[0m
+pass
+file 120 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_42.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 7291
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.43399e+06 n_event: 4.8206e+06[0m
+pass
+pass
+file 121 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_5.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 13098
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.4991e+06 n_event: 4.85386e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------]  [33m76.3475%  p_event: 9.4991e+06 n_event: 4.85386e+06[0m
+pass
+pass
+file 122 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_6.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19613
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.59515e+06 n_event: 4.90286e+06[0m
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m50.9866%  p_event: 9.59515e+06 n_event: 4.90286e+06[0m
+pass
+pass
+pass
+pass
+file 123 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_7.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 6895
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.62884e+06 n_event: 4.92004e+06[0m
+pass
+pass
+file 124 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_8.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 19424
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.72527e+06 n_event: 4.96875e+06[0m
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.4827%  p_event: 9.72527e+06 n_event: 4.96875e+06[0m
+pass
+pass
+file 125 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version7_TTGJets_v2/210312_072358/0000/treePKU_9.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 7240
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 9.76131e+06 n_event: 4.987e+06[0m
+pass
+pass
+pass
+pass
+pass
+9.76131e+06 4.987e+06
 hist_
 hist_pileup_up
 hist_pileup_down
@@ -996,5 +1691,5 @@ hist_fakelepton_up
 hist_fakelepton_down
 
 
-time start : 2021-04-26 10:45:27
-time end   : 2021-04-26 10:51:20
+time start : 2021-05-13 18:10:29
+time end   : 2021-05-13 18:14:54

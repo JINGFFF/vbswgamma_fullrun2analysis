@@ -1,6 +1,6 @@
 WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
          Developer's area is created for available architecture slc6_amd64_gcc630.
-[34myear             : 2018[0m
+[34myear             : 2016[0m
 [34mregion           : aqgc region[0m
 [34mchannel          : muon channel[0m
 [34mbarrel_or_endcap : all[0m
@@ -9,66 +9,67 @@ WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700
 [34mbtag workpoint   : medium[0m
 [34mpujet workpoint   : T[0m
 [34minput file list  : filelist_dir3/loose_for_analysis_muon.txt[0m
-[34moutput file      : test_aqgc1/2018_muon_data_aqgc_all_doublefake.root[0m
+[34moutput file      : test_aqgc2/2016_muon_data_aqgc_all_doublefake.root[0m
 
 start load Btag info!
 Btag info has been loaded!
-file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_A.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 89004
+file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_B.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 39042
 processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>[0m---------------------------------------------]  [33m11.2355%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>[0m---------------------------------------]  [33m22.4709%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>[0m----------------------------------]  [33m33.7064%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>[0m----------------------------]  [33m44.9418%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----------------------]  [33m56.1773%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----------------]  [33m67.4127%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----------]  [33m78.6482%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------]  [33m89.8836%  p_event: 1 n_event: 100[0m
-file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_B.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 43567
+processing : [[32m>>>>>>>>>>>>[0m--------------------------------------]  [33m25.6134%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------------]  [33m51.2269%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------]  [33m76.8403%  p_event: 1 n_event: 100[0m
+file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_C.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 18404
 processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>[0m---------------------------------------]  [33m22.9532%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>[0m----------------------------]  [33m45.9063%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----------------]  [33m68.8595%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----]  [33m91.8126%  p_event: 1 n_event: 100[0m
-file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_C.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 46007
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----------------------]  [33m54.336%  p_event: 1 n_event: 100[0m
+pass
+file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_D.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 28070
 processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>[0m----------------------------------------]  [33m21.7358%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>[0m-----------------------------]  [33m43.4716%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------]  [33m65.2075%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------]  [33m86.9433%  p_event: 1 n_event: 100[0m
-file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/2018_loose_for_analysis_single_muon_D.root
-LUMI : 59.74
-btag value cut :  0.4184
-Number of events to be analyzed : 200552
+processing : [[32m>>>>>>>>>>>>>>>>>[0m---------------------------------]  [33m35.6252%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------------]  [33m71.2504%  p_event: 1 n_event: 100[0m
+file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_E.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 27902
 processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
-processing : [[32m>>[0m------------------------------------------------]  [33m4.98624%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>[0m----------------------------------------------]  [33m9.97248%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>[0m-------------------------------------------]  [33m14.9587%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>[0m-----------------------------------------]  [33m19.945%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>[0m--------------------------------------]  [33m24.9312%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>[0m------------------------------------]  [33m29.9174%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>[0m---------------------------------]  [33m34.9037%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>[0m-------------------------------]  [33m39.8899%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>[0m----------------------------]  [33m44.8761%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>[0m--------------------------]  [33m49.8624%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----------------------]  [33m54.8486%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------------------]  [33m59.8349%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------]  [33m64.8211%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m----------------]  [33m69.8073%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------]  [33m74.7936%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-----------]  [33m79.7798%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m--------]  [33m84.766%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------]  [33m89.7523%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---]  [33m94.7385%  p_event: 1 n_event: 100[0m
-processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-]  [33m99.7248%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>[0m---------------------------------]  [33m35.8397%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------------]  [33m71.6794%  p_event: 1 n_event: 100[0m
+file 5 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_F.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 21218
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>[0m---------------------------]  [33m47.1298%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---]  [33m94.2596%  p_event: 1 n_event: 100[0m
+file 6 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_G.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 48034
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>[0m----------------------------------------]  [33m20.8186%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>[0m------------------------------]  [33m41.6372%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m-------------------]  [33m62.4558%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------]  [33m83.2743%  p_event: 1 n_event: 100[0m
+file 7 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_loose_for_analysis_single_muon_H.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 56634
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1 n_event: 100[0m
+pass
+processing : [[32m>>>>>>>>[0m------------------------------------------]  [33m17.6572%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>[0m---------------------------------]  [33m35.3145%  p_event: 1 n_event: 100[0m
+pass
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------------------------]  [33m52.9717%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m---------------]  [33m70.629%  p_event: 1 n_event: 100[0m
+processing : [[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[0m------]  [33m88.2862%  p_event: 1 n_event: 100[0m
 1 100
 hist_
 hist_pileup_up
@@ -101,5 +102,5 @@ hist_fakelepton_up
 hist_fakelepton_down
 
 
-time start : 2021-04-26 10:45:27
-time end   : 2021-04-26 10:46:13
+time start : 2021-05-13 18:10:25
+time end   : 2021-05-13 18:10:48

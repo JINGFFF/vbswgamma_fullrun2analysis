@@ -1,10 +1,10 @@
 +AcctGroup = "pku"
 +AcctGroupUser  = "pengj"
-executable   = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/sig_out1/significance_12_condor.sh
-arguments    = test_sig2
-output       = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/sig_out1/significance_outputfile12
-error        = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/sig_out1/significance_errorfile12
-log          = /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/sig_out1/significance_myexe12.log
+executable   = /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/sig_out1/significance_12_condor.sh
+arguments    = test_signi3
+output       = /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/sig_out1/significance_outputfile12
+error        = /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/sig_out1/significance_errorfile12
+log          = /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/sig_out1/significance_myexe12.log
 request_cpus   = 1
 request_memory = 1024
 request_disk   = 1024

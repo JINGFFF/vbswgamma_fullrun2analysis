@@ -688,10 +688,10 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderArray<Double_t>    genjet_phi  = {fReader, "genjet_phi"};
    TTreeReaderArray<Double_t>    genjet_e  = {fReader, "genjet_e"};
 
-//   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
+   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
 
-  // TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
-  // TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
+   TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
+   TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
 
    Long64_t maxEntries = fReader.GetEntries(false);
    cout << "Number of events to be analyzed : " << maxEntries << std::endl;

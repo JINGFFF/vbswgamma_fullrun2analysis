@@ -3,8 +3,8 @@ cmsrel CMSSW_9_3_4
 cd CMSSW_9_3_4/src
 cmsenv
 cd ../..
-cp -r /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/scalef .
-cp -r /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/make_hist* .
-cp -r /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/filelist_dir* .
-./make_hist filelist_dir3/loose_for_analysis_electron.txt $1 2018 electron data control barrel doublefake medium T
-cp -r $1 /data/pku/home/pengj/testvbs/analysis/analysis2018/step7_significance/sig_out1
+cp -r /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/scalef .
+cp -r /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/make_hist* .
+cp -r /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/filelist_dir* .
+./make_hist filelist_dir3/loose_for_analysis_electron.txt $1 2016 electron data control barrel doublefake medium T
+cp -r $1 /data/pku/home/pengj/testvbs/analysis/analysis2016/step7_significance/sig_out1

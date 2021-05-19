@@ -1,0 +1,52 @@
+imax 1   number of channels
+jmax 15   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 73.86
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	VBS_in	VBS_out	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+rate	1.89	1.80	38.99	0.00	0.12	0.11	0.37	0.20	1.47	0.73	0.25	0.00	6.33	13.77	6.24	1.58
+------------
+lumi	lnN	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	-	-	-	#lumi
+WGJJ_hist_in__signal_muon_barrel_stat_bin_1_2016	lnN	1.05300429799	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJJ_hist_out__signal_muon_barrel_stat_bin_1_2016	lnN	-	1.05560864777	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	1.07560461137	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	1.70711201435	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	1.71500232538	-	-	-	-	-	-	-	-	-	-
+ST_tW_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	1.70958596912	-	-	-	-	-	-	-	-	-
+ST_tbarW_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	-	2	-	-	-	-	-	-	-	-
+TTG_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	-	-	1.30459889258	-	-	-	-	-	-	-
+WW_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	-	-	-	2	-	-	-	-	-	-
+WZ_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	-	-	-	-	2	-	-	-	-	-
+ZZ_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-
+ZG_signal_muon_barrel_stat_bin_1_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	1.19794352903	-	-	-
+photon_ID_2016	lnN	1.02	1.02	1.02	1.00	1.03	1.02	1.01	1.04	1.02	1.15	1.04	1.00	1.02	-	-	-
+electron_ID_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_Reco_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+electron_HLT_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_ID_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.00	1.01	-	-	-
+muon_iso_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+btag_2016	lnN	1.00	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.00	-	-	-
+JEC_2016	lnN	1.10	1.05	1.08	1.00	1.52	1.60	1.51	1.00	1.12	1.00	1.02	1.00	1.27	-	-	-
+JER_2016	lnN	1.08	1.04	1.15	1.00	1.00	1.00	1.54	1.00	1.14	1.89	1.00	1.00	1.09	-	-	-
+pujet_2016	lnN	1.00	1.00	1.00	1.00	1.01	1.01	1.00	1.01	1.01	1.00	1.00	1.00	1.00	-	-	-
+pujet_mistag_2016	lnN	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.01	-	-	-
+pileup_2016	lnN	1.01	1.01	1.03	1.00	1.05	1.23	1.04	1.08	1.03	1.13	1.09	1.00	1.00	-	-	-
+fakephoton_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	1.12	-	1.11
+fakelepton_2016	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1.30	1.30
+WGJJ_pdf	lnN	1.00070083236	1.00070083236	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJJ_scale	lnN	1.05825191778	1.05825191778	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_pdf	lnN	-	-	1.00061017048	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muF1	lnN	-	-	1.0117717541	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muR1	lnN	-	-	1.02583717899	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_muRmuF	lnN	-	-	1.03756009678	-	-	-	-	-	-	-	-	-	-	-	-	-

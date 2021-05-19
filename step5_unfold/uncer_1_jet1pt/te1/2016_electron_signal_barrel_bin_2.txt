@@ -1,0 +1,39 @@
+imax 1   number of channels
+jmax 18   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 150.59
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	genbin1	genbin2	genbin3	genbin4	VBS_out	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	-4	-3	-2	-1	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+rate	0	1.51701368406	11.6152697502	0.743656805727	6.64	76.39	0.00	0.89	0.23	0.19	0.53	10.14	0.71	0.00	0.00	7.38	18.22	11.33	4.05
+------------
+lumi	lnN	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	-	-	-	#lumi
+WGJJ_hist_out__electron_barrel_stat_bin_3	lnN	-	-	-	-	1.02126811427	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	1.05313490145	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	1.25361417586	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	1.50192226035	-	-	-	-	-	-	-	-	-	-
+ST_tW_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	2	-	-	-	-	-	-	-	-	-
+ST_tbarW_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	-	1.57916483865	-	-	-	-	-	-	-	-
+TTG_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	-	-	1.09652749953	-	-	-	-	-	-	-
+WW_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	-	-	-	2	-	-	-	-	-	-
+WZ_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-
+ZZ_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-
+ZG_electron_barrel_stat_bin_3	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1.15533180785	-	-	-
+photon_ID	lnN	-	-	-	-	1.03	1.03	1.00	1.03	1.02	1.01	1.02	1.04	1.15	1.00	1.00	1.02	-	-	-
+electron_ID	lnN	-	-	-	-	1.03	1.04	1.00	1.01	1.01	1.00	1.01	1.05	1.02	1.00	1.00	1.01	-	-	-
+electron_Reco	lnN	-	-	-	-	1.01	1.01	1.00	1.01	1.01	1.00	1.00	1.01	1.01	1.00	1.00	1.01	-	-	-
+electron_HLT	lnN	-	-	-	-	1.01	1.01	1.00	1.01	1.00	1.00	1.00	1.01	1.00	1.00	1.00	1.01	-	-	-
+muon_ID	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+JEC_2016	lnN	-	-	-	-	1.03	1.08	1.00	1.11	1.00	1.00	1.35	1.06	1.00	1.00	1.00	1.12	-	-	-
+JER_2016	lnN	-	-	-	-	1.04	1.02	1.00	1.24	1.26	1.00	1.36	1.11	2.11	1.00	1.00	1.15	-	-	-

@@ -1,0 +1,173 @@
+WARNING: Release CMSSW_9_3_4 is not available for architecture slc6_amd64_gcc700.
+         Developer's area is created for available architecture slc6_amd64_gcc630.
+[34myear             : 2016[0m
+[34mregion           : signal region[0m
+[34mchannel          : muon channel[0m
+[34mbarrel_or_endcap : barrel[0m
+[34mtype             : mc[0m
+[34msample           : WZ[0m
+[34mbtag workpoint   : medium[0m
+[34mpujet workpoint   : T[0m
+[34minput file list  : filelist_dir3/tight_for_analysis_WZ.txt[0m
+[34moutput file      : test_fiducial1/2016_muon_mc_signal_barrel_WZ.root[0m
+
+start load Btag info!
+Btag info has been loaded!
+hist_
+hist_pileup_up
+hist_pileup_down
+hist_L1_up
+hist_L1_down
+hist_photon_ID_up
+hist_photon_ID_down
+hist_electron_ID_up
+hist_electron_ID_down
+hist_electron_Reco_up
+hist_electron_Reco_down
+hist_electron_HLT_up
+hist_electron_HLT_down
+hist_muon_ID_up
+hist_muon_ID_down
+hist_muon_iso_up
+hist_muon_iso_down
+hist_muon_HLT_up
+hist_muon_HLT_down
+hist_fakephoton_up
+hist_fakephoton_down
+hist_btag_up
+hist_btag_down
+hist_pujet_up
+hist_pujet_down
+hist_pujet_mistag_up
+hist_pujet_mistag_down
+hist_fakelepton_up
+hist_fakelepton_down
+file 1 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_1.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 884
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 191227 n_event: 0[0m
+file 2 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_10.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 570
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 312873 n_event: 0[0m
+file 3 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_11.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1202
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 596971 n_event: 0[0m
+file 4 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_12.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1103
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 820631 n_event: 0[0m
+file 5 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_13.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 946
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.034e+06 n_event: 0[0m
+file 6 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_14.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1084
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.25532e+06 n_event: 0[0m
+file 7 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_15.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 230
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.30487e+06 n_event: 0[0m
+file 8 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_2.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 809
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.47787e+06 n_event: 0[0m
+file 9 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_3.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 887
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.68421e+06 n_event: 0[0m
+file 10 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_4.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1206
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 1.9323e+06 n_event: 0[0m
+file 11 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_5.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 957
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.13747e+06 n_event: 0[0m
+file 12 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_6.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 989
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.35976e+06 n_event: 0[0m
+file 13 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_7.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1011
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.58341e+06 n_event: 0[0m
+file 14 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_8.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 763
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.75421e+06 n_event: 0[0m
+file 15 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_1/210422_002210/0000/treePKU_9.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1084
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 2.99753e+06 n_event: 0[0m
+file 16 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_2/210422_002222/0000/treePKU_1.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 821
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.18868e+06 n_event: 0[0m
+file 17 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_2/210422_002222/0000/treePKU_2.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1316
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.47852e+06 n_event: 0[0m
+file 18 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_2/210422_002222/0000/treePKU_3.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1387
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.76844e+06 n_event: 0[0m
+file 19 : /data/pku/home/pengj/testvbs/data/for_analysis/2016_PUJetID/full_run2_2016_PUJetID_for_analysis_version8_WZ_2/210422_002222/0000/treePKU_4.root
+LUMI : 35.92
+btag value cut :  0.6321
+Number of events to be analyzed : 1097
+processing : [[32m[0m--------------------------------------------------]  [33m0%  p_event: 3.99752e+06 n_event: 0[0m
+3.99752e+06 0
+hist_
+hist_pileup_up
+hist_pileup_down
+hist_L1_up
+hist_L1_down
+hist_photon_ID_up
+hist_photon_ID_down
+hist_electron_ID_up
+hist_electron_ID_down
+hist_electron_Reco_up
+hist_electron_Reco_down
+hist_electron_HLT_up
+hist_electron_HLT_down
+hist_muon_ID_up
+hist_muon_ID_down
+hist_muon_iso_up
+hist_muon_iso_down
+hist_muon_HLT_up
+hist_muon_HLT_down
+hist_fakephoton_up
+hist_fakephoton_down
+hist_btag_up
+hist_btag_down
+hist_pujet_up
+hist_pujet_down
+hist_pujet_mistag_up
+hist_pujet_mistag_down
+hist_fakelepton_up
+hist_fakelepton_down
+
+
+time start : 2021-05-16 21:39:08
+time end   : 2021-05-16 21:39:12

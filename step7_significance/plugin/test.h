@@ -779,6 +779,42 @@ void test::init_sf()
       pu_weight_up_SF = 1;
       pu_weight_down_SF = 1;
 
+      pu_jet1_SF = 1;
+      pu_jet1_up_SF = 1;
+      pu_jet1_down_SF = 1;
+
+      pu_jet1_JEC_up_SF = 1;
+      pu_jet1_JEC_down_SF = 1;
+      pu_jet1_JER_up_SF = 1;
+      pu_jet1_JER_down_SF = 1;
+
+      pu_jet2_SF = 1;
+      pu_jet2_up_SF = 1;
+      pu_jet2_down_SF = 1;
+
+      pu_jet2_JEC_up_SF = 1;
+      pu_jet2_JEC_down_SF = 1;
+      pu_jet2_JER_up_SF = 1;
+      pu_jet2_JER_down_SF = 1;
+
+      pu_jet1_mistag_SF = 1;
+      pu_jet1_mistag_up_SF = 1;
+      pu_jet1_mistag_down_SF = 1;
+
+      pu_jet1_mistag_JEC_up_SF = 1;
+      pu_jet1_mistag_JEC_down_SF = 1;
+      pu_jet1_mistag_JER_up_SF = 1;
+      pu_jet1_mistag_JER_down_SF = 1;
+
+      pu_jet2_mistag_SF = 1;
+      pu_jet2_mistag_up_SF = 1;
+      pu_jet2_mistag_down_SF = 1;
+
+      pu_jet2_mistag_JEC_up_SF = 1;
+      pu_jet2_mistag_JEC_down_SF = 1;
+      pu_jet2_mistag_JER_up_SF = 1;
+      pu_jet2_mistag_JER_down_SF = 1;
+
       cross_section_SF = 1;
 }
 

@@ -1,0 +1,39 @@
+imax 1   number of channels
+jmax 18   number of processes-1
+kmax 1  number of nuisance parameters (sources of systematical uncertainties)
+------------
+# we have just one channel, in which we observe 0 events
+bin mubarrel
+observation 27.18
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second process line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel	mubarrel
+process	genbin1	genbin2	genbin3	genbin4	VBS_out	WGJets	ST_s	ST_t	ST_tbar	ST_tW	ST_tbarW	TTG	WW	WZ	ZZ	ZG	fakephoton	fakelepton	doublefake
+process	-4	-3	-2	-1	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+rate	0	0	0.467630534057	3.7733623744	1.25	8.76	0.00	0.12	0.13	0.00	0.11	1.10	0.00	0.25	0.00	0.75	3.20	6.10	1.17
+------------
+lumi	lnN	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	1.022	-	-	-	#lumi
+WGJJ_hist_out__electron_endcap_stat_bin_4	lnN	-	-	-	-	1.04760946438	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+WGJets_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	1.16789592794	-	-	-	-	-	-	-	-	-	-	-	-	-
+ST_s_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-	-	-	-
+ST_t_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	1.70790323158	-	-	-	-	-	-	-	-	-	-	-
+ST_tbar_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	1.70747430005	-	-	-	-	-	-	-	-	-	-
+ST_tW_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-	-	-	-	-
+ST_tbarW_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	-	1.70916191554	-	-	-	-	-	-	-	-
+TTG_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	-	-	1.32737810235	-	-	-	-	-	-	-
+WW_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-	-	-
+WZ_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	2	-	-	-	-	-
+ZZ_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1	-	-	-	-
+ZG_electron_endcap_stat_bin_4	lnN	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1.45223382286	-	-	-
+photon_ID	lnN	-	-	-	-	1.03	1.02	1.00	1.01	1.02	1.00	1.02	1.01	1.00	1.01	1.00	1.02	-	-	-
+electron_ID	lnN	-	-	-	-	1.03	1.10	1.00	1.01	1.02	1.00	1.01	1.06	1.00	1.03	1.00	1.19	-	-	-
+electron_Reco	lnN	-	-	-	-	1.01	1.01	1.00	1.01	1.00	1.00	1.01	1.01	1.00	1.01	1.00	1.01	-	-	-
+electron_HLT	lnN	-	-	-	-	1.01	1.01	1.00	1.00	1.01	1.00	1.01	1.01	1.00	1.02	1.00	1.01	-	-	-
+muon_ID	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_iso	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+muon_HLT	lnN	-	-	-	-	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	-	-	-
+JEC_2016	lnN	-	-	-	-	1.03	1.13	1.00	1.00	1.48	1.00	1.00	1.06	1.00	1.00	1.00	1.10	-	-	-
+JER_2016	lnN	-	-	-	-	1.04	1.16	1.00	1.00	1.48	1.00	2.39	1.09	1.00	1.00	1.00	1.42	-	-	-

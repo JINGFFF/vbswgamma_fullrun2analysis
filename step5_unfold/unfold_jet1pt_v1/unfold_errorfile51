@@ -1,0 +1,3 @@
+WARNING: In non-interactive mode release checks e.g. deprecated releases, production architectures are disabled.
+/var/lib/condor/execute/dir_38148/condor_exec.exe: line 9: 38285 Segmentation fault      (core dumped) ./make_hist_jet1pt_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2016 electron mc signal barrel ZZ medium T
+cp: cannot stat `test_1': No such file or directory

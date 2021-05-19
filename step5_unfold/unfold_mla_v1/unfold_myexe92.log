@@ -1,0 +1,89 @@
+000 (1048149.000.000) 05/17 21:55:13 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1048149.000.000) 05/17 22:22:22 Job executing on host: <192.168.1.4:9618?addrs=192.168.1.4-9618&noUDP&sock=115268_2729_3>
+...
+006 (1048149.000.000) 05/17 22:22:24 Image size of job updated: 1128
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (1048149.000.000) 05/17 22:22:25 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	1447716  -  Run Bytes Sent By Job
+	536  -  Run Bytes Received By Job
+	1447716  -  Total Bytes Sent By Job
+	536  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.01        1         1 
+	   Disk (KB)            :  2932        1024    705744 
+	   Memory (MB)          :     0        1024      1024 
+...
+000 (1048661.000.000) 05/17 22:54:48 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1048661.000.000) 05/17 22:55:08 Job executing on host: <192.168.1.8:9618?addrs=192.168.1.8-9618&noUDP&sock=4966_27cf_67>
+...
+006 (1048661.000.000) 05/17 22:55:16 Image size of job updated: 1136
+	2  -  MemoryUsage of job (MB)
+	1136  -  ResidentSetSize of job (KB)
+...
+006 (1048661.000.000) 05/17 23:00:16 Image size of job updated: 159068
+	156  -  MemoryUsage of job (MB)
+	158740  -  ResidentSetSize of job (KB)
+...
+006 (1048661.000.000) 05/17 23:05:17 Image size of job updated: 161500
+	158  -  MemoryUsage of job (MB)
+	161172  -  ResidentSetSize of job (KB)
+...
+006 (1048661.000.000) 05/17 23:10:10 Image size of job updated: 161844
+	158  -  MemoryUsage of job (MB)
+	161172  -  ResidentSetSize of job (KB)
+...
+005 (1048661.000.000) 05/17 23:10:10 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:11:55, Sys 0 00:00:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:11:55, Sys 0 00:00:01  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	4390957  -  Run Bytes Sent By Job
+	536  -  Run Bytes Received By Job
+	4390957  -  Total Bytes Sent By Job
+	536  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.99        1         1 
+	   Disk (KB)            :  6083        1024    175383 
+	   Memory (MB)          :   158        1024      1024 
+...
+000 (1049117.000.000) 05/17 23:17:53 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1049117.000.000) 05/17 23:27:07 Job executing on host: <192.168.1.8:9618?addrs=192.168.1.8-9618&noUDP&sock=4966_27cf_67>
+...
+006 (1049117.000.000) 05/17 23:27:15 Image size of job updated: 140788
+	105  -  MemoryUsage of job (MB)
+	107288  -  ResidentSetSize of job (KB)
+...
+006 (1049117.000.000) 05/17 23:32:15 Image size of job updated: 164204
+	160  -  MemoryUsage of job (MB)
+	163620  -  ResidentSetSize of job (KB)
+...
+006 (1049117.000.000) 05/17 23:40:36 Image size of job updated: 416676
+	160  -  MemoryUsage of job (MB)
+	163620  -  ResidentSetSize of job (KB)
+...
+005 (1049117.000.000) 05/17 23:40:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:13:02, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:13:02, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	4390957  -  Run Bytes Sent By Job
+	536  -  Run Bytes Received By Job
+	4390957  -  Total Bytes Sent By Job
+	536  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :  6083        1024    175383 
+	   Memory (MB)          :   160        1024      1024 
+...
