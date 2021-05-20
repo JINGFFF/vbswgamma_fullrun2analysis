@@ -817,7 +817,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_jet2phi_JER_down    = (*jet2phi_JER_down);
 
          fill_lep                 = (*lep);
-         fill_HLT_muon            = (*HLT_Mu2);
+         fill_HLT_muon            = (*HLT_Mu3);
          fill_HLT_electron        = (*HLT_Ele2);
          fill_ptlep1              = (*ptlep1);
          fill_etalep1             = (*etalep1);
@@ -1056,7 +1056,7 @@ photonp42.Delete();
          fill_jet2phi_JER_down    = (*jet2phi_JER_down_f);
 
          fill_lep                 = (*lep);
-         fill_HLT_muon            = (*HLT_Mu2);
+         fill_HLT_muon            = (*HLT_Mu3);
          fill_HLT_electron        = (*HLT_Ele2);
          fill_ptlep1              = (*ptlep1);
          fill_etalep1             = (*etalep1);
