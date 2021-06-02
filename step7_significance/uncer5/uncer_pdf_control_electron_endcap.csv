@@ -1,7 +1,0 @@
-control electron endcap, bin1, bin2, bin3, 
-WGJJ_pdf, 0.000232950757988, 0.00028344948596, 0.000207835885535
-WGJJ_scale, 0.00649226118651, 0.000771953809745, 0.0067556100688
-WGJets_pdf, 0.0, 0.0, 0.0
-WGJets_muR1, 0.0, 0.0, 0.0
-WGJets_muF1, 0.0, 0.0, 0.0
-WGJets_muRmuF, 0.0, 0.0, 0.0
