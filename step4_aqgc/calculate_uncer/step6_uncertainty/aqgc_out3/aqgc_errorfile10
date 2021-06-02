@@ -1,4 +1,0 @@
-WARNING: In non-interactive mode release checks e.g. deprecated releases, production architectures are disabled.
-Error in <TSystem::ExpandFileName>: input: $HOME/.root.mimes, output: $HOME/.root.mimes
-Warning in <TClass::Init>: no dictionary for class ROOT::TIOFeatures is available
-cp: cannot create directory `/data/pku/home/pengj/testvbs/analysis/analysis2018/step4_aqgc/calculate_uncer/step6_uncertainty/aqgc_out3/test_aqgc1': File exists
