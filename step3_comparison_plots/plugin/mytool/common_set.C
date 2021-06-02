@@ -1,51 +1,55 @@
 using namespace std;
+   Double_t eff_b_jet_tight[10]  =  {0.364617, 0.486436, 0.547392, 0.569581, 0.571089, 0.549325, 0.472031, 0.302929, 0.083657, 0.0132275};
+   Double_t eff_b_jet_medium[10] = {0.550703, 0.655257, 0.708018, 0.733123, 0.743445, 0.73445, 0.685051, 0.559069, 0.337587, 0.156085};
+   Double_t eff_b_jet_loose[10] =  {0.747759, 0.817121, 0.85459, 0.876767, 0.891093, 0.894935, 0.880487, 0.835978, 0.761482, 0.655203};
 
-   Double_t eff_b_jet_tight[10]  =  {0.375338, 0.493779, 0.553314, 0.575056, 0.579706, 0.563553, 0.491523, 0.327807, 0.105522, 0.0292929};
-   Double_t eff_b_jet_medium[10] = {0.565127, 0.663282, 0.714194, 0.737916, 0.750325, 0.745599, 0.701239, 0.590619, 0.390365, 0.216667};
-   Double_t eff_b_jet_loose[10] =  {0.753404, 0.813243, 0.850107, 0.87129, 0.88806, 0.89424, 0.881965, 0.846197, 0.798682, 0.70404};
-   Double_t eff_c_jet_tight[10]  =  {0.0178263, 0.0219464, 0.0242307, 0.0269731, 0.0299322, 0.0316588, 0.0287384, 0.0180558, 0.00498598, 0.00366972};
-   Double_t eff_c_jet_medium[10] = {0.120439, 0.128175, 0.130494, 0.13781, 0.14765, 0.154195, 0.146221, 0.120963, 0.0666874, 0.0311927};
-   Double_t eff_c_jet_loose[10] =  {0.392685, 0.415126, 0.42917, 0.445494, 0.462387, 0.473021, 0.461477, 0.451609, 0.421237, 0.348624};
-   Double_t eff_l_jet_tight[10]  =  {0.00115722, 0.000821689, 0.000900955, 0.00110315, 0.0014241, 0.00181297, 0.0020553, 0.00198708, 0.000801618, 0};
-   Double_t eff_l_jet_medium[10] = {0.00904002, 0.00806116, 0.00810405, 0.00924306, 0.0113922, 0.0137251, 0.0159489, 0.0189461, 0.0130992, 0.004265};
-   Double_t eff_l_jet_loose[10] =  {0.125149, 0.0924003, 0.0847756, 0.0946918, 0.113998, 0.134914, 0.15921, 0.19733, 0.229773, 0.206426};
-   ifstream fin("./scalef/jet/DeepCSV_102XSF_WP_V1.csv");
+   Double_t eff_c_jet_tight[10]  =  {0.0153558, 0.0200096, 0.0227714, 0.0253193, 0.0274522, 0.0289083, 0.0250352, 0.0149095, 0.00344508, 0.00315457};
+   Double_t eff_c_jet_medium[10] = {0.100341, 0.111135, 0.115312, 0.123547, 0.132176, 0.137718, 0.12915, 0.102925, 0.0532662, 0.022082};
+   Double_t eff_c_jet_loose[10] =  {0.382709, 0.419236, 0.431463, 0.44594, 0.460301, 0.46941, 0.454488, 0.433304, 0.384656, 0.274448};
 
-   TFile * pu_weight_input = new TFile ("./scalef/puweight_2018.root");
+   Double_t eff_l_jet_tight[10]  =  {0.00106936, 0.000838236, 0.000886369, 0.00103145, 0.00125678, 0.0015645, 0.00162616, 0.00144056, 0.000416533, 0};
+   Double_t eff_l_jet_medium[10] = {0.0073096, 0.00782829, 0.00801778, 0.00894073, 0.0105117, 0.0122973, 0.0130844, 0.0131463, 0.00887536, 0.00256148};
+   Double_t eff_l_jet_loose[10] =  {0.0951708, 0.0892728, 0.0866658, 0.0965049, 0.112411, 0.131063, 0.15024, 0.173086, 0.179398, 0.170082};
+
+   ifstream fin("./scalef/jet/DeepCSV_94XSF_WP_V4_B_F.csv");
+
+   TFile * pu_weight_input = new TFile ("./scalef/pileup/puweight2017.root");
    TH1D* h_pu_weight = (TH1D*)pu_weight_input->Get("h2");
-   TFile * pu_weight_up_input = new TFile ("./scalef/puweight_2018.root");
-   TH1D* h_pu_weight_up = (TH1D*)pu_weight_input->Get("h2");
-   TFile * pu_weight_down_input = new TFile ("./scalef/puweight_2018.root");
-   TH1D* h_pu_weight_down = (TH1D*)pu_weight_input->Get("h2");
+   TFile * pu_weight_up_input = new TFile ("./scalef/pileup/puweight2017_up.root");
+   TH1D* h_pu_weight_up = (TH1D*)pu_weight_up_input->Get("h2");
+   TFile * pu_weight_down_input = new TFile ("./scalef/pileup/puweight2017_down.root");
+   TH1D* h_pu_weight_down = (TH1D*)pu_weight_down_input->Get("h2");
 
    // photon medium ID weight
-   TFile * photon_ID_weight_input = new TFile ("./scalef/photon/2018_PhotonsMedium.root");
-   TH2D* h_photon_ID_weight = (TH2D*)photon_ID_weight_input->Get("EGamma_SF2D");
+   TFile * photon_ID_weight_input = new TFile ("./scalef/photon/2017_PhotonsMedium.root");
+   TH2D * h_photon_ID_weight = (TH2D*)photon_ID_weight_input->Get("EGamma_SF2D");
 
    // muon HLT weight
-   TFile * muon_HLT_weight_input = new TFile ("./scalef/muon/EfficienciesAndSF_2018Data_AfterMuonHLTUpdate.root");
-   TDirectory * muon_HLT_weight_dir  = (TDirectory*)muon_HLT_weight_input->Get("IsoMu24_PtEtaBins");
-   TH2D* h_muon_HLT_weight = (TH2D*)muon_HLT_weight_dir->Get("abseta_pt_ratio");
+   TFile * muon_HLT_weight_input = new TFile ("./scalef/muon/EfficienciesAndSF_RunBtoF_Nov17Nov2017.root");
+   TDirectory * muon_HLT_weight_dir  = (TDirectory*)muon_HLT_weight_input->Get("IsoMu27_PtEtaBins");
+   TH2D * h_muon_HLT_weight = (TH2D*)muon_HLT_weight_dir->Get("abseta_pt_ratio");
 
    // muon ID weight
-   TFile * muon_ID_weight_input = new TFile ("./scalef/muon/RunABCD_SF_ID.root");
-   TH2D* h_muon_ID_weight = (TH2D*)muon_ID_weight_input->Get("NUM_TightID_DEN_TrackerMuons_pt_abseta");
+   TFile * muon_ID_weight_input = new TFile ("./scalef/muon/RunBCDEF_SF_ID.root");
+   TH2D * h_muon_ID_weight = (TH2D*)muon_ID_weight_input->Get("NUM_TightID_DEN_genTracks_pt_abseta");
 
-   // muon iso scale
-   TFile * muon_iso_weight_input = new TFile ("./scalef/muon/RunABCD_SF_ISO.root");
-   TH2D* h_muon_iso_weight = (TH2D*)muon_iso_weight_input->Get("NUM_TightRelIso_DEN_TightIDandIPCut_pt_abseta");
+   // muon iso weight
+   TFile * muon_iso_weight_input = new TFile ("./scalef/muon/RunBCDEF_SF_ISO.root");
+   TH2D * h_muon_iso_weight = (TH2D*)muon_iso_weight_input->Get("NUM_TightRelIso_DEN_TightIDandIPCut_pt_abseta");
 
-   // electron reco scale
-   TFile * electron_reco_weight_input = new TFile ("./scalef/electron/EGM2D_electron_Reco.root");
-   TH2D* h_electron_reco_weight = (TH2D*)electron_reco_weight_input->Get("EGamma_SF2D");
+   // electron reco weight
+   TFile * electron_reco_weight_input = new TFile ("./scalef/electron/egammaEffi.txt_EGM2D_runBCDEF_passingRECO.root");
+   TH2D * h_electron_reco_weight = (TH2D*)electron_reco_weight_input->Get("EGamma_SF2D");
 
-   // electron ID scale
-   TFile * electron_ID_weight_input = new TFile ("./scalef/electron/2018_ElectronTight.root");
-   TH2D* h_electron_ID_weight = (TH2D*)electron_ID_weight_input->Get("EGamma_SF2D");
+   // electron ID weight
+   TFile * electron_ID_weight_input = new TFile ("./scalef/electron/2017_ElectronTight.root");
+   TH2D * h_electron_ID_weight = (TH2D*)electron_ID_weight_input->Get("EGamma_SF2D");
 
-   // electron HLT scale
-   TFile * electron_HLT_weight_input = new TFile ("./scalef/electron/2018_egamma_hlt_sf.root");
-   TH2D* h_electron_HLT_weight = (TH2D*)electron_HLT_weight_input->Get("EGamma_SF2D");
+
+   // electron HLT weight
+   TFile * electron_HLT_weight_input = new TFile ("./scalef/electron/2017_egamma_hlt_sf.root");
+   TH2D * h_electron_HLT_weight = (TH2D*)electron_HLT_weight_input->Get("EGamma_SF2D");
+
 
    // data driven
    // fake lepton weight

@@ -32,7 +32,7 @@ def read_hist(h_name, tmp_hist, indir, which_year, which_channel, which_type, wh
     infilename= indir + "/" + which_year + "_" + which_channel +  "_" + which_type + "_" + which_region + "_"+barrel_or_endcap+"_" + which_sample + ".root"
     f_in = TFile.Open(infilename)
     hist       = f_in.Get(h_name)
-    hist.Print()
+    #hist.Print()
     binEdge_arr = array('d')
     binEdge_arr.append(hist.GetXaxis().GetBinLowEdge(1))
     for i in range(hist.GetNbinsX()):
@@ -129,7 +129,8 @@ fPads2.Draw();
 
 #cv.SetLogy()
 hs = THStack(" ", " ")
-hmc = TH1D()
+hmc = h[1].Clone()
+hmc.Reset()
 for i in range(len(h) - 1):
     #ii = 15 - i
     hs.Add(h[i])
@@ -221,7 +222,7 @@ hs.GetYaxis().SetTickLength(0.02)
 hs.GetYaxis().SetTitleOffset(1.2)
 hs.GetXaxis().SetTitleOffset(1.3)
 hs.GetXaxis().SetLabelSize(0.0)
-hs.GetXaxis().SetTitle("M_{jj} [GeV]")   
+#hs.GetXaxis().SetTitle("M_{jj} [GeV]")   
 
 bin_width_signal = ['500', '600', '700', '1000', 'inf']
 bin_width_control = ['200', '300', '400', '500']
@@ -254,13 +255,15 @@ fPads2.SetGridx()
 
 divide = TH1D()
 if expect_or_observe == 'expect':
-    divide = hmc
+    divide = hmc.Clone()
 else : 
-    divide = h[15]
+    divide = h[15].Clone()
 divide.Divide(hmc);
+#hmc.Print("all")
+
 divide.SetTitle("");
 divide.SetStats(0);
-divide.SetLineColor(9);
+divide.SetLineColor(1);
 divide.SetLineWidth(1);
 divide.GetYaxis().SetTitle("Data/MC");
 divide.GetYaxis().CenterTitle();
@@ -280,6 +283,7 @@ divide.SetMarkerSize(0.8);
 
 #divide.GetXaxis().SetLabelSize(0.13)
 divide.Draw("p ");
+#divide.Print("all")
 xlow  = divide.GetXaxis().GetXmin();
 xhigh = divide.GetXaxis().GetXmax();
 f1 = TF1("f1","1",-500,500);

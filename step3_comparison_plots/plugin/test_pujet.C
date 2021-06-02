@@ -688,10 +688,10 @@ void test::Loop(TDirectory * dir, TTree * tree)
    TTreeReaderArray<Double_t>    genjet_phi  = {fReader, "genjet_phi"};
    TTreeReaderArray<Double_t>    genjet_e  = {fReader, "genjet_e"};
 
-//   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
+   TTreeReaderValue<Double_t>    prefWeight  = {fReader, "prefWeight"};
 
-  // TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
-  // TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
+   TTreeReaderValue<Double_t>    prefWeightUp  = {fReader, "prefWeightUp"};
+   TTreeReaderValue<Double_t>    prefWeightDown  = {fReader, "prefWeightDown"};
 
    Long64_t maxEntries = fReader.GetEntries(false);
    cout << "Number of events to be analyzed : " << maxEntries << std::endl;
@@ -817,7 +817,7 @@ void test::Loop(TDirectory * dir, TTree * tree)
          fill_jet2phi_JER_down    = (*jet2phi_JER_down);
 
          fill_lep                 = (*lep);
-         fill_HLT_muon            = (*HLT_Mu2);
+         fill_HLT_muon            = (*HLT_Mu3);
          fill_HLT_electron        = (*HLT_Ele2);
          fill_ptlep1              = (*ptlep1);
          fill_etalep1             = (*etalep1);
@@ -1056,7 +1056,7 @@ photonp42.Delete();
          fill_jet2phi_JER_down    = (*jet2phi_JER_down_f);
 
          fill_lep                 = (*lep);
-         fill_HLT_muon            = (*HLT_Mu2);
+         fill_HLT_muon            = (*HLT_Mu3);
          fill_HLT_electron        = (*HLT_Ele2);
          fill_ptlep1              = (*ptlep1);
          fill_etalep1             = (*etalep1);
@@ -1320,7 +1320,7 @@ photonp42.Delete();
       // init all SF
       init_sf();
       // cross section SF
-      if(m_sample == "WGJJ")          { cross_section_SF=1000.*0.5439   *fabs(*theWeight)/(*theWeight); }
+      if(m_sample == "WGJJ")          { cross_section_SF=1000.*0.776   *fabs(*theWeight)/(*theWeight); }
       if(m_sample == "WGJets")        { cross_section_SF=1000.*192.3    *fabs(*theWeight)/(*theWeight); }
       if(m_sample == "W0Jets")        { cross_section_SF=1000.*55971.0  *fabs(*theWeight)/(*theWeight); }
       if(m_sample == "W1Jets")        { cross_section_SF=1000.*6942.0   *fabs(*theWeight)/(*theWeight); }
@@ -1392,83 +1392,83 @@ photonp42.Delete();
 //cout<<"memory: "<<physical_memory_used_by_process()<<endl;
 
          pu_jet1_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "center");
-         pu_jet1_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
-         pu_jet1_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
+         //pu_jet1_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
+         //pu_jet1_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
 
-         pu_jet1_JEC_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_up, fill_jet1phi_JEC_up, fill_jet1pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_up, "center");
-         pu_jet1_JEC_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_down, fill_jet1phi_JEC_down, fill_jet1pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_down, "center");
-         pu_jet1_JER_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_up, fill_jet1phi_JER_up, fill_jet1pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_up, "center");
-         pu_jet1_JER_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_down, fill_jet1phi_JER_down, fill_jet1pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_down, "center");
+         //pu_jet1_JEC_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_up, fill_jet1phi_JEC_up, fill_jet1pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_up, "center");
+         //pu_jet1_JEC_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_down, fill_jet1phi_JEC_down, fill_jet1pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_down, "center");
+         //pu_jet1_JER_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_up, fill_jet1phi_JER_up, fill_jet1pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_up, "center");
+         //pu_jet1_JER_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_down, fill_jet1phi_JER_down, fill_jet1pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_down, "center");
 
          pu_jet2_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "center");
-         pu_jet2_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "up");
-         pu_jet2_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "down");
+         //pu_jet2_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "up");
+         //pu_jet2_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "down");
 
-         pu_jet2_JEC_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_up, fill_jet2phi_JEC_up, fill_jet2pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_up, "center");
-         pu_jet2_JEC_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
-         pu_jet2_JER_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
-         pu_jet2_JER_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
+         //pu_jet2_JEC_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_up, fill_jet2phi_JEC_up, fill_jet2pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_up, "center");
+         //pu_jet2_JEC_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
+         //pu_jet2_JER_up_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
+         //pu_jet2_JER_down_SF = get_puIdweight_eff_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
 
          pu_jet1_mistag_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "center");
-         pu_jet1_mistag_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
-         pu_jet1_mistag_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
+         //pu_jet1_mistag_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "up");
+         //pu_jet1_mistag_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet1eta_new, *jet1phi_new, *jet1pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId, "down");
 
-         pu_jet1_mistag_JEC_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_up, fill_jet1phi_JEC_up, fill_jet1pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_up, "center");
-         pu_jet1_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_down, fill_jet1phi_JEC_down, fill_jet1pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_down, "center");
-         pu_jet1_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_up, fill_jet1phi_JER_up, fill_jet1pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_up, "center");
-         pu_jet1_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_down, fill_jet1phi_JER_down, fill_jet1pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_down, "center");
+         //pu_jet1_mistag_JEC_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_up, fill_jet1phi_JEC_up, fill_jet1pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_up, "center");
+         //pu_jet1_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JEC_down, fill_jet1phi_JEC_down, fill_jet1pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JEC_down, "center");
+         //pu_jet1_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_up, fill_jet1phi_JER_up, fill_jet1pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_up, "center");
+         //pu_jet1_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet1eta_JER_down, fill_jet1phi_JER_down, fill_jet1pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet1puId_JER_down, "center");
 
          pu_jet2_mistag_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "center");
-         pu_jet2_mistag_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "up");
-         pu_jet2_mistag_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "down");
+         //pu_jet2_mistag_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "up");
+         //pu_jet2_mistag_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, *jet2eta_new, *jet2phi_new, *jet2pt_new, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId, "down");
 
-         pu_jet2_mistag_JEC_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_up, fill_jet2phi_JEC_up, fill_jet2pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_up, "center");
-         pu_jet2_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
-         pu_jet2_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
-         pu_jet2_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
+         //pu_jet2_mistag_JEC_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_up, fill_jet2phi_JEC_up, fill_jet2pt_JEC_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_up, "center");
+         //pu_jet2_mistag_JEC_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JEC_down, fill_jet2phi_JEC_down, fill_jet2pt_JEC_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JEC_down, "center");
+         //pu_jet2_mistag_JER_up_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_up, fill_jet2phi_JER_up, fill_jet2pt_JER_up, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_up, "center");
+         //pu_jet2_mistag_JER_down_SF = get_puIdweight_mistag_SF(fill_genjet_eta, fill_genjet_phi, fill_jet2eta_JER_down, fill_jet2phi_JER_down, fill_jet2pt_JER_down, h2_eff_mc2017_T, h2_eff_sf2017_T, h2_eff_sf2017_T_Systuncty, fill_jet2puId_JER_down, "center");
 
          double JET1DEEPCSV      = (*jet1deepcsv_probb_new) + (*jet1deepcsv_probbb_new);
          double JET2DEEPCSV      = (*jet2deepcsv_probb_new) + (*jet2deepcsv_probbb_new);
 
          //test
          btag_jet1_SF     = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet1_up_SF  = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet1_low_SF = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
+         //btag_jet1_up_SF  = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet1_low_SF = btag_SF(*jet1pt_new, *jet1eta_new, *jet1pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
 //cout<<btag_jet1_SF<<" "<<btag_jet1_up_SF<<" "<<btag_jet1_low_SF<<endl;
 
-         btag_jet1_SF_JEC_up     = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_SF_JEC_up     = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet1_up_SF_JEC_up  = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet1_low_SF_JEC_up = btag_SF(fill_jet1pt_JEC_up, fill_jet1eta_JEC_up, fill_jet1pf_JEC_up, fill_jet1deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet1_SF_JEC_down     = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_SF_JEC_down     = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet1_up_SF_JEC_down  = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet1_low_SF_JEC_down = btag_SF(fill_jet1pt_JEC_down, fill_jet1eta_JEC_down, fill_jet1pf_JEC_down, fill_jet1deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet1_SF_JER_up     = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_SF_JER_up     = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet1_up_SF_JER_up  = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet1_low_SF_JER_up = btag_SF(fill_jet1pt_JER_up, fill_jet1eta_JER_up, fill_jet1pf_JER_up, fill_jet1deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet1_SF_JER_down     = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet1_SF_JER_down     = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet1_up_SF_JER_down  = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet1_low_SF_JER_down = btag_SF(fill_jet1pt_JER_down, fill_jet1eta_JER_down, fill_jet1pf_JER_down, fill_jet1deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "low");
 
          btag_jet2_SF     = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "central");
-         btag_jet2_up_SF  = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
-         btag_jet2_low_SF = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
+         //btag_jet2_up_SF  = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "up");
+         //btag_jet2_low_SF = btag_SF(*jet2pt_new, *jet2eta_new, *jet2pf, JET1DEEPCSV, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet2_SF_JEC_up     = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_SF_JEC_up     = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet2_up_SF_JEC_up  = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet2_low_SF_JEC_up = btag_SF(fill_jet2pt_JEC_up, fill_jet2eta_JEC_up, fill_jet2pf_JEC_up, fill_jet2deepcsv_JEC_up, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet2_SF_JEC_down     = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_SF_JEC_down     = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet2_up_SF_JEC_down  = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet2_low_SF_JEC_down = btag_SF(fill_jet2pt_JEC_down, fill_jet2eta_JEC_down, fill_jet2pf_JEC_down, fill_jet2deepcsv_JEC_down, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet2_SF_JER_up     = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_SF_JER_up     = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet2_up_SF_JER_up  = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet2_low_SF_JER_up = btag_SF(fill_jet2pt_JER_up, fill_jet2eta_JER_up, fill_jet2pf_JER_up, fill_jet2deepcsv_JER_up, btag_cut_value, m_btag_workpoint, "low");
 
-         btag_jet2_SF_JER_down     = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
+         //btag_jet2_SF_JER_down     = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "central");
          //btag_jet2_up_SF_JER_down  = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "up");
          //btag_jet2_low_SF_JER_down = btag_SF(fill_jet2pt_JER_down, fill_jet2eta_JER_down, fill_jet2pf_JER_down, fill_jet2deepcsv_JER_down, btag_cut_value, m_btag_workpoint, "low");
 
@@ -1664,84 +1664,106 @@ photonp42.Delete();
             }
          }
          else if(m_type == "mc") {
-            weight =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_pileup_up =  cross_section_SF * pu_weight_up_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_pileup_down =  cross_section_SF * pu_weight_down_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pileup_up =  (*prefWeightUp) * cross_section_SF * pu_weight_up_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pileup_down =  (*prefWeightDown) * cross_section_SF * pu_weight_down_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_L1_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_L1_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_L1_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_L1_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_photon_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_up_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_photon_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_low_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_photon_ID_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_up_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_photon_ID_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_low_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_electron_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_up_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_electron_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_low_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_ID_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_up_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_ID_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_low_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_electron_Reco_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_up_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_electron_Reco_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_low_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_Reco_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_up_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_Reco_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_low_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_electron_HLT_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_up_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_electron_HLT_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_low_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_HLT_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_up_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_electron_HLT_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_low_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
 
-            weight_muon_ID_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_up_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_muon_ID_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_low_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_ID_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_up_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_ID_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_low_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_muon_iso_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_up_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_muon_iso_down =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_low_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_iso_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_up_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_iso_down =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_low_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_muon_HLT_up =  cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_up_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_muon_HLT_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_low_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_HLT_up =  (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_up_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_muon_HLT_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_low_SF * btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_btag_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_up_SF * btag_jet2_up_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_btag_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_low_SF * btag_jet2_low_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_btag_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_up_SF * btag_jet2_up_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_btag_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_low_SF * btag_jet2_low_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_pujet_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_up_SF * pu_jet2_up_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
-            weight_pujet_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_down_SF * pu_jet2_down_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pujet_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_up_SF * pu_jet2_up_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
+            weight_pujet_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_down_SF * pu_jet2_down_SF * pu_jet1_mistag_SF * pu_jet2_mistag_SF;
 
-            weight_pujet_mistag_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_up_SF * pu_jet2_mistag_up_SF;
-            weight_pujet_mistag_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_down_SF * pu_jet2_mistag_down_SF;
+            weight_pujet_mistag_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_up_SF * pu_jet2_mistag_up_SF;
+            weight_pujet_mistag_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF * btag_jet2_SF * pu_jet1_SF * pu_jet2_SF * pu_jet1_mistag_down_SF * pu_jet2_mistag_down_SF;
 
-            weight_jec_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_up * btag_jet2_SF_JEC_up * pu_jet1_JEC_up_SF * pu_jet2_JEC_up_SF * pu_jet1_mistag_JEC_up_SF * pu_jet2_mistag_JEC_up_SF;
-            weight_jec_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_down * btag_jet2_SF_JEC_down * pu_jet1_JEC_down_SF * pu_jet2_JEC_down_SF * pu_jet1_mistag_JEC_down_SF * pu_jet2_mistag_JEC_down_SF;
-            weight_jer_up = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_up * btag_jet2_SF_JER_up * pu_jet1_JER_up_SF * pu_jet2_JER_up_SF * pu_jet1_mistag_JER_up_SF * pu_jet2_mistag_JER_up_SF;
-            weight_jer_down = cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_down * btag_jet2_SF_JER_down * pu_jet1_JER_down_SF * pu_jet2_JER_down_SF * pu_jet1_mistag_JER_down_SF * pu_jet2_mistag_JER_down_SF;
+            weight_jec_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_up * btag_jet2_SF_JEC_up * pu_jet1_JEC_up_SF * pu_jet2_JEC_up_SF * pu_jet1_mistag_JEC_up_SF * pu_jet2_mistag_JEC_up_SF;
+            weight_jec_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JEC_down * btag_jet2_SF_JEC_down * pu_jet1_JEC_down_SF * pu_jet2_JEC_down_SF * pu_jet1_mistag_JEC_down_SF * pu_jet2_mistag_JEC_down_SF;
+            weight_jer_up = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_up * btag_jet2_SF_JER_up * pu_jet1_JER_up_SF * pu_jet2_JER_up_SF * pu_jet1_mistag_JER_up_SF * pu_jet2_mistag_JER_up_SF;
+            weight_jer_down = (*prefWeight) * cross_section_SF * pu_weight_SF * photon_ID_SF * electron_ID_SF * electron_Reco_SF * electron_HLT_SF *muon_ID_SF * muon_iso_SF * muon_HLT_SF*btag_jet1_SF_JER_down * btag_jet2_SF_JER_down * pu_jet1_JER_down_SF * pu_jet2_JER_down_SF * pu_jet1_mistag_JER_down_SF * pu_jet2_mistag_JER_down_SF;
+
 
          }
+            if (fill_nVtx>50)            fill_nVtx = 49.5;
+            if (fill_ptlep1>200.0)       fill_ptlep1 = 199.0;
+            //if (fabs(fill_etalep1)>2.4) fill_etalep1 = 2.399;
+            if (fill_mtVlepJECnew>150.0) fill_mtVlepJECnew = 149.0;
+            if (fill_ptVlepJEC>200.0)    fill_ptVlepJEC = 199.0;
+            if (fill_photonet>200.0)     fill_photonet = 199.0;
+            //if (fabs(fill_photoneta)>2.5) fill_photoneta = 2.499;
+            if (fill_jet1pt>300)         fill_jet1pt = 299.;
+            //if (fabs(fill_jet1eta)>5.0) fill_jet1eta = 4.99;
+            if (fill_jet2pt>300)         fill_jet2pt = 299.;
+            //if (fabs(fill_jet2eta)>5.0) fill_jet2eta = 4.99;
+            if (fill_zepp>5.0)           fill_zepp = 4.99;
+            if (fill_deltaeta>5.0)       fill_deltaeta = 4.99;
+            if (fill_MET_et>200.0)        fill_MET_et = 199.9;
+            if (fill_Dphiwajj>3.2)       fill_Dphiwajj = 3.1999;
+            if (fill_Mla>200.)           fill_Mla = 199;
+            if (fill_Mjj>1200.)          fill_Mjj = 1199.;
 
-            double fill_var = fill_Mva;
-            double fill_var_jecr[4] = {fill_Mva_JEC_up, fill_Mva_JEC_down, fill_Mva_JER_up, fill_Mva_JER_down};
-            double fill_weight[length] = {weight, weight_pileup_up, weight_pileup_down, weight_L1_up, weight_L1_down, weight_photon_ID_up, weight_photon_ID_down, weight_electron_ID_up, weight_electron_ID_down, weight_electron_Reco_up, weight_electron_Reco_down, weight_electron_HLT_up, weight_electron_HLT_down, weight_muon_ID_up, weight_muon_ID_down, weight_muon_iso_up, weight_muon_iso_down, weight_muon_HLT_up, weight_muon_HLT_down, weight_fakephoton_up, weight_fakephoton_down, weight_btag_up, weight_btag_down, weight_pujet_up, weight_pujet_down, weight_pujet_mistag_up, weight_pujet_mistag_down, weight_fakelepton_up, weight_fakelepton_down};//cout<<weight<<" "<<weight_pujet_up<<" "<<weight_pujet_down<<" "<<weight_pujet_mistag_up<<" "<<weight_pujet_mistag_down<<endl;
+
+            double fill_var[18] = {fill_nVtx, fill_ptlep1, fill_etalep1, fill_mtVlepJECnew, fill_ptVlepJEC, fill_photonet, fill_photoneta, fill_photonsceta, fill_jet1pt, fill_jet1eta, fill_jet2pt, fill_jet2eta, fill_Mjj, fill_zepp, fill_deltaeta, fill_MET_et, fill_Dphiwajj, fill_Mla};
+            //double fill_var_jecr[4] = {fill_Mva_JEC_up, fill_Mva_JEC_down, fill_Mva_JER_up, fill_Mva_JER_down};
+
+            //double fill_weight[length] = {weight, weight_pileup_up, weight_pileup_down, weight_L1_up, weight_L1_down, weight_photon_ID_up, weight_photon_ID_down, weight_electron_ID_up, weight_electron_ID_down, weight_electron_Reco_up, weight_electron_Reco_down, weight_electron_HLT_up, weight_electron_HLT_down, weight_muon_ID_up, weight_muon_ID_down, weight_muon_iso_up, weight_muon_iso_down, weight_muon_HLT_up, weight_muon_HLT_down, weight_fakephoton_up, weight_fakephoton_down, weight_btag_up, weight_btag_down, weight_pujet_up, weight_pujet_down, weight_pujet_mistag_up, weight_pujet_mistag_down, weight_fakelepton_up, weight_fakelepton_down};//cout<<weight<<" "<<weight_pujet_up<<" "<<weight_pujet_down<<" "<<weight_pujet_mistag_up<<" "<<weight_pujet_mistag_down<<endl;
 
 
-            double fill_weight_jecr[4] = { weight_jec_up, weight_jec_down, weight_jer_up, weight_jer_down};
+            //double fill_weight_jecr[4] = { weight_jec_up, weight_jec_down, weight_jer_up, weight_jer_down};
 
 
             if(cut1){ 
-               for(int k2 = 0; k2<400; k2++){
-                  fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
-               }
-
+/*
+                 h[0]->Fill(fill_nVtx, weight);
+                 h[1]->Fill(fill_ptlep1, weight);
+                 h[2]->Fill(fill_etalep1, weight);
+                 h[3]->Fill(fill_mtVlepJECnew, weight);
+                 h[4]->Fill(fill_ptVlepJEC, weight);
+                 h[5]->Fill(fill_photonet, weight);
+                 h[6]->Fill(fill_photoneta, weight);
+                 h[7]->Fill(fill_photonsceta, weight);
+                 h[8]->Fill(fill_jet1pt, weight);
+                 h[9]->Fill(fill_jet1eta, weight);
+                 h[10]->Fill(fill_jet2pt, weight);
+                 h[11]->Fill(fill_jet2eta, weight);
+                 h[12]->Fill(fill_Mjj, weight);
+                 h[13]->Fill(fill_zepp, weight);
+                 h[14]->Fill(fill_deltaeta, weight);
+                 h[15]->Fill(fill_MET_et, weight);
+                 h[16]->Fill(fill_Dphiwajj, weight);
+                 h[17]->Fill(fill_Mla, weight);
+*/
                for(int j = 0; j<length; j++){
-                  fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
+                  h[j]->Fill(fill_var[j], weight);
+
+                  //fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
                }
-            }
-            if (cut2) {
-               fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
-
-            }
-            if (cut3) {
-               fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
-
-            }
-            if (cut4) {
-               fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_jecr[2], fill_weight_jecr[2]);
-
-            }
-            if (cut5) {
-               fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_jecr[3], fill_weight_jecr[3]);
-
             }
 
 

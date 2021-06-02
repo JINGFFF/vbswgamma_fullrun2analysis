@@ -58,33 +58,33 @@ void creat_hist(TString region){
       BINS[xx] = bins[i][xx];
    }
 
-   h[0] = new TH1D("nVtx", "nVtx", 50, 0, 50);
+   h[0] = new TH1D("nVtx", "nVtx", 25, 0, 50);
    h[1] = new TH1D("ptlep1", "ptlep1", 25, 0.0, 200.0);
-   h[2] = new TH1D("etalep1", "etalep1", 50, -2.4, 2.4);
-   h[3] = new TH1D("mtVlepJECnew", "mtVlepJECnew", 30, 30.0, 150.0);
-   h[4] = new TH1D("ptVlepJEC", "ptVlepJEC", 50, 0.0, 200.0);
-   h[5] = new TH1D("photonet", "photonet", 50, 30.0, 200.0);
-   h[6] = new TH1D("photoneta", "photoneta", 50, -2.5, 2.5);
-   h[7] = new TH1D("photonsceta", "photonsceta", 50, -2.5, 2.5);
-   h[8] = new TH1D("jet1pt", "jet1pt", 50, 40.0, 300.0);
-   h[9] = new TH1D("jet1eta", "jet1eta", 50, -5.0, 5.0);
-   h[10] = new TH1D("jet2pt", "jet2pt", 50, 30.0, 200.0);
-   h[11] = new TH1D("jet2eta", "jet2eta", 50, -5.0, 5.0);
-   //h[12] = new TH1D("Mjj", "Mjj", 30, 200., 400.);
-   h[13] = new TH1D("zepp", "zepp", 50, 0.0, 5.0);
-   h[14] = new TH1D("deltaeta", "deltaeta", 50, 0.5, 5.0);
-   h[15] = new TH1D("MET_et", "MET_et", 50, 50.0, 200.0);
-   h[16] = new TH1D("Dphiwajj", "Dphiwajj", 50, 0.0, 3.2);
-   h[17] = new TH1D("Mla", "Mla", 50, 0.0, 200);
+   h[2] = new TH1D("etalep1", "etalep1", 25, -2.4, 2.4);
+   h[3] = new TH1D("mtVlepJECnew", "mtVlepJECnew", 25, 30.0, 150.0);
+   h[4] = new TH1D("ptVlepJEC", "ptVlepJEC", 25, 0.0, 200.0);
+   h[5] = new TH1D("photonet", "photonet", 25, 30.0, 200.0);
+   h[6] = new TH1D("photoneta", "photoneta", 25, -2.5, 2.5);
+   h[7] = new TH1D("photonsceta", "photonsceta", 25, -2.5, 2.5);
+   h[8] = new TH1D("jet1pt", "jet1pt", 25, 40.0, 300.0);
+   h[9] = new TH1D("jet1eta", "jet1eta", 25, -5.0, 5.0);
+   h[10] = new TH1D("jet2pt", "jet2pt", 25, 30.0, 200.0);
+   h[11] = new TH1D("jet2eta", "jet2eta", 25, -5.0, 5.0);
+   //h[12] = new TH1D("Mjj", "Mjj", 25, 200., 500.);
+   h[13] = new TH1D("zepp", "zepp", 25, 0.0, 5.0);
+   h[14] = new TH1D("deltaeta", "deltaeta", 25, 0.5, 5.0);
+   h[15] = new TH1D("MET_et", "MET_et", 25, 50.0, 200.0);
+   h[16] = new TH1D("Dphiwajj", "Dphiwajj", 25, 0.0, 3.2);
+   h[17] = new TH1D("Mla", "Mla", 25, 0.0, 200);
 
    if(region == "signal") {
-      h[12] = new TH1D("Mjj", "Mjj", 30, 500., 1200.);
+      h[12] = new TH1D("Mjj", "Mjj", 25, 500., 1200.);
 
    }
 
 
    if(region == "control") {
-      h[12] = new TH1D("Mjj", "Mjj", 30, 200., 500.);
+      h[12] = new TH1D("Mjj", "Mjj", 25, 200., 500.);
    }
 
 }
