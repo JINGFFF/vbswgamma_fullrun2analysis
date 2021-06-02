@@ -16,7 +16,7 @@ outputdir            = sys.argv[6]
 os.system("mkdir -p " + outputdir)
 
 f_in_data   = TFile.Open(data_pt_distribution)
-f_in_fake   = TFile.Open(data_pt_distribution)
+f_in_fake   = TFile.Open(fake_pt_distribution)
 
 f_in_1   = TFile.Open(fake_fraction)
 f_in_2   = TFile.Open(sideband_uncer)
@@ -27,6 +27,9 @@ data_barrel = f_in_data.Get("barrel_photonpt")
 data_endcap = f_in_data.Get("endcap_photonpt")
 fake_barrel = f_in_fake.Get("barrel_photonpt")
 fake_endcap = f_in_fake.Get("endcap_photonpt")
+data_barrel.Print("all")
+fake_barrel.Print("all")
+
 
 # fake photon fraction
 hist_fraction_barrel = f_in_1.Get("barrel_fraction")
@@ -103,10 +106,8 @@ for i in range(barrel_fake_photon_weight.GetNbinsX()) :
     uncer_endcap_sideband.append(tmp_uncer_endcap_sideband)
 
     # weight
-    barrel_fake_photon_weight.SetBinContent(i+1, data_barrel.GetBinContent(i+1) * \
-                              hist_fraction_barrel.GetBinContent(i+1) / fake_barrel.GetBinContent(i+1) )
-    endcap_fake_photon_weight.SetBinContent(i+1, data_endcap.GetBinContent(i+1) * \
-                              hist_fraction_endcap.GetBinContent(i+1) / fake_endcap.GetBinContent(i+1) )
+    barrel_fake_photon_weight.SetBinContent(i+1, data_barrel.GetBinContent(i+1) * hist_fraction_barrel.GetBinContent(i+1) / fake_barrel.GetBinContent(i+1) )
+    endcap_fake_photon_weight.SetBinContent(i+1, data_endcap.GetBinContent(i+1) * hist_fraction_endcap.GetBinContent(i+1) / fake_endcap.GetBinContent(i+1) )
     # weight up
     barrel_fake_photon_weight_up.SetBinContent(i+1, (1 + tmp_uncer_barrel) * data_barrel.GetBinContent(i+1) * \
                               hist_fraction_barrel.GetBinContent(i+1) / fake_barrel.GetBinContent(i+1) )

@@ -1,0 +1,68 @@
+000 (1041971.000.000) 04/28 19:50:39 Job submitted from host: <202.38.140.107:9618?addrs=202.38.140.107-9618&noUDP&sock=5097_f412>
+...
+001 (1041971.000.000) 04/28 19:50:58 Job executing on host: <192.168.1.3:9618?addrs=192.168.1.3-9618&noUDP&sock=69109_eb16_3>
+...
+006 (1041971.000.000) 04/28 19:51:07 Image size of job updated: 84960
+	81  -  MemoryUsage of job (MB)
+	82052  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 19:56:08 Image size of job updated: 100840
+	96  -  MemoryUsage of job (MB)
+	98008  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:01:08 Image size of job updated: 125104
+	120  -  MemoryUsage of job (MB)
+	122272  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:06:08 Image size of job updated: 145556
+	140  -  MemoryUsage of job (MB)
+	142724  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:11:09 Image size of job updated: 173724
+	167  -  MemoryUsage of job (MB)
+	170892  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:16:09 Image size of job updated: 189708
+	183  -  MemoryUsage of job (MB)
+	186876  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:21:09 Image size of job updated: 196276
+	189  -  MemoryUsage of job (MB)
+	193444  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:26:10 Image size of job updated: 202388
+	195  -  MemoryUsage of job (MB)
+	199556  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:31:10 Image size of job updated: 209564
+	202  -  MemoryUsage of job (MB)
+	206732  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:36:10 Image size of job updated: 215940
+	209  -  MemoryUsage of job (MB)
+	213112  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:41:11 Image size of job updated: 221412
+	214  -  MemoryUsage of job (MB)
+	218584  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:46:12 Image size of job updated: 229608
+	222  -  MemoryUsage of job (MB)
+	226780  -  ResidentSetSize of job (KB)
+...
+006 (1041971.000.000) 04/28 20:51:12 Image size of job updated: 233412
+	226  -  MemoryUsage of job (MB)
+	230584  -  ResidentSetSize of job (KB)
+...
+007 (1041971.000.000) 04/28 20:55:39 Shadow exception!
+	Error from slot1_8@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2018/step2_fake_photon/make_hist: (errno 26) Text file busy
+	15095117  -  Run Bytes Sent By Job
+	554  -  Run Bytes Received By Job
+...
+012 (1041971.000.000) 04/28 20:55:39 Job was held.
+	Error from slot1_8@node01.phy.pku.edu.cn: STARTER at 192.168.1.3 failed to send file(s) to <202.38.140.107:9618>; SHADOW at 202.38.140.107 failed to write to file /data/pku/home/pengj/testvbs/analysis/analysis2018/step2_fake_photon/make_hist: (errno 26) Text file busy
+	Code 12 Subcode 26
+...
+009 (1041971.000.000) 04/28 21:39:21 Job was aborted by the user.
+	via condor_rm (by user pengj)
+...

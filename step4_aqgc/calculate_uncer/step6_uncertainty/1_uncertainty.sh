@@ -17,7 +17,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 electron mc aqgc all ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 electron mc aqgc all ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 electron mc aqgc all ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 electron mc aqgc all WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 electron mc aqgc all WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 electron mc aqgc all WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 electron mc aqgc all WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 electron mc aqgc all ZZ medium T
@@ -30,7 +30,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 muon mc aqgc all ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 muon mc aqgc all ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 muon mc aqgc all ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 muon mc aqgc all WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 muon mc aqgc all WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 muon mc aqgc all WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 muon mc aqgc all WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 muon mc aqgc all ZZ medium T

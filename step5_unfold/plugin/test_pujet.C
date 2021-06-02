@@ -1751,44 +1751,44 @@ photonp42.Delete();
 
 
             double fill_weight_jecr[4] = { weight_jec_up, weight_jec_down, weight_jer_up, weight_jer_down};
+            double fill_reco[5] = {fill_ptlep1, fill_ptlep1, fill_ptlep1, fill_ptlep1, fill_ptlep1};
+            double fill_gen  = genlep1pt;
 
-
-            if(cut1){ 
-cout<<weight<<"  "<<weight_pileup_up<<"   "<<weight_pileup_down<<endl;
+            if(cut1){
 
                for(int k2 = 0; k2<400; k2++){
-                  fill_hist(m_region, fill_Mjj, fill_Mla, h_pdf[k2], fill_weight[0]*(pweight[k2]));
+                  fill_hist(fill_reco[0], Bins, h_pdf[k2], fill_weight[0]*(pweight[k2]));
                }
 
                for(int j = 0; j<length; j++){
-                  int num1 = fill_hist(m_region, fill_Mjj, fill_Mla, h[j], fill_weight[j]);
+                  int num1 = fill_hist(fill_reco[0], Bins,, h[j], fill_weight[j]);
                   //cout<<num1<<endl;
-                  if (cut_gen && num1>=0) fill_hist(m_region, genMjj, genMla, h_in[num1][j], fill_weight[j]);
-                  
-                  if (!cut_gen) fill_hist(m_region, fill_Mjj, fill_Mla, h_out[j], fill_weight[j]);
+                  if (cut_gen && num1>=0) fill_hist(fill_gen, Bins, h_in[num1][j], fill_weight[j]);
+
+                  if (!cut_gen) fill_hist(fill_gen, Bins, h_out[j], fill_weight[j]);
                }
             }
             if (cut2) {
-               int num2 = fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_jecr[0], fill_weight_jecr[0]);
-               if (cut_gen && num2>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num2][0], fill_weight_jecr[0]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_up, fill_Mla, h_out_jecr[0], fill_weight_jecr[0]);
+               int num2 = fill_hist(fill_reco[1], Bins, h_jecr[0], fill_weight_jecr[0]);
+               if (cut_gen && num2>=0) fill_hist(fill_gen, Bins, h_in_jecr[num2][0], fill_weight_jecr[0]);
+               if (!cut_gen) fill_hist(fill_gen, Bins, h_out_jecr[0], fill_weight_jecr[0]);
             }
             if (cut3) {
-               int num3 = fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_jecr[1], fill_weight_jecr[1]);
-               if (cut_gen && num3>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num3][1], fill_weight_jecr[1]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JEC_down, fill_Mla, h_out_jecr[1], fill_weight_jecr[1]);
+               int num3 = fill_hist(fill_reco[2], Bins, h_jecr[1], fill_weight_jecr[1]);
+               if (cut_gen && num3>=0) fill_hist(fill_gen, Bins, h_in_jecr[num3][1], fill_weight_jecr[1]);
+               if (!cut_gen) fill_hist(fill_gen, Bins, h_out_jecr[1], fill_weight_jecr[1]);
 
             }
             if (cut4) {
-               int num4 = fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_jecr[2], fill_weight_jecr[2]);
-               if (cut_gen &&num4>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num4][2], fill_weight_jecr[2]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_up, fill_Mla, h_out_jecr[2], fill_weight_jecr[2]);
+               int num4 = fill_hist(fill_reco[3], Bins, h_jecr[2], fill_weight_jecr[2]);
+               if (cut_gen &&num4>=0) fill_hist(fill_gen, Bins, h_in_jecr[num4][2], fill_weight_jecr[2]);
+               if (!cut_gen) fill_hist(fill_gen, Bins, h_out_jecr[2], fill_weight_jecr[2]);
 
             }
             if (cut5) {
-               int num5 = fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_jecr[3], fill_weight_jecr[3]);
-               if (cut_gen &&num5>=0) fill_hist(m_region, genMjj, genMla, h_in_jecr[num5][3], fill_weight_jecr[3]);
-               if (!cut_gen) fill_hist(m_region, fill_Mjj_JER_down, fill_Mla, h_out_jecr[3], fill_weight_jecr[3]);
+               int num5 = fill_hist(fill_reco[4], Bins, h_jecr[3], fill_weight_jecr[3]);
+               if (cut_gen &&num5>=0) fill_hist(fill_gen, Bins, h_in_jecr[num5][3], fill_weight_jecr[3]);
+               if (!cut_gen) fill_hist(fill_gen, Bins, h_out_jecr[3], fill_weight_jecr[3]);
             }
 
 

@@ -46,7 +46,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 electron mc signal barrel ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 electron mc signal barrel ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 electron mc signal barrel ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 electron mc signal barrel WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 electron mc signal barrel WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 electron mc signal barrel WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 electron mc signal barrel WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 electron mc signal barrel ZZ medium T
@@ -59,7 +59,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 electron mc signal endcap ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 electron mc signal endcap ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 electron mc signal endcap ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 electron mc signal endcap WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 electron mc signal endcap WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 electron mc signal endcap WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 electron mc signal endcap WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 electron mc signal endcap ZZ medium T
@@ -72,7 +72,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 muon mc signal barrel ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 muon mc signal barrel ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 muon mc signal barrel ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 muon mc signal barrel WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 muon mc signal barrel WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 muon mc signal barrel WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 muon mc signal barrel WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 muon mc signal barrel ZZ medium T
@@ -85,7 +85,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 muon mc signal endcap ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 muon mc signal endcap ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 muon mc signal endcap ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 muon mc signal endcap WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 muon mc signal endcap WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 muon mc signal endcap WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 muon mc signal endcap WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 muon mc signal endcap ZZ medium T
@@ -99,7 +99,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 electron mc control barrel ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 electron mc control barrel ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 electron mc control barrel ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 electron mc control barrel WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 electron mc control barrel WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 electron mc control barrel WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 electron mc control barrel WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 electron mc control barrel ZZ medium T
@@ -112,7 +112,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 electron mc control endcap ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 electron mc control endcap ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 electron mc control endcap ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 electron mc control endcap WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 electron mc control endcap WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 electron mc control endcap WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 electron mc control endcap WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 electron mc control endcap ZZ medium T
@@ -125,7 +125,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 muon mc control barrel ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 muon mc control barrel ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 muon mc control barrel ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 muon mc control barrel WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 muon mc control barrel WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 muon mc control barrel WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 muon mc control barrel WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 muon mc control barrel ZZ medium T
@@ -138,7 +138,7 @@
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbar.txt $1 2018 muon mc control endcap ST_tbar medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tW.txt $1 2018 muon mc control endcap ST_tW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ST_tbarW.txt $1 2018 muon mc control endcap ST_tbarW medium T
-./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ.txt $1 2018 muon mc control endcap WGJJ medium T
+./make_hist_mc filelist_dir3/tight_for_analysis_WGJJ_d0.txt $1 2018 muon mc control endcap WGJJ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WW.txt $1 2018 muon mc control endcap WW medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_WZ.txt $1 2018 muon mc control endcap WZ medium T
 ./make_hist_mc filelist_dir3/tight_for_analysis_ZZ.txt $1 2018 muon mc control endcap ZZ medium T
